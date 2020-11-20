@@ -15,6 +15,7 @@ namespace KingWilliamApp
         public frmMainForm()
         {
             InitializeComponent();
+            customizeDesign();
         }
 
         #region Event Handlers
@@ -25,25 +26,55 @@ namespace KingWilliamApp
 
         private void btnReservations_Click(object sender, EventArgs e)
         {
-            openChildForm(new frmViewReservations());
+            showSubMenu(pnlReservations);
+        }
+
+        private void btnBills_Click(object sender, EventArgs e)
+        {
+            showSubMenu(pnlBills);
+        }
+
+        private void btnChargeableItems_Click(object sender, EventArgs e)
+        {
+            showSubMenu(pnlChargeableItems);
         }
 
         private void btnRooms_Click(object sender, EventArgs e)
         {
-            openChildForm(new frmViewRooms());
+            showSubMenu(pnlRooms);
         }
 
         private void btnClients_Click(object sender, EventArgs e)
         {
-            openChildForm(new frmViewClients());
+            showSubMenu(pnlClients);
         }
 
         private void btnStaff_Click(object sender, EventArgs e)
         {
+            showSubMenu(pnlStaff);
+        }
+
+        private void btnReservationView_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frmViewReservations());
+        }
+
+        private void btnRoomView_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frmViewRooms());
+        }
+
+        private void btnClientView_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frmViewClients());
+        }
+
+        private void btnStaffView_Click(object sender, EventArgs e)
+        {
             openChildForm(new frmViewStaff());
         }
 
-        private void btnChargeableItems_Click(object sender, EventArgs e)
+        private void btnChargeableItemView_Click(object sender, EventArgs e)
         {
             openChildForm(new frmViewChargeableItems());
         }
@@ -56,6 +87,43 @@ namespace KingWilliamApp
         #endregion Event Handlers
 
         #region Methods
+
+        private void customizeDesign()
+        {
+            pnlReservations.Visible = false;
+            pnlBills.Visible = false;
+            pnlChargeableItems.Visible = false;
+            pnlRooms.Visible = false;
+            pnlClients.Visible = false;
+            pnlStaff.Visible = false;
+        }
+
+        private void hideSubMenu()
+        {
+            if (pnlReservations.Visible == true)
+                pnlReservations.Visible = false;
+            if (pnlBills.Visible == true)
+                pnlBills.Visible = false;
+            if (pnlChargeableItems.Visible == true)
+                pnlChargeableItems.Visible = false;
+            if (pnlRooms.Visible == true)
+                pnlRooms.Visible = false;
+            if (pnlClients.Visible == true)
+                pnlClients.Visible = false;
+            if (pnlStaff.Visible == true)
+                pnlStaff.Visible = false;
+        }
+
+        private void showSubMenu(Panel subMenu)
+        {
+            if (subMenu.Visible == false)
+            {
+                hideSubMenu();
+                subMenu.Visible = true;
+            }
+            else
+                subMenu.Visible = false;
+        }
 
         private Form activeForm = null;
         public void openChildForm(Form childForm)
