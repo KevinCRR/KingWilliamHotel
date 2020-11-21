@@ -29,7 +29,6 @@ C:\Users\Termina1\Desktop\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\bin\Deb
 C:\Users\Termina1\Desktop\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.csprojAssemblyReference.cache
 C:\Users\Termina1\Desktop\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmBill.resources
 C:\Users\Termina1\Desktop\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmCreateChargeableItem.resources
-C:\Users\Termina1\Desktop\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmCreateReservation.resources
 C:\Users\Termina1\Desktop\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmCreateStaff.resources
 C:\Users\Termina1\Desktop\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmLogin.resources
 C:\Users\Termina1\Desktop\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmMainForm.resources
@@ -48,3 +47,6 @@ C:\Users\Termina1\Desktop\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Deb
 C:\Users\Termina1\Desktop\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.csproj.CoreCompileInputs.cache
 C:\Users\Termina1\Desktop\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.exe
 C:\Users\Termina1\Desktop\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.pdb
+C:\Users\Termina1\Desktop\KingWilliamHotel\KingWilliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmEditReservation.resources
+C:\Users\Termina1\Desktop\KingWilliamHotel\KingWilliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmEditReservations.resources
+C:\Users\Termina1\Desktop\KingWilliamHotel\KingWilliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmDeleteReservation.resources

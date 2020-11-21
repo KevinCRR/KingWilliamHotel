@@ -85,6 +85,18 @@
     <Compile Include="frmCreateStaff.Designer.cs">
       <DependentUpon>frmCreateStaff.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDeleteReservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDeleteReservation.Designer.cs">
+      <DependentUpon>frmDeleteReservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditReservations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditReservations.Designer.cs">
+      <DependentUpon>frmEditReservations.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +182,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCreateStaff.resx">
       <DependentUpon>frmCreateStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDeleteReservation.resx">
+      <DependentUpon>frmDeleteReservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditReservations.resx">
+      <DependentUpon>frmEditReservations.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>

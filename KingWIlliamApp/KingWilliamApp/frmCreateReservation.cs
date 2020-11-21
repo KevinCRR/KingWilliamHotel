@@ -10,11 +10,26 @@ using System.Windows.Forms;
 
 namespace KingWilliamApp
 {
-    public partial class frmCreateReservation : Form
+    public partial class frmEditReservation : Form
     {
-        public frmCreateReservation()
+        public frmEditReservation()
         {
             InitializeComponent();
+        }
+
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmCreateReservation_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

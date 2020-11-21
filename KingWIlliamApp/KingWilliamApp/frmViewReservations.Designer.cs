@@ -41,7 +41,7 @@
             this.btnViewBill.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnViewBill.Font = new System.Drawing.Font("Segoe UI Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnViewBill.ForeColor = System.Drawing.Color.DimGray;
-            this.btnViewBill.Location = new System.Drawing.Point(683, 205);
+            this.btnViewBill.Location = new System.Drawing.Point(665, 158);
             this.btnViewBill.Name = "btnViewBill";
             this.btnViewBill.Size = new System.Drawing.Size(117, 32);
             this.btnViewBill.TabIndex = 18;
@@ -54,7 +54,7 @@
             this.lblPageName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblPageName.Font = new System.Drawing.Font("Segoe UI Black", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPageName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblPageName.Location = new System.Drawing.Point(192, 30);
+            this.lblPageName.Location = new System.Drawing.Point(183, 6);
             this.lblPageName.Name = "lblPageName";
             this.lblPageName.Size = new System.Drawing.Size(458, 74);
             this.lblPageName.TabIndex = 17;
@@ -66,7 +66,7 @@
             this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEdit.Font = new System.Drawing.Font("Segoe UI Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.ForeColor = System.Drawing.Color.DimGray;
-            this.btnEdit.Location = new System.Drawing.Point(683, 155);
+            this.btnEdit.Location = new System.Drawing.Point(665, 108);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(117, 32);
             this.btnEdit.TabIndex = 16;
@@ -79,7 +79,7 @@
             this.btnCreate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCreate.Font = new System.Drawing.Font("Segoe UI Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreate.ForeColor = System.Drawing.Color.DimGray;
-            this.btnCreate.Location = new System.Drawing.Point(683, 106);
+            this.btnCreate.Location = new System.Drawing.Point(665, 59);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(117, 32);
             this.btnCreate.TabIndex = 15;
@@ -92,7 +92,7 @@
             this.panel1.BackColor = System.Drawing.Color.Gray;
             this.panel1.Location = new System.Drawing.Point(30, 107);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(620, 583);
+            this.panel1.Size = new System.Drawing.Size(620, 535);
             this.panel1.TabIndex = 14;
             // 
             // btnClose
@@ -111,7 +111,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(830, 720);
+            this.ClientSize = new System.Drawing.Size(812, 673);
             this.Controls.Add(this.btnViewBill);
             this.Controls.Add(this.lblPageName);
             this.Controls.Add(this.btnEdit);
