@@ -421,8 +421,10 @@
             // 
             // cbxProvince
             // 
+            this.cbxProvince.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxProvince.FormattingEnabled = true;
             this.cbxProvince.Location = new System.Drawing.Point(35, 324);
+            this.cbxProvince.MaxDropDownItems = 13;
             this.cbxProvince.Name = "cbxProvince";
             this.cbxProvince.Size = new System.Drawing.Size(197, 24);
             this.cbxProvince.TabIndex = 49;
