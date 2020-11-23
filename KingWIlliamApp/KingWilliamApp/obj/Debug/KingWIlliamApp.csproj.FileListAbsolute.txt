@@ -50,3 +50,5 @@ C:\Users\Termina1\Desktop\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Deb
 C:\Users\Termina1\Desktop\KingWilliamHotel\KingWilliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmEditReservation.resources
 C:\Users\Termina1\Desktop\KingWilliamHotel\KingWilliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmEditReservations.resources
 C:\Users\Termina1\Desktop\KingWilliamHotel\KingWilliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmDeleteReservation.resources
+C:\Users\Termina1\Desktop\KingWilliamHotel\KingWilliamApp\KingWIlliamApp\bin\Debug\KingWilliamDB.mdf
+C:\Users\Termina1\Desktop\KingWilliamHotel\KingWilliamApp\KingWIlliamApp\bin\Debug\KingWilliamDB_log.ldf
