@@ -57,13 +57,15 @@ namespace KingWilliamApp
             {
                 sqlcon.Open();
 
-                SqlCommand sqlProvinces = new SqlCommand("SELECT (provinceCode) FROM tblProvinces", sqlcon);
+                SqlCommand sqlProvinces = new SqlCommand("SELECT (provinceID), (provinceCode) FROM tblProvinces", sqlcon);
                 SqlDataReader readerProvinces;
                 readerProvinces = sqlProvinces.ExecuteReader();
                 DataTable dtProvinces = new DataTable();
+                dtProvinces.Columns.Add("provinceID", typeof(int));
                 dtProvinces.Columns.Add("provinceCode", typeof(string));
                 dtProvinces.Load(readerProvinces);
-                cbxProvince.ValueMember = "provinceCode";
+                cbxProvince.DisplayMember = "provinceCode";
+                cbxProvince.ValueMember = "provinceID";
                 cbxProvince.DataSource = dtProvinces;
 
                 SqlCommand sqlRooms = new SqlCommand("SELECT (roomNumber) FROM tblRooms", sqlcon);
