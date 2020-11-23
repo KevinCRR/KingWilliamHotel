@@ -465,6 +465,7 @@
             // 
             // cbxRoom
             // 
+            this.cbxRoom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxRoom.FormattingEnabled = true;
             this.cbxRoom.Location = new System.Drawing.Point(28, 239);
             this.cbxRoom.Name = "cbxRoom";
