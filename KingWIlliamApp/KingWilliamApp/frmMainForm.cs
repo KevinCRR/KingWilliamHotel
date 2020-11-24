@@ -45,10 +45,6 @@ namespace KingWilliamApp
             openChildForm(new frmEditReservations());
         }
 
-        private void btnReservationDelete_Click(object sender, EventArgs e)
-        {
-            openChildForm(new frmDeleteReservation());
-        }
         #endregion Reservations
 
         #region Bills
@@ -59,12 +55,13 @@ namespace KingWilliamApp
 
         private void btnBillView_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new frmViewBill());
+            
         }
 
         private void btnBillEdit_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new frmEditBill());
         }
         #endregion Bills
 
@@ -81,12 +78,12 @@ namespace KingWilliamApp
 
         private void btnChargeableItemCreate_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new frmCreateChargeableItem());
         }
 
         private void btnChargeableItemEdit_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new frmEditChargeableItem());
         }
 
         private void btnChargeableItemDelete_Click(object sender, EventArgs e)
@@ -103,23 +100,19 @@ namespace KingWilliamApp
 
         private void btnTransactionsView_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new frmViewTransactions());
         }
 
         private void btnTransactionCreate_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new frmCreateTransactions());
         }
 
         private void btnTransactionEdit_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new frmEditTransactions());
         }
 
-        private void btnTransactionDelete_Click(object sender, EventArgs e)
-        {
-
-        }
         #endregion Transactions
 
         #region Rooms
@@ -130,23 +123,14 @@ namespace KingWilliamApp
 
         private void btnRoomView_Click(object sender, EventArgs e)
         {
-            openChildForm(new frmViewRooms());
-        }
-
-        private void btnRoomCreate_Click(object sender, EventArgs e)
-        {
-
+            openChildForm(new frmViewRoom());
         }
 
         private void btnRoomEdit_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new frmEditRoom());
         }
 
-        private void btnRoomDelete_Click(object sender, EventArgs e)
-        {
-
-        }
         #endregion Rooms
 
         #region Room Types
@@ -157,7 +141,7 @@ namespace KingWilliamApp
 
         private void btnRoomTypeView_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnRoomTypeCreate_Click(object sender, EventArgs e)
@@ -184,17 +168,17 @@ namespace KingWilliamApp
 
         private void btnClientView_Click(object sender, EventArgs e)
         {
-            openChildForm(new frmViewClients());
+            openChildForm(new frmViewCustomer());
         }
 
         private void btnClientCreate_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new frmCreateCustomer());
         }
 
         private void btnClientEdit_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new frmEditCustomer());
         }
         #endregion Clients
 
@@ -211,12 +195,12 @@ namespace KingWilliamApp
 
         private void btnStaffCreate_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new frmCreateStaff());
         }
 
         private void btnStaffEdit_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new frmEditStaff());
         }
         #endregion Staff
 
@@ -228,22 +212,17 @@ namespace KingWilliamApp
 
         private void btnEmploymentPositionView_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new frmViewEmployementPositions());
         }
 
         private void btnEmploymentPositionCreate_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new frmCreateEmploymentPositions());
         }
 
         private void btnEmploymentPositionEdit_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnEmploymentPositionDelete_Click(object sender, EventArgs e)
-        {
-
+            openChildForm(new frmEditEmployementPositions());
         }
         #endregion Employment Positions
 
@@ -255,7 +234,7 @@ namespace KingWilliamApp
 
         private void btnUserView_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new frmViewUsers());
         }
         #endregion Users
 
@@ -336,17 +315,14 @@ namespace KingWilliamApp
 
         private void btnUserCreate_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new frmCreateUsers());
         }
 
         private void btnUserEdit_Click(object sender, EventArgs e)
         {
+            openChildForm(new frmEditUsers());
 
         }
 
-        private void btnUserDelete_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

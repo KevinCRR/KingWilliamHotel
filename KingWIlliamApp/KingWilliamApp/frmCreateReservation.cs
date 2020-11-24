@@ -18,7 +18,7 @@ namespace KingWilliamApp
             InitializeComponent();
         }
 
-        SqlConnection sqlcon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Termina1\Desktop\KingWilliamHotel\KingWilliamApp\KingWIlliamApp\KingWilliamDB.mdf;Integrated Security=True");
+        SqlConnection sqlcon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\KingWilliamDB.mdf;Integrated Security=True");
 
         private void btnCreate_Click(object sender, EventArgs e)
         {

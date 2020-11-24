@@ -33,13 +33,11 @@
             this.pnlMenuButtons = new System.Windows.Forms.Panel();
             this.btnSignOut = new System.Windows.Forms.Button();
             this.pnlUsers = new System.Windows.Forms.Panel();
-            this.btnUserDelete = new System.Windows.Forms.Button();
             this.btnUserEdit = new System.Windows.Forms.Button();
             this.btnUserCreate = new System.Windows.Forms.Button();
             this.btnUserView = new System.Windows.Forms.Button();
             this.btnUsers = new System.Windows.Forms.Button();
             this.pnlEmploymentPositions = new System.Windows.Forms.Panel();
-            this.btnEmploymentPositionDelete = new System.Windows.Forms.Button();
             this.btnEmploymentPositionEdit = new System.Windows.Forms.Button();
             this.btnEmploymentPositionCreate = new System.Windows.Forms.Button();
             this.btnEmploymentPositionView = new System.Windows.Forms.Button();
@@ -55,25 +53,20 @@
             this.btnClientView = new System.Windows.Forms.Button();
             this.btnClients = new System.Windows.Forms.Button();
             this.pnlRoomTypes = new System.Windows.Forms.Panel();
-            this.btnRoomTypeDelete = new System.Windows.Forms.Button();
             this.btnRoomTypeEdit = new System.Windows.Forms.Button();
             this.btnRoomTypeCreate = new System.Windows.Forms.Button();
             this.btnRoomTypeView = new System.Windows.Forms.Button();
             this.btnRoomTypes = new System.Windows.Forms.Button();
             this.pnlRooms = new System.Windows.Forms.Panel();
-            this.btnRoomDelete = new System.Windows.Forms.Button();
             this.btnRoomEdit = new System.Windows.Forms.Button();
-            this.btnRoomCreate = new System.Windows.Forms.Button();
             this.btnRoomView = new System.Windows.Forms.Button();
             this.btnRooms = new System.Windows.Forms.Button();
             this.pnlTransactions = new System.Windows.Forms.Panel();
-            this.btnTransactionDelete = new System.Windows.Forms.Button();
             this.btnTransactionEdit = new System.Windows.Forms.Button();
             this.btnTransactionCreate = new System.Windows.Forms.Button();
             this.btnTransactionsView = new System.Windows.Forms.Button();
             this.btnTransactions = new System.Windows.Forms.Button();
             this.pnlChargeableItems = new System.Windows.Forms.Panel();
-            this.btnChargeableItemDelete = new System.Windows.Forms.Button();
             this.btnChargeableItemEdit = new System.Windows.Forms.Button();
             this.btnChargeableItemCreate = new System.Windows.Forms.Button();
             this.btnChargeableItemView = new System.Windows.Forms.Button();
@@ -83,7 +76,6 @@
             this.btnBillView = new System.Windows.Forms.Button();
             this.btnBills = new System.Windows.Forms.Button();
             this.pnlReservations = new System.Windows.Forms.Panel();
-            this.btnReservationDelete = new System.Windows.Forms.Button();
             this.btnReservationEdit = new System.Windows.Forms.Button();
             this.btnReservationCreate = new System.Windows.Forms.Button();
             this.btnReservationView = new System.Windows.Forms.Button();
@@ -120,8 +112,9 @@
             this.pnlMenu.Controls.Add(this.pnlActiveUser);
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenu.Location = new System.Drawing.Point(0, 0);
+            this.pnlMenu.Margin = new System.Windows.Forms.Padding(2);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(273, 673);
+            this.pnlMenu.Size = new System.Drawing.Size(205, 553);
             this.pnlMenu.TabIndex = 0;
             // 
             // pnlMenuButtons
@@ -149,9 +142,10 @@
             this.pnlMenuButtons.Controls.Add(this.pnlReservations);
             this.pnlMenuButtons.Controls.Add(this.btnReservations);
             this.pnlMenuButtons.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlMenuButtons.Location = new System.Drawing.Point(0, 129);
+            this.pnlMenuButtons.Location = new System.Drawing.Point(0, 105);
+            this.pnlMenuButtons.Margin = new System.Windows.Forms.Padding(2);
             this.pnlMenuButtons.Name = "pnlMenuButtons";
-            this.pnlMenuButtons.Size = new System.Drawing.Size(273, 544);
+            this.pnlMenuButtons.Size = new System.Drawing.Size(205, 448);
             this.pnlMenuButtons.TabIndex = 4;
             // 
             // btnSignOut
@@ -162,10 +156,11 @@
             this.btnSignOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSignOut.Font = new System.Drawing.Font("Segoe UI Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSignOut.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnSignOut.Location = new System.Drawing.Point(0, 2061);
+            this.btnSignOut.Location = new System.Drawing.Point(0, 1398);
+            this.btnSignOut.Margin = new System.Windows.Forms.Padding(2);
             this.btnSignOut.Name = "btnSignOut";
-            this.btnSignOut.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnSignOut.Size = new System.Drawing.Size(252, 60);
+            this.btnSignOut.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
+            this.btnSignOut.Size = new System.Drawing.Size(188, 49);
             this.btnSignOut.TabIndex = 4;
             this.btnSignOut.Text = "Sign Out";
             this.btnSignOut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -175,32 +170,15 @@
             // pnlUsers
             // 
             this.pnlUsers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
-            this.pnlUsers.Controls.Add(this.btnUserDelete);
             this.pnlUsers.Controls.Add(this.btnUserEdit);
             this.pnlUsers.Controls.Add(this.btnUserCreate);
             this.pnlUsers.Controls.Add(this.btnUserView);
             this.pnlUsers.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlUsers.Location = new System.Drawing.Point(0, 1899);
+            this.pnlUsers.Location = new System.Drawing.Point(0, 1300);
+            this.pnlUsers.Margin = new System.Windows.Forms.Padding(2);
             this.pnlUsers.Name = "pnlUsers";
-            this.pnlUsers.Size = new System.Drawing.Size(252, 162);
+            this.pnlUsers.Size = new System.Drawing.Size(188, 98);
             this.pnlUsers.TabIndex = 17;
-            // 
-            // btnUserDelete
-            // 
-            this.btnUserDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
-            this.btnUserDelete.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnUserDelete.FlatAppearance.BorderSize = 0;
-            this.btnUserDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUserDelete.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnUserDelete.Location = new System.Drawing.Point(0, 120);
-            this.btnUserDelete.Name = "btnUserDelete";
-            this.btnUserDelete.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnUserDelete.Size = new System.Drawing.Size(252, 40);
-            this.btnUserDelete.TabIndex = 5;
-            this.btnUserDelete.Text = "Delete";
-            this.btnUserDelete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUserDelete.UseVisualStyleBackColor = false;
-            this.btnUserDelete.Click += new System.EventHandler(this.btnUserDelete_Click);
             // 
             // btnUserEdit
             // 
@@ -209,10 +187,11 @@
             this.btnUserEdit.FlatAppearance.BorderSize = 0;
             this.btnUserEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUserEdit.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnUserEdit.Location = new System.Drawing.Point(0, 80);
+            this.btnUserEdit.Location = new System.Drawing.Point(0, 64);
+            this.btnUserEdit.Margin = new System.Windows.Forms.Padding(2);
             this.btnUserEdit.Name = "btnUserEdit";
-            this.btnUserEdit.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnUserEdit.Size = new System.Drawing.Size(252, 40);
+            this.btnUserEdit.Padding = new System.Windows.Forms.Padding(26, 0, 0, 0);
+            this.btnUserEdit.Size = new System.Drawing.Size(188, 32);
             this.btnUserEdit.TabIndex = 2;
             this.btnUserEdit.Text = "Edit";
             this.btnUserEdit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -226,10 +205,11 @@
             this.btnUserCreate.FlatAppearance.BorderSize = 0;
             this.btnUserCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUserCreate.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnUserCreate.Location = new System.Drawing.Point(0, 40);
+            this.btnUserCreate.Location = new System.Drawing.Point(0, 32);
+            this.btnUserCreate.Margin = new System.Windows.Forms.Padding(2);
             this.btnUserCreate.Name = "btnUserCreate";
-            this.btnUserCreate.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnUserCreate.Size = new System.Drawing.Size(252, 40);
+            this.btnUserCreate.Padding = new System.Windows.Forms.Padding(26, 0, 0, 0);
+            this.btnUserCreate.Size = new System.Drawing.Size(188, 32);
             this.btnUserCreate.TabIndex = 1;
             this.btnUserCreate.Text = "Create";
             this.btnUserCreate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -246,8 +226,8 @@
             this.btnUserView.Location = new System.Drawing.Point(0, 0);
             this.btnUserView.Margin = new System.Windows.Forms.Padding(0);
             this.btnUserView.Name = "btnUserView";
-            this.btnUserView.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnUserView.Size = new System.Drawing.Size(252, 40);
+            this.btnUserView.Padding = new System.Windows.Forms.Padding(26, 0, 0, 0);
+            this.btnUserView.Size = new System.Drawing.Size(188, 32);
             this.btnUserView.TabIndex = 0;
             this.btnUserView.Text = "View";
             this.btnUserView.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -262,10 +242,11 @@
             this.btnUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUsers.Font = new System.Drawing.Font("Segoe UI Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsers.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnUsers.Location = new System.Drawing.Point(0, 1839);
+            this.btnUsers.Location = new System.Drawing.Point(0, 1251);
+            this.btnUsers.Margin = new System.Windows.Forms.Padding(2);
             this.btnUsers.Name = "btnUsers";
-            this.btnUsers.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnUsers.Size = new System.Drawing.Size(252, 60);
+            this.btnUsers.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnUsers.Size = new System.Drawing.Size(188, 49);
             this.btnUsers.TabIndex = 16;
             this.btnUsers.Text = "Users";
             this.btnUsers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -275,32 +256,15 @@
             // pnlEmploymentPositions
             // 
             this.pnlEmploymentPositions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
-            this.pnlEmploymentPositions.Controls.Add(this.btnEmploymentPositionDelete);
             this.pnlEmploymentPositions.Controls.Add(this.btnEmploymentPositionEdit);
             this.pnlEmploymentPositions.Controls.Add(this.btnEmploymentPositionCreate);
             this.pnlEmploymentPositions.Controls.Add(this.btnEmploymentPositionView);
             this.pnlEmploymentPositions.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlEmploymentPositions.Location = new System.Drawing.Point(0, 1677);
+            this.pnlEmploymentPositions.Location = new System.Drawing.Point(0, 1154);
+            this.pnlEmploymentPositions.Margin = new System.Windows.Forms.Padding(2);
             this.pnlEmploymentPositions.Name = "pnlEmploymentPositions";
-            this.pnlEmploymentPositions.Size = new System.Drawing.Size(252, 162);
+            this.pnlEmploymentPositions.Size = new System.Drawing.Size(188, 97);
             this.pnlEmploymentPositions.TabIndex = 19;
-            // 
-            // btnEmploymentPositionDelete
-            // 
-            this.btnEmploymentPositionDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
-            this.btnEmploymentPositionDelete.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnEmploymentPositionDelete.FlatAppearance.BorderSize = 0;
-            this.btnEmploymentPositionDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEmploymentPositionDelete.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnEmploymentPositionDelete.Location = new System.Drawing.Point(0, 120);
-            this.btnEmploymentPositionDelete.Name = "btnEmploymentPositionDelete";
-            this.btnEmploymentPositionDelete.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnEmploymentPositionDelete.Size = new System.Drawing.Size(252, 40);
-            this.btnEmploymentPositionDelete.TabIndex = 5;
-            this.btnEmploymentPositionDelete.Text = "Delete";
-            this.btnEmploymentPositionDelete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmploymentPositionDelete.UseVisualStyleBackColor = false;
-            this.btnEmploymentPositionDelete.Click += new System.EventHandler(this.btnEmploymentPositionDelete_Click);
             // 
             // btnEmploymentPositionEdit
             // 
@@ -309,10 +273,11 @@
             this.btnEmploymentPositionEdit.FlatAppearance.BorderSize = 0;
             this.btnEmploymentPositionEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEmploymentPositionEdit.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnEmploymentPositionEdit.Location = new System.Drawing.Point(0, 80);
+            this.btnEmploymentPositionEdit.Location = new System.Drawing.Point(0, 64);
+            this.btnEmploymentPositionEdit.Margin = new System.Windows.Forms.Padding(2);
             this.btnEmploymentPositionEdit.Name = "btnEmploymentPositionEdit";
-            this.btnEmploymentPositionEdit.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnEmploymentPositionEdit.Size = new System.Drawing.Size(252, 40);
+            this.btnEmploymentPositionEdit.Padding = new System.Windows.Forms.Padding(26, 0, 0, 0);
+            this.btnEmploymentPositionEdit.Size = new System.Drawing.Size(188, 32);
             this.btnEmploymentPositionEdit.TabIndex = 2;
             this.btnEmploymentPositionEdit.Text = "Edit";
             this.btnEmploymentPositionEdit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -326,10 +291,11 @@
             this.btnEmploymentPositionCreate.FlatAppearance.BorderSize = 0;
             this.btnEmploymentPositionCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEmploymentPositionCreate.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnEmploymentPositionCreate.Location = new System.Drawing.Point(0, 40);
+            this.btnEmploymentPositionCreate.Location = new System.Drawing.Point(0, 32);
+            this.btnEmploymentPositionCreate.Margin = new System.Windows.Forms.Padding(2);
             this.btnEmploymentPositionCreate.Name = "btnEmploymentPositionCreate";
-            this.btnEmploymentPositionCreate.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnEmploymentPositionCreate.Size = new System.Drawing.Size(252, 40);
+            this.btnEmploymentPositionCreate.Padding = new System.Windows.Forms.Padding(26, 0, 0, 0);
+            this.btnEmploymentPositionCreate.Size = new System.Drawing.Size(188, 32);
             this.btnEmploymentPositionCreate.TabIndex = 1;
             this.btnEmploymentPositionCreate.Text = "Create";
             this.btnEmploymentPositionCreate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -346,8 +312,8 @@
             this.btnEmploymentPositionView.Location = new System.Drawing.Point(0, 0);
             this.btnEmploymentPositionView.Margin = new System.Windows.Forms.Padding(0);
             this.btnEmploymentPositionView.Name = "btnEmploymentPositionView";
-            this.btnEmploymentPositionView.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnEmploymentPositionView.Size = new System.Drawing.Size(252, 40);
+            this.btnEmploymentPositionView.Padding = new System.Windows.Forms.Padding(26, 0, 0, 0);
+            this.btnEmploymentPositionView.Size = new System.Drawing.Size(188, 32);
             this.btnEmploymentPositionView.TabIndex = 0;
             this.btnEmploymentPositionView.Text = "View";
             this.btnEmploymentPositionView.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -362,10 +328,11 @@
             this.btnEmploymentPositions.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEmploymentPositions.Font = new System.Drawing.Font("Segoe UI Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEmploymentPositions.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnEmploymentPositions.Location = new System.Drawing.Point(0, 1617);
+            this.btnEmploymentPositions.Location = new System.Drawing.Point(0, 1105);
+            this.btnEmploymentPositions.Margin = new System.Windows.Forms.Padding(2);
             this.btnEmploymentPositions.Name = "btnEmploymentPositions";
-            this.btnEmploymentPositions.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnEmploymentPositions.Size = new System.Drawing.Size(252, 60);
+            this.btnEmploymentPositions.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnEmploymentPositions.Size = new System.Drawing.Size(188, 49);
             this.btnEmploymentPositions.TabIndex = 18;
             this.btnEmploymentPositions.Text = "Employment Positions";
             this.btnEmploymentPositions.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -379,9 +346,10 @@
             this.pnlStaff.Controls.Add(this.btnStaffCreate);
             this.pnlStaff.Controls.Add(this.btnStaffView);
             this.pnlStaff.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlStaff.Location = new System.Drawing.Point(0, 1495);
+            this.pnlStaff.Location = new System.Drawing.Point(0, 1006);
+            this.pnlStaff.Margin = new System.Windows.Forms.Padding(2);
             this.pnlStaff.Name = "pnlStaff";
-            this.pnlStaff.Size = new System.Drawing.Size(252, 122);
+            this.pnlStaff.Size = new System.Drawing.Size(188, 99);
             this.pnlStaff.TabIndex = 11;
             // 
             // btnStaffEdit
@@ -391,10 +359,11 @@
             this.btnStaffEdit.FlatAppearance.BorderSize = 0;
             this.btnStaffEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStaffEdit.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnStaffEdit.Location = new System.Drawing.Point(0, 80);
+            this.btnStaffEdit.Location = new System.Drawing.Point(0, 64);
+            this.btnStaffEdit.Margin = new System.Windows.Forms.Padding(2);
             this.btnStaffEdit.Name = "btnStaffEdit";
-            this.btnStaffEdit.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnStaffEdit.Size = new System.Drawing.Size(252, 40);
+            this.btnStaffEdit.Padding = new System.Windows.Forms.Padding(26, 0, 0, 0);
+            this.btnStaffEdit.Size = new System.Drawing.Size(188, 32);
             this.btnStaffEdit.TabIndex = 2;
             this.btnStaffEdit.Text = "Edit";
             this.btnStaffEdit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -408,10 +377,11 @@
             this.btnStaffCreate.FlatAppearance.BorderSize = 0;
             this.btnStaffCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStaffCreate.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnStaffCreate.Location = new System.Drawing.Point(0, 40);
+            this.btnStaffCreate.Location = new System.Drawing.Point(0, 32);
+            this.btnStaffCreate.Margin = new System.Windows.Forms.Padding(2);
             this.btnStaffCreate.Name = "btnStaffCreate";
-            this.btnStaffCreate.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnStaffCreate.Size = new System.Drawing.Size(252, 40);
+            this.btnStaffCreate.Padding = new System.Windows.Forms.Padding(26, 0, 0, 0);
+            this.btnStaffCreate.Size = new System.Drawing.Size(188, 32);
             this.btnStaffCreate.TabIndex = 1;
             this.btnStaffCreate.Text = "Create";
             this.btnStaffCreate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -428,8 +398,8 @@
             this.btnStaffView.Location = new System.Drawing.Point(0, 0);
             this.btnStaffView.Margin = new System.Windows.Forms.Padding(0);
             this.btnStaffView.Name = "btnStaffView";
-            this.btnStaffView.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnStaffView.Size = new System.Drawing.Size(252, 40);
+            this.btnStaffView.Padding = new System.Windows.Forms.Padding(26, 0, 0, 0);
+            this.btnStaffView.Size = new System.Drawing.Size(188, 32);
             this.btnStaffView.TabIndex = 0;
             this.btnStaffView.Text = "View";
             this.btnStaffView.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -444,10 +414,11 @@
             this.btnStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStaff.Font = new System.Drawing.Font("Segoe UI Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStaff.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnStaff.Location = new System.Drawing.Point(0, 1435);
+            this.btnStaff.Location = new System.Drawing.Point(0, 957);
+            this.btnStaff.Margin = new System.Windows.Forms.Padding(2);
             this.btnStaff.Name = "btnStaff";
-            this.btnStaff.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnStaff.Size = new System.Drawing.Size(252, 60);
+            this.btnStaff.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnStaff.Size = new System.Drawing.Size(188, 49);
             this.btnStaff.TabIndex = 10;
             this.btnStaff.Text = "Staff";
             this.btnStaff.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -461,9 +432,10 @@
             this.pnlClients.Controls.Add(this.btnClientCreate);
             this.pnlClients.Controls.Add(this.btnClientView);
             this.pnlClients.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlClients.Location = new System.Drawing.Point(0, 1313);
+            this.pnlClients.Location = new System.Drawing.Point(0, 858);
+            this.pnlClients.Margin = new System.Windows.Forms.Padding(2);
             this.pnlClients.Name = "pnlClients";
-            this.pnlClients.Size = new System.Drawing.Size(252, 122);
+            this.pnlClients.Size = new System.Drawing.Size(188, 99);
             this.pnlClients.TabIndex = 9;
             // 
             // btnClientEdit
@@ -473,10 +445,11 @@
             this.btnClientEdit.FlatAppearance.BorderSize = 0;
             this.btnClientEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClientEdit.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnClientEdit.Location = new System.Drawing.Point(0, 80);
+            this.btnClientEdit.Location = new System.Drawing.Point(0, 64);
+            this.btnClientEdit.Margin = new System.Windows.Forms.Padding(2);
             this.btnClientEdit.Name = "btnClientEdit";
-            this.btnClientEdit.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnClientEdit.Size = new System.Drawing.Size(252, 40);
+            this.btnClientEdit.Padding = new System.Windows.Forms.Padding(26, 0, 0, 0);
+            this.btnClientEdit.Size = new System.Drawing.Size(188, 35);
             this.btnClientEdit.TabIndex = 2;
             this.btnClientEdit.Text = "Edit";
             this.btnClientEdit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -490,10 +463,11 @@
             this.btnClientCreate.FlatAppearance.BorderSize = 0;
             this.btnClientCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClientCreate.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnClientCreate.Location = new System.Drawing.Point(0, 40);
+            this.btnClientCreate.Location = new System.Drawing.Point(0, 32);
+            this.btnClientCreate.Margin = new System.Windows.Forms.Padding(2);
             this.btnClientCreate.Name = "btnClientCreate";
-            this.btnClientCreate.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnClientCreate.Size = new System.Drawing.Size(252, 40);
+            this.btnClientCreate.Padding = new System.Windows.Forms.Padding(26, 0, 0, 0);
+            this.btnClientCreate.Size = new System.Drawing.Size(188, 32);
             this.btnClientCreate.TabIndex = 1;
             this.btnClientCreate.Text = "Create";
             this.btnClientCreate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -510,8 +484,8 @@
             this.btnClientView.Location = new System.Drawing.Point(0, 0);
             this.btnClientView.Margin = new System.Windows.Forms.Padding(0);
             this.btnClientView.Name = "btnClientView";
-            this.btnClientView.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnClientView.Size = new System.Drawing.Size(252, 40);
+            this.btnClientView.Padding = new System.Windows.Forms.Padding(26, 0, 0, 0);
+            this.btnClientView.Size = new System.Drawing.Size(188, 32);
             this.btnClientView.TabIndex = 0;
             this.btnClientView.Text = "View";
             this.btnClientView.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -526,12 +500,13 @@
             this.btnClients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClients.Font = new System.Drawing.Font("Segoe UI Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClients.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnClients.Location = new System.Drawing.Point(0, 1253);
+            this.btnClients.Location = new System.Drawing.Point(0, 809);
+            this.btnClients.Margin = new System.Windows.Forms.Padding(2);
             this.btnClients.Name = "btnClients";
-            this.btnClients.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnClients.Size = new System.Drawing.Size(252, 60);
+            this.btnClients.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnClients.Size = new System.Drawing.Size(188, 49);
             this.btnClients.TabIndex = 8;
-            this.btnClients.Text = "Clients";
+            this.btnClients.Text = "Customers";
             this.btnClients.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClients.UseVisualStyleBackColor = false;
             this.btnClients.Click += new System.EventHandler(this.btnClients_Click);
@@ -539,32 +514,15 @@
             // pnlRoomTypes
             // 
             this.pnlRoomTypes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
-            this.pnlRoomTypes.Controls.Add(this.btnRoomTypeDelete);
             this.pnlRoomTypes.Controls.Add(this.btnRoomTypeEdit);
             this.pnlRoomTypes.Controls.Add(this.btnRoomTypeCreate);
             this.pnlRoomTypes.Controls.Add(this.btnRoomTypeView);
             this.pnlRoomTypes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlRoomTypes.Location = new System.Drawing.Point(0, 1091);
+            this.pnlRoomTypes.Location = new System.Drawing.Point(0, 713);
+            this.pnlRoomTypes.Margin = new System.Windows.Forms.Padding(2);
             this.pnlRoomTypes.Name = "pnlRoomTypes";
-            this.pnlRoomTypes.Size = new System.Drawing.Size(252, 162);
+            this.pnlRoomTypes.Size = new System.Drawing.Size(188, 96);
             this.pnlRoomTypes.TabIndex = 15;
-            // 
-            // btnRoomTypeDelete
-            // 
-            this.btnRoomTypeDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
-            this.btnRoomTypeDelete.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnRoomTypeDelete.FlatAppearance.BorderSize = 0;
-            this.btnRoomTypeDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRoomTypeDelete.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnRoomTypeDelete.Location = new System.Drawing.Point(0, 120);
-            this.btnRoomTypeDelete.Name = "btnRoomTypeDelete";
-            this.btnRoomTypeDelete.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnRoomTypeDelete.Size = new System.Drawing.Size(252, 40);
-            this.btnRoomTypeDelete.TabIndex = 5;
-            this.btnRoomTypeDelete.Text = "Delete";
-            this.btnRoomTypeDelete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRoomTypeDelete.UseVisualStyleBackColor = false;
-            this.btnRoomTypeDelete.Click += new System.EventHandler(this.btnRoomTypeDelete_Click);
             // 
             // btnRoomTypeEdit
             // 
@@ -573,10 +531,11 @@
             this.btnRoomTypeEdit.FlatAppearance.BorderSize = 0;
             this.btnRoomTypeEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRoomTypeEdit.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnRoomTypeEdit.Location = new System.Drawing.Point(0, 80);
+            this.btnRoomTypeEdit.Location = new System.Drawing.Point(0, 64);
+            this.btnRoomTypeEdit.Margin = new System.Windows.Forms.Padding(2);
             this.btnRoomTypeEdit.Name = "btnRoomTypeEdit";
-            this.btnRoomTypeEdit.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnRoomTypeEdit.Size = new System.Drawing.Size(252, 40);
+            this.btnRoomTypeEdit.Padding = new System.Windows.Forms.Padding(26, 0, 0, 0);
+            this.btnRoomTypeEdit.Size = new System.Drawing.Size(188, 32);
             this.btnRoomTypeEdit.TabIndex = 2;
             this.btnRoomTypeEdit.Text = "Edit";
             this.btnRoomTypeEdit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -590,10 +549,11 @@
             this.btnRoomTypeCreate.FlatAppearance.BorderSize = 0;
             this.btnRoomTypeCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRoomTypeCreate.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnRoomTypeCreate.Location = new System.Drawing.Point(0, 40);
+            this.btnRoomTypeCreate.Location = new System.Drawing.Point(0, 32);
+            this.btnRoomTypeCreate.Margin = new System.Windows.Forms.Padding(2);
             this.btnRoomTypeCreate.Name = "btnRoomTypeCreate";
-            this.btnRoomTypeCreate.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnRoomTypeCreate.Size = new System.Drawing.Size(252, 40);
+            this.btnRoomTypeCreate.Padding = new System.Windows.Forms.Padding(26, 0, 0, 0);
+            this.btnRoomTypeCreate.Size = new System.Drawing.Size(188, 32);
             this.btnRoomTypeCreate.TabIndex = 1;
             this.btnRoomTypeCreate.Text = "Create";
             this.btnRoomTypeCreate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -610,8 +570,8 @@
             this.btnRoomTypeView.Location = new System.Drawing.Point(0, 0);
             this.btnRoomTypeView.Margin = new System.Windows.Forms.Padding(0);
             this.btnRoomTypeView.Name = "btnRoomTypeView";
-            this.btnRoomTypeView.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnRoomTypeView.Size = new System.Drawing.Size(252, 40);
+            this.btnRoomTypeView.Padding = new System.Windows.Forms.Padding(26, 0, 0, 0);
+            this.btnRoomTypeView.Size = new System.Drawing.Size(188, 32);
             this.btnRoomTypeView.TabIndex = 0;
             this.btnRoomTypeView.Text = "View";
             this.btnRoomTypeView.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -626,10 +586,11 @@
             this.btnRoomTypes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRoomTypes.Font = new System.Drawing.Font("Segoe UI Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRoomTypes.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnRoomTypes.Location = new System.Drawing.Point(0, 1031);
+            this.btnRoomTypes.Location = new System.Drawing.Point(0, 664);
+            this.btnRoomTypes.Margin = new System.Windows.Forms.Padding(2);
             this.btnRoomTypes.Name = "btnRoomTypes";
-            this.btnRoomTypes.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnRoomTypes.Size = new System.Drawing.Size(252, 60);
+            this.btnRoomTypes.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnRoomTypes.Size = new System.Drawing.Size(188, 49);
             this.btnRoomTypes.TabIndex = 14;
             this.btnRoomTypes.Text = "Room Types";
             this.btnRoomTypes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -639,32 +600,14 @@
             // pnlRooms
             // 
             this.pnlRooms.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
-            this.pnlRooms.Controls.Add(this.btnRoomDelete);
             this.pnlRooms.Controls.Add(this.btnRoomEdit);
-            this.pnlRooms.Controls.Add(this.btnRoomCreate);
             this.pnlRooms.Controls.Add(this.btnRoomView);
             this.pnlRooms.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlRooms.Location = new System.Drawing.Point(0, 869);
+            this.pnlRooms.Location = new System.Drawing.Point(0, 600);
+            this.pnlRooms.Margin = new System.Windows.Forms.Padding(2);
             this.pnlRooms.Name = "pnlRooms";
-            this.pnlRooms.Size = new System.Drawing.Size(252, 162);
+            this.pnlRooms.Size = new System.Drawing.Size(188, 64);
             this.pnlRooms.TabIndex = 7;
-            // 
-            // btnRoomDelete
-            // 
-            this.btnRoomDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
-            this.btnRoomDelete.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnRoomDelete.FlatAppearance.BorderSize = 0;
-            this.btnRoomDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRoomDelete.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnRoomDelete.Location = new System.Drawing.Point(0, 120);
-            this.btnRoomDelete.Name = "btnRoomDelete";
-            this.btnRoomDelete.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnRoomDelete.Size = new System.Drawing.Size(252, 40);
-            this.btnRoomDelete.TabIndex = 5;
-            this.btnRoomDelete.Text = "Delete";
-            this.btnRoomDelete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRoomDelete.UseVisualStyleBackColor = false;
-            this.btnRoomDelete.Click += new System.EventHandler(this.btnRoomDelete_Click);
             // 
             // btnRoomEdit
             // 
@@ -673,32 +616,16 @@
             this.btnRoomEdit.FlatAppearance.BorderSize = 0;
             this.btnRoomEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRoomEdit.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnRoomEdit.Location = new System.Drawing.Point(0, 80);
+            this.btnRoomEdit.Location = new System.Drawing.Point(0, 32);
+            this.btnRoomEdit.Margin = new System.Windows.Forms.Padding(2);
             this.btnRoomEdit.Name = "btnRoomEdit";
-            this.btnRoomEdit.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnRoomEdit.Size = new System.Drawing.Size(252, 40);
+            this.btnRoomEdit.Padding = new System.Windows.Forms.Padding(26, 0, 0, 0);
+            this.btnRoomEdit.Size = new System.Drawing.Size(188, 32);
             this.btnRoomEdit.TabIndex = 2;
             this.btnRoomEdit.Text = "Edit";
             this.btnRoomEdit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRoomEdit.UseVisualStyleBackColor = false;
             this.btnRoomEdit.Click += new System.EventHandler(this.btnRoomEdit_Click);
-            // 
-            // btnRoomCreate
-            // 
-            this.btnRoomCreate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
-            this.btnRoomCreate.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnRoomCreate.FlatAppearance.BorderSize = 0;
-            this.btnRoomCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRoomCreate.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnRoomCreate.Location = new System.Drawing.Point(0, 40);
-            this.btnRoomCreate.Name = "btnRoomCreate";
-            this.btnRoomCreate.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnRoomCreate.Size = new System.Drawing.Size(252, 40);
-            this.btnRoomCreate.TabIndex = 1;
-            this.btnRoomCreate.Text = "Create";
-            this.btnRoomCreate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRoomCreate.UseVisualStyleBackColor = false;
-            this.btnRoomCreate.Click += new System.EventHandler(this.btnRoomCreate_Click);
             // 
             // btnRoomView
             // 
@@ -710,8 +637,8 @@
             this.btnRoomView.Location = new System.Drawing.Point(0, 0);
             this.btnRoomView.Margin = new System.Windows.Forms.Padding(0);
             this.btnRoomView.Name = "btnRoomView";
-            this.btnRoomView.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnRoomView.Size = new System.Drawing.Size(252, 40);
+            this.btnRoomView.Padding = new System.Windows.Forms.Padding(26, 0, 0, 0);
+            this.btnRoomView.Size = new System.Drawing.Size(188, 32);
             this.btnRoomView.TabIndex = 0;
             this.btnRoomView.Text = "View";
             this.btnRoomView.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -726,10 +653,11 @@
             this.btnRooms.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRooms.Font = new System.Drawing.Font("Segoe UI Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRooms.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnRooms.Location = new System.Drawing.Point(0, 809);
+            this.btnRooms.Location = new System.Drawing.Point(0, 551);
+            this.btnRooms.Margin = new System.Windows.Forms.Padding(2);
             this.btnRooms.Name = "btnRooms";
-            this.btnRooms.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnRooms.Size = new System.Drawing.Size(252, 60);
+            this.btnRooms.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnRooms.Size = new System.Drawing.Size(188, 49);
             this.btnRooms.TabIndex = 6;
             this.btnRooms.Text = "Rooms";
             this.btnRooms.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -739,32 +667,15 @@
             // pnlTransactions
             // 
             this.pnlTransactions.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pnlTransactions.Controls.Add(this.btnTransactionDelete);
             this.pnlTransactions.Controls.Add(this.btnTransactionEdit);
             this.pnlTransactions.Controls.Add(this.btnTransactionCreate);
             this.pnlTransactions.Controls.Add(this.btnTransactionsView);
             this.pnlTransactions.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlTransactions.Location = new System.Drawing.Point(0, 647);
+            this.pnlTransactions.Location = new System.Drawing.Point(0, 456);
+            this.pnlTransactions.Margin = new System.Windows.Forms.Padding(2);
             this.pnlTransactions.Name = "pnlTransactions";
-            this.pnlTransactions.Size = new System.Drawing.Size(252, 162);
+            this.pnlTransactions.Size = new System.Drawing.Size(188, 95);
             this.pnlTransactions.TabIndex = 13;
-            // 
-            // btnTransactionDelete
-            // 
-            this.btnTransactionDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
-            this.btnTransactionDelete.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTransactionDelete.FlatAppearance.BorderSize = 0;
-            this.btnTransactionDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTransactionDelete.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnTransactionDelete.Location = new System.Drawing.Point(0, 120);
-            this.btnTransactionDelete.Name = "btnTransactionDelete";
-            this.btnTransactionDelete.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnTransactionDelete.Size = new System.Drawing.Size(252, 40);
-            this.btnTransactionDelete.TabIndex = 5;
-            this.btnTransactionDelete.Text = "Delete";
-            this.btnTransactionDelete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTransactionDelete.UseVisualStyleBackColor = false;
-            this.btnTransactionDelete.Click += new System.EventHandler(this.btnTransactionDelete_Click);
             // 
             // btnTransactionEdit
             // 
@@ -773,10 +684,11 @@
             this.btnTransactionEdit.FlatAppearance.BorderSize = 0;
             this.btnTransactionEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTransactionEdit.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnTransactionEdit.Location = new System.Drawing.Point(0, 80);
+            this.btnTransactionEdit.Location = new System.Drawing.Point(0, 64);
+            this.btnTransactionEdit.Margin = new System.Windows.Forms.Padding(2);
             this.btnTransactionEdit.Name = "btnTransactionEdit";
-            this.btnTransactionEdit.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnTransactionEdit.Size = new System.Drawing.Size(252, 40);
+            this.btnTransactionEdit.Padding = new System.Windows.Forms.Padding(26, 0, 0, 0);
+            this.btnTransactionEdit.Size = new System.Drawing.Size(188, 32);
             this.btnTransactionEdit.TabIndex = 2;
             this.btnTransactionEdit.Text = "Edit";
             this.btnTransactionEdit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -790,10 +702,11 @@
             this.btnTransactionCreate.FlatAppearance.BorderSize = 0;
             this.btnTransactionCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTransactionCreate.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnTransactionCreate.Location = new System.Drawing.Point(0, 40);
+            this.btnTransactionCreate.Location = new System.Drawing.Point(0, 32);
+            this.btnTransactionCreate.Margin = new System.Windows.Forms.Padding(2);
             this.btnTransactionCreate.Name = "btnTransactionCreate";
-            this.btnTransactionCreate.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnTransactionCreate.Size = new System.Drawing.Size(252, 40);
+            this.btnTransactionCreate.Padding = new System.Windows.Forms.Padding(26, 0, 0, 0);
+            this.btnTransactionCreate.Size = new System.Drawing.Size(188, 32);
             this.btnTransactionCreate.TabIndex = 1;
             this.btnTransactionCreate.Text = "Create";
             this.btnTransactionCreate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -810,8 +723,8 @@
             this.btnTransactionsView.Location = new System.Drawing.Point(0, 0);
             this.btnTransactionsView.Margin = new System.Windows.Forms.Padding(0);
             this.btnTransactionsView.Name = "btnTransactionsView";
-            this.btnTransactionsView.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnTransactionsView.Size = new System.Drawing.Size(252, 40);
+            this.btnTransactionsView.Padding = new System.Windows.Forms.Padding(26, 0, 0, 0);
+            this.btnTransactionsView.Size = new System.Drawing.Size(188, 32);
             this.btnTransactionsView.TabIndex = 0;
             this.btnTransactionsView.Text = "View";
             this.btnTransactionsView.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -826,10 +739,11 @@
             this.btnTransactions.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTransactions.Font = new System.Drawing.Font("Segoe UI Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTransactions.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnTransactions.Location = new System.Drawing.Point(0, 587);
+            this.btnTransactions.Location = new System.Drawing.Point(0, 407);
+            this.btnTransactions.Margin = new System.Windows.Forms.Padding(2);
             this.btnTransactions.Name = "btnTransactions";
-            this.btnTransactions.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnTransactions.Size = new System.Drawing.Size(252, 60);
+            this.btnTransactions.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnTransactions.Size = new System.Drawing.Size(188, 49);
             this.btnTransactions.TabIndex = 12;
             this.btnTransactions.Text = "Transactions";
             this.btnTransactions.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -839,32 +753,15 @@
             // pnlChargeableItems
             // 
             this.pnlChargeableItems.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
-            this.pnlChargeableItems.Controls.Add(this.btnChargeableItemDelete);
             this.pnlChargeableItems.Controls.Add(this.btnChargeableItemEdit);
             this.pnlChargeableItems.Controls.Add(this.btnChargeableItemCreate);
             this.pnlChargeableItems.Controls.Add(this.btnChargeableItemView);
             this.pnlChargeableItems.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlChargeableItems.Location = new System.Drawing.Point(0, 425);
+            this.pnlChargeableItems.Location = new System.Drawing.Point(0, 312);
+            this.pnlChargeableItems.Margin = new System.Windows.Forms.Padding(2);
             this.pnlChargeableItems.Name = "pnlChargeableItems";
-            this.pnlChargeableItems.Size = new System.Drawing.Size(252, 162);
+            this.pnlChargeableItems.Size = new System.Drawing.Size(188, 95);
             this.pnlChargeableItems.TabIndex = 5;
-            // 
-            // btnChargeableItemDelete
-            // 
-            this.btnChargeableItemDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
-            this.btnChargeableItemDelete.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnChargeableItemDelete.FlatAppearance.BorderSize = 0;
-            this.btnChargeableItemDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChargeableItemDelete.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnChargeableItemDelete.Location = new System.Drawing.Point(0, 120);
-            this.btnChargeableItemDelete.Name = "btnChargeableItemDelete";
-            this.btnChargeableItemDelete.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnChargeableItemDelete.Size = new System.Drawing.Size(252, 40);
-            this.btnChargeableItemDelete.TabIndex = 4;
-            this.btnChargeableItemDelete.Text = "Delete";
-            this.btnChargeableItemDelete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnChargeableItemDelete.UseVisualStyleBackColor = false;
-            this.btnChargeableItemDelete.Click += new System.EventHandler(this.btnChargeableItemDelete_Click);
             // 
             // btnChargeableItemEdit
             // 
@@ -873,10 +770,11 @@
             this.btnChargeableItemEdit.FlatAppearance.BorderSize = 0;
             this.btnChargeableItemEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChargeableItemEdit.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnChargeableItemEdit.Location = new System.Drawing.Point(0, 80);
+            this.btnChargeableItemEdit.Location = new System.Drawing.Point(0, 64);
+            this.btnChargeableItemEdit.Margin = new System.Windows.Forms.Padding(2);
             this.btnChargeableItemEdit.Name = "btnChargeableItemEdit";
-            this.btnChargeableItemEdit.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnChargeableItemEdit.Size = new System.Drawing.Size(252, 40);
+            this.btnChargeableItemEdit.Padding = new System.Windows.Forms.Padding(26, 0, 0, 0);
+            this.btnChargeableItemEdit.Size = new System.Drawing.Size(188, 32);
             this.btnChargeableItemEdit.TabIndex = 2;
             this.btnChargeableItemEdit.Text = "Edit";
             this.btnChargeableItemEdit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -890,10 +788,11 @@
             this.btnChargeableItemCreate.FlatAppearance.BorderSize = 0;
             this.btnChargeableItemCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChargeableItemCreate.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnChargeableItemCreate.Location = new System.Drawing.Point(0, 40);
+            this.btnChargeableItemCreate.Location = new System.Drawing.Point(0, 32);
+            this.btnChargeableItemCreate.Margin = new System.Windows.Forms.Padding(2);
             this.btnChargeableItemCreate.Name = "btnChargeableItemCreate";
-            this.btnChargeableItemCreate.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnChargeableItemCreate.Size = new System.Drawing.Size(252, 40);
+            this.btnChargeableItemCreate.Padding = new System.Windows.Forms.Padding(26, 0, 0, 0);
+            this.btnChargeableItemCreate.Size = new System.Drawing.Size(188, 32);
             this.btnChargeableItemCreate.TabIndex = 1;
             this.btnChargeableItemCreate.Text = "Create";
             this.btnChargeableItemCreate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -910,8 +809,8 @@
             this.btnChargeableItemView.Location = new System.Drawing.Point(0, 0);
             this.btnChargeableItemView.Margin = new System.Windows.Forms.Padding(0);
             this.btnChargeableItemView.Name = "btnChargeableItemView";
-            this.btnChargeableItemView.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnChargeableItemView.Size = new System.Drawing.Size(252, 40);
+            this.btnChargeableItemView.Padding = new System.Windows.Forms.Padding(26, 0, 0, 0);
+            this.btnChargeableItemView.Size = new System.Drawing.Size(188, 32);
             this.btnChargeableItemView.TabIndex = 0;
             this.btnChargeableItemView.Text = "View";
             this.btnChargeableItemView.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -926,10 +825,11 @@
             this.btnChargeableItems.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChargeableItems.Font = new System.Drawing.Font("Segoe UI Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChargeableItems.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnChargeableItems.Location = new System.Drawing.Point(0, 365);
+            this.btnChargeableItems.Location = new System.Drawing.Point(0, 263);
+            this.btnChargeableItems.Margin = new System.Windows.Forms.Padding(2);
             this.btnChargeableItems.Name = "btnChargeableItems";
-            this.btnChargeableItems.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnChargeableItems.Size = new System.Drawing.Size(252, 60);
+            this.btnChargeableItems.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnChargeableItems.Size = new System.Drawing.Size(188, 49);
             this.btnChargeableItems.TabIndex = 4;
             this.btnChargeableItems.Text = "Chargeable Items";
             this.btnChargeableItems.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -942,9 +842,10 @@
             this.pnlBills.Controls.Add(this.btnBillEdit);
             this.pnlBills.Controls.Add(this.btnBillView);
             this.pnlBills.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlBills.Location = new System.Drawing.Point(0, 282);
+            this.pnlBills.Location = new System.Drawing.Point(0, 196);
+            this.pnlBills.Margin = new System.Windows.Forms.Padding(2);
             this.pnlBills.Name = "pnlBills";
-            this.pnlBills.Size = new System.Drawing.Size(252, 83);
+            this.pnlBills.Size = new System.Drawing.Size(188, 67);
             this.pnlBills.TabIndex = 3;
             // 
             // btnBillEdit
@@ -954,10 +855,11 @@
             this.btnBillEdit.FlatAppearance.BorderSize = 0;
             this.btnBillEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBillEdit.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnBillEdit.Location = new System.Drawing.Point(0, 40);
+            this.btnBillEdit.Location = new System.Drawing.Point(0, 32);
+            this.btnBillEdit.Margin = new System.Windows.Forms.Padding(2);
             this.btnBillEdit.Name = "btnBillEdit";
-            this.btnBillEdit.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnBillEdit.Size = new System.Drawing.Size(252, 40);
+            this.btnBillEdit.Padding = new System.Windows.Forms.Padding(26, 0, 0, 0);
+            this.btnBillEdit.Size = new System.Drawing.Size(188, 32);
             this.btnBillEdit.TabIndex = 2;
             this.btnBillEdit.Text = "Edit";
             this.btnBillEdit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -974,8 +876,8 @@
             this.btnBillView.Location = new System.Drawing.Point(0, 0);
             this.btnBillView.Margin = new System.Windows.Forms.Padding(0);
             this.btnBillView.Name = "btnBillView";
-            this.btnBillView.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnBillView.Size = new System.Drawing.Size(252, 40);
+            this.btnBillView.Padding = new System.Windows.Forms.Padding(26, 0, 0, 0);
+            this.btnBillView.Size = new System.Drawing.Size(188, 32);
             this.btnBillView.TabIndex = 0;
             this.btnBillView.Text = "View";
             this.btnBillView.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -990,10 +892,11 @@
             this.btnBills.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBills.Font = new System.Drawing.Font("Segoe UI Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBills.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnBills.Location = new System.Drawing.Point(0, 222);
+            this.btnBills.Location = new System.Drawing.Point(0, 147);
+            this.btnBills.Margin = new System.Windows.Forms.Padding(2);
             this.btnBills.Name = "btnBills";
-            this.btnBills.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnBills.Size = new System.Drawing.Size(252, 60);
+            this.btnBills.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnBills.Size = new System.Drawing.Size(188, 49);
             this.btnBills.TabIndex = 2;
             this.btnBills.Text = "Bills";
             this.btnBills.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1003,32 +906,15 @@
             // pnlReservations
             // 
             this.pnlReservations.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
-            this.pnlReservations.Controls.Add(this.btnReservationDelete);
             this.pnlReservations.Controls.Add(this.btnReservationEdit);
             this.pnlReservations.Controls.Add(this.btnReservationCreate);
             this.pnlReservations.Controls.Add(this.btnReservationView);
             this.pnlReservations.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlReservations.Location = new System.Drawing.Point(0, 60);
+            this.pnlReservations.Location = new System.Drawing.Point(0, 49);
+            this.pnlReservations.Margin = new System.Windows.Forms.Padding(2);
             this.pnlReservations.Name = "pnlReservations";
-            this.pnlReservations.Size = new System.Drawing.Size(252, 162);
+            this.pnlReservations.Size = new System.Drawing.Size(188, 98);
             this.pnlReservations.TabIndex = 1;
-            // 
-            // btnReservationDelete
-            // 
-            this.btnReservationDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
-            this.btnReservationDelete.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnReservationDelete.FlatAppearance.BorderSize = 0;
-            this.btnReservationDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReservationDelete.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnReservationDelete.Location = new System.Drawing.Point(0, 120);
-            this.btnReservationDelete.Name = "btnReservationDelete";
-            this.btnReservationDelete.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnReservationDelete.Size = new System.Drawing.Size(252, 40);
-            this.btnReservationDelete.TabIndex = 3;
-            this.btnReservationDelete.Text = "Delete";
-            this.btnReservationDelete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReservationDelete.UseVisualStyleBackColor = false;
-            this.btnReservationDelete.Click += new System.EventHandler(this.btnReservationDelete_Click);
             // 
             // btnReservationEdit
             // 
@@ -1037,10 +923,11 @@
             this.btnReservationEdit.FlatAppearance.BorderSize = 0;
             this.btnReservationEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReservationEdit.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnReservationEdit.Location = new System.Drawing.Point(0, 80);
+            this.btnReservationEdit.Location = new System.Drawing.Point(0, 64);
+            this.btnReservationEdit.Margin = new System.Windows.Forms.Padding(2);
             this.btnReservationEdit.Name = "btnReservationEdit";
-            this.btnReservationEdit.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnReservationEdit.Size = new System.Drawing.Size(252, 40);
+            this.btnReservationEdit.Padding = new System.Windows.Forms.Padding(26, 0, 0, 0);
+            this.btnReservationEdit.Size = new System.Drawing.Size(188, 32);
             this.btnReservationEdit.TabIndex = 2;
             this.btnReservationEdit.Text = "Edit";
             this.btnReservationEdit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1054,10 +941,11 @@
             this.btnReservationCreate.FlatAppearance.BorderSize = 0;
             this.btnReservationCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReservationCreate.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnReservationCreate.Location = new System.Drawing.Point(0, 40);
+            this.btnReservationCreate.Location = new System.Drawing.Point(0, 32);
+            this.btnReservationCreate.Margin = new System.Windows.Forms.Padding(2);
             this.btnReservationCreate.Name = "btnReservationCreate";
-            this.btnReservationCreate.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnReservationCreate.Size = new System.Drawing.Size(252, 40);
+            this.btnReservationCreate.Padding = new System.Windows.Forms.Padding(26, 0, 0, 0);
+            this.btnReservationCreate.Size = new System.Drawing.Size(188, 32);
             this.btnReservationCreate.TabIndex = 1;
             this.btnReservationCreate.Text = "Create";
             this.btnReservationCreate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1074,8 +962,8 @@
             this.btnReservationView.Location = new System.Drawing.Point(0, 0);
             this.btnReservationView.Margin = new System.Windows.Forms.Padding(0);
             this.btnReservationView.Name = "btnReservationView";
-            this.btnReservationView.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnReservationView.Size = new System.Drawing.Size(252, 40);
+            this.btnReservationView.Padding = new System.Windows.Forms.Padding(26, 0, 0, 0);
+            this.btnReservationView.Size = new System.Drawing.Size(188, 32);
             this.btnReservationView.TabIndex = 0;
             this.btnReservationView.Text = "View";
             this.btnReservationView.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1091,9 +979,10 @@
             this.btnReservations.Font = new System.Drawing.Font("Segoe UI Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReservations.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnReservations.Location = new System.Drawing.Point(0, 0);
+            this.btnReservations.Margin = new System.Windows.Forms.Padding(2);
             this.btnReservations.Name = "btnReservations";
-            this.btnReservations.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnReservations.Size = new System.Drawing.Size(252, 60);
+            this.btnReservations.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnReservations.Size = new System.Drawing.Size(188, 49);
             this.btnReservations.TabIndex = 0;
             this.btnReservations.Text = "Reservations";
             this.btnReservations.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1107,17 +996,19 @@
             this.pnlActiveUser.Controls.Add(this.lblUserName);
             this.pnlActiveUser.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlActiveUser.Location = new System.Drawing.Point(0, 0);
+            this.pnlActiveUser.Margin = new System.Windows.Forms.Padding(2);
             this.pnlActiveUser.Name = "pnlActiveUser";
-            this.pnlActiveUser.Size = new System.Drawing.Size(273, 129);
+            this.pnlActiveUser.Size = new System.Drawing.Size(205, 105);
             this.pnlActiveUser.TabIndex = 3;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::KingWilliamApp.Properties.Resources.rsz_default_profile;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(28, 34);
+            this.pictureBox1.Location = new System.Drawing.Point(21, 28);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(60, 60);
+            this.pictureBox1.Size = new System.Drawing.Size(45, 49);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -1127,9 +1018,10 @@
             this.lblUserRole.AutoSize = true;
             this.lblUserRole.Font = new System.Drawing.Font("Segoe UI Black", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUserRole.ForeColor = System.Drawing.Color.Silver;
-            this.lblUserRole.Location = new System.Drawing.Point(96, 75);
+            this.lblUserRole.Location = new System.Drawing.Point(72, 61);
+            this.lblUserRole.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUserRole.Name = "lblUserRole";
-            this.lblUserRole.Size = new System.Drawing.Size(107, 19);
+            this.lblUserRole.Size = new System.Drawing.Size(83, 13);
             this.lblUserRole.TabIndex = 2;
             this.lblUserRole.Text = "Administrator";
             // 
@@ -1138,9 +1030,10 @@
             this.lblUserName.AutoSize = true;
             this.lblUserName.Font = new System.Drawing.Font("Segoe UI Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUserName.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblUserName.Location = new System.Drawing.Point(94, 45);
+            this.lblUserName.Location = new System.Drawing.Point(70, 37);
+            this.lblUserName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(109, 23);
+            this.lblUserName.Size = new System.Drawing.Size(90, 19);
             this.lblUserName.TabIndex = 1;
             this.lblUserName.Text = "Basil Cleese";
             // 
@@ -1150,9 +1043,10 @@
             this.pnlChildForm.Controls.Add(this.lblKingWilliam);
             this.pnlChildForm.Controls.Add(this.pbxKingWilliam);
             this.pnlChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlChildForm.Location = new System.Drawing.Point(273, 0);
+            this.pnlChildForm.Location = new System.Drawing.Point(205, 0);
+            this.pnlChildForm.Margin = new System.Windows.Forms.Padding(2);
             this.pnlChildForm.Name = "pnlChildForm";
-            this.pnlChildForm.Size = new System.Drawing.Size(789, 673);
+            this.pnlChildForm.Size = new System.Drawing.Size(593, 553);
             this.pnlChildForm.TabIndex = 1;
             // 
             // lblKingWilliam
@@ -1160,9 +1054,10 @@
             this.lblKingWilliam.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblKingWilliam.Font = new System.Drawing.Font("Segoe UI Black", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblKingWilliam.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
-            this.lblKingWilliam.Location = new System.Drawing.Point(298, 251);
+            this.lblKingWilliam.Location = new System.Drawing.Point(224, 207);
+            this.lblKingWilliam.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblKingWilliam.Name = "lblKingWilliam";
-            this.lblKingWilliam.Size = new System.Drawing.Size(373, 141);
+            this.lblKingWilliam.Size = new System.Drawing.Size(280, 115);
             this.lblKingWilliam.TabIndex = 1;
             this.lblKingWilliam.Text = "The King William Hotel";
             // 
@@ -1171,23 +1066,25 @@
             this.pbxKingWilliam.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pbxKingWilliam.BackgroundImage = global::KingWilliamApp.Properties.Resources.kw_logo;
             this.pbxKingWilliam.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbxKingWilliam.Location = new System.Drawing.Point(140, 251);
+            this.pbxKingWilliam.Location = new System.Drawing.Point(105, 207);
+            this.pbxKingWilliam.Margin = new System.Windows.Forms.Padding(2);
             this.pbxKingWilliam.Name = "pbxKingWilliam";
-            this.pbxKingWilliam.Size = new System.Drawing.Size(140, 140);
+            this.pbxKingWilliam.Size = new System.Drawing.Size(105, 114);
             this.pbxKingWilliam.TabIndex = 0;
             this.pbxKingWilliam.TabStop = false;
             // 
             // frmMainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(1062, 673);
+            this.ClientSize = new System.Drawing.Size(798, 553);
             this.Controls.Add(this.pnlChildForm);
             this.Controls.Add(this.pnlMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(1080, 720);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MinimumSize = new System.Drawing.Size(814, 592);
             this.Name = "frmMainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "The King William Hotel";
@@ -1231,7 +1128,6 @@
         private System.Windows.Forms.Button btnReservationView;
         private System.Windows.Forms.Button btnReservationEdit;
         private System.Windows.Forms.Button btnReservationCreate;
-        private System.Windows.Forms.Button btnReservationDelete;
         private System.Windows.Forms.Panel pnlBills;
         private System.Windows.Forms.Button btnBillEdit;
         private System.Windows.Forms.Button btnBillView;
@@ -1244,40 +1140,33 @@
         private System.Windows.Forms.Button btnClients;
         private System.Windows.Forms.Panel pnlRooms;
         private System.Windows.Forms.Button btnRoomEdit;
-        private System.Windows.Forms.Button btnRoomCreate;
         private System.Windows.Forms.Button btnRoomView;
         private System.Windows.Forms.Button btnRooms;
         private System.Windows.Forms.Panel pnlChargeableItems;
         private System.Windows.Forms.Button btnChargeableItemEdit;
         private System.Windows.Forms.Button btnChargeableItemCreate;
         private System.Windows.Forms.Button btnChargeableItemView;
-        private System.Windows.Forms.Button btnChargeableItemDelete;
-        private System.Windows.Forms.Button btnRoomDelete;
         private System.Windows.Forms.Panel pnlStaff;
         private System.Windows.Forms.Button btnStaffEdit;
         private System.Windows.Forms.Button btnStaffCreate;
         private System.Windows.Forms.Button btnStaffView;
         private System.Windows.Forms.Button btnStaff;
         private System.Windows.Forms.Panel pnlEmploymentPositions;
-        private System.Windows.Forms.Button btnEmploymentPositionDelete;
         private System.Windows.Forms.Button btnEmploymentPositionEdit;
         private System.Windows.Forms.Button btnEmploymentPositionCreate;
         private System.Windows.Forms.Button btnEmploymentPositionView;
         private System.Windows.Forms.Button btnEmploymentPositions;
         private System.Windows.Forms.Panel pnlUsers;
-        private System.Windows.Forms.Button btnUserDelete;
         private System.Windows.Forms.Button btnUserEdit;
         private System.Windows.Forms.Button btnUserCreate;
         private System.Windows.Forms.Button btnUserView;
         private System.Windows.Forms.Button btnUsers;
         private System.Windows.Forms.Panel pnlRoomTypes;
-        private System.Windows.Forms.Button btnRoomTypeDelete;
         private System.Windows.Forms.Button btnRoomTypeEdit;
         private System.Windows.Forms.Button btnRoomTypeCreate;
         private System.Windows.Forms.Button btnRoomTypeView;
         private System.Windows.Forms.Button btnRoomTypes;
         private System.Windows.Forms.Panel pnlTransactions;
-        private System.Windows.Forms.Button btnTransactionDelete;
         private System.Windows.Forms.Button btnTransactionEdit;
         private System.Windows.Forms.Button btnTransactionCreate;
         private System.Windows.Forms.Button btnTransactionsView;

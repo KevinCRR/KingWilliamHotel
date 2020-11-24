@@ -61,17 +61,65 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmBill.cs">
+    <Compile Include="frmCreateEmploymentPositions.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBill.Designer.cs">
-      <DependentUpon>frmBill.cs</DependentUpon>
+    <Compile Include="frmCreateEmploymentPositions.designer.cs">
+      <DependentUpon>frmCreateEmploymentPositions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCreateTransactions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCreateTransactions.designer.cs">
+      <DependentUpon>frmCreateTransactions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCreateUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCreateUsers.designer.cs">
+      <DependentUpon>frmCreateUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditBill.designer.cs">
+      <DependentUpon>frmEditBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditEmploymentPositions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditEmploymentPositions.designer.cs">
+      <DependentUpon>frmEditEmploymentPositions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditTransactions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditTransactions.designer.cs">
+      <DependentUpon>frmEditTransactions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditUsers.designer.cs">
+      <DependentUpon>frmEditUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmViewBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmViewBill.Designer.cs">
+      <DependentUpon>frmViewBill.cs</DependentUpon>
     </Compile>
     <Compile Include="frmCreateChargeableItem.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmCreateChargeableItem.Designer.cs">
       <DependentUpon>frmCreateChargeableItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCreateCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCreateCustomer.Designer.cs">
+      <DependentUpon>frmCreateCustomer.cs</DependentUpon>
     </Compile>
     <Compile Include="frmCreateReservation.cs">
       <SubType>Form</SubType>
@@ -85,12 +133,6 @@
     <Compile Include="frmCreateStaff.Designer.cs">
       <DependentUpon>frmCreateStaff.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmDeleteReservation.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmDeleteReservation.Designer.cs">
-      <DependentUpon>frmDeleteReservation.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmEditReservations.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,17 +145,17 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmUpdateChargeableItem.cs">
+    <Compile Include="frmEditChargeableItem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmUpdateChargeableItem.Designer.cs">
-      <DependentUpon>frmUpdateChargeableItem.cs</DependentUpon>
+    <Compile Include="frmEditChargeableItem.Designer.cs">
+      <DependentUpon>frmEditChargeableItem.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmUpdateStaff.cs">
+    <Compile Include="frmEditStaff.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmUpdateStaff.Designer.cs">
-      <DependentUpon>frmUpdateStaff.cs</DependentUpon>
+    <Compile Include="frmEditStaff.Designer.cs">
+      <DependentUpon>frmEditStaff.cs</DependentUpon>
     </Compile>
     <Compile Include="frmViewChargeableItems.cs">
       <SubType>Form</SubType>
@@ -121,11 +163,17 @@
     <Compile Include="frmViewChargeableItems.Designer.cs">
       <DependentUpon>frmViewChargeableItems.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmViewClients.cs">
+    <Compile Include="frmViewCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmViewClients.Designer.cs">
-      <DependentUpon>frmViewClients.cs</DependentUpon>
+    <Compile Include="frmViewCustomer.designer.cs">
+      <DependentUpon>frmViewCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmViewEmploymentPositions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmViewEmploymentPositions.designer.cs">
+      <DependentUpon>frmViewEmploymentPositions.cs</DependentUpon>
     </Compile>
     <Compile Include="frmViewReservations.cs">
       <SubType>Form</SubType>
@@ -139,52 +187,79 @@
     <Compile Include="frmMainForm.Designer.cs">
       <DependentUpon>frmMainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmViewRooms.cs">
+    <Compile Include="frmViewRoom.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmViewRooms.Designer.cs">
-      <DependentUpon>frmViewRooms.cs</DependentUpon>
+    <Compile Include="frmViewRoom.designer.cs">
+      <DependentUpon>frmViewRoom.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmUpdateClient.cs">
+    <Compile Include="frmEditCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmUpdateClient.Designer.cs">
-      <DependentUpon>frmUpdateClient.cs</DependentUpon>
+    <Compile Include="frmEditCustomer.Designer.cs">
+      <DependentUpon>frmEditCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmUpdateReservation.cs">
+    <Compile Include="frmEditRoom.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmUpdateReservation.Designer.cs">
-      <DependentUpon>frmUpdateReservation.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmUpdateRoom.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmUpdateRoom.Designer.cs">
-      <DependentUpon>frmUpdateRoom.cs</DependentUpon>
+    <Compile Include="frmEditRoom.Designer.cs">
+      <DependentUpon>frmEditRoom.cs</DependentUpon>
     </Compile>
     <Compile Include="frmViewStaff.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmViewStaff.Designer.cs">
+    <Compile Include="frmViewStaff.designer.cs">
       <DependentUpon>frmViewStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmViewTransactions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmViewTransactions.designer.cs">
+      <DependentUpon>frmViewTransactions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmViewUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmViewUsers.designer.cs">
+      <DependentUpon>frmViewUsers.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmBill.resx">
-      <DependentUpon>frmBill.cs</DependentUpon>
+    <EmbeddedResource Include="frmCreateEmploymentPositions.resx">
+      <DependentUpon>frmCreateEmploymentPositions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCreateTransactions.resx">
+      <DependentUpon>frmCreateTransactions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCreateUsers.resx">
+      <DependentUpon>frmCreateUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditBill.resx">
+      <DependentUpon>frmEditBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditEmploymentPositions.resx">
+      <DependentUpon>frmEditEmploymentPositions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditTransactions.resx">
+      <DependentUpon>frmEditTransactions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditUsers.resx">
+      <DependentUpon>frmEditUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmViewBill.resx">
+      <DependentUpon>frmViewBill.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCreateChargeableItem.resx">
       <DependentUpon>frmCreateChargeableItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCreateCustomer.resx">
+      <DependentUpon>frmCreateCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCreateReservation.resx">
       <DependentUpon>frmCreateReservation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCreateStaff.resx">
       <DependentUpon>frmCreateStaff.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmDeleteReservation.resx">
-      <DependentUpon>frmDeleteReservation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEditReservations.resx">
       <DependentUpon>frmEditReservations.cs</DependentUpon>
@@ -195,35 +270,41 @@
     <EmbeddedResource Include="frmMainForm.resx">
       <DependentUpon>frmMainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmUpdateChargeableItem.resx">
-      <DependentUpon>frmUpdateChargeableItem.cs</DependentUpon>
+    <EmbeddedResource Include="frmEditChargeableItem.resx">
+      <DependentUpon>frmEditChargeableItem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmUpdateClient.resx">
-      <DependentUpon>frmUpdateClient.cs</DependentUpon>
+    <EmbeddedResource Include="frmEditCustomer.resx">
+      <DependentUpon>frmEditCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmUpdateReservation.resx">
-      <DependentUpon>frmUpdateReservation.cs</DependentUpon>
+    <EmbeddedResource Include="frmEditRoom.resx">
+      <DependentUpon>frmEditRoom.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmUpdateRoom.resx">
-      <DependentUpon>frmUpdateRoom.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmUpdateStaff.resx">
-      <DependentUpon>frmUpdateStaff.cs</DependentUpon>
+    <EmbeddedResource Include="frmEditStaff.resx">
+      <DependentUpon>frmEditStaff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmViewChargeableItems.resx">
       <DependentUpon>frmViewChargeableItems.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmViewClients.resx">
-      <DependentUpon>frmViewClients.cs</DependentUpon>
+    <EmbeddedResource Include="frmViewCustomer.resx">
+      <DependentUpon>frmViewCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmViewEmploymentPositions.resx">
+      <DependentUpon>frmViewEmploymentPositions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmViewReservations.resx">
       <DependentUpon>frmViewReservations.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmViewRooms.resx">
-      <DependentUpon>frmViewRooms.cs</DependentUpon>
+    <EmbeddedResource Include="frmViewRoom.resx">
+      <DependentUpon>frmViewRoom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmViewStaff.resx">
       <DependentUpon>frmViewStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmViewTransactions.resx">
+      <DependentUpon>frmViewTransactions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmViewUsers.resx">
+      <DependentUpon>frmViewUsers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
