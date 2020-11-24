@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Address.cs" />
+    <Compile Include="Bill.cs" />
     <Compile Include="Customer.cs" />
     <Compile Include="DBL.cs" />
     <Compile Include="frmBill.cs">

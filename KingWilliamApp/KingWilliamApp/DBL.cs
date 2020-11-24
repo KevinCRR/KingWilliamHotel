@@ -24,7 +24,7 @@ namespace KingWilliamApp
 
         #endregion
 
-        #region "Methods"
+        #region "Insert Methods"  
 
         internal static int InsertNewAddress(Address insertAddress)
         {
@@ -106,17 +106,15 @@ namespace KingWilliamApp
             // Declare the connection
             SqlConnection dbConnection = new SqlConnection(GetConnectionString());
 
-            //Check if customer exists
-
             // Create new SQL command and assign it paramaters
             SqlCommand command = new SqlCommand("INSERT INTO tblReservations VALUES(@numberOfGuests, @startDate, @endDate, @notes, @customerID, @billID, @roomNumber)", dbConnection);
-            //command.Parameters.AddWithValue("@firstName", insertWorker.FirstName);
-            //command.Parameters.AddWithValue("@lastName", insertWorker.LastName);
-            //command.Parameters.AddWithValue("@messages", insertWorker.Messages);
-            //command.Parameters.AddWithValue("@pay", insertWorker.Pay);
-            //command.Parameters.AddWithValue("@type", insertWorker.Type);
-            //command.Parameters.AddWithValue("@entryDate", insertWorker.EntryDate);
-            //command.Parameters.AddWithValue("@createdBy", insertWorker.CreatedBy);
+            command.Parameters.AddWithValue("@numberOfGuests", insertReservation.NumberOfGuests);
+            command.Parameters.AddWithValue("@startDate", insertReservation.StartDate);
+            command.Parameters.AddWithValue("@endDate", insertReservation.EndDate);
+            command.Parameters.AddWithValue("@notes", insertReservation.Notes);
+            command.Parameters.AddWithValue("@customerID", insertReservation.CustomerID);
+            command.Parameters.AddWithValue("@billID", insertReservation.BillID);
+            command.Parameters.AddWithValue("@roomNumber", insertReservation.RoomNumber);
 
             // Try to insert the new record, return result
             try
@@ -128,20 +126,55 @@ namespace KingWilliamApp
             }
             catch (Exception ex)
             {
-                throw new DataException("Error in InsertNewRecord", ex);
+                throw new DataException("Error in InsertNewReservation", ex);
             }
             finally
             {
                 dbConnection.Close();
             }
 
-            // Return the true if this worked, false if it failed
             return returnValue;
         }
 
-        
+        internal static int InsertNewBill(Bill insertBill)
+        {
+            // Create return value
+            int returnValue = 0;
 
-        internal static Customer GetOneRow(int workerId)
+            // Declare the connection
+            SqlConnection dbConnection = new SqlConnection(GetConnectionString());
+
+            // Create new SQL command and assign it paramaters
+            SqlCommand command = new SqlCommand("INSERT INTO tblCustomerBilling VALUES(@billAmount, @paymentType, @amountOwing)", dbConnection);
+            command.Parameters.AddWithValue("@billAmount", insertBill.BillAmount);
+            command.Parameters.AddWithValue("@paymentType", insertBill.PaymentType);
+            command.Parameters.AddWithValue("@amountOwing", insertBill.AmountOwing);
+
+            // Try to insert the new record, return result
+            try
+            {
+                dbConnection.Open();
+                // Try to insert the new record, return result
+                returnValue = (int)command.ExecuteScalar();
+
+            }
+            catch (Exception ex)
+            {
+                throw new DataException("Error in InsertNewBill", ex);
+            }
+            finally
+            {
+                dbConnection.Close();
+            }
+
+            return returnValue;
+        }
+
+        #endregion "Insert Methods"  
+
+        #region "Select Methods"
+
+        internal static Customer GetOneCustomer(int customerID)
         {
             // Declare new worker object
             Worker returnWorker = new PieceworkWorker();

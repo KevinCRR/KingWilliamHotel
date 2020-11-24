@@ -13,17 +13,12 @@ namespace KingWilliamApp
 
         DateTime startDate;
         DateTime endDate;
-        int roomNumber;
         int numberOfGuests;
-        string firstName;
-        string lastName;
-        string phoneNumber;
-        string address1;
-        string address2;
-        string city;
-        int province;
-        string country;
-        string postalCode;
+        int customerID;
+        int billID;
+        int roomNumber;
+        //int customerID;
+        //int billID;
         string notes;
 
         #endregion
@@ -35,19 +30,37 @@ namespace KingWilliamApp
             string address1Value, string address2Value, string cityValue, int provinceValue, string countryValue, 
             string postalCodeValue, string notesValue)
         {
+            Customer newCustomer = new Customer(firstNameValue, lastNameValue, phoneNumberValue,
+                address1Value, address2Value, cityValue, provinceValue, countryValue, postalCodeValue);
+
+            if (newCustomer.CustomerID != 0)
+            {
+                Bill newBill = new Bill();
+
+                if (newBill.BillID != 0)
+                {
+                    this.StartDate = startDateValue;
+                    this.EndDate = endDateValue;
+                    this.NumberOfGuests = numberOfGuestsValue;
+                    this.RoomNumber = roomNumberValue;
+                    this.CustomerID = newCustomer.CustomerID;
+                    this.BillID = newBill.BillID;
+                    this.Notes = notesValue;
+
+                    DBL.InsertNewReservation(this);
+                }
+            }
+        }
+
+        protected internal Reservation(DateTime startDateValue, DateTime endDateValue, int numberOfGuestsValue,
+            int roomNumberValue, int customerIDValue, int billIDValue, string notesValue)
+        {
             this.StartDate = startDateValue;
             this.EndDate = endDateValue;
-            this.RoomNumber = roomNumberValue;
             this.NumberOfGuests = numberOfGuestsValue;
-            this.FirstName = firstNameValue;
-            this.LastName = lastNameValue;
-            this.PhoneNumber = phoneNumberValue;
-            this.Address1 = address1Value;
-            this.Address2 = address2Value;
-            this.City = cityValue;
-            this.PostalCode = postalCodeValue;
-            this.Country = countryValue;
-            this.PostalCode = postalCodeValue;
+            this.RoomNumber = roomNumberValue;
+            this.CustomerID = customerIDValue;
+            this.BillID = billIDValue;
             this.Notes = notesValue;
 
             DBL.InsertNewReservation(this);
@@ -132,174 +145,27 @@ namespace KingWilliamApp
             }
         }
 
-        protected internal string FirstName
+        protected internal int CustomerID
         {
             get
             {
-                return firstName;
+                return customerID;
             }
             set
             {
-                if (!(value == string.Empty))
-                {
-                    firstName = value;
-                }
-                else
-                {
-                    // If it is blank, declare and throw an exception
-                    ArgumentException ex = new ArgumentException("First name is required", "reservation");
-                    throw ex;
-                }
+                customerID = value;
             }
         }
 
-        protected internal string LastName
+        protected internal int BillID
         {
             get
             {
-                return lastName;
+                return billID;
             }
             set
             {
-                if (!(value == string.Empty))
-                {
-                    lastName = value;
-                }
-                else
-                {
-                    // If it is blank, declare and throw an exception
-                    ArgumentException ex = new ArgumentException("Last name is required", "reservation");
-                    throw ex;
-                }
-            }
-        }
-
-        protected internal string PhoneNumber
-        {
-            get
-            {
-                return phoneNumber;
-            }
-            set
-            {
-                if (!(value == string.Empty))
-                {
-                    phoneNumber = value;
-                }
-                else
-                {
-                    // If it is blank, declare and throw an exception
-                    ArgumentException ex = new ArgumentException("Phone number is required", "reservation");
-                    throw ex;
-                }
-            }
-        }
-
-        protected internal string Address1
-        {
-            get
-            {
-                return address1;
-            }
-            set
-            {
-                if (!(value == string.Empty))
-                {
-                    address1 = value;
-                }
-                else
-                {
-                    // If it is blank, declare and throw an exception
-                    ArgumentException ex = new ArgumentException("Address Line 1 is required", "reservation");
-                    throw ex;
-                }
-            }
-        }
-
-        protected internal string Address2
-        {
-            get
-            {
-                return address2;
-            }
-            set
-            {
-                address2 = value;
-            }
-        }
-
-        protected internal string City
-        {
-            get
-            {
-                return city;
-            }
-            set
-            {
-                if (!(value == string.Empty))
-                {
-                    city = value;
-                }
-                else
-                {
-                    // If it is blank, declare and throw an exception
-                    ArgumentException ex = new ArgumentException("City is required", "reservation");
-                    throw ex;
-                }
-            }
-        }
-
-        protected internal int Province
-        {
-            get
-            {
-                return province;
-            }
-            set
-            {
-                province = value;
-            }
-        }
-
-        protected internal string Country
-        {
-            get
-            {
-                return country;
-            }
-            set
-            {
-                if (!(value == string.Empty))
-                {
-                    country = value;
-                }
-                else
-                {
-                    // If it is blank, declare and throw an exception
-                    ArgumentException ex = new ArgumentException("Country is required", "reservation");
-                    throw ex;
-                }
-            }
-        }
-
-        protected internal string PostalCode
-        {
-            get
-            {
-                return postalCode;
-            }
-            set
-            {
-                if (!(value == string.Empty))
-                {
-                    postalCode = value;
-                }
-                else
-                {
-                    // If it is blank, declare and throw an exception
-                    ArgumentException ex = new ArgumentException("Postal code is required", "reservation");
-                    throw ex;
-                }
+                billID = value;
             }
         }
 

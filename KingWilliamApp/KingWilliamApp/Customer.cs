@@ -11,6 +11,7 @@ namespace KingWilliamApp
 
         #region "Variable declarations"
 
+        int customerID = 0;
         string firstName;
         string lastName;
         string phoneNumber;
@@ -27,12 +28,15 @@ namespace KingWilliamApp
             Address newAddress = new Address(address1Value, address2Value, cityValue, provinceValue,
                 countryValue, postalCodeValue);
 
-            this.FirstName = firstNameValue;
-            this.LastName = lastNameValue;
-            this.PhoneNumber = phoneNumberValue;
-            this.AddressID = newAddress.AddressID;
+            if (newAddress.AddressID != 0)
+            {
+                this.FirstName = firstNameValue;
+                this.LastName = lastNameValue;
+                this.PhoneNumber = phoneNumberValue;
+                this.AddressID = newAddress.AddressID;
 
-            DBL.InsertNewCustomer(this);
+                customerID = DBL.InsertNewCustomer(this);
+            }
         }
 
         protected internal Customer(string firstNameValue, string lastNameValue, string phoneNumberValue, 
@@ -133,6 +137,14 @@ namespace KingWilliamApp
             set
             {
                 addressID = value;
+            }
+        }
+
+        protected internal int CustomerID
+        {
+            get
+            {
+                return customerID;
             }
         }
 

@@ -11,14 +11,13 @@ namespace KingWilliamApp
 
         #region "Variable declarations"
 
+        int addressID = 0;
         string address1;
         string address2;
         string city;
         int province;
         string country;
         string postalCode;
-
-        int addressID;
 
         #endregion
 
