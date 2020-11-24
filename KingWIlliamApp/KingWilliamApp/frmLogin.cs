@@ -27,12 +27,8 @@ namespace KingWilliamApp
         {
             String user = txtUsername.Text.Trim();
             String password = txtPassword.Text.Trim();
-            SqlConnection sqlcon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Termina1\Desktop\KingWilliamHotel\KingWilliamApp\KingWIlliamApp\KingWilliamDB.mdf;Integrated Security=True");
-            string query = "SELECT * FROM tblUsers WHERE username = '" + user + "' and password = '" + password + "'";
-            SqlDataAdapter sda = new SqlDataAdapter(query, sqlcon);
-            DataTable dtbl = new DataTable();
-            sda.Fill(dtbl);
-            if (dtbl.Rows.Count == 1)
+
+            if (User.GetUser(user, password) != null)
             {
                 this.Close();
                 IsLoggedIn = true;

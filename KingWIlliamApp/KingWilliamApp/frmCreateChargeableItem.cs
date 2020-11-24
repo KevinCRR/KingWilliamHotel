@@ -16,5 +16,10 @@ namespace KingWilliamApp
         {
             InitializeComponent();
         }
+
+        private void lblPageName_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
