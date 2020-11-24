@@ -61,6 +61,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Address.cs" />
+    <Compile Include="Bill.cs" />
+    <Compile Include="Customer.cs" />
+    <Compile Include="DBL.cs" />
     <Compile Include="frmCreateEmploymentPositions.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -225,6 +229,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reservation.cs" />
+    <Compile Include="User.cs" />
     <EmbeddedResource Include="frmCreateEmploymentPositions.resx">
       <DependentUpon>frmCreateEmploymentPositions.cs</DependentUpon>
     </EmbeddedResource>
