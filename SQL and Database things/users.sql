@@ -1,0 +1,15 @@
+insert into users (userName, password, roleID, staffID) values ('fblundon0', HASHBYTES('SHA2_512',m4BQZBl7G), 'Admin', '1');
+insert into users (userName, password, roleID, staffID) values ('slongridge1', HASHBYTES('SHA2_512',ehRuCLzx), 'Admin', '2');
+insert into users (userName, password, roleID, staffID) values ('aduigenan2', HASHBYTES('SHA2_512',79jm4cpE), 'Admin', '3');
+insert into users (userName, password, roleID, staffID) values ('dpitrollo3', HASHBYTES('SHA2_512',EXGbyy1n), 'Manager', '4');
+insert into users (userName, password, roleID, staffID) values ('sgemson4', HASHBYTES('SHA2_512',4NHX2G), 'FrontD', '5');
+insert into users (userName, password, roleID, staffID) values ('aridwood5', HASHBYTES('SHA2_512',0ExtXRakIk), 'Manager', '6');
+insert into users (userName, password, roleID, staffID) values ('tloidl8', HASHBYTES('SHA2_512',3td05i), 'RoomS', '9');
+insert into users (userName, password, roleID, staffID) values ('zkillingworth9', HASHBYTES('SHA2_512',6AnaYUEMcK), 'RoomS', '10');
+insert into users (userName, password, roleID, staffID) values ('bniblocka', HASHBYTES('SHA2_512',d7vfxvj), 'RoomS', '11');
+insert into users (userName, password, roleID, staffID) values ('whammettb', HASHBYTES('SHA2_512',TUm5RLqIgzy2), 'RoomS', '12');
+insert into users (userName, password, roleID, staffID) values ('hdarceye', HASHBYTES('SHA2_512',NbgsM462I), 'Kitchen', '15');
+insert into users (userName, password, roleID, staffID) values ('sraddonf', HASHBYTES('SHA2_512',W2yxzyOL), 'KitchenS', '16');
+insert into users (userName, password, roleID, staffID) values ('bformiglig', HASHBYTES('SHA2_512',sMUrlZ), 'KitchenS', '17');
+insert into users (userName, password, roleID, staffID) values ('iadrianelloh', HASHBYTES('SHA2_512',Dw7UUkG), 'KitchenS', '18');
+insert into users (userName, password, roleID, staffID) values ('ischimeki', HASHBYTES('SHA2_512',oyA3F6m), 'FrontD', '19');
