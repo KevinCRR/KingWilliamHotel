@@ -37,7 +37,7 @@ namespace KingWilliamApp
         }
 
         #endregion
-
+         
         #region "Class methods"
 
         protected internal static User GetUser(string usernameValue, string passwordValue)
