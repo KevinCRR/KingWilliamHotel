@@ -10,11 +10,12 @@ namespace KingWilliamApp
     {
         #region "Variable declarations"
 
-        int userID = 0;
-        string username;
-        string password;
-        int staffID = 0;
-        int roleID = 0;
+        private int userID = 0;
+        private string username;
+        private string password;
+        private int staffID = 0;
+        private int roleID = 0;
+        private string roleName; 
 
         #endregion
 
@@ -27,15 +28,16 @@ namespace KingWilliamApp
             this.Password = passwordValue;
             this.RoleID = roleIDValue;
             this.StaffID = staffIDValue;
+            this.roleName = GetRole(roleIDValue);
         }
 
-        protected internal User(int userIDValue, string usernameValue, string passwordValue, int roleIDValue)
-        {
-            this.UserID = userIDValue;
-            this.Username = usernameValue;
-            this.Password = passwordValue;
-            this.RoleID = roleIDValue;
-        }
+        //protected internal User(int userIDValue, string usernameValue, string passwordValue, int roleIDValue)
+        //{
+        //    this.UserID = userIDValue;
+        //    this.Username = usernameValue;
+        //    this.Password = passwordValue;
+        //    this.RoleID = roleIDValue;
+        //}
 
         protected internal User()
         {
@@ -50,6 +52,14 @@ namespace KingWilliamApp
         {
             return DBL.SelectUser(usernameValue, passwordValue);
         }
+
+
+        protected internal static String GetRole(int userID)
+        {
+            return DBL.SelectRoleTitle(userID);
+        }
+
+
 
         #endregion
 
@@ -134,6 +144,7 @@ namespace KingWilliamApp
                 roleID = value;
             }
         }
+
 
         #endregion
 

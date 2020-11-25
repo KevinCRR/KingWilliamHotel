@@ -197,10 +197,10 @@ namespace KingWilliamApp
                 {
                     while (reader.Read())
                     {
-                        if (reader.GetInt32(4) != 0)
+                        //if (reader.GetInt32(4) != 0)
                             returnUser = new User(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetInt32(3), reader.GetInt32(4));
-                        else
-                            returnUser = new User(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetInt32(3));
+                        //else
+                        //    returnUser = new User(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetInt32(3));
                     }
                 }
                 else
