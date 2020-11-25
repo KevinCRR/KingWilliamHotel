@@ -98,10 +98,10 @@ namespace KingWilliamApp
             return returnValue;
         }
 
-        internal static bool InsertNewReservation(Reservation insertReservation)
+        internal static int InsertNewReservation(Reservation insertReservation)
         {
             // Create return value
-            bool returnValue = false;
+            int returnValue = 0;
 
             // Declare the connection
             SqlConnection dbConnection = new SqlConnection(GetConnectionString());
@@ -121,7 +121,7 @@ namespace KingWilliamApp
             {
                 dbConnection.Open();
                 // Try to insert the new record, return result
-                returnValue = (command.ExecuteNonQuery() == 1);
+                returnValue = (int)command.ExecuteScalar();
 
             }
             catch (Exception ex)
@@ -181,19 +181,33 @@ namespace KingWilliamApp
             // Declare new SQL connection
             SqlConnection dbConnection = new SqlConnection(GetConnectionString());
 
+            string sql = "SELECT * FROM tblUsers WHERE username = '" + username + "' and password = '" + password + "'";
+
             // Create new SQL command
-            SqlCommand command = new SqlCommand("SELECT * FROM tblUsers WHERE username = '" + username + "' and password = '" + password + "'", dbConnection);
+            SqlCommand command = new SqlCommand(sql, dbConnection);
 
             // Try to connect to the database, create a datareader. If successful, read from the database and fill created row
             // with information from matching record
             try
             {
                 dbConnection.Open();
-                IDataReader reader = command.ExecuteReader();
-                if (reader.Read())
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.HasRows)
                 {
-                    returnUser = new User(reader.GetInt32(1), reader.GetString(2), reader.GetString(3), reader.GetInt32(4), reader.GetInt32(5));
+                    while (reader.Read())
+                    {
+                        if (reader.GetInt32(4) != 0)
+                            returnUser = new User(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetInt32(3), reader.GetInt32(4));
+                        else
+                            returnUser = new User(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetInt32(3));
+                    }
                 }
+                else
+                {
+                    //throw new DataException("No records found", ex);
+                }
+                reader.Close();
             }
             catch (Exception ex)
             {
@@ -206,6 +220,88 @@ namespace KingWilliamApp
 
             // Return the populated row
             return returnUser;
+
+        }
+
+        internal static Staff SelectStaff(int staffID)
+        {
+            Staff returnStaff = new Staff();
+
+            // Declare new SQL connection
+            SqlConnection dbConnection = new SqlConnection(GetConnectionString());
+
+            string sql = "SELECT * FROM tblStaff WHERE staffID = '" + staffID + "'";
+
+            // Create new SQL command
+            SqlCommand command = new SqlCommand(sql, dbConnection);
+
+            // Try to connect to the database, create a datareader. If successful, read from the database and fill created row
+            // with information from matching record
+            try
+            {
+                dbConnection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        returnStaff = new Staff(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), 
+                            reader.GetString(3), reader.GetDouble(4), reader.GetDateTime(5), reader.GetDateTime(6),
+                            reader.GetString(7), reader.GetInt32(8), reader.GetInt32(9));
+                    }
+                }
+                else
+                {
+                    //throw new DataException("No records found", ex);
+                }
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                throw new DataException("Error in GetUser", ex);
+            }
+            finally
+            {
+                dbConnection.Close();
+            }
+
+            // Return the populated row
+            return returnStaff;
+
+        }
+
+        internal static string SelectRoleTitle(int roleID)
+        {
+            string returnRole;
+
+            // Declare new SQL connection
+            SqlConnection dbConnection = new SqlConnection(GetConnectionString());
+
+            string sql = "SELECT (roleTitle) FROM tblRoles WHERE roleID = '" + roleID + "'";
+
+            // Create new SQL command
+            SqlCommand command = new SqlCommand(sql, dbConnection);
+
+            // Try to connect to the database, create a datareader. If successful, read from the database and fill created row
+            // with information from matching record
+            try
+            {
+                dbConnection.Open();
+
+                returnRole = (String)command.ExecuteScalar();
+            }
+            catch (Exception ex)
+            {
+                throw new DataException("Error in GetRoleTitle", ex);
+            }
+            finally
+            {
+                dbConnection.Close();
+            }
+
+            // Return the populated row
+            return returnRole;
 
         }
 

@@ -230,6 +230,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reservation.cs" />
+    <Compile Include="Staff.cs" />
     <Compile Include="User.cs" />
     <EmbeddedResource Include="frmCreateEmploymentPositions.resx">
       <DependentUpon>frmCreateEmploymentPositions.cs</DependentUpon>

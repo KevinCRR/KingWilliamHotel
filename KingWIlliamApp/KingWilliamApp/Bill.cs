@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace KingWilliamApp
 {
-    class Bill
+    public class Bill
     {
         #region "Variable declarations"
 

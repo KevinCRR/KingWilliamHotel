@@ -20,22 +20,29 @@ namespace KingWilliamApp
 
         public bool IsLoggedIn { get; set; }
 
-        public bool UserFullName { get; set; }
-
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            String user = txtUsername.Text.Trim();
-            String password = txtPassword.Text.Trim();
+            string username = txtUsername.Text.Trim();
+            string password = txtPassword.Text.Trim();
 
-            if (User.GetUser(user, password) != null)
+            if (!string.IsNullOrEmpty(username) && !string.IsNullOrEmpty(password))
             {
-                this.Close();
-                IsLoggedIn = true;
+                User.CurrentUser = User.GetUser(username, password);
+
+                if (User.CurrentUser != null)
+                {
+                    this.Close();
+                    IsLoggedIn = true;
+                }
+                else
+                {
+                    MessageBox.Show("Incorrect username or password! Try again or contact an administrator.");
+                }
             }
             else
             {
-                MessageBox.Show("Incorrect username or password! Try again or contact an administrator.");
+                MessageBox.Show("Please enter a username and password.");
             }
         }
     }

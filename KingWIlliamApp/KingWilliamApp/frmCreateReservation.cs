@@ -18,8 +18,6 @@ namespace KingWilliamApp
             InitializeComponent();
         }
 
-        SqlConnection sqlcon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\KingWilliamDB.mdf;Integrated Security=True");
-
         private void btnCreate_Click(object sender, EventArgs e)
         {
             try
@@ -41,7 +39,21 @@ namespace KingWilliamApp
                     (txtCountry.Text.Trim() != "")
                 )
                 {
-                    
+                    Reservation newReservation = new Reservation(dateStart.Value, dateEnd.Value, (int)cbxRoom.SelectedValue,
+                        (int)nudGuests.Value, txtFirstName.Text, txtLastName.Text, txtPhone.Text, txtAddress1.Text,
+                        txtAddress2.Text, txtCity.Text, (int)cbxProvince.SelectedValue, txtCountry.Text, 
+                        txtPostalCode.Text, txtNotes.Text);
+
+                    MessageBox.Show(newReservation.ReservationID.ToString());
+
+                    if (newReservation.ReservationID != 0)
+                    {
+                        MessageBox.Show("Success - Reservation ID #" + newReservation.ReservationID.ToString());
+                    }
+                    else
+                    {
+                        MessageBox.Show("There was an error creating the reservation");
+                    }    
                 }
                 else
                 {
@@ -53,6 +65,8 @@ namespace KingWilliamApp
 
         private void frmCreateReservation_Load(object sender, EventArgs e)
         {
+            SqlConnection sqlcon = new SqlConnection(Properties.Settings.Default.connectionString);
+
             try
             {
                 sqlcon.Open();

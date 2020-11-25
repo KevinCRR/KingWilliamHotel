@@ -6,19 +6,18 @@ using System.Threading.Tasks;
 
 namespace KingWilliamApp
 {
-    class Reservation
+    public class Reservation
     {
 
         #region "Variable declarations"
 
+        int reservationID;
         DateTime startDate;
         DateTime endDate;
         int numberOfGuests;
         int customerID;
         int billID;
         int roomNumber;
-        //int customerID;
-        //int billID;
         string notes;
 
         #endregion
@@ -47,14 +46,15 @@ namespace KingWilliamApp
                     this.BillID = newBill.BillID;
                     this.Notes = notesValue;
 
-                    DBL.InsertNewReservation(this);
+                    this.ReservationID = DBL.InsertNewReservation(this);
                 }
             }
         }
 
-        protected internal Reservation(DateTime startDateValue, DateTime endDateValue, int numberOfGuestsValue,
-            int roomNumberValue, int customerIDValue, int billIDValue, string notesValue)
+        protected internal Reservation(int reservationIDValue, DateTime startDateValue, DateTime endDateValue, 
+            int numberOfGuestsValue, int roomNumberValue, int customerIDValue, int billIDValue, string notesValue)
         {
+            this.ReservationID = reservationIDValue;
             this.StartDate = startDateValue;
             this.EndDate = endDateValue;
             this.NumberOfGuests = numberOfGuestsValue;
@@ -62,8 +62,6 @@ namespace KingWilliamApp
             this.CustomerID = customerIDValue;
             this.BillID = billIDValue;
             this.Notes = notesValue;
-
-            DBL.InsertNewReservation(this);
         }
 
         protected internal Reservation()
@@ -75,11 +73,26 @@ namespace KingWilliamApp
 
         #region "Class methods"
 
-
+        //protected internal Reservation GetReservation()
+        //{
+        //    return 
+        //}
 
         #endregion
 
         #region "Property Procedures"
+        
+        protected internal int ReservationID
+        {
+            get
+            {
+                return reservationID;
+            }
+            set
+            {
+                reservationID = value;
+            }
+        }
 
         protected internal DateTime StartDate
         {

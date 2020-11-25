@@ -21,6 +21,20 @@ namespace KingWilliamApp
         #region Event Handlers
         private void frmMainForm_Load(object sender, EventArgs e)
         {
+            //Staff currentStaff = DBL.SelectStaff(User.CurrentUser.StaffID);
+            //lblUserName.Text = currentStaff.FirstName + " " + currentStaff.LastName;
+
+            lblUserRole.Text = DBL.SelectRoleTitle(User.CurrentUser.RoleID);
+
+            btnBills.Visible = false;
+            btnChargeableItems.Visible = false;
+            btnCustomers.Visible = false;
+            btnStaff.Visible = false;
+            btnTransactions.Visible = false;
+            btnUsers.Visible = false;
+            btnRoomTypes.Visible = false;
+            btnRooms.Visible = false;
+            btnEmploymentPositions.Visible = false;
 
         }
 
@@ -161,22 +175,22 @@ namespace KingWilliamApp
         #endregion Room Types
 
         #region Clients
-        private void btnClients_Click(object sender, EventArgs e)
+        private void btnCustomer_Click(object sender, EventArgs e)
         {
             showSubMenu(pnlClients);
         }
 
-        private void btnClientView_Click(object sender, EventArgs e)
+        private void btnCustomerView_Click(object sender, EventArgs e)
         {
             openChildForm(new frmViewCustomer());
         }
 
-        private void btnClientCreate_Click(object sender, EventArgs e)
+        private void btnCustomerCreate_Click(object sender, EventArgs e)
         {
             openChildForm(new frmCreateCustomer());
         }
 
-        private void btnClientEdit_Click(object sender, EventArgs e)
+        private void btnCustomerEdit_Click(object sender, EventArgs e)
         {
             openChildForm(new frmEditCustomer());
         }
@@ -236,10 +250,22 @@ namespace KingWilliamApp
         {
             openChildForm(new frmViewUsers());
         }
+
+        private void btnUserCreate_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frmCreateUsers());
+        }
+
+        private void btnUserEdit_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frmEditUsers());
+
+        }
         #endregion Users
 
         private void btnSignOut_Click(object sender, EventArgs e)
         {
+            User.CurrentUser = null;
             Application.Restart();  // Closes the program and starts a new instance which defaults to the login page. More secure option
         }
 
@@ -312,17 +338,6 @@ namespace KingWilliamApp
         }
 
         #endregion Methods
-
-        private void btnUserCreate_Click(object sender, EventArgs e)
-        {
-            openChildForm(new frmCreateUsers());
-        }
-
-        private void btnUserEdit_Click(object sender, EventArgs e)
-        {
-            openChildForm(new frmEditUsers());
-
-        }
 
     }
 }

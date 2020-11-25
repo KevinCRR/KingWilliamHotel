@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace KingWilliamApp
 {
-    class User
+    public class User
     {
         #region "Variable declarations"
 
@@ -20,15 +20,21 @@ namespace KingWilliamApp
 
         #region "Constructors"
 
-        protected internal User(int userIDValue, string usernameValue, string passwordValue, int staffIDValue, int roleIDValue)
+        protected internal User(int userIDValue, string usernameValue, string passwordValue, int roleIDValue, int staffIDValue)
         {
             this.UserID = userIDValue;
             this.Username = usernameValue;
             this.Password = passwordValue;
-            this.StaffID = staffIDValue;
             this.RoleID = roleIDValue;
+            this.StaffID = staffIDValue;
+        }
 
-            //DBL.InsertNewUser(this);
+        protected internal User(int userIDValue, string usernameValue, string passwordValue, int roleIDValue)
+        {
+            this.UserID = userIDValue;
+            this.Username = usernameValue;
+            this.Password = passwordValue;
+            this.RoleID = roleIDValue;
         }
 
         protected internal User()
@@ -42,15 +48,14 @@ namespace KingWilliamApp
 
         protected internal static User GetUser(string usernameValue, string passwordValue)
         {
-            User returnUser = new User();
-            returnUser = DBL.SelectUser(usernameValue, passwordValue);
-
-            return returnUser;
+            return DBL.SelectUser(usernameValue, passwordValue);
         }
 
         #endregion
 
         #region "Property Procedures"
+
+        public static User CurrentUser { get; set; }
 
         protected internal string Username
         {
