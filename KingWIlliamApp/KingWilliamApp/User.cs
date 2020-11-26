@@ -10,34 +10,24 @@ namespace KingWilliamApp
     {
         #region "Variable declarations"
 
-        private int userID = 0;
         private string username;
         private string password;
         private int staffID = 0;
         private int roleID = 0;
-        private string roleName; 
+        private string roleName;
 
         #endregion
 
         #region "Constructors"
 
-        protected internal User(int userIDValue, string usernameValue, string passwordValue, int roleIDValue, int staffIDValue)
+        protected internal User(string usernameValue, string passwordValue, int roleIDValue, int staffIDValue)
         {
-            this.UserID = userIDValue;
             this.Username = usernameValue;
             this.Password = passwordValue;
             this.RoleID = roleIDValue;
             this.StaffID = staffIDValue;
             this.roleName = GetRole(roleIDValue);
         }
-
-        //protected internal User(int userIDValue, string usernameValue, string passwordValue, int roleIDValue)
-        //{
-        //    this.UserID = userIDValue;
-        //    this.Username = usernameValue;
-        //    this.Password = passwordValue;
-        //    this.RoleID = roleIDValue;
-        //}
 
         protected internal User()
         {
@@ -54,9 +44,9 @@ namespace KingWilliamApp
         }
 
 
-        protected internal static String GetRole(int userID)
+        protected internal static String GetRole(int roleIDValue)
         {
-            return DBL.SelectRoleTitle(userID);
+            return DBL.SelectRoleTitle(roleIDValue);
         }
 
 
@@ -106,18 +96,6 @@ namespace KingWilliamApp
                     ArgumentException ex = new ArgumentException("Password is required", "reservation");
                     throw ex;
                 }
-            }
-        }
-
-        protected internal int UserID
-        {
-            get
-            {
-                return userID;
-            }
-            set
-            {
-                userID = value;
             }
         }
 

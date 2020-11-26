@@ -197,10 +197,7 @@ namespace KingWilliamApp
                 {
                     while (reader.Read())
                     {
-                        //if (reader.GetInt32(4) != 0)
-                            returnUser = new User(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetInt32(3), reader.GetInt32(4));
-                        //else
-                        //    returnUser = new User(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetInt32(3));
+                        returnUser = new User(reader.GetString(0), reader.GetString(1), reader.GetInt32(2), reader.GetInt32(3));
                     }
                 }
                 else
@@ -220,7 +217,6 @@ namespace KingWilliamApp
 
             // Return the populated row
             return returnUser;
-
         }
 
         internal static Staff SelectStaff(int staffID)
@@ -302,7 +298,6 @@ namespace KingWilliamApp
 
             // Return the populated row
             return returnRole;
-
         }
 
         #endregion

@@ -26,20 +26,20 @@ namespace KingWilliamApp
 
             lblUserRole.Text = DBL.SelectRoleTitle(User.CurrentUser.RoleID);
 
-            if (role == admin)
-            {
-                btnReservations.Visible = true;
-                btnBills.Visible = true;
-                btnChargeableItems.Visible = true;
-                btnCustomers.Visible = true;
-                btnStaff.Visible = true;
-                btnTransactions.Visible = true;
-                btnUsers.Visible = true;
-                btnRoomTypes.Visible = true;
-                btnRooms.Visible = true;
-                btnEmploymentPositions.Visible = true;
-            }
-            else if (role == frontDesk)
+            //if (role == admin)
+            //{
+            //    btnReservations.Visible = true;
+            //    btnBills.Visible = true;
+            //    btnChargeableItems.Visible = true;
+            //    btnCustomers.Visible = true;
+            //    btnStaff.Visible = true;
+            //    btnTransactions.Visible = true;
+            //    btnUsers.Visible = true;
+            //    btnRoomTypes.Visible = true;
+            //    btnRooms.Visible = true;
+            //    btnEmploymentPositions.Visible = true;
+            //}
+            //else if (role == frontDesk)
             {
                 btnReservations.Visible = true;
                 btnBills.Visible = true;
