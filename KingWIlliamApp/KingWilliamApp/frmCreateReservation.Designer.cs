@@ -63,8 +63,8 @@
             this.pnlColumn2 = new System.Windows.Forms.Panel();
             this.pnlColumn1 = new System.Windows.Forms.Panel();
             this.cbxRoom = new System.Windows.Forms.ComboBox();
-            this.dateStart = new System.Windows.Forms.DateTimePicker();
             this.lblLabel = new System.Windows.Forms.Label();
+            this.dateStart = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.nudGuests)).BeginInit();
             this.pnlHeader.SuspendLayout();
             this.pnlExit.SuspendLayout();
@@ -82,7 +82,7 @@
             this.btnSubmit.Font = new System.Drawing.Font("Segoe UI Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnSubmit.Location = new System.Drawing.Point(0, 495);
-            this.btnSubmit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSubmit.Margin = new System.Windows.Forms.Padding(2);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(592, 52);
             this.btnSubmit.TabIndex = 14;
@@ -95,7 +95,7 @@
             this.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPhone.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhone.Location = new System.Drawing.Point(26, 263);
-            this.txtPhone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPhone.Margin = new System.Windows.Forms.Padding(2);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(148, 25);
             this.txtPhone.TabIndex = 11;
@@ -119,7 +119,7 @@
             this.btnClose.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.Maroon;
             this.btnClose.Location = new System.Drawing.Point(9, 21);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(30, 32);
             this.btnClose.TabIndex = 19;
@@ -132,7 +132,7 @@
             this.txtLastName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtLastName.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLastName.Location = new System.Drawing.Point(26, 194);
-            this.txtLastName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtLastName.Margin = new System.Windows.Forms.Padding(2);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(148, 25);
             this.txtLastName.TabIndex = 25;
@@ -166,7 +166,7 @@
             this.txtCountry.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCountry.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCountry.Location = new System.Drawing.Point(26, 338);
-            this.txtCountry.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCountry.Margin = new System.Windows.Forms.Padding(2);
             this.txtCountry.Name = "txtCountry";
             this.txtCountry.Size = new System.Drawing.Size(148, 25);
             this.txtCountry.TabIndex = 29;
@@ -307,17 +307,27 @@
             // 
             this.nudGuests.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nudGuests.Location = new System.Drawing.Point(26, 56);
-            this.nudGuests.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nudGuests.Margin = new System.Windows.Forms.Padding(2);
+            this.nudGuests.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.nudGuests.Name = "nudGuests";
             this.nudGuests.Size = new System.Drawing.Size(148, 23);
             this.nudGuests.TabIndex = 40;
+            this.nudGuests.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // txtPostalCode
             // 
             this.txtPostalCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPostalCode.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPostalCode.Location = new System.Drawing.Point(26, 338);
-            this.txtPostalCode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPostalCode.Margin = new System.Windows.Forms.Padding(2);
             this.txtPostalCode.Name = "txtPostalCode";
             this.txtPostalCode.Size = new System.Drawing.Size(148, 25);
             this.txtPostalCode.TabIndex = 27;
@@ -325,7 +335,7 @@
             // dateEnd
             // 
             this.dateEnd.Location = new System.Drawing.Point(21, 124);
-            this.dateEnd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateEnd.Margin = new System.Windows.Forms.Padding(2);
             this.dateEnd.Name = "dateEnd";
             this.dateEnd.Size = new System.Drawing.Size(157, 20);
             this.dateEnd.TabIndex = 42;
@@ -334,7 +344,7 @@
             // 
             this.txtNotes.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNotes.Location = new System.Drawing.Point(21, 263);
-            this.txtNotes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNotes.Margin = new System.Windows.Forms.Padding(2);
             this.txtNotes.Name = "txtNotes";
             this.txtNotes.Size = new System.Drawing.Size(157, 100);
             this.txtNotes.TabIndex = 43;
@@ -345,7 +355,7 @@
             this.txtAddress1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtAddress1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAddress1.Location = new System.Drawing.Point(26, 56);
-            this.txtAddress1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAddress1.Margin = new System.Windows.Forms.Padding(2);
             this.txtAddress1.Name = "txtAddress1";
             this.txtAddress1.Size = new System.Drawing.Size(148, 25);
             this.txtAddress1.TabIndex = 44;
@@ -355,7 +365,7 @@
             this.txtFirstName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtFirstName.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFirstName.Location = new System.Drawing.Point(26, 124);
-            this.txtFirstName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtFirstName.Margin = new System.Windows.Forms.Padding(2);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(148, 25);
             this.txtFirstName.TabIndex = 45;
@@ -366,7 +376,7 @@
             this.pnlHeader.Controls.Add(this.lblPageName);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
-            this.pnlHeader.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlHeader.Margin = new System.Windows.Forms.Padding(2);
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Size = new System.Drawing.Size(592, 82);
             this.pnlHeader.TabIndex = 46;
@@ -376,7 +386,7 @@
             this.pnlExit.Controls.Add(this.btnClose);
             this.pnlExit.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlExit.Location = new System.Drawing.Point(0, 0);
-            this.pnlExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlExit.Margin = new System.Windows.Forms.Padding(2);
             this.pnlExit.Name = "pnlExit";
             this.pnlExit.Size = new System.Drawing.Size(89, 82);
             this.pnlExit.TabIndex = 24;
@@ -386,7 +396,7 @@
             this.txtAddress2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtAddress2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAddress2.Location = new System.Drawing.Point(26, 124);
-            this.txtAddress2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAddress2.Margin = new System.Windows.Forms.Padding(2);
             this.txtAddress2.Name = "txtAddress2";
             this.txtAddress2.Size = new System.Drawing.Size(148, 25);
             this.txtAddress2.TabIndex = 47;
@@ -396,7 +406,7 @@
             this.txtCity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCity.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCity.Location = new System.Drawing.Point(26, 194);
-            this.txtCity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCity.Margin = new System.Windows.Forms.Padding(2);
             this.txtCity.Name = "txtCity";
             this.txtCity.Size = new System.Drawing.Size(148, 25);
             this.txtCity.TabIndex = 48;
@@ -408,7 +418,7 @@
             this.panel2.Controls.Add(this.pnlColumn1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 82);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(592, 413);
             this.panel2.TabIndex = 49;
@@ -427,7 +437,7 @@
             this.pnlColumn3.Controls.Add(this.txtAddress1);
             this.pnlColumn3.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlColumn3.Location = new System.Drawing.Point(394, 0);
-            this.pnlColumn3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlColumn3.Margin = new System.Windows.Forms.Padding(2);
             this.pnlColumn3.Name = "pnlColumn3";
             this.pnlColumn3.Size = new System.Drawing.Size(197, 413);
             this.pnlColumn3.TabIndex = 51;
@@ -437,7 +447,7 @@
             this.cbxProvince.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxProvince.FormattingEnabled = true;
             this.cbxProvince.Location = new System.Drawing.Point(26, 263);
-            this.cbxProvince.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbxProvince.Margin = new System.Windows.Forms.Padding(2);
             this.cbxProvince.MaxDropDownItems = 13;
             this.cbxProvince.Name = "cbxProvince";
             this.cbxProvince.Size = new System.Drawing.Size(149, 21);
@@ -457,7 +467,7 @@
             this.pnlColumn2.Controls.Add(this.txtPhone);
             this.pnlColumn2.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlColumn2.Location = new System.Drawing.Point(197, 0);
-            this.pnlColumn2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlColumn2.Margin = new System.Windows.Forms.Padding(2);
             this.pnlColumn2.Name = "pnlColumn2";
             this.pnlColumn2.Size = new System.Drawing.Size(197, 413);
             this.pnlColumn2.TabIndex = 50;
@@ -474,7 +484,7 @@
             this.pnlColumn1.Controls.Add(this.label3);
             this.pnlColumn1.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlColumn1.Location = new System.Drawing.Point(0, 0);
-            this.pnlColumn1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlColumn1.Margin = new System.Windows.Forms.Padding(2);
             this.pnlColumn1.Name = "pnlColumn1";
             this.pnlColumn1.Size = new System.Drawing.Size(197, 413);
             this.pnlColumn1.TabIndex = 49;
@@ -484,18 +494,10 @@
             this.cbxRoom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxRoom.FormattingEnabled = true;
             this.cbxRoom.Location = new System.Drawing.Point(21, 194);
-            this.cbxRoom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbxRoom.Margin = new System.Windows.Forms.Padding(2);
             this.cbxRoom.Name = "cbxRoom";
             this.cbxRoom.Size = new System.Drawing.Size(157, 21);
             this.cbxRoom.TabIndex = 44;
-            // 
-            // dateStart
-            // 
-            this.dateStart.Location = new System.Drawing.Point(21, 56);
-            this.dateStart.Margin = new System.Windows.Forms.Padding(2);
-            this.dateStart.Name = "dateStart";
-            this.dateStart.Size = new System.Drawing.Size(157, 20);
-            this.dateStart.TabIndex = 41;
             // 
             // lblLabel
             // 
@@ -509,6 +511,14 @@
             this.lblLabel.TabIndex = 10;
             this.lblLabel.Text = "Start Date";
             // 
+            // dateStart
+            // 
+            this.dateStart.Location = new System.Drawing.Point(21, 56);
+            this.dateStart.Margin = new System.Windows.Forms.Padding(2);
+            this.dateStart.Name = "dateStart";
+            this.dateStart.Size = new System.Drawing.Size(157, 20);
+            this.dateStart.TabIndex = 41;
+            // 
             // frmEditReservation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -519,7 +529,7 @@
             this.Controls.Add(this.pnlHeader);
             this.Controls.Add(this.btnSubmit);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmEditReservation";
             this.Text = "Create Reservation";
             this.Load += new System.EventHandler(this.frmCreateReservation_Load);
