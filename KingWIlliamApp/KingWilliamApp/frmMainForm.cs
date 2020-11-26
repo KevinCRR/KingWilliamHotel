@@ -16,16 +16,16 @@ namespace KingWilliamApp
         {
             InitializeComponent();
             customizeDesign();
-            btnReservations.Visible = false;
-            btnBills.Visible = false;
-            btnChargeableItems.Visible = false;
-            btnCustomers.Visible = false;
-            btnStaff.Visible = false;
-            btnTransactions.Visible = false;
-            btnUsers.Visible = false;
-            btnRoomTypes.Visible = false;
-            btnRooms.Visible = false;
-            btnEmploymentPositions.Visible = false;
+            //btnReservations.Visible = false;
+            //btnBills.Visible = false;
+            //btnChargeableItems.Visible = false;
+            //btnCustomers.Visible = false;
+            //btnStaff.Visible = false;
+            //btnTransactions.Visible = false;
+            //btnUsers.Visible = false;
+            //btnRoomTypes.Visible = false;
+            //btnRooms.Visible = false;
+            //btnEmploymentPositions.Visible = false;
             //IsMdiContainer = true;
 
 
@@ -65,6 +65,16 @@ namespace KingWilliamApp
             }
             else if (User.CurrentUser.ToString() == "FrontD")
             {
+                btnReservations.Visible = false;
+                btnBills.Visible = false;
+                btnChargeableItems.Visible = false;
+                btnCustomers.Visible = false;
+                btnStaff.Visible = false;
+                btnTransactions.Visible = false;
+                btnUsers.Visible = false;
+                btnRoomTypes.Visible = false;
+                btnRooms.Visible = false;
+                btnEmploymentPositions.Visible = false;
                 btnReservations.Visible = true;
                 btnBills.Visible = true;
                 btnCustomers.Visible = true;
