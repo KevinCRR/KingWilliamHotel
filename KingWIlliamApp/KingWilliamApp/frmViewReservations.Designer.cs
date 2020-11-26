@@ -64,6 +64,7 @@
             // 
             // lblPageName
             // 
+            this.lblPageName.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblPageName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblPageName.Font = new System.Drawing.Font("Segoe UI Black", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPageName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -77,6 +78,7 @@
             // 
             // pnlExit
             // 
+            this.pnlExit.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pnlExit.Controls.Add(this.btnClose);
             this.pnlExit.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlExit.Location = new System.Drawing.Point(0, 0);
@@ -112,6 +114,7 @@
             // 
             // btnSubmit
             // 
+            this.btnSubmit.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnSubmit.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnSubmit.FlatAppearance.BorderSize = 0;
             this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -123,11 +126,12 @@
             this.btnSubmit.Size = new System.Drawing.Size(609, 52);
             this.btnSubmit.TabIndex = 53;
             this.btnSubmit.Text = "Save Changes";
-            this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.UseVisualStyleBackColor = false;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // pnlColumn1
             // 
+            this.pnlColumn1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pnlColumn1.Controls.Add(this.lblMessage);
             this.pnlColumn1.Controls.Add(this.pnlSearch);
             this.pnlColumn1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -246,6 +250,7 @@
             // 
             // pnlColumn2
             // 
+            this.pnlColumn2.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pnlColumn2.Controls.Add(this.cbxRoom);
             this.pnlColumn2.Controls.Add(this.nudGuests);
             this.pnlColumn2.Controls.Add(this.label1);
@@ -356,6 +361,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel2.Controls.Add(this.pnlColumn2);
             this.panel2.Controls.Add(this.pnlColumn1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
