@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
+using System.Windows.Forms;
+using System.Security.Cryptography;
 
 namespace KingWilliamApp
 {
@@ -35,7 +37,7 @@ namespace KingWilliamApp
             SqlConnection dbConnection = new SqlConnection(GetConnectionString());
 
             // Create new SQL command and assign it paramaters
-            SqlCommand command = new SqlCommand("INSERT INTO tblAddresses VALUES(@addressLine1, @addressLine2, @city, @provinceID, @country, @postalCode)", dbConnection);
+            SqlCommand command = new SqlCommand("INSERT INTO address VALUES(@addressLine1, @addressLine2, @city, @provinceID, @country, @postalCode)", dbConnection);
             command.Parameters.AddWithValue("@addressLine1", insertAddress.Address1);
             command.Parameters.AddWithValue("@addressLine2", insertAddress.Address2);
             command.Parameters.AddWithValue("@city", insertAddress.City);
@@ -72,7 +74,7 @@ namespace KingWilliamApp
             SqlConnection dbConnection = new SqlConnection(GetConnectionString());
 
             // Create new SQL command and assign it paramaters
-            SqlCommand command = new SqlCommand("INSERT INTO tblCustomers VALUES(@firstName, @lastName, @phoneNumber, @addressID)", dbConnection);
+            SqlCommand command = new SqlCommand("INSERT INTO customers VALUES(@firstName, @lastName, @phoneNumber, @addressID)", dbConnection);
             command.Parameters.AddWithValue("@firstName", insertCustomer.FirstName);
             command.Parameters.AddWithValue("@lastName", insertCustomer.LastName);
             command.Parameters.AddWithValue("@phoneNumber", insertCustomer.PhoneNumber);
@@ -107,7 +109,7 @@ namespace KingWilliamApp
             SqlConnection dbConnection = new SqlConnection(GetConnectionString());
 
             // Create new SQL command and assign it paramaters
-            SqlCommand command = new SqlCommand("INSERT INTO tblReservations VALUES(@numberOfGuests, @startDate, @endDate, @notes, @customerID, @billID, @roomNumber)", dbConnection);
+            SqlCommand command = new SqlCommand("INSERT INTO reservations VALUES(@numberOfGuests, @startDate, @endDate, @notes, @customerID, @billID, @roomNumber)", dbConnection);
             command.Parameters.AddWithValue("@numberOfGuests", insertReservation.NumberOfGuests);
             command.Parameters.AddWithValue("@startDate", insertReservation.StartDate);
             command.Parameters.AddWithValue("@endDate", insertReservation.EndDate);
@@ -145,7 +147,7 @@ namespace KingWilliamApp
             SqlConnection dbConnection = new SqlConnection(GetConnectionString());
 
             // Create new SQL command and assign it paramaters
-            SqlCommand command = new SqlCommand("INSERT INTO tblCustomerBilling VALUES(@billAmount, @paymentType, @amountOwing)", dbConnection);
+            SqlCommand command = new SqlCommand("INSERT INTO customerBilling VALUES(@billAmount, @paymentType, @amountOwing)", dbConnection);
             command.Parameters.AddWithValue("@billAmount", insertBill.BillAmount);
             command.Parameters.AddWithValue("@paymentType", insertBill.PaymentType);
             command.Parameters.AddWithValue("@amountOwing", insertBill.AmountOwing);
@@ -181,7 +183,16 @@ namespace KingWilliamApp
             // Declare new SQL connection
             SqlConnection dbConnection = new SqlConnection(GetConnectionString());
 
-            string sql = "SELECT * FROM tblUsers WHERE username = '" + username + "' and password = '" + password + "'";
+            // Hashing
+            Byte[] inputBytes = Encoding.UTF8.GetBytes(password);
+            SHA512 shaM = new SHA512Managed();
+            Byte[] hashedBytes = shaM.ComputeHash(inputBytes);
+
+            string hashedpassword = Convert.ToBase64String(hashedBytes);
+
+
+
+            string sql = "SELECT * FROM users WHERE userName = '" + username + "' AND password = '" + hashedpassword + "'";
 
             // Create new SQL command
             SqlCommand command = new SqlCommand(sql, dbConnection);
@@ -191,6 +202,7 @@ namespace KingWilliamApp
             try
             {
                 dbConnection.Open();
+
                 SqlDataReader reader = command.ExecuteReader();
 
                 if (reader.HasRows)
@@ -199,10 +211,10 @@ namespace KingWilliamApp
                     {
                         returnUser = new User(reader.GetString(0), reader.GetString(1), reader.GetInt32(2), reader.GetInt32(3));
                     }
-                }
-                else
+                }                
+                else  //showing the error message if user credential is wrong  
                 {
-                    //throw new DataException("No records found", ex);
+                    MessageBox.Show("Please enter the valid credentials", "error", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 reader.Close();
             }
@@ -226,7 +238,7 @@ namespace KingWilliamApp
             // Declare new SQL connection
             SqlConnection dbConnection = new SqlConnection(GetConnectionString());
 
-            string sql = "SELECT * FROM tblStaff WHERE staffID = '" + staffID + "'";
+            string sql = "SELECT * FROM staff WHERE staffID = '" + staffID + "'";
 
             // Create new SQL command
             SqlCommand command = new SqlCommand(sql, dbConnection);
@@ -274,7 +286,7 @@ namespace KingWilliamApp
             // Declare new SQL connection
             SqlConnection dbConnection = new SqlConnection(GetConnectionString());
 
-            string sql = "SELECT (roleTitle) FROM tblRoles WHERE roleID = '" + roleID + "'";
+            string sql = "SELECT (roleTitle) FROM roles WHERE roleID = '" + roleID + "'";
 
             // Create new SQL command
             SqlCommand command = new SqlCommand(sql, dbConnection);

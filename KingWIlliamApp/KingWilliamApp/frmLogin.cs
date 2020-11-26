@@ -30,7 +30,7 @@ namespace KingWilliamApp
             {
                 User.CurrentUser = User.GetUser(username, password);
 
-                if (User.CurrentUser != null)
+                if (User.CurrentUser.Username != null)
                 {
                     this.Close();
                     IsLoggedIn = true;

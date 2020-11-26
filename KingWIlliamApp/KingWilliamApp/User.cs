@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -44,11 +45,10 @@ namespace KingWilliamApp
         }
 
 
-        protected internal static String GetRole(int roleIDValue)
+        protected internal static string GetRole(int roleIDValue)
         {
             return DBL.SelectRoleTitle(roleIDValue);
         }
-
 
 
         #endregion
