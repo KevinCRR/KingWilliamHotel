@@ -209,7 +209,11 @@ namespace KingWilliamApp
                 {
                     while (reader.Read())
                     {
-                        returnUser = new User(reader.GetString(0), reader.GetString(1), reader.GetInt32(2), reader.GetInt32(3));
+                        returnUser = new User(reader.GetString(0), reader.GetString(1), reader.GetString(2), reader.GetInt32(3));
+                        //returnUser.Username = reader.GetString(0);
+                        //returnUser.Password = reader.GetString(1);
+                        //returnUser.RoleID = reader.GetString(2);
+                        //returnUser.StaffID = reader.GetInt32(3);
                     }
                 }                
                 else  //showing the error message if user credential is wrong  
@@ -279,7 +283,7 @@ namespace KingWilliamApp
 
         }
 
-        internal static string SelectRoleTitle(int roleID)
+        internal static string SelectRoleTitle(string roleID)
         {
             string returnRole;
 

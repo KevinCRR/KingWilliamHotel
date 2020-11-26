@@ -14,7 +14,7 @@ namespace KingWilliamApp
         private string username;
         private string password;
         private int staffID = 0;
-        private int roleID = 0;
+        private string roleID;
         private string roleName;
         public string roleNamePublic;
 
@@ -22,7 +22,7 @@ namespace KingWilliamApp
 
         #region "Constructors"
 
-        protected internal User(string usernameValue, string passwordValue, int roleIDValue, int staffIDValue)
+        protected internal User(string usernameValue, string passwordValue, string roleIDValue, int staffIDValue)
         {
             this.Username = usernameValue;
             this.Password = passwordValue;
@@ -47,7 +47,7 @@ namespace KingWilliamApp
         }
 
 
-        protected internal static string GetRole(int roleIDValue)
+        protected internal static string GetRole(string roleIDValue)
         {
             return DBL.SelectRoleTitle(roleIDValue);
         }
@@ -113,7 +113,7 @@ namespace KingWilliamApp
             }
         }
 
-        protected internal int RoleID
+        protected internal string RoleID
         {
             get
             {
@@ -127,7 +127,7 @@ namespace KingWilliamApp
 
 
         #endregion
-        public User(int roleIDValue) { 
+        public User(string roleIDValue) { 
             this.roleNamePublic = GetRole(roleIDValue);
         }
         public override string ToString()
