@@ -36,28 +36,28 @@ namespace KingWilliamApp
                     Error = string.Concat("The end-date cannot be before start date!\n");
                 }
 
-                if (txtFirstName.Text.Trim() != "")
-                {
-                    Error = string.Concat("First Name field Cannot be empty!\n");
-                }
-                else if (txtFirstName.Text.Trim().Any(char.IsDigit))
-                {
-                    Error = string.Concat("First Name field Cannot contain a number!\n");
-                }
+                //if (txtFirstName.Text.Trim() != "")
+                //{
+                //    Error = string.Concat("First Name field Cannot be empty!\n");
+                //}
+                //else if (txtFirstName.Text.Trim().Any(char.IsDigit))
+                //{
+                //    Error = string.Concat("First Name field Cannot contain a number!\n");
+                //}
 
-                if (txtLastName.Text.Trim() != "")
-                {
-                    Error = string.Concat("Last Name field Cannot be empty!\n");
-                }
-                else if (txtLastName.Text.Trim().Any(char.IsDigit))
-                {
-                    Error = string.Concat("Last Name field Cannot contain a number!\n");
-                }
+                //if (txtLastName.Text.Trim() != "")
+                //{
+                //    Error = string.Concat("Last Name field Cannot be empty!\n");
+                //}
+                //else if (txtLastName.Text.Trim().Any(char.IsDigit))
+                //{
+                //    Error = string.Concat("Last Name field Cannot contain a number!\n");
+                //}
 
-                if (txtPhone.Text.Trim() != "")
-                {
-                    Error = string.Concat("Last Name field Cannot contain a number!\n");
-                }
+                //if (txtPhone.Text.Trim() != "")
+                //{
+                //    Error = string.Concat("Last Name field Cannot contain a number!\n");
+                //}
 
                 if (Error == null)
                 {
@@ -71,14 +71,14 @@ namespace KingWilliamApp
                     SqlCommand sqlDA = new SqlCommand(oString, sqlcon);
                     SqlDataReader dr = sqlDA.ExecuteReader();
 
-                    if(dr.Read())
+                    if (dr.Read())
                     {
                         Error = string.Concat("Booking Cannot be made for this date, Select another room or date!\n");
                         Booked = true;
                     }
                 }
 
-                
+
 
                 // SELECT * FROM RESERVATION WHERE roomNumber = this.roomNumber AND endDate < this.startDate.Value;
                 // if return 0 then room won't be occupied but if return > 0 then room will be occupied. 
@@ -89,27 +89,21 @@ namespace KingWilliamApp
 
 
 
-                if 
+                if
                 (
                     (dateStart.Value != null) &&
                     (dateEnd.Value != null) &&
                     (cbxRoom.SelectedValue != null) &&
-                    (nudGuests.Value >= 1) &&
-                    (txtFirstName.Text.Trim() != "") &&
-                    (txtLastName.Text.Trim() != "") &&
-                    (txtPhone.Text.Trim() != "") &&
-                    (txtPostalCode.Text.Trim() != "") &&
-                    (txtAddress1.Text.Trim() != "") &&
-                    (txtAddress2.Text.Trim() != "") &&
-                    (txtCity.Text.Trim() != "") &&
-                    (cbxProvince.SelectedValue != null) &&
-                    (txtCountry.Text.Trim() != "")
+                    (nudGuests.Value >= 1)
                 )
                 {
-                    Reservation newReservation = new Reservation(dateStart.Value, dateEnd.Value, (int)cbxRoom.SelectedValue,
-                        (int)nudGuests.Value, txtFirstName.Text, txtLastName.Text, txtPhone.Text, txtAddress1.Text,
-                        txtAddress2.Text, txtCity.Text, (int)cbxProvince.SelectedValue, txtCountry.Text, 
-                        txtPostalCode.Text, txtNotes.Text);
+                    Reservation newReservation = null;
+                    //Reservation newReservation = new Reservation(1,dateStart.Value, dateEnd.Value, (int)cbxRoom.SelectedValue,
+                    //    (int)nudGuests.Value, txtNotes.Text);
+
+                    //txtFirstName.Text, txtLastName.Text, txtPhone.Text, txtAddress1.Text,
+                    //    txtAddress2.Text, txtCity.Text, (int)cbxProvince.SelectedValue, txtCountry.Text,
+                    //    txtPostalCode.Text,
 
                     MessageBox.Show(newReservation.ReservationID.ToString());
 
@@ -120,7 +114,7 @@ namespace KingWilliamApp
                     else
                     {
                         MessageBox.Show("There was an error creating the reservation");
-                    }    
+                    }
                 }
                 else
                 {
@@ -144,8 +138,8 @@ namespace KingWilliamApp
                 DataTable dtProvinces = new DataTable();
                 dtProvinces.Columns.Add("provinceCode", typeof(string));
                 dtProvinces.Load(readerProvinces);
-                cbxProvince.ValueMember = "provinceCode";
-                cbxProvince.DataSource = dtProvinces;
+                //cbxProvince.ValueMember = "provinceCode";
+                //cbxProvince.DataSource = dtProvinces;
 
                 SqlCommand sqlRooms = new SqlCommand("SELECT (roomNumber) FROM rooms", sqlcon);
                 SqlDataReader readerRooms;

@@ -26,6 +26,9 @@ namespace KingWilliamApp
             btnRoomTypes.Visible = false;
             btnRooms.Visible = false;
             btnEmploymentPositions.Visible = false;
+            IsMdiContainer = true;
+
+
         }
 
         #region Event Handlers
@@ -36,7 +39,7 @@ namespace KingWilliamApp
 
             lblUserRole.Text = DBL.SelectRoleTitle(User.CurrentUser.RoleID);
 
-            if (User.CurrentUser.ToString() == "admin")
+            if (User.CurrentUser.ToString() == "Admin")
             {
                 btnReservations.Visible = true;
                 btnBills.Visible = true;
@@ -49,7 +52,7 @@ namespace KingWilliamApp
                 btnRooms.Visible = true;
                 btnEmploymentPositions.Visible = true;
             }
-            else if (User.CurrentUser.ToString() == "manager")
+            else if (User.CurrentUser.ToString() == "Manager")
             {
                 btnReservations.Visible = true;
                 btnBills.Visible = true;
@@ -60,18 +63,18 @@ namespace KingWilliamApp
                 btnRoomTypes.Visible = true;
                 btnRooms.Visible = true;
             }
-            else if (User.CurrentUser.ToString() == "frontDesk")
+            else if (User.CurrentUser.ToString() == "FrontD")
             {
                 btnReservations.Visible = true;
                 btnBills.Visible = true;
                 btnCustomers.Visible = true;
             }
-            else if (User.CurrentUser.ToString() == "roomCleaning")
+            else if (User.CurrentUser.ToString() == "roomS")
             {
                 btnReservations.Visible = true;
                 btnBills.Visible = true;
             }
-            else if (User.CurrentUser.ToString() == "kitchenStaff")
+            else if (User.CurrentUser.ToString() == "KitchenS")
             {
                 btnReservations.Visible = true;
                 btnBills.Visible = true;
