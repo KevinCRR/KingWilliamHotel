@@ -16,6 +16,16 @@ namespace KingWilliamApp
         {
             InitializeComponent();
             customizeDesign();
+            btnReservations.Visible = false;
+            btnBills.Visible = false;
+            btnChargeableItems.Visible = false;
+            btnCustomers.Visible = false;
+            btnStaff.Visible = false;
+            btnTransactions.Visible = false;
+            btnUsers.Visible = false;
+            btnRoomTypes.Visible = false;
+            btnRooms.Visible = false;
+            btnEmploymentPositions.Visible = false;
         }
 
         #region Event Handlers
@@ -26,33 +36,52 @@ namespace KingWilliamApp
 
             lblUserRole.Text = DBL.SelectRoleTitle(User.CurrentUser.RoleID);
 
-            //if (role == admin)
-            //{
-            //    btnReservations.Visible = true;
-            //    btnBills.Visible = true;
-            //    btnChargeableItems.Visible = true;
-            //    btnCustomers.Visible = true;
-            //    btnStaff.Visible = true;
-            //    btnTransactions.Visible = true;
-            //    btnUsers.Visible = true;
-            //    btnRoomTypes.Visible = true;
-            //    btnRooms.Visible = true;
-            //    btnEmploymentPositions.Visible = true;
-            //}
-            //else if (role == frontDesk)
+            if (User.CurrentUser.ToString() == "admin")
             {
                 btnReservations.Visible = true;
                 btnBills.Visible = true;
-                btnChargeableItems.Visible = false;
-                btnCustomers.Visible = false;
-                btnStaff.Visible = false;
-                btnTransactions.Visible = false;
-                btnUsers.Visible = false;
-                btnRoomTypes.Visible = false;
-                btnRooms.Visible = false;
-                btnEmploymentPositions.Visible = false;
+                btnChargeableItems.Visible = true;
+                btnCustomers.Visible = true;
+                btnStaff.Visible = true;
+                btnTransactions.Visible = true;
+                btnUsers.Visible = true;
+                btnRoomTypes.Visible = true;
+                btnRooms.Visible = true;
+                btnEmploymentPositions.Visible = true;
             }
-            
+            else if (User.CurrentUser.ToString() == "manager")
+            {
+                btnReservations.Visible = true;
+                btnBills.Visible = true;
+                btnCustomers.Visible = true;
+                btnStaff.Visible = true;
+                btnTransactions.Visible = true;
+                btnUsers.Visible = true;
+                btnRoomTypes.Visible = true;
+                btnRooms.Visible = true;
+            }
+            else if (User.CurrentUser.ToString() == "frontDesk")
+            {
+                btnReservations.Visible = true;
+                btnBills.Visible = true;
+                btnCustomers.Visible = true;
+            }
+            else if (User.CurrentUser.ToString() == "roomCleaning")
+            {
+                btnReservations.Visible = true;
+                btnBills.Visible = true;
+            }
+            else if (User.CurrentUser.ToString() == "kitchenStaff")
+            {
+                btnReservations.Visible = true;
+                btnBills.Visible = true;
+            }
+            else if (User.CurrentUser.ToString() == "accountingAndStock")
+            {
+                btnReservations.Visible = true;
+                btnBills.Visible = true;
+            }
+
 
         }
 
