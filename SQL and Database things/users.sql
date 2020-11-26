@@ -1,4 +1,4 @@
-insert into users (userName, password, roleID, staffID) values ('fblundon0', HASHBYTES('SHA2_512',m4BQZBl7G), 'Admin', '1');
+insert into users (userName, password, roleID, staffID) values ('fblundon0', HASHBYTES('SHA1',m4BQZBl7G), 'Admin', '1');
 insert into users (userName, password, roleID, staffID) values ('slongridge1', HASHBYTES('SHA2_512',ehRuCLzx), 'Admin', '2');
 insert into users (userName, password, roleID, staffID) values ('aduigenan2', HASHBYTES('SHA2_512',79jm4cpE), 'Admin', '3');
 insert into users (userName, password, roleID, staffID) values ('dpitrollo3', HASHBYTES('SHA2_512',EXGbyy1n), 'Manager', '4');

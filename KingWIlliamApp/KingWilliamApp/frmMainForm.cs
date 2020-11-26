@@ -16,16 +16,16 @@ namespace KingWilliamApp
         {
             InitializeComponent();
             customizeDesign();
-            //btnReservations.Visible = false;
-            //btnBills.Visible = false;
-            //btnChargeableItems.Visible = false;
-            //btnCustomers.Visible = false;
-            //btnStaff.Visible = false;
-            //btnTransactions.Visible = false;
-            //btnUsers.Visible = false;
-            //btnRoomTypes.Visible = false;
-            //btnRooms.Visible = false;
-            //btnEmploymentPositions.Visible = false;
+            btnReservations.Visible = false;
+            btnBills.Visible = false;
+            btnChargeableItems.Visible = false;
+            btnCustomers.Visible = false;
+            btnStaff.Visible = false;
+            btnTransactions.Visible = false;
+            btnUsers.Visible = false;
+            btnRoomTypes.Visible = false;
+            btnRooms.Visible = false;
+            btnEmploymentPositions.Visible = false;
             //IsMdiContainer = true;
 
 
@@ -237,7 +237,8 @@ namespace KingWilliamApp
 
         private void btnCustomerCreate_Click(object sender, EventArgs e)
         {
-            openChildForm(new frmCreateCustomer());
+            Customer customer = null;
+            openChildForm(new frmCreateCustomer(customer));
         }
 
         private void btnCustomerEdit_Click(object sender, EventArgs e)
