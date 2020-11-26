@@ -35,14 +35,16 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnlColumn3 = new System.Windows.Forms.Panel();
             this.pnlColumn2 = new System.Windows.Forms.Panel();
+            this.btnCreateUser = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblOr = new System.Windows.Forms.Label();
+            this.txtLastName = new System.Windows.Forms.TextBox();
+            this.txtFirstName = new System.Windows.Forms.TextBox();
+            this.txtPhone = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.lblFirstName = new System.Windows.Forms.Label();
-            this.txtFirstName = new System.Windows.Forms.TextBox();
             this.lblLastName = new System.Windows.Forms.Label();
-            this.txtLastName = new System.Windows.Forms.TextBox();
             this.lblPhoneNum = new System.Windows.Forms.Label();
-            this.txtPhone = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -54,8 +56,6 @@
             this.txtText = new System.Windows.Forms.TextBox();
             this.btnCreate = new System.Windows.Forms.Button();
             this.lblLabel = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.lblOr = new System.Windows.Forms.Label();
             this.pnlHeader.SuspendLayout();
             this.pnlExit.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -138,7 +138,7 @@
             // pnlColumn2
             // 
             this.pnlColumn2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.pnlColumn2.Controls.Add(this.button3);
+            this.pnlColumn2.Controls.Add(this.btnCreateUser);
             this.pnlColumn2.Controls.Add(this.panel1);
             this.pnlColumn2.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlColumn2.Location = new System.Drawing.Point(0, 0);
@@ -147,6 +147,79 @@
             this.pnlColumn2.Size = new System.Drawing.Size(622, 585);
             this.pnlColumn2.TabIndex = 50;
             this.pnlColumn2.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlColumn2_Paint);
+            // 
+            // btnCreateUser
+            // 
+            this.btnCreateUser.FlatAppearance.BorderSize = 0;
+            this.btnCreateUser.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCreateUser.Font = new System.Drawing.Font("Segoe UI Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreateUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnCreateUser.Location = new System.Drawing.Point(224, 462);
+            this.btnCreateUser.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCreateUser.Name = "btnCreateUser";
+            this.btnCreateUser.Size = new System.Drawing.Size(156, 47);
+            this.btnCreateUser.TabIndex = 65;
+            this.btnCreateUser.Text = "Create User";
+            this.btnCreateUser.UseVisualStyleBackColor = true;
+            this.btnCreateUser.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.lblOr);
+            this.panel1.Controls.Add(this.txtLastName);
+            this.panel1.Controls.Add(this.txtFirstName);
+            this.panel1.Controls.Add(this.txtPhone);
+            this.panel1.Controls.Add(this.btnSearch);
+            this.panel1.Controls.Add(this.lblFirstName);
+            this.panel1.Controls.Add(this.lblLastName);
+            this.panel1.Controls.Add(this.lblPhoneNum);
+            this.panel1.Location = new System.Drawing.Point(152, 104);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(319, 441);
+            this.panel1.TabIndex = 64;
+            // 
+            // lblOr
+            // 
+            this.lblOr.AutoSize = true;
+            this.lblOr.Font = new System.Drawing.Font("Segoe UI Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOr.ForeColor = System.Drawing.Color.Gray;
+            this.lblOr.Location = new System.Drawing.Point(112, 322);
+            this.lblOr.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblOr.Name = "lblOr";
+            this.lblOr.Size = new System.Drawing.Size(62, 19);
+            this.lblOr.TabIndex = 64;
+            this.lblOr.Text = "-- OR --";
+            // 
+            // txtLastName
+            // 
+            this.txtLastName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtLastName.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLastName.Location = new System.Drawing.Point(54, 114);
+            this.txtLastName.Margin = new System.Windows.Forms.Padding(2);
+            this.txtLastName.Name = "txtLastName";
+            this.txtLastName.Size = new System.Drawing.Size(192, 25);
+            this.txtLastName.TabIndex = 25;
+            // 
+            // txtFirstName
+            // 
+            this.txtFirstName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtFirstName.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFirstName.Location = new System.Drawing.Point(54, 39);
+            this.txtFirstName.Margin = new System.Windows.Forms.Padding(2);
+            this.txtFirstName.Name = "txtFirstName";
+            this.txtFirstName.Size = new System.Drawing.Size(192, 25);
+            this.txtFirstName.TabIndex = 45;
+            // 
+            // txtPhone
+            // 
+            this.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPhone.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhone.Location = new System.Drawing.Point(54, 193);
+            this.txtPhone.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(192, 25);
+            this.txtPhone.TabIndex = 11;
             // 
             // btnSearch
             // 
@@ -175,16 +248,6 @@
             this.lblFirstName.TabIndex = 31;
             this.lblFirstName.Text = "First Name";
             // 
-            // txtFirstName
-            // 
-            this.txtFirstName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtFirstName.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFirstName.Location = new System.Drawing.Point(54, 39);
-            this.txtFirstName.Margin = new System.Windows.Forms.Padding(2);
-            this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(192, 25);
-            this.txtFirstName.TabIndex = 45;
-            // 
             // lblLastName
             // 
             this.lblLastName.AutoSize = true;
@@ -197,16 +260,6 @@
             this.lblLastName.TabIndex = 32;
             this.lblLastName.Text = "Last Name";
             // 
-            // txtLastName
-            // 
-            this.txtLastName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtLastName.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLastName.Location = new System.Drawing.Point(54, 114);
-            this.txtLastName.Margin = new System.Windows.Forms.Padding(2);
-            this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(192, 25);
-            this.txtLastName.TabIndex = 25;
-            // 
             // lblPhoneNum
             // 
             this.lblPhoneNum.AutoSize = true;
@@ -218,32 +271,6 @@
             this.lblPhoneNum.Size = new System.Drawing.Size(113, 19);
             this.lblPhoneNum.TabIndex = 33;
             this.lblPhoneNum.Text = "Phone Number";
-            // 
-            // txtPhone
-            // 
-            this.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPhone.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhone.Location = new System.Drawing.Point(54, 193);
-            this.txtPhone.Margin = new System.Windows.Forms.Padding(2);
-            this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(192, 25);
-            this.txtPhone.TabIndex = 11;
-            // 
-            // panel1
-            // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.lblOr);
-            this.panel1.Controls.Add(this.txtLastName);
-            this.panel1.Controls.Add(this.txtFirstName);
-            this.panel1.Controls.Add(this.txtPhone);
-            this.panel1.Controls.Add(this.btnSearch);
-            this.panel1.Controls.Add(this.lblFirstName);
-            this.panel1.Controls.Add(this.lblLastName);
-            this.panel1.Controls.Add(this.lblPhoneNum);
-            this.panel1.Location = new System.Drawing.Point(152, 104);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(319, 441);
-            this.panel1.TabIndex = 64;
             // 
             // textBox3
             // 
@@ -372,32 +399,6 @@
             this.lblLabel.TabIndex = 53;
             this.lblLabel.Text = "Textbox";
             // 
-            // button3
-            // 
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("Segoe UI Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button3.Location = new System.Drawing.Point(224, 462);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(156, 47);
-            this.button3.TabIndex = 65;
-            this.button3.Text = "Create User";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // lblOr
-            // 
-            this.lblOr.AutoSize = true;
-            this.lblOr.Font = new System.Drawing.Font("Segoe UI Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOr.ForeColor = System.Drawing.Color.Gray;
-            this.lblOr.Location = new System.Drawing.Point(112, 322);
-            this.lblOr.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblOr.Name = "lblOr";
-            this.lblOr.Size = new System.Drawing.Size(62, 19);
-            this.lblOr.TabIndex = 64;
-            this.lblOr.Text = "-- OR --";
-            // 
             // frmViewCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -458,7 +459,7 @@
         private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnCreateUser;
         private System.Windows.Forms.Label lblOr;
     }
 }

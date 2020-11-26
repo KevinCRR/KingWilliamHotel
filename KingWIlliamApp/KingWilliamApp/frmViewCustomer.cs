@@ -53,11 +53,21 @@ namespace KingWilliamApp
             string phoneNum = txtPhone.Text;
             string errorMsg = null;
 
-            int custID;
+            int custID = -1;
             string firstName1;
             string lastName1;
             string phoneNum1;
-            int address;
+            int address = -1;
+
+     
+            string addressLine1;
+            string addressLine2;
+            string city;
+            string provinceCode;
+            string country;
+            string postalCode;
+            string provinceName;
+
 
             Customer customerRecord;
 
@@ -91,7 +101,6 @@ namespace KingWilliamApp
 
             if(errorMsg == null)
             {
-                MessageBox.Show(phoneNum);
                 long phone;
                 if (long.TryParse(phoneNum, out phone))
                 {
@@ -102,6 +111,8 @@ namespace KingWilliamApp
                         //Brain
                         //4055306195
                         string oString = "SELECT * FROM customers WHERE firstName=@firstName AND lastName=@lastName AND phoneNumber=@phoneNumber;";
+                        string oString2 = "SELECT * FROM address WHERE addressID=@addressId;";
+                        string oString3 = "SELECT * FROM reservations WHERE customerID=@customerID";
                         using (SqlConnection myConnection = new SqlConnection(Properties.Settings.Default.connectionString))
                         {
                             SqlCommand oCmd = new SqlCommand(oString, myConnection);
@@ -113,7 +124,7 @@ namespace KingWilliamApp
                             {
                                 if (oReader.Read())
                                 {
-                                    MessageBox.Show("Record Found!");
+                                    MessageBox.Show("User Record Found!");
                                     custID = Convert.ToInt32(oReader["customerID"].ToString());
                                     firstName1 = oReader["FirstName"].ToString();
                                     lastName1 = oReader["LastName"].ToString();
@@ -121,19 +132,60 @@ namespace KingWilliamApp
                                     address = Convert.ToInt32(oReader["addressID"].ToString());
 
                                     customerRecord = new Customer(firstName1, lastName1, phoneNum1, address);
-                                    MessageBox.Show("userMade!");
 
                                 }
                                 else
                                 {
-                                    MessageBox.Show("Record Not Found!");
                                     errorMsg = "Record Not Found!";
                                 }
 
                                 myConnection.Close();
+
+                                if(address > -1)
+                                {
+                                    SqlCommand oCmd2 = new SqlCommand(oString2, myConnection);
+                                    oCmd2.Parameters.AddWithValue("@addressId", address);
+                                    myConnection.Open();
+                                    using (SqlDataReader oReader2 = oCmd.ExecuteReader())
+                                    {
+                                        if (oReader2.Read())
+                                        {
+                                            var addressRecord = oReader2;
+                                            MessageBox.Show("Address Records Found");
+                                        }
+                                        else
+                                        {
+                                            errorMsg = "Address Record Not Found!";
+                                        }
+                                    }
+                                    myConnection.Close();
+                                }
+
+                                if (custID>-1)
+                                {
+                                    SqlCommand oCmd3 = new SqlCommand(oString3, myConnection);
+                                    oCmd3.Parameters.AddWithValue("@customerID", custID);
+                                    myConnection.Open();
+                                    using (SqlDataReader oReader3 = oCmd.ExecuteReader())
+                                    {
+                                        if (oReader3.Read())
+                                        {
+                                            var reservationRecords = oReader3;
+                                            MessageBox.Show("Reservation Records Found");
+
+                                        }
+                                        else
+                                        {
+                                            MessageBox.Show("Reservation Records Not Found!");
+                                        }
+                                    }
+                                    myConnection.Close();
+                                }
+
                             }
                         }
-                       frmCreateCustomer f = new frmCreateCustomer();
+
+                        frmCreateCustomer f = new frmCreateCustomer();
 
                         f.MdiParent = this;
                         f.StartPosition = FormStartPosition.CenterParent;
@@ -144,8 +196,6 @@ namespace KingWilliamApp
                         // this.Hide();
                         // this.ParentForm.f.ShowDialog();
                         // this.Close();
-
-
                     }
                     catch (Exception ex)
                     {
@@ -166,6 +216,11 @@ namespace KingWilliamApp
                 MessageBox.Show(errorMsg);
             }
 
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
 
         }
     }
