@@ -35,7 +35,7 @@ namespace KingWilliamApp
         private void frmMainForm_Load(object sender, EventArgs e)
         {
             //Staff currentStaff = DBL.SelectStaff(User.CurrentUser.StaffID);
-            //lblUserName.Text = currentStaff.FirstName + " " + currentStaff.LastName;
+            //lblUserName.Text = currentStaff.FirstName + " " + currentStaff.LastName;n   
 
             lblUserRole.Text = DBL.SelectRoleTitle(User.CurrentUser.RoleID);
 
