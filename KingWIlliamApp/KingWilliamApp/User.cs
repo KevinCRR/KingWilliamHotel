@@ -15,6 +15,7 @@ namespace KingWilliamApp
         private int staffID = 0;
         private int roleID = 0;
         private string roleName;
+        public string roleNamePublic;
 
         #endregion
 
@@ -27,6 +28,7 @@ namespace KingWilliamApp
             this.RoleID = roleIDValue;
             this.StaffID = staffIDValue;
             this.roleName = GetRole(roleIDValue);
+            
         }
 
         protected internal User()
@@ -125,6 +127,12 @@ namespace KingWilliamApp
 
 
         #endregion
-
+        public User(int roleIDValue) { 
+            this.roleNamePublic = GetRole(roleIDValue);
+        }
+        public override string ToString()
+        {
+            return RoleID.ToString();
+        }
     }
 }
