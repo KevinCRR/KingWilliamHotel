@@ -16,17 +16,17 @@ namespace KingWilliamApp
         {
             InitializeComponent();
             customizeDesign();
-            btnReservations.Visible = false;
-            btnBills.Visible = false;
-            btnChargeableItems.Visible = false;
-            btnCustomers.Visible = false;
-            btnStaff.Visible = false;
-            btnTransactions.Visible = false;
-            btnUsers.Visible = false;
-            btnRoomTypes.Visible = false;
-            btnRooms.Visible = false;
-            btnEmploymentPositions.Visible = false;
-            IsMdiContainer = true;
+            //btnReservations.Visible = false;
+            //btnBills.Visible = false;
+            //btnChargeableItems.Visible = false;
+            //btnCustomers.Visible = false;
+            //btnStaff.Visible = false;
+            //btnTransactions.Visible = false;
+            //btnUsers.Visible = false;
+            //btnRoomTypes.Visible = false;
+            //btnRooms.Visible = false;
+            //btnEmploymentPositions.Visible = false;
+            //IsMdiContainer = true;
 
 
         }
