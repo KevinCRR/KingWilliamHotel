@@ -12,25 +12,16 @@ namespace KingWilliamApp
 {
     public partial class frmCreateCustomer : Form
     {
-        public frmCreateCustomer()
+        public frmCreateCustomer(Customer customer)
         {
             InitializeComponent();
+
+            if(customer!=null)
+            {
+
+            }
         }
 
-        private void txtFirstName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void label18_Click(object sender, EventArgs e)
         {
@@ -92,35 +83,7 @@ namespace KingWilliamApp
 
         }
 
-        private void pnlColumn1_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
-
-        private void cbxRoom_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateStart_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
@@ -187,30 +150,13 @@ namespace KingWilliamApp
 
         }
 
-        private void label15_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label16_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtLastName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+     
 
         private void txtPostalCode_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void label17_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void txtPhone_TextChanged(object sender, EventArgs e)
         {
@@ -242,25 +188,6 @@ namespace KingWilliamApp
 
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void label4_Click_1(object sender, EventArgs e)
         {

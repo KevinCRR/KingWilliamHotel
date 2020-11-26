@@ -46,7 +46,7 @@ namespace KingWilliamApp
 
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
+        public void btnSearch_Click(object sender, EventArgs e)
         {
             string firstName = txtFirstName.Text;
             string lastName = txtLastName.Text;
@@ -69,7 +69,7 @@ namespace KingWilliamApp
             string provinceName;
 
 
-            Customer customerRecord;
+            Customer customerRecord = null;
 
             if (firstName == "")
             {
@@ -125,6 +125,7 @@ namespace KingWilliamApp
                                 if (oReader.Read())
                                 {
                                     MessageBox.Show("User Record Found!");
+                                    var custom = oReader;
                                     custID = Convert.ToInt32(oReader["customerID"].ToString());
                                     firstName1 = oReader["FirstName"].ToString();
                                     lastName1 = oReader["LastName"].ToString();
@@ -132,7 +133,6 @@ namespace KingWilliamApp
                                     address = Convert.ToInt32(oReader["addressID"].ToString());
 
                                     customerRecord = new Customer(firstName1, lastName1, phoneNum1, address);
-
                                 }
                                 else
                                 {
@@ -185,11 +185,15 @@ namespace KingWilliamApp
                             }
                         }
 
-                        frmCreateCustomer f = new frmCreateCustomer();
+                        if(customerRecord!= null)
+                        {
+                            frmCreateCustomer f = new frmCreateCustomer(customerRecord);
 
-                        f.MdiParent = this;
-                        f.StartPosition = FormStartPosition.CenterParent;
-                        f.Show();
+                            f.MdiParent = this;
+                            f.StartPosition = FormStartPosition.CenterParent;
+                            f.Show();
+                        }
+
                         // //f.Visible = true;
                         // f.MdiParent = this.ParentForm;
                         // //f.Show();
