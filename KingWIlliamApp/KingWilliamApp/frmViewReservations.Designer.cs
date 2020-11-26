@@ -72,7 +72,7 @@
             this.lblPageName.Name = "lblPageName";
             this.lblPageName.Size = new System.Drawing.Size(609, 82);
             this.lblPageName.TabIndex = 23;
-            this.lblPageName.Text = "Edit Reservation";
+            this.lblPageName.Text = "View Reservation";
             this.lblPageName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnlExit
