@@ -83,6 +83,12 @@
     <Compile Include="frmCreateUsers.designer.cs">
       <DependentUpon>frmCreateUsers.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDeleteUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDeleteUser.Designer.cs">
+      <DependentUpon>frmDeleteUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmEditBill.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -245,6 +251,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCreateUsers.resx">
       <DependentUpon>frmCreateUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDeleteUser.resx">
+      <DependentUpon>frmDeleteUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEditBill.resx">
       <DependentUpon>frmEditBill.cs</DependentUpon>

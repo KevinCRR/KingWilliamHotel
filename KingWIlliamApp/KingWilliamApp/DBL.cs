@@ -172,6 +172,48 @@ namespace KingWilliamApp
             return returnValue;
         }
 
+        internal static bool InsertNewUser(User insertUser)
+        {
+            // Create return value
+            bool returnValue = false;
+
+            // Declare the connection
+            SqlConnection dbConnection = new SqlConnection(GetConnectionString());
+
+            // Hashing
+            Byte[] inputBytes = Encoding.UTF8.GetBytes(insertUser.Password);
+            SHA512 shaM = new SHA512Managed();
+            Byte[] hashedBytes = shaM.ComputeHash(inputBytes);
+
+            string hashedpassword = Convert.ToBase64String(hashedBytes);
+
+            // Create new SQL command and assign it paramaters
+            SqlCommand command = new SqlCommand("INSERT INTO users VALUES(@username, @password, @roleID, @staffID)", dbConnection);
+            command.Parameters.AddWithValue("@username", insertUser.Username);
+            command.Parameters.AddWithValue("@password", hashedpassword);
+            command.Parameters.AddWithValue("@roleID", insertUser.RoleID);
+            command.Parameters.AddWithValue("@staffID", insertUser.StaffID);
+
+            // Try to insert the new record, return result
+            try
+            {
+                dbConnection.Open();
+                // Try to insert the new record, return result
+                returnValue = (command.ExecuteNonQuery() == 1);
+
+            }
+            catch (Exception ex)
+            {
+                throw new DataException("Error in InsertNewUser", ex);
+            }
+            finally
+            {
+                dbConnection.Close();
+            }
+
+            return returnValue;
+        }
+
         #endregion "Insert Methods"  
 
         #region "Select Methods"
@@ -190,12 +232,10 @@ namespace KingWilliamApp
 
             string hashedpassword = Convert.ToBase64String(hashedBytes);
 
-
-
-            string sql = "SELECT * FROM users WHERE userName = '" + username + "' AND password = '" + hashedpassword + "'";
-
             // Create new SQL command
-            SqlCommand command = new SqlCommand(sql, dbConnection);
+            SqlCommand command = new SqlCommand("SELECT * FROM users WHERE userName = @username AND password = @password", dbConnection);
+            command.Parameters.AddWithValue("@username", username);
+            command.Parameters.AddWithValue("@password", hashedpassword);
 
             // Try to connect to the database, create a datareader. If successful, read from the database and fill created row
             // with information from matching record
@@ -209,18 +249,18 @@ namespace KingWilliamApp
                 {
                     while (reader.Read())
                     {
-                        returnUser = new User(reader.GetString(0), reader.GetString(1), reader.GetString(2), reader.GetInt32(3));
-                        //returnUser.Username = reader.GetString(0);
-                        //returnUser.Password = reader.GetString(1);
-                        //returnUser.RoleID = reader.GetString(2);
-                        //returnUser.StaffID = reader.GetInt32(3);
+                        returnUser = new User(reader.GetString(0), reader.GetString(1), reader.GetString(2), reader.GetInt32(3).ToString());
                     }
                 }                
                 else  //showing the error message if user credential is wrong  
                 {
-                    MessageBox.Show("Please enter the valid credentials", "error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    throw new ArgumentException("User does not Exist", "Not Found");
                 }
                 reader.Close();
+            }
+            catch (ArgumentException ex)
+            {
+                throw new ArgumentException("User does not Exist", "Not Found");
             }
             catch (Exception ex)
             {
@@ -314,6 +354,43 @@ namespace KingWilliamApp
 
             // Return the populated row
             return returnRole;
+        }
+
+        #endregion
+
+        #region "Delete Methods"
+
+        internal static bool DeleteUser(string username, int staffID)
+        {
+            // Create return value
+            bool returnValue = false;
+
+            // Declare the connection
+            SqlConnection dbConnection = new SqlConnection(GetConnectionString());
+
+            // Create new SQL command and assign it paramaters
+            SqlCommand command = new SqlCommand("DELETE FROM users WHERE userName = @username AND staffID = @staffID", dbConnection);
+            command.Parameters.AddWithValue("@username", username);
+            command.Parameters.AddWithValue("@staffID", staffID);
+
+            // Try to insert the new record, return result
+            try
+            {
+                dbConnection.Open();
+                // Try to insert the new record, return result
+                returnValue = (command.ExecuteNonQuery() == 1);
+
+            }
+            catch (Exception ex)
+            {
+                throw new DataException("Error in DeleteUser", ex);
+            }
+            finally
+            {
+                dbConnection.Close();
+            }
+
+            return returnValue;
         }
 
         #endregion

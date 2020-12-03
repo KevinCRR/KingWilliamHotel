@@ -22,14 +22,12 @@ namespace KingWilliamApp
 
         #region "Constructors"
 
-        protected internal User(string usernameValue, string passwordValue, string roleIDValue, int staffIDValue)
+        protected internal User(string usernameValue, string passwordValue, string roleIDValue, string staffIDValue)
         {
             this.Username = usernameValue;
             this.Password = passwordValue;
             this.RoleID = roleIDValue;
             this.StaffID = staffIDValue;
-            this.roleName = GetRole(roleIDValue);
-            
         }
 
         protected internal User()
@@ -43,13 +41,75 @@ namespace KingWilliamApp
 
         protected internal static User GetUser(string usernameValue, string passwordValue)
         {
-            return DBL.SelectUser(usernameValue, passwordValue);
+            bool passed = true;
+            User returnUser = null;
+
+            if (usernameValue == string.Empty)
+            {
+                passed = false;
+                // If it is blank, declare and throw an exception
+                ArgumentNullException ex = new ArgumentNullException("Username is required", "Missing Fields");
+                throw ex;
+            }
+            if (passwordValue == string.Empty)
+            {
+                passed = false;
+                // If it is blank, declare and throw an exception
+                ArgumentNullException ex = new ArgumentNullException("Password is required", "Missing Fields");
+                throw ex;
+            }
+
+            if (passed == true)
+                returnUser = DBL.SelectUser(usernameValue, passwordValue);
+
+            return returnUser;
+        }
+
+        protected internal static bool DeleteUser(string usernameValue, string staffIDValue)
+        {
+            bool passed = true;
+            bool returnValue = false;
+            int valStaffID;
+
+            if (usernameValue == string.Empty)
+            {
+                passed = false;
+                // If it is blank, declare and throw an exception
+                ArgumentNullException ex = new ArgumentNullException("Username is required", "Missing Fields");
+                throw ex;
+            }
+            if (!(staffIDValue == string.Empty))
+            {
+                if (!int.TryParse(staffIDValue, out valStaffID))
+                {
+                    passed = false;
+                    ArgumentOutOfRangeException ex = new ArgumentOutOfRangeException("Staff ID must be a whole number", "Incorrect Format");
+                    throw ex;
+                }
+            }
+            else
+            {
+                passed = false;
+                // If it is blank, declare and throw an exception
+                ArgumentNullException ex = new ArgumentNullException("Staff ID is required", "Missing Fields");
+                throw ex;
+            }
+
+            if (passed == true)
+                returnValue = DBL.DeleteUser(usernameValue, valStaffID);
+
+            return returnValue;
         }
 
 
         protected internal static string GetRole(string roleIDValue)
         {
             return DBL.SelectRoleTitle(roleIDValue);
+        }
+
+        protected internal void InsertUser()
+        {
+            DBL.InsertNewUser(this);
         }
 
 
@@ -74,7 +134,7 @@ namespace KingWilliamApp
                 else
                 {
                     // If it is blank, declare and throw an exception
-                    ArgumentException ex = new ArgumentException("Username is required", "user");
+                    ArgumentNullException ex = new ArgumentNullException("Username is required", "Missing Fields");
                     throw ex;
                 }
             }
@@ -95,21 +155,34 @@ namespace KingWilliamApp
                 else
                 {
                     // If it is blank, declare and throw an exception
-                    ArgumentException ex = new ArgumentException("Password is required", "reservation");
+                    ArgumentNullException ex = new ArgumentNullException("Password is required", "Missing Fields");
                     throw ex;
                 }
             }
         }
 
-        protected internal int StaffID
+        protected internal string StaffID
         {
             get
             {
-                return staffID;
+                return staffID.ToString();
             }
             set
             {
-                staffID = value;
+                if (!(value == string.Empty))
+                {
+                    if (!int.TryParse(value, out staffID))
+                    {
+                        ArgumentOutOfRangeException ex = new ArgumentOutOfRangeException("Staff ID must be a whole number", "Incorrect Format");
+                        throw ex;
+                    }
+                }
+                else
+                {
+                    // If it is blank, declare and throw an exception
+                    ArgumentNullException ex = new ArgumentNullException("Staff ID is required", "Missing Fields");
+                    throw ex;
+                }
             }
         }
 

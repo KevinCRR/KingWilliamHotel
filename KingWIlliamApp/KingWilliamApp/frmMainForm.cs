@@ -317,10 +317,9 @@ namespace KingWilliamApp
             openChildForm(new frmCreateUsers());
         }
 
-        private void btnUserEdit_Click(object sender, EventArgs e)
+        private void btnUserDelete_Click(object sender, EventArgs e)
         {
-            openChildForm(new frmEditUsers());
-
+            openChildForm(new frmDeleteUser());
         }
         #endregion Users
 
