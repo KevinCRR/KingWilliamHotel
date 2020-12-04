@@ -12,7 +12,6 @@ namespace KingWilliamApp
 {
     class DBL
     {
-
         #region "Connection String"
 
         /// <summary>
@@ -273,6 +272,38 @@ namespace KingWilliamApp
 
             // Return the populated row
             return returnUser;
+        }
+
+        internal static bool UserExists(string username)
+        {
+            bool returnValue = false;
+
+            // Declare new SQL connection
+            SqlConnection dbConnection = new SqlConnection(GetConnectionString());
+
+            // Create new SQL command
+            SqlCommand command = new SqlCommand("SELECT * FROM users WHERE userName = @username", dbConnection);
+            command.Parameters.AddWithValue("@username", username);
+
+            // Try to connect to the database, create a datareader. If successful, read from the database and fill created row
+            // with information from matching record
+            try
+            {
+                dbConnection.Open();
+
+                returnValue = (command.ExecuteNonQuery() == 1);
+            }
+            catch (Exception ex)
+            {
+                throw new DataException("Error in GetUser", ex);
+            }
+            finally
+            {
+                dbConnection.Close();
+            }
+
+            // Return the populated row
+            return returnValue;
         }
 
         internal static Staff SelectStaff(int staffID)

@@ -65,6 +65,11 @@ namespace KingWilliamApp
             return returnUser;
         }
 
+        protected internal static bool CheckExists(string usernameValue)
+        {
+            return DBL.UserExists(usernameValue);
+        }
+
         protected internal static bool DeleteUser(string usernameValue, string staffIDValue)
         {
             bool passed = true;
@@ -109,7 +114,10 @@ namespace KingWilliamApp
 
         protected internal void InsertUser()
         {
-            DBL.InsertNewUser(this);
+            if (!CheckExists(this.Username))
+                DBL.InsertNewUser(this);
+            else
+                throw new ArgumentException("Username already exists!");
         }
 
 
