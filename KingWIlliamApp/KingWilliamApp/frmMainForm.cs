@@ -130,7 +130,6 @@ namespace KingWilliamApp
         private void btnBillView_Click(object sender, EventArgs e)
         {
             openChildForm(new frmViewBill());
-            
         }
 
         private void btnBillEdit_Click(object sender, EventArgs e)

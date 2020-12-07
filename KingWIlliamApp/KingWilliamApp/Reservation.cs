@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -73,15 +74,16 @@ namespace KingWilliamApp
 
         #region "Class methods"
 
-        //protected internal Reservation GetReservation()
-        //{
-        //    return 
-        //}
+        
+        public static List<Reservation> GetAll(DateTime fromDate)
+        {
+            return DBL.SelectAllReservations(fromDate);
+        }
 
         #endregion
 
         #region "Property Procedures"
-        
+
         protected internal int ReservationID
         {
             get
@@ -114,15 +116,17 @@ namespace KingWilliamApp
             }
             set
             {
-                if (value > startDate)
-                {
-                    endDate = value;
-                }
-                else
-                {
-                    ArgumentException ex = new ArgumentException("Reservation 'End Date' must be later than the start date!", "reservation");
-                    throw ex;
-                }
+                endDate = value;
+
+                //if (value > startDate)
+                //{
+                //    endDate = value;
+                //}
+                //else
+                //{
+                //    ArgumentException ex = new ArgumentException("Reservation 'End Date' must be later than the start date!", "reservation");
+                //    throw ex;
+                //}
             }
         }
 

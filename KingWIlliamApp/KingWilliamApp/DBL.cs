@@ -7,6 +7,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Security.Cryptography;
+using System.Data.Linq;
 
 namespace KingWilliamApp
 {
@@ -24,6 +25,10 @@ namespace KingWilliamApp
         }
 
         #endregion
+
+        //***********************************************************************************************************
+        // INSERTS
+        //***********************************************************************************************************
 
         #region "Insert Methods"  
 
@@ -215,6 +220,10 @@ namespace KingWilliamApp
 
         #endregion "Insert Methods"  
 
+        //***********************************************************************************************************
+        // SELECTS
+        //***********************************************************************************************************
+
         #region "Select Methods"
 
         internal static User SelectUser(string username, string password)
@@ -385,6 +394,71 @@ namespace KingWilliamApp
 
             // Return the populated row
             return returnRole;
+        }
+
+        internal static List<Reservation> SelectAllReservations(DateTime fromDate)
+        {
+            List<Reservation> returnList = new List<Reservation> { };
+
+            SqlConnection dbConnection = new SqlConnection(GetConnectionString());
+
+            SqlCommand command = new SqlCommand("SELECT * FROM reservations WHERE startDate > @fromDate ORDER BY startDate ASC", dbConnection);
+            command.Parameters.AddWithValue("@fromDate", fromDate);
+
+            try
+            {
+                dbConnection.Open();
+
+                Reservation temp = new Reservation();
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read() && returnList.Count() < 25)
+                    {
+                        //temp.ReservationID = reader.GetInt32(0);
+                        //temp.StartDate = reader.GetDateTime(5);
+                        //temp.EndDate = reader.GetDateTime(6);
+                        //temp.NumberOfGuests = reader.GetInt32(4);
+                        //temp.RoomNumber = reader.GetInt32(1);
+                        //temp.CustomerID = reader.GetInt32(2);
+                        //temp.BillID = reader.GetInt32(3);
+                        //temp.Notes = "null";
+
+                        temp = new Reservation(
+                            reader.GetInt32(0),         // id
+                            reader.GetDateTime(5),      // startDate
+                            reader.GetDateTime(6),      // endDate
+                            reader.GetInt32(4),         // numberOfGuests
+                            reader.GetInt32(1),         // roomNumber
+                            reader.GetInt32(2),         // customerID
+                            reader.GetInt32(3),         // billID
+                            "null");  //reader.GetString(7));      // notes
+
+                        returnList.Add(temp);
+
+                        //returnList.Add(new Reservation(
+                        //    reader.GetInt32(0),         // id
+                        //    reader.GetDateTime(5),      // startDate
+                        //    reader.GetDateTime(6),      // endDate
+                        //    reader.GetInt32(4),         // numberOfGuests
+                        //    reader.GetInt32(1),         // roomNumber
+                        //    reader.GetInt32(2),         // customerID
+                        //    reader.GetInt32(3),         // billID
+                        //    reader.GetString(7)));      // notes
+                    }
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                throw new DataException("Error in GetAllReservations", ex);
+            }
+            finally
+            {
+                dbConnection.Close();
+            }
+
+            return returnList;
         }
 
         #endregion
