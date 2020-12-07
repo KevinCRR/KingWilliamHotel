@@ -101,12 +101,13 @@ namespace KingWilliamApp
         #region Reservations
         private void btnReservations_Click(object sender, EventArgs e)
         {
-            showSubMenu(pnlReservations);
+            openChildForm(new frmViewReservations());
+            //showSubMenu(pnlReservations);
         }
 
         private void btnReservationView_Click(object sender, EventArgs e)
         {
-            openChildForm(new frmViewReservations());
+            //openChildForm(new frmViewReservations());
         }
 
         private void btnReservationCreate_Click(object sender, EventArgs e)
@@ -116,7 +117,7 @@ namespace KingWilliamApp
 
         private void btnReservationEdit_Click(object sender, EventArgs e)
         {
-            openChildForm(new frmEditReservations());
+            //openChildForm(new frmEditReservations());
         }
 
         #endregion Reservations

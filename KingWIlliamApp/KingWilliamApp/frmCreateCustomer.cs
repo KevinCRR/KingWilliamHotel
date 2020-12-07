@@ -23,24 +23,24 @@ namespace KingWilliamApp
             {
                 lblMessage.Text = "";
 
-                Address newAddress = new Address(txtAddress1.Text.Trim(), txtAddress2.Text.Trim(), txtCity.Text.Trim(), (int)cbxProvince.SelectedValue, txtCountry.Text.Trim(), txtPostalCode.Text.Trim());
+                Address newAddress = new Address(txtAddress1.Text.Trim(), txtAddress2.Text.Trim(), txtCity.Text.Trim(), cbxProvince.SelectedValue.ToString(), txtCountry.Text.Trim(), txtPostalCode.Text.Trim());
                 Customer newCustomer = new Customer(txtFirstName.Text.Trim(), txtLastName.Text.Trim(), txtPhone.Text.Trim(), newAddress.InsertAddress());
                 newCustomer.InsertCustomer();
 
-                frmCreateReservation formCreateReservation = new frmCreateReservation(newCustomer.CustomerID);
-                formCreateReservation.ShowDialog();
+                frmViewReservations.OpenFormAsDialog(new frmCreateReservation(newCustomer));
+                this.Close();
             }
             catch (ArgumentNullException ex)
             {
-                lblMessage.Text = ex.ParamName;
+                lblMessage.Text = ex.Message;
             }
             catch (ArgumentOutOfRangeException ex)
             {
-                lblMessage.Text = ex.ParamName;
+                lblMessage.Text = ex.Message;
             }
             catch (ArgumentException ex)
             {
-                lblMessage.Text = ex.ParamName;
+                lblMessage.Text = ex.Message;
             }
             // Respond to DataExceptions referencing the database and the inner exception thrown during the database operation
             catch (DataException ex)
@@ -64,7 +64,7 @@ namespace KingWilliamApp
 
         private void frmCreateCustomer_Load(object sender, EventArgs e)
         {
-            cbxProvince.ValueMember = "provinceCode";
+            cbxProvince.ValueMember = "provinceName";
             cbxProvince.DataSource = Address.GetProvinces();
         }
     }

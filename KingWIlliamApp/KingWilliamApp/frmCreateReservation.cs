@@ -13,13 +13,40 @@ namespace KingWilliamApp
 {
     public partial class frmCreateReservation : Form
     {
-        int customerID;
+        private Customer UseCustomer;
 
-        public frmCreateReservation(int useCustomer)
+        public frmCreateReservation(Customer useCustomer)
         {
             InitializeComponent();
-            customerID = useCustomer;
+            UseCustomer = useCustomer;
         }
+
+        private void frmCreateReservation_Load(object sender, EventArgs e)
+        {
+            lblCustomerName.Text = UseCustomer.FirstName + " " + UseCustomer.LastName;
+
+            cbxRoom.ValueMember = "roomNumber";
+            cbxRoom.DataSource = Room.GetAllRooms();
+        }
+
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
@@ -125,42 +152,6 @@ namespace KingWilliamApp
                 }
             }
             catch (Exception) { }
-        }
-
-        private void frmCreateReservation_Load(object sender, EventArgs e)
-        {
-            SqlConnection sqlcon = new SqlConnection(Properties.Settings.Default.connectionString);
-
-            try
-            {
-                sqlcon.Open();
-
-                SqlCommand sqlProvinces = new SqlCommand("SELECT (provinceCode) FROM provinces", sqlcon);
-                SqlDataReader readerProvinces;
-                readerProvinces = sqlProvinces.ExecuteReader();
-                DataTable dtProvinces = new DataTable();
-                dtProvinces.Columns.Add("provinceCode", typeof(string));
-                dtProvinces.Load(readerProvinces);
-                //cbxProvince.ValueMember = "provinceCode";
-                //cbxProvince.DataSource = dtProvinces;
-
-                SqlCommand sqlRooms = new SqlCommand("SELECT (roomNumber) FROM rooms", sqlcon);
-                SqlDataReader readerRooms;
-                readerRooms = sqlRooms.ExecuteReader();
-                DataTable dtRooms = new DataTable();
-                dtRooms.Columns.Add("roomNumber", typeof(string));
-                dtRooms.Load(readerRooms);
-                cbxRoom.ValueMember = "roomNumber";
-                cbxRoom.DataSource = dtRooms;
-
-                sqlcon.Close();
-            }
-            catch (Exception) {}
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

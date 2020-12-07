@@ -73,5 +73,7 @@ namespace KingWilliamApp
         {
             newForm.ShowDialog();
         }
+
+        
     }
 }

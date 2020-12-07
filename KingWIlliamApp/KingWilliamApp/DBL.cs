@@ -152,7 +152,7 @@ namespace KingWilliamApp
             SqlConnection dbConnection = new SqlConnection(GetConnectionString());
 
             // Create new SQL command and assign it paramaters
-            SqlCommand command = new SqlCommand("INSERT INTO customers VALUES(@firstName, @lastName, @phoneNumber, @addressID)", dbConnection);
+            SqlCommand command = new SqlCommand("INSERT INTO customers OUTPUT INSERTED.customerID VALUES(@firstName, @lastName, @phoneNumber, @addressID)", dbConnection);
             command.Parameters.AddWithValue("@firstName", insertCustomer.FirstName);
             command.Parameters.AddWithValue("@lastName", insertCustomer.LastName);
             command.Parameters.AddWithValue("@phoneNumber", insertCustomer.PhoneNumber);
@@ -195,11 +195,11 @@ namespace KingWilliamApp
             SqlConnection dbConnection = new SqlConnection(GetConnectionString());
 
             // Create new SQL command and assign it paramaters
-            SqlCommand command = new SqlCommand("INSERT INTO address VALUES(@addressLine1, @addressLine2, @city, @provinceID, @country, @postalCode)", dbConnection);
+            SqlCommand command = new SqlCommand("INSERT INTO address OUTPUT INSERTED.addressID VALUES(@addressLine1, @addressLine2, @city, @provinceCode, @country, @postalCode)", dbConnection);
             command.Parameters.AddWithValue("@addressLine1", insertAddress.Address1);
             command.Parameters.AddWithValue("@addressLine2", insertAddress.Address2);
             command.Parameters.AddWithValue("@city", insertAddress.City);
-            command.Parameters.AddWithValue("@provinceID", insertAddress.Province);
+            command.Parameters.AddWithValue("@provinceCode", insertAddress.Province);
             command.Parameters.AddWithValue("@country", insertAddress.Country);
             command.Parameters.AddWithValue("@postalCode", insertAddress.PostalCode);
 
@@ -229,7 +229,7 @@ namespace KingWilliamApp
 
             SqlConnection dbConnection = new SqlConnection(GetConnectionString());
 
-            SqlCommand command = new SqlCommand("SELECT (provinceCode) FROM provinces", dbConnection);
+            SqlCommand command = new SqlCommand("SELECT (provinceName) FROM provinces", dbConnection);
 
             try
             {
@@ -238,7 +238,7 @@ namespace KingWilliamApp
                 SqlDataReader readerProvinces;
                 readerProvinces = command.ExecuteReader();
 
-                returnDataTable.Columns.Add("provinceCode", typeof(string));
+                returnDataTable.Columns.Add("provinceName", typeof(string));
                 returnDataTable.Load(readerProvinces);
 
             }
@@ -523,6 +523,45 @@ namespace KingWilliamApp
             // Return the populated row
             return returnStaff;
 
+        }
+
+        #endregion
+
+        //***********************************************************************************************************
+        // Room
+        //***********************************************************************************************************
+
+        #region Room
+
+        internal static DataTable SelectAllRooms()
+        {
+            DataTable returnDataTable = new DataTable();
+
+            SqlConnection dbConnection = new SqlConnection(GetConnectionString());
+
+            SqlCommand command = new SqlCommand("SELECT (roomNumber) FROM rooms", dbConnection);
+
+            try
+            {
+                dbConnection.Open();
+
+                SqlDataReader reader;
+                reader = command.ExecuteReader();
+
+                returnDataTable.Columns.Add("roomNumber", typeof(string));
+                returnDataTable.Load(reader);
+
+            }
+            catch (Exception ex)
+            {
+                throw new DataException("Error in GetAllRooms", ex);
+            }
+            finally
+            {
+                dbConnection.Close();
+            }
+
+            return returnDataTable;
         }
 
         #endregion

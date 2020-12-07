@@ -68,7 +68,7 @@
             this.btnSubmit.Margin = new System.Windows.Forms.Padding(2);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(622, 52);
-            this.btnSubmit.TabIndex = 50;
+            this.btnSubmit.TabIndex = 9;
             this.btnSubmit.Text = "Create";
             this.btnSubmit.UseVisualStyleBackColor = false;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
@@ -88,12 +88,12 @@
             // 
             this.txtAddress1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtAddress1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtAddress1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddress1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAddress1.Location = new System.Drawing.Point(338, 52);
             this.txtAddress1.Margin = new System.Windows.Forms.Padding(2);
             this.txtAddress1.Name = "txtAddress1";
             this.txtAddress1.Size = new System.Drawing.Size(216, 25);
-            this.txtAddress1.TabIndex = 76;
+            this.txtAddress1.TabIndex = 3;
             // 
             // lblAddress1
             // 
@@ -112,12 +112,12 @@
             // 
             this.txtCity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtCity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCity.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCity.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCity.Location = new System.Drawing.Point(336, 189);
             this.txtCity.Margin = new System.Windows.Forms.Padding(2);
             this.txtCity.Name = "txtCity";
             this.txtCity.Size = new System.Drawing.Size(216, 25);
-            this.txtCity.TabIndex = 78;
+            this.txtCity.TabIndex = 5;
             // 
             // lblCity
             // 
@@ -149,12 +149,12 @@
             // 
             this.txtCountry.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtCountry.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCountry.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCountry.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCountry.Location = new System.Drawing.Point(336, 399);
             this.txtCountry.Margin = new System.Windows.Forms.Padding(2);
             this.txtCountry.Name = "txtCountry";
             this.txtCountry.Size = new System.Drawing.Size(216, 25);
-            this.txtCountry.TabIndex = 69;
+            this.txtCountry.TabIndex = 8;
             // 
             // lblCountry
             // 
@@ -173,23 +173,23 @@
             // 
             this.txtPostalCode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtPostalCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPostalCode.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPostalCode.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPostalCode.Location = new System.Drawing.Point(336, 259);
             this.txtPostalCode.Margin = new System.Windows.Forms.Padding(2);
             this.txtPostalCode.Name = "txtPostalCode";
             this.txtPostalCode.Size = new System.Drawing.Size(216, 25);
-            this.txtPostalCode.TabIndex = 68;
+            this.txtPostalCode.TabIndex = 6;
             // 
             // txtAddress2
             // 
             this.txtAddress2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtAddress2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtAddress2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddress2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAddress2.Location = new System.Drawing.Point(336, 119);
             this.txtAddress2.Margin = new System.Windows.Forms.Padding(2);
             this.txtAddress2.Name = "txtAddress2";
             this.txtAddress2.Size = new System.Drawing.Size(216, 25);
-            this.txtAddress2.TabIndex = 77;
+            this.txtAddress2.TabIndex = 4;
             // 
             // lblAddress2
             // 
@@ -208,13 +208,14 @@
             // 
             this.cbxProvince.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.cbxProvince.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxProvince.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxProvince.FormattingEnabled = true;
             this.cbxProvince.Location = new System.Drawing.Point(336, 329);
             this.cbxProvince.Margin = new System.Windows.Forms.Padding(2);
             this.cbxProvince.MaxDropDownItems = 13;
             this.cbxProvince.Name = "cbxProvince";
-            this.cbxProvince.Size = new System.Drawing.Size(217, 21);
-            this.cbxProvince.TabIndex = 79;
+            this.cbxProvince.Size = new System.Drawing.Size(217, 25);
+            this.cbxProvince.TabIndex = 7;
             // 
             // lblPostal
             // 
@@ -233,12 +234,12 @@
             // 
             this.txtPhone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPhone.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhone.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhone.Location = new System.Drawing.Point(49, 189);
             this.txtPhone.Margin = new System.Windows.Forms.Padding(2);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(216, 25);
-            this.txtPhone.TabIndex = 80;
+            this.txtPhone.TabIndex = 2;
             // 
             // lblPhone
             // 
@@ -257,12 +258,12 @@
             // 
             this.txtLastName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtLastName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtLastName.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLastName.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLastName.Location = new System.Drawing.Point(51, 119);
             this.txtLastName.Margin = new System.Windows.Forms.Padding(2);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(214, 25);
-            this.txtLastName.TabIndex = 81;
+            this.txtLastName.TabIndex = 1;
             // 
             // lblLastName
             // 
@@ -281,12 +282,12 @@
             // 
             this.txtFirstName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtFirstName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtFirstName.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFirstName.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFirstName.Location = new System.Drawing.Point(49, 52);
             this.txtFirstName.Margin = new System.Windows.Forms.Padding(2);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(216, 25);
-            this.txtFirstName.TabIndex = 85;
+            this.txtFirstName.TabIndex = 0;
             // 
             // lblFirstName
             // 
@@ -362,7 +363,7 @@
             this.btnExistingCustomer.Margin = new System.Windows.Forms.Padding(0);
             this.btnExistingCustomer.Name = "btnExistingCustomer";
             this.btnExistingCustomer.Size = new System.Drawing.Size(216, 38);
-            this.btnExistingCustomer.TabIndex = 86;
+            this.btnExistingCustomer.TabIndex = 10;
             this.btnExistingCustomer.Text = "Use Existing Customer";
             this.btnExistingCustomer.UseVisualStyleBackColor = false;
             this.btnExistingCustomer.Click += new System.EventHandler(this.btnExistingCustomer_Click);
@@ -371,11 +372,11 @@
             // 
             this.lblMessage.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMessage.ForeColor = System.Drawing.Color.Red;
-            this.lblMessage.Location = new System.Drawing.Point(47, 259);
+            this.lblMessage.Location = new System.Drawing.Point(47, 236);
             this.lblMessage.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(218, 91);
-            this.lblMessage.TabIndex = 87;
+            this.lblMessage.Size = new System.Drawing.Size(218, 131);
+            this.lblMessage.TabIndex = 11;
             this.lblMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmCreateCustomer
@@ -390,6 +391,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmCreateCustomer";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Create Customer";
             this.Load += new System.EventHandler(this.frmCreateCustomer_Load);
             this.pnlHeader.ResumeLayout(false);

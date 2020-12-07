@@ -16,7 +16,7 @@ namespace KingWilliamApp
         string address1;
         string address2;
         string city;
-        int province;
+        string province;
         string country;
         string postalCode;
 
@@ -25,12 +25,12 @@ namespace KingWilliamApp
         #region "Constructors"
 
         protected internal Address(string address1Value, string address2Value, string cityValue, 
-            int provinceValue, string countryValue, string postalCodeValue)
+            string provinceValue, string countryValue, string postalCodeValue)
         {
             this.Address1 = address1Value;
             this.Address2 = address2Value;
             this.City = cityValue;
-            this.PostalCode = postalCodeValue;
+            this.Province = provinceValue;
             this.Country = countryValue;
             this.PostalCode = postalCodeValue;
         }
@@ -113,7 +113,7 @@ namespace KingWilliamApp
             }
         }
 
-        protected internal int Province
+        protected internal string Province
         {
             get
             {

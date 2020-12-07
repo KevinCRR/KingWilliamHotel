@@ -66,7 +66,7 @@
             this.lblPageName.Location = new System.Drawing.Point(0, 0);
             this.lblPageName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPageName.Name = "lblPageName";
-            this.lblPageName.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.lblPageName.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.lblPageName.Size = new System.Drawing.Size(733, 67);
             this.lblPageName.TabIndex = 23;
             this.lblPageName.Text = "Reservations";
@@ -84,7 +84,7 @@
             // 
             // pnlSecondHeader
             // 
-            this.pnlSecondHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pnlSecondHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.pnlSecondHeader.Controls.Add(this.label1);
             this.pnlSecondHeader.Controls.Add(this.dtFromDate);
             this.pnlSecondHeader.Controls.Add(this.btnNew);
@@ -97,10 +97,11 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(530, 9);
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(515, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(41, 17);
             this.label1.TabIndex = 2;
@@ -108,7 +109,8 @@
             // 
             // dtFromDate
             // 
-            this.dtFromDate.Location = new System.Drawing.Point(577, 9);
+            this.dtFromDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtFromDate.Location = new System.Drawing.Point(562, 9);
             this.dtFromDate.Name = "dtFromDate";
             this.dtFromDate.Size = new System.Drawing.Size(129, 20);
             this.dtFromDate.TabIndex = 1;
@@ -122,7 +124,7 @@
             this.btnNew.FlatAppearance.BorderSize = 0;
             this.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnNew.ForeColor = System.Drawing.Color.Black;
-            this.btnNew.Location = new System.Drawing.Point(27, 9);
+            this.btnNew.Location = new System.Drawing.Point(39, 11);
             this.btnNew.Margin = new System.Windows.Forms.Padding(0);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(85, 20);
@@ -139,10 +141,10 @@
             this.pnlList.BackColor = System.Drawing.Color.White;
             this.pnlList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlList.Controls.Add(this.dgvReservations);
-            this.pnlList.Location = new System.Drawing.Point(27, 126);
+            this.pnlList.Location = new System.Drawing.Point(38, 148);
             this.pnlList.Margin = new System.Windows.Forms.Padding(2);
             this.pnlList.Name = "pnlList";
-            this.pnlList.Size = new System.Drawing.Size(679, 396);
+            this.pnlList.Size = new System.Drawing.Size(653, 360);
             this.pnlList.TabIndex = 55;
             // 
             // dgvReservations
@@ -184,7 +186,7 @@
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvReservations.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvReservations.RowTemplate.Height = 28;
-            this.dgvReservations.Size = new System.Drawing.Size(677, 394);
+            this.dgvReservations.Size = new System.Drawing.Size(651, 358);
             this.dgvReservations.TabIndex = 0;
             this.dgvReservations.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvReservations_CellClick);
             // 
