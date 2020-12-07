@@ -21,18 +21,19 @@ namespace KingWilliamApp
 
         protected internal Bill()
         {
-            billAmount = 0;
-            paymentType = "Undefined";
-            amountOwing = 0;
-
-            billID = DBL.InsertNewBill(this);
+            this.BillAmount = 0;
+            this.PaymentType = "Undefined";
+            this.AmountOwing = 0;
         }
 
         #endregion
 
         #region "Class methods"
 
-
+        protected internal void InsertBill()
+        {
+            this.BillID = DBL.InsertNewBill(this);
+        }
 
         #endregion
 

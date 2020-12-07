@@ -21,44 +21,27 @@ namespace KingWilliamApp
 
         #region "Constructors"
 
-        //protected internal Customer(string firstNameValue, string lastNameValue, string phoneNumberValue,
-        //    string address1Value, string address2Value, string cityValue,
-        //    int provinceValue, string countryValue, string postalCodeValue)
-        //{
-        //    Address newAddress = new Address(address1Value, address2Value, cityValue, provinceValue,
-        //        countryValue, postalCodeValue);
-
-        //    if (newAddress.AddressID != 0)
-        //    {
-        //        this.FirstName = firstNameValue;
-        //        this.LastName = lastNameValue;
-        //        this.PhoneNumber = phoneNumberValue;
-        //        this.AddressID = newAddress.AddressID;
-
-        //        customerID = DBL.InsertNewCustomer(this);
-        //    }
-        //}
-
         protected internal Customer(string firstNameValue, string lastNameValue, string phoneNumberValue, int addressIDValue)
         {
             this.FirstName = firstNameValue;
             this.LastName = lastNameValue;
             this.PhoneNumber = phoneNumberValue;
             this.AddressID = addressIDValue;
-
-            //DBL.InsertNewCustomer(this);
         }
 
-        //protected internal Customer()
-        //{
+        protected internal Customer()
+        {
 
-        //}
+        }
 
         #endregion
 
         #region "Class methods"
 
-
+        protected internal void InsertCustomer()
+        {
+            this.CustomerID = DBL.InsertNewCustomer(this);
+        }
 
         #endregion
 
@@ -146,6 +129,10 @@ namespace KingWilliamApp
             get
             {
                 return customerID;
+            }
+            set
+            {
+                customerID = value;
             }
         }
 

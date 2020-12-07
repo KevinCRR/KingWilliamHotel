@@ -187,7 +187,7 @@ namespace KingWilliamApp
 
                         if(customerRecord!= null)
                         {
-                            frmCreateCustomer f = new frmCreateCustomer(customerRecord);
+                            frmCreateCustomer f = new frmCreateCustomer();
 
                             f.MdiParent = this;
                             f.StartPosition = FormStartPosition.CenterParent;

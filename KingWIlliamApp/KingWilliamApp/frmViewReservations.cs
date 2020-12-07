@@ -20,124 +20,62 @@ namespace KingWilliamApp
 
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
+        private void frmViewReservations_Load(object sender, EventArgs e)
         {
-            this.Close();
+            dtFromDate.Value = DateTime.Today;
+            PopulateData(Reservation.GetAll(dtFromDate.Value));
         }
 
-        private void btnCreate_Click(object sender, EventArgs e)
+        private void dtFromDate_ValueChanged(object sender, EventArgs e)
         {
-            //if (this.Parent == null)
-            //    return;
-
-            //frmCreateReservation createForm = new frmCreateReservation();
-
-            //createForm.TopLevel = false;
-            //createForm.FormBorderStyle = FormBorderStyle.None;
-            //createForm.Dock = DockStyle.Fill;
-
-            ////Panel pnlChildForm = (this.Parent as frmMainForm).Controls["pnlChildForm"] as Panel;
-            ////pnlChildForm.Controls.Add(createForm);
-            ////pnlChildForm.Tag = createForm;
-
-            //Panel pnlContainer = (Parent.Controls["pnlChildForm"] as Panel);
-            //pnlContainer.Controls.Add(createForm);
-            //pnlContainer.Tag = createForm;
-
-            //createForm.BringToFront();
-            //createForm.Show();
+            PopulateData(Reservation.GetAll(dtFromDate.Value));
         }
 
-        private void btnEdit_Click(object sender, EventArgs e)
+        void PopulateData(List<Reservation> reservations)
         {
-
+            dgvReservations.Rows.Clear();
+            foreach (Reservation r in reservations)
+            {
+                dgvReservations.Rows.Add(new object[]
+                {
+                    r.ReservationID,
+                    r.StartDate,
+                    r.EndDate,
+                    r.RoomNumber,
+                    r.NumberOfGuests,
+                    r.CustomerID,
+                    r.BillID,
+                    r.Notes,
+                    "Edit",
+                    "Delete"
+                });
+                dgvReservations.Rows[dgvReservations.RowCount - 1].Tag = r;
+            }
         }
 
-        private void btnViewBill_Click(object sender, EventArgs e)
+        private void dgvReservations_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            if (e.ColumnIndex == 8) // edit
+            {
+                // edit form
+            }
+            if (e.ColumnIndex == 9)
+            {
+                // delete
+            }
         }
 
-        public frmMainForm Parent { get; set; }
-
-        private void pnlColumn2_Paint(object sender, PaintEventArgs e)
+        private void btnNew_Click(object sender, EventArgs e)
         {
-
+            frmCreateCustomer formCreateCustomer = new frmCreateCustomer();
+            formCreateCustomer.ShowDialog();
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        public static void OpenFormAsDialog(Form newForm)
         {
-
+            newForm.ShowDialog();
         }
 
-        private void txtNotes_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pnlColumn1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void btnSubmit_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void nudGuests_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pnlSearch_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblMessage_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateEnd_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cbxRoom_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pnlHeader_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        
     }
 }

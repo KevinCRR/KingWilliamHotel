@@ -101,22 +101,23 @@ namespace KingWilliamApp
         #region Reservations
         private void btnReservations_Click(object sender, EventArgs e)
         {
-            showSubMenu(pnlReservations);
+            openChildForm(new frmViewReservations());
+            //showSubMenu(pnlReservations);
         }
 
         private void btnReservationView_Click(object sender, EventArgs e)
         {
-            openChildForm(new frmViewReservations());
+            //openChildForm(new frmViewReservations());
         }
 
         private void btnReservationCreate_Click(object sender, EventArgs e)
         {
-            openChildForm(new frmEditReservation());
+            //openChildForm(new frmCreateReservation());
         }
 
         private void btnReservationEdit_Click(object sender, EventArgs e)
         {
-            openChildForm(new frmEditReservations());
+            //openChildForm(new frmEditReservations());
         }
 
         #endregion Reservations
@@ -130,7 +131,6 @@ namespace KingWilliamApp
         private void btnBillView_Click(object sender, EventArgs e)
         {
             openChildForm(new frmViewBill());
-            
         }
 
         private void btnBillEdit_Click(object sender, EventArgs e)
@@ -247,8 +247,7 @@ namespace KingWilliamApp
 
         private void btnCustomerCreate_Click(object sender, EventArgs e)
         {
-            Customer customer = null;
-            openChildForm(new frmCreateCustomer(customer));
+            openChildForm(new frmCreateCustomer());
         }
 
         private void btnCustomerEdit_Click(object sender, EventArgs e)
@@ -317,10 +316,9 @@ namespace KingWilliamApp
             openChildForm(new frmCreateUsers());
         }
 
-        private void btnUserEdit_Click(object sender, EventArgs e)
+        private void btnUserDelete_Click(object sender, EventArgs e)
         {
-            openChildForm(new frmEditUsers());
-
+            openChildForm(new frmDeleteUser());
         }
         #endregion Users
 

@@ -23,26 +23,42 @@ namespace KingWilliamApp
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string username = txtUsername.Text.Trim();
-            string password = txtPassword.Text.Trim();
+            User currentUser = null;
+            lblMessage.Text = "";
 
-            if (!string.IsNullOrEmpty(username) && !string.IsNullOrEmpty(password))
+            try
             {
-                User.CurrentUser = User.GetUser(username, password);
-
-                if (User.CurrentUser.Username != null)
+                currentUser = User.GetUser(txtUsername.Text.Trim(), txtPassword.Text.Trim());
+            }
+            catch (ArgumentNullException ex)
+            {
+                lblMessage.Text = ex.ParamName;
+            }
+            catch (ArgumentException ex)
+            {
+                lblMessage.Text = ex.ParamName;
+            }
+            // Respond to DataExceptions referencing the database and the inner exception thrown during the database operation
+            catch (DataException ex)
+            {
+                lblMessage.Text = "Database error! " + ex.Message + "\n\n" +
+                    ex.InnerException.Message + "\n\n" + ex.Source + "\n\n" + ex.Message +
+                    "\n\n" + ex.StackTrace;
+            }
+            // Catch other unanticipated exceptions and provide as much debugging info as possible.
+            catch (Exception ex)
+            {
+                lblMessage.Text = "An unknown error has occurred in " + ex.Source + "! Please contact your IT department and provide the following details:\n\n" + ex.Message + "\n\n" + ex.StackTrace + "\n\nUnknown Error!";
+            }
+            finally
+            {
+                if (lblMessage.Text == "" && currentUser != null)
                 {
+                    // Success
+                    User.CurrentUser = currentUser;
                     this.Close();
                     IsLoggedIn = true;
                 }
-                else
-                {
-                    MessageBox.Show("Incorrect username or password! Try again or contact an administrator.");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Please enter a username and password.");
             }
         }
     }
