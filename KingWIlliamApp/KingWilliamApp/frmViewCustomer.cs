@@ -132,7 +132,7 @@ namespace KingWilliamApp
                                     phoneNum1 = oReader["phoneNumber"].ToString();
                                     address = Convert.ToInt32(oReader["addressID"].ToString());
 
-                                    customerRecord = new Customer(firstName1, lastName1, phoneNum1, address);
+                                    Customer.CurrentCustomer = new Customer(firstName1, lastName1, phoneNum1, address);
                                 }
                                 else
                                 {

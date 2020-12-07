@@ -64,6 +64,8 @@ namespace KingWilliamApp
 
         #region "Property Procedures"
 
+        public static Customer CurrentCustomer { get; set; }
+
         protected internal string FirstName
         {
             get
@@ -148,6 +150,7 @@ namespace KingWilliamApp
         }
 
         #endregion
+
 
     }
 }
