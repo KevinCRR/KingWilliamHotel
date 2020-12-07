@@ -111,7 +111,7 @@ namespace KingWilliamApp
 
         private void btnReservationCreate_Click(object sender, EventArgs e)
         {
-            openChildForm(new frmEditReservation());
+            //openChildForm(new frmCreateReservation());
         }
 
         private void btnReservationEdit_Click(object sender, EventArgs e)

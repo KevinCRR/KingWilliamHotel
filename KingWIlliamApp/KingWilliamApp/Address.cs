@@ -44,7 +44,7 @@ namespace KingWilliamApp
 
         #region "Class methods"
 
-        protected static DataTable GetProvinces()
+        public static DataTable GetProvinces()
         {
             return DBL.SelectAllProvinces();
         }
