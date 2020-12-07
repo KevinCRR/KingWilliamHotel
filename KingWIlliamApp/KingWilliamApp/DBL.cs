@@ -64,11 +64,12 @@ namespace KingWilliamApp
                             reader.GetInt32(0),         // id
                             reader.GetDateTime(5),      // startDate
                             reader.GetDateTime(6),      // endDate
-                            reader.GetInt32(4),         // numberOfGuests
                             reader.GetInt32(1),         // roomNumber
+                            reader.GetInt32(4),         // numberOfGuests
+                            "null",               //reader.GetString(7));      // notes
                             reader.GetInt32(2),         // customerID
-                            reader.GetInt32(3),         // billID
-                            "null");  //reader.GetString(7));      // notes
+                            reader.GetInt32(3));        // billID
+                            
 
                         returnList.Add(temp);
 
@@ -106,14 +107,14 @@ namespace KingWilliamApp
             SqlConnection dbConnection = new SqlConnection(GetConnectionString());
 
             // Create new SQL command and assign it paramaters
-            SqlCommand command = new SqlCommand("INSERT INTO reservations VALUES(@numberOfGuests, @startDate, @endDate, @notes, @customerID, @billID, @roomNumber)", dbConnection);
+            SqlCommand command = new SqlCommand("INSERT INTO reservations OUTPUT INSERTED.reservationID VALUES(@roomNumber, @customerID, @billID, @numberOfGuests, @startDate, @endDate, @notes)", dbConnection);
+            command.Parameters.AddWithValue("@roomNumber", insertReservation.RoomNumber);
+            command.Parameters.AddWithValue("@customerID", insertReservation.CustomerID);
+            command.Parameters.AddWithValue("@billID", insertReservation.BillID);
             command.Parameters.AddWithValue("@numberOfGuests", insertReservation.NumberOfGuests);
             command.Parameters.AddWithValue("@startDate", insertReservation.StartDate);
             command.Parameters.AddWithValue("@endDate", insertReservation.EndDate);
             command.Parameters.AddWithValue("@notes", insertReservation.Notes);
-            command.Parameters.AddWithValue("@customerID", insertReservation.CustomerID);
-            command.Parameters.AddWithValue("@billID", insertReservation.BillID);
-            command.Parameters.AddWithValue("@roomNumber", insertReservation.RoomNumber);
 
             // Try to insert the new record, return result
             try
@@ -271,7 +272,7 @@ namespace KingWilliamApp
             SqlConnection dbConnection = new SqlConnection(GetConnectionString());
 
             // Create new SQL command and assign it paramaters
-            SqlCommand command = new SqlCommand("INSERT INTO customerBilling VALUES(@billAmount, @paymentType, @amountOwing)", dbConnection);
+            SqlCommand command = new SqlCommand("INSERT INTO customerBilling OUTPUT INSERTED.billID VALUES(@billAmount, @paymentType, @amountOwing)", dbConnection);
             command.Parameters.AddWithValue("@billAmount", insertBill.BillAmount);
             command.Parameters.AddWithValue("@paymentType", insertBill.PaymentType);
             command.Parameters.AddWithValue("@amountOwing", insertBill.AmountOwing);

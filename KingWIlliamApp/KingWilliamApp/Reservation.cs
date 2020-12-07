@@ -15,54 +15,38 @@ namespace KingWilliamApp
         int reservationID;
         DateTime startDate;
         DateTime endDate;
+        int roomNumber;
         int numberOfGuests;
+        string notes;
         int customerID;
         int billID;
-        int roomNumber;
-        string notes;
 
         #endregion
 
         #region "Constructors"
 
-        //protected internal Reservation(DateTime startDateValue, DateTime endDateValue, int roomNumberValue, 
-        //    int numberOfGuestsValue, string firstNameValue, string lastNameValue, string phoneNumberValue, 
-        //    string address1Value, string address2Value, string cityValue, int provinceValue, string countryValue, 
-        //    string postalCodeValue, string notesValue)
-        //{
-        //    Customer newCustomer = new Customer(firstNameValue, lastNameValue, phoneNumberValue,
-        //        address1Value, address2Value, cityValue, provinceValue, countryValue, postalCodeValue);
+        protected internal Reservation(DateTime startDateValue, DateTime endDateValue, 
+            int roomNumberValue, int numberOfGuestsValue, string notesValue, int customerIDValue)
+        {
+            this.StartDate = startDateValue;
+            this.EndDate = endDateValue;
+            this.RoomNumber = roomNumberValue;
+            this.NumberOfGuests = numberOfGuestsValue;
+            this.Notes = notesValue;
+            this.CustomerID = customerIDValue;
+        }
 
-        //    if (newCustomer.CustomerID != 0)
-        //    {
-        //        Bill newBill = new Bill();
-
-        //        if (newBill.BillID != 0)
-        //        {
-        //            this.StartDate = startDateValue;
-        //            this.EndDate = endDateValue;
-        //            this.NumberOfGuests = numberOfGuestsValue;
-        //            this.RoomNumber = roomNumberValue;
-        //            this.CustomerID = newCustomer.CustomerID;
-        //            this.BillID = newBill.BillID;
-        //            this.Notes = notesValue;
-
-        //            this.ReservationID = DBL.InsertNewReservation(this);
-        //        }
-        //    }
-        //}
-
-        protected internal Reservation(int reservationIDValue, DateTime startDateValue, DateTime endDateValue, 
-            int numberOfGuestsValue, int roomNumberValue, int customerIDValue, int billIDValue, string notesValue)
+        protected internal Reservation(int reservationIDValue, DateTime startDateValue, DateTime endDateValue,
+            int roomNumberValue, int numberOfGuestsValue, string notesValue, int customerIDValue, int billIDValue)
         {
             this.ReservationID = reservationIDValue;
             this.StartDate = startDateValue;
             this.EndDate = endDateValue;
-            this.NumberOfGuests = numberOfGuestsValue;
             this.RoomNumber = roomNumberValue;
+            this.NumberOfGuests = numberOfGuestsValue;
+            this.Notes = notesValue;
             this.CustomerID = customerIDValue;
             this.BillID = billIDValue;
-            this.Notes = notesValue;
         }
 
         protected internal Reservation()
@@ -78,6 +62,18 @@ namespace KingWilliamApp
         public static List<Reservation> GetAll(DateTime fromDate)
         {
             return DBL.SelectAllReservations(fromDate);
+        }
+
+        protected internal void InsertReservation()
+        {
+            if (this.BillID == 0)
+            {
+                Bill newBill = new Bill();
+                newBill.InsertBill();
+                this.BillID = newBill.BillID;
+            }
+
+            this.ReservationID = DBL.InsertNewReservation(this);
         }
 
         #endregion
