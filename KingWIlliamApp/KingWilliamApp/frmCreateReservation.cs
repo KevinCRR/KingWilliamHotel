@@ -11,11 +11,14 @@ using System.Data.SqlClient;
 
 namespace KingWilliamApp
 {
-    public partial class frmEditReservation : Form
+    public partial class frmCreateReservation : Form
     {
-        public frmEditReservation()
+        int customerID;
+
+        public frmCreateReservation(int useCustomer)
         {
             InitializeComponent();
+            customerID = useCustomer;
         }
 
         private void btnCreate_Click(object sender, EventArgs e)

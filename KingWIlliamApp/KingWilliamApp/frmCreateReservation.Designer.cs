@@ -1,6 +1,6 @@
 ﻿namespace KingWilliamApp
 {
-    partial class frmEditReservation
+    partial class frmCreateReservation
     {
         /// <summary>
         /// Required designer variable.

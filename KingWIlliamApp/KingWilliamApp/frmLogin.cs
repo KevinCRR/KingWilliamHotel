@@ -32,11 +32,11 @@ namespace KingWilliamApp
             }
             catch (ArgumentNullException ex)
             {
-                lblMessage.Text = ex.Message;
+                lblMessage.Text = ex.ParamName;
             }
             catch (ArgumentException ex)
             {
-                lblMessage.Text = ex.Message;
+                lblMessage.Text = ex.ParamName;
             }
             // Respond to DataExceptions referencing the database and the inner exception thrown during the database operation
             catch (DataException ex)

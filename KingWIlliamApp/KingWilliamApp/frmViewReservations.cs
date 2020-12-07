@@ -18,34 +18,6 @@ namespace KingWilliamApp
             InitializeComponent();
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void btnCreate_Click(object sender, EventArgs e)
-        {
-            //if (this.Parent == null)
-            //    return;
-
-            //frmCreateReservation createForm = new frmCreateReservation();
-
-            //createForm.TopLevel = false;
-            //createForm.FormBorderStyle = FormBorderStyle.None;
-            //createForm.Dock = DockStyle.Fill;
-
-            ////Panel pnlChildForm = (this.Parent as frmMainForm).Controls["pnlChildForm"] as Panel;
-            ////pnlChildForm.Controls.Add(createForm);
-            ////pnlChildForm.Tag = createForm;
-
-            //Panel pnlContainer = (Parent.Controls["pnlChildForm"] as Panel);
-            //pnlContainer.Controls.Add(createForm);
-            //pnlContainer.Tag = createForm;
-
-            //createForm.BringToFront();
-            //createForm.Show();
-        }
-
         private void frmViewReservations_Load(object sender, EventArgs e)
         {
             dtFromDate.Value = DateTime.Today;
@@ -89,6 +61,17 @@ namespace KingWilliamApp
             {
                 // delete
             }
+        }
+
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            frmCreateCustomer formCreateCustomer = new frmCreateCustomer();
+            formCreateCustomer.ShowDialog();
+        }
+
+        public static void OpenFormAsDialog(Form newForm)
+        {
+            newForm.ShowDialog();
         }
     }
 }

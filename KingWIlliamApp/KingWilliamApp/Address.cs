@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,8 +33,6 @@ namespace KingWilliamApp
             this.PostalCode = postalCodeValue;
             this.Country = countryValue;
             this.PostalCode = postalCodeValue;
-
-            addressID = DBL.InsertNewAddress(this);
         }
 
         protected internal Address()
@@ -45,7 +44,16 @@ namespace KingWilliamApp
 
         #region "Class methods"
 
+        protected static DataTable GetProvinces()
+        {
+            return DBL.SelectAllProvinces();
+        }
 
+        protected internal int InsertAddress()
+        {
+            addressID = DBL.InsertNewAddress(this);
+            return addressID;
+        }
 
         #endregion
 

@@ -246,8 +246,7 @@ namespace KingWilliamApp
 
         private void btnCustomerCreate_Click(object sender, EventArgs e)
         {
-            Customer customer = null;
-            openChildForm(new frmCreateCustomer(customer));
+            openChildForm(new frmCreateCustomer());
         }
 
         private void btnCustomerEdit_Click(object sender, EventArgs e)

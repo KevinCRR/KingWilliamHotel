@@ -107,7 +107,7 @@
             // 
             // pnlMenu
             // 
-            this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
+            this.pnlMenu.BackColor = System.Drawing.Color.Black;
             this.pnlMenu.Controls.Add(this.pnlMenuButtons);
             this.pnlMenu.Controls.Add(this.pnlActiveUser);
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
@@ -120,6 +120,7 @@
             // pnlMenuButtons
             // 
             this.pnlMenuButtons.AutoScroll = true;
+            this.pnlMenuButtons.BackColor = System.Drawing.Color.Transparent;
             this.pnlMenuButtons.Controls.Add(this.btnSignOut);
             this.pnlMenuButtons.Controls.Add(this.pnlUsers);
             this.pnlMenuButtons.Controls.Add(this.btnUsers);
@@ -150,7 +151,6 @@
             // 
             // btnSignOut
             // 
-            this.btnSignOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
             this.btnSignOut.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnSignOut.FlatAppearance.BorderSize = 0;
             this.btnSignOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -169,7 +169,7 @@
             // 
             // pnlUsers
             // 
-            this.pnlUsers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
+            this.pnlUsers.BackColor = System.Drawing.Color.Transparent;
             this.pnlUsers.Controls.Add(this.btnUserDelete);
             this.pnlUsers.Controls.Add(this.btnUserCreate);
             this.pnlUsers.Controls.Add(this.btnUserView);
@@ -182,7 +182,6 @@
             // 
             // btnUserDelete
             // 
-            this.btnUserDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
             this.btnUserDelete.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnUserDelete.FlatAppearance.BorderSize = 0;
             this.btnUserDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -200,7 +199,6 @@
             // 
             // btnUserCreate
             // 
-            this.btnUserCreate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
             this.btnUserCreate.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnUserCreate.FlatAppearance.BorderSize = 0;
             this.btnUserCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -218,7 +216,6 @@
             // 
             // btnUserView
             // 
-            this.btnUserView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
             this.btnUserView.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnUserView.FlatAppearance.BorderSize = 0;
             this.btnUserView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -236,7 +233,6 @@
             // 
             // btnUsers
             // 
-            this.btnUsers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
             this.btnUsers.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnUsers.FlatAppearance.BorderSize = 0;
             this.btnUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -255,7 +251,7 @@
             // 
             // pnlEmploymentPositions
             // 
-            this.pnlEmploymentPositions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
+            this.pnlEmploymentPositions.BackColor = System.Drawing.Color.Transparent;
             this.pnlEmploymentPositions.Controls.Add(this.btnEmploymentPositionEdit);
             this.pnlEmploymentPositions.Controls.Add(this.btnEmploymentPositionCreate);
             this.pnlEmploymentPositions.Controls.Add(this.btnEmploymentPositionView);
@@ -268,7 +264,6 @@
             // 
             // btnEmploymentPositionEdit
             // 
-            this.btnEmploymentPositionEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
             this.btnEmploymentPositionEdit.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnEmploymentPositionEdit.FlatAppearance.BorderSize = 0;
             this.btnEmploymentPositionEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -286,7 +281,6 @@
             // 
             // btnEmploymentPositionCreate
             // 
-            this.btnEmploymentPositionCreate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
             this.btnEmploymentPositionCreate.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnEmploymentPositionCreate.FlatAppearance.BorderSize = 0;
             this.btnEmploymentPositionCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -304,7 +298,6 @@
             // 
             // btnEmploymentPositionView
             // 
-            this.btnEmploymentPositionView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
             this.btnEmploymentPositionView.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnEmploymentPositionView.FlatAppearance.BorderSize = 0;
             this.btnEmploymentPositionView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -322,7 +315,6 @@
             // 
             // btnEmploymentPositions
             // 
-            this.btnEmploymentPositions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
             this.btnEmploymentPositions.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnEmploymentPositions.FlatAppearance.BorderSize = 0;
             this.btnEmploymentPositions.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -341,7 +333,7 @@
             // 
             // pnlStaff
             // 
-            this.pnlStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
+            this.pnlStaff.BackColor = System.Drawing.Color.Transparent;
             this.pnlStaff.Controls.Add(this.btnStaffEdit);
             this.pnlStaff.Controls.Add(this.btnStaffCreate);
             this.pnlStaff.Controls.Add(this.btnStaffView);
@@ -354,7 +346,6 @@
             // 
             // btnStaffEdit
             // 
-            this.btnStaffEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
             this.btnStaffEdit.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnStaffEdit.FlatAppearance.BorderSize = 0;
             this.btnStaffEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -372,7 +363,6 @@
             // 
             // btnStaffCreate
             // 
-            this.btnStaffCreate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
             this.btnStaffCreate.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnStaffCreate.FlatAppearance.BorderSize = 0;
             this.btnStaffCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -390,7 +380,6 @@
             // 
             // btnStaffView
             // 
-            this.btnStaffView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
             this.btnStaffView.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnStaffView.FlatAppearance.BorderSize = 0;
             this.btnStaffView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -408,7 +397,6 @@
             // 
             // btnStaff
             // 
-            this.btnStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
             this.btnStaff.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnStaff.FlatAppearance.BorderSize = 0;
             this.btnStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -427,7 +415,7 @@
             // 
             // pnlClients
             // 
-            this.pnlClients.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlClients.BackColor = System.Drawing.Color.Transparent;
             this.pnlClients.Controls.Add(this.btnCustomerEdit);
             this.pnlClients.Controls.Add(this.btnCustomerCreate);
             this.pnlClients.Controls.Add(this.btnCustomerView);
@@ -440,7 +428,6 @@
             // 
             // btnCustomerEdit
             // 
-            this.btnCustomerEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
             this.btnCustomerEdit.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCustomerEdit.FlatAppearance.BorderSize = 0;
             this.btnCustomerEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -458,7 +445,6 @@
             // 
             // btnCustomerCreate
             // 
-            this.btnCustomerCreate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
             this.btnCustomerCreate.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCustomerCreate.FlatAppearance.BorderSize = 0;
             this.btnCustomerCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -476,7 +462,6 @@
             // 
             // btnCustomerView
             // 
-            this.btnCustomerView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
             this.btnCustomerView.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCustomerView.FlatAppearance.BorderSize = 0;
             this.btnCustomerView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -494,7 +479,6 @@
             // 
             // btnCustomers
             // 
-            this.btnCustomers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
             this.btnCustomers.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCustomers.FlatAppearance.BorderSize = 0;
             this.btnCustomers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -513,7 +497,7 @@
             // 
             // pnlRoomTypes
             // 
-            this.pnlRoomTypes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
+            this.pnlRoomTypes.BackColor = System.Drawing.Color.Transparent;
             this.pnlRoomTypes.Controls.Add(this.btnRoomTypeEdit);
             this.pnlRoomTypes.Controls.Add(this.btnRoomTypeCreate);
             this.pnlRoomTypes.Controls.Add(this.btnRoomTypeView);
@@ -526,7 +510,6 @@
             // 
             // btnRoomTypeEdit
             // 
-            this.btnRoomTypeEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
             this.btnRoomTypeEdit.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnRoomTypeEdit.FlatAppearance.BorderSize = 0;
             this.btnRoomTypeEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -544,7 +527,6 @@
             // 
             // btnRoomTypeCreate
             // 
-            this.btnRoomTypeCreate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
             this.btnRoomTypeCreate.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnRoomTypeCreate.FlatAppearance.BorderSize = 0;
             this.btnRoomTypeCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -562,7 +544,6 @@
             // 
             // btnRoomTypeView
             // 
-            this.btnRoomTypeView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
             this.btnRoomTypeView.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnRoomTypeView.FlatAppearance.BorderSize = 0;
             this.btnRoomTypeView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -580,7 +561,6 @@
             // 
             // btnRoomTypes
             // 
-            this.btnRoomTypes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
             this.btnRoomTypes.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnRoomTypes.FlatAppearance.BorderSize = 0;
             this.btnRoomTypes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -599,7 +579,7 @@
             // 
             // pnlRooms
             // 
-            this.pnlRooms.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
+            this.pnlRooms.BackColor = System.Drawing.Color.Transparent;
             this.pnlRooms.Controls.Add(this.btnRoomEdit);
             this.pnlRooms.Controls.Add(this.btnRoomView);
             this.pnlRooms.Dock = System.Windows.Forms.DockStyle.Top;
@@ -611,7 +591,6 @@
             // 
             // btnRoomEdit
             // 
-            this.btnRoomEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
             this.btnRoomEdit.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnRoomEdit.FlatAppearance.BorderSize = 0;
             this.btnRoomEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -629,7 +608,6 @@
             // 
             // btnRoomView
             // 
-            this.btnRoomView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
             this.btnRoomView.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnRoomView.FlatAppearance.BorderSize = 0;
             this.btnRoomView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -647,7 +625,6 @@
             // 
             // btnRooms
             // 
-            this.btnRooms.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
             this.btnRooms.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnRooms.FlatAppearance.BorderSize = 0;
             this.btnRooms.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -666,7 +643,7 @@
             // 
             // pnlTransactions
             // 
-            this.pnlTransactions.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlTransactions.BackColor = System.Drawing.Color.Transparent;
             this.pnlTransactions.Controls.Add(this.btnTransactionEdit);
             this.pnlTransactions.Controls.Add(this.btnTransactionCreate);
             this.pnlTransactions.Controls.Add(this.btnTransactionsView);
@@ -679,7 +656,6 @@
             // 
             // btnTransactionEdit
             // 
-            this.btnTransactionEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
             this.btnTransactionEdit.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnTransactionEdit.FlatAppearance.BorderSize = 0;
             this.btnTransactionEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -697,7 +673,6 @@
             // 
             // btnTransactionCreate
             // 
-            this.btnTransactionCreate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
             this.btnTransactionCreate.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnTransactionCreate.FlatAppearance.BorderSize = 0;
             this.btnTransactionCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -715,7 +690,6 @@
             // 
             // btnTransactionsView
             // 
-            this.btnTransactionsView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
             this.btnTransactionsView.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnTransactionsView.FlatAppearance.BorderSize = 0;
             this.btnTransactionsView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -733,7 +707,6 @@
             // 
             // btnTransactions
             // 
-            this.btnTransactions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
             this.btnTransactions.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnTransactions.FlatAppearance.BorderSize = 0;
             this.btnTransactions.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -752,7 +725,7 @@
             // 
             // pnlChargeableItems
             // 
-            this.pnlChargeableItems.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
+            this.pnlChargeableItems.BackColor = System.Drawing.Color.Transparent;
             this.pnlChargeableItems.Controls.Add(this.btnChargeableItemEdit);
             this.pnlChargeableItems.Controls.Add(this.btnChargeableItemCreate);
             this.pnlChargeableItems.Controls.Add(this.btnChargeableItemView);
@@ -765,7 +738,6 @@
             // 
             // btnChargeableItemEdit
             // 
-            this.btnChargeableItemEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
             this.btnChargeableItemEdit.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnChargeableItemEdit.FlatAppearance.BorderSize = 0;
             this.btnChargeableItemEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -783,7 +755,6 @@
             // 
             // btnChargeableItemCreate
             // 
-            this.btnChargeableItemCreate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
             this.btnChargeableItemCreate.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnChargeableItemCreate.FlatAppearance.BorderSize = 0;
             this.btnChargeableItemCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -801,7 +772,6 @@
             // 
             // btnChargeableItemView
             // 
-            this.btnChargeableItemView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
             this.btnChargeableItemView.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnChargeableItemView.FlatAppearance.BorderSize = 0;
             this.btnChargeableItemView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -819,7 +789,6 @@
             // 
             // btnChargeableItems
             // 
-            this.btnChargeableItems.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
             this.btnChargeableItems.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnChargeableItems.FlatAppearance.BorderSize = 0;
             this.btnChargeableItems.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -838,7 +807,7 @@
             // 
             // pnlBills
             // 
-            this.pnlBills.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
+            this.pnlBills.BackColor = System.Drawing.Color.Transparent;
             this.pnlBills.Controls.Add(this.btnBillEdit);
             this.pnlBills.Controls.Add(this.btnBillView);
             this.pnlBills.Dock = System.Windows.Forms.DockStyle.Top;
@@ -850,7 +819,6 @@
             // 
             // btnBillEdit
             // 
-            this.btnBillEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
             this.btnBillEdit.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnBillEdit.FlatAppearance.BorderSize = 0;
             this.btnBillEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -868,7 +836,7 @@
             // 
             // btnBillView
             // 
-            this.btnBillView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
+            this.btnBillView.BackColor = System.Drawing.Color.Transparent;
             this.btnBillView.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnBillView.FlatAppearance.BorderSize = 0;
             this.btnBillView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -886,7 +854,7 @@
             // 
             // btnBills
             // 
-            this.btnBills.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
+            this.btnBills.BackColor = System.Drawing.Color.Transparent;
             this.btnBills.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnBills.FlatAppearance.BorderSize = 0;
             this.btnBills.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -905,7 +873,7 @@
             // 
             // pnlReservations
             // 
-            this.pnlReservations.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
+            this.pnlReservations.BackColor = System.Drawing.Color.Transparent;
             this.pnlReservations.Controls.Add(this.btnReservationEdit);
             this.pnlReservations.Controls.Add(this.btnReservationCreate);
             this.pnlReservations.Controls.Add(this.btnReservationView);
@@ -918,7 +886,7 @@
             // 
             // btnReservationEdit
             // 
-            this.btnReservationEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
+            this.btnReservationEdit.BackColor = System.Drawing.Color.Transparent;
             this.btnReservationEdit.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnReservationEdit.FlatAppearance.BorderSize = 0;
             this.btnReservationEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -936,7 +904,7 @@
             // 
             // btnReservationCreate
             // 
-            this.btnReservationCreate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
+            this.btnReservationCreate.BackColor = System.Drawing.Color.Transparent;
             this.btnReservationCreate.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnReservationCreate.FlatAppearance.BorderSize = 0;
             this.btnReservationCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -954,7 +922,7 @@
             // 
             // btnReservationView
             // 
-            this.btnReservationView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
+            this.btnReservationView.BackColor = System.Drawing.Color.Transparent;
             this.btnReservationView.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnReservationView.FlatAppearance.BorderSize = 0;
             this.btnReservationView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -972,7 +940,7 @@
             // 
             // btnReservations
             // 
-            this.btnReservations.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
+            this.btnReservations.BackColor = System.Drawing.Color.Transparent;
             this.btnReservations.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnReservations.FlatAppearance.BorderSize = 0;
             this.btnReservations.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -991,6 +959,7 @@
             // 
             // pnlActiveUser
             // 
+            this.pnlActiveUser.BackColor = System.Drawing.Color.Transparent;
             this.pnlActiveUser.Controls.Add(this.pictureBox1);
             this.pnlActiveUser.Controls.Add(this.lblUserRole);
             this.pnlActiveUser.Controls.Add(this.lblUserName);
@@ -1089,6 +1058,7 @@
             this.Name = "frmMainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "The King William Hotel";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMainForm_Load);
             this.pnlMenu.ResumeLayout(false);
             this.pnlMenuButtons.ResumeLayout(false);
