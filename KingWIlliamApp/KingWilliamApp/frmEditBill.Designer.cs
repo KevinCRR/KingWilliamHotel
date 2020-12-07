@@ -39,6 +39,7 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.pnlColumn1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.textBox10 = new System.Windows.Forms.TextBox();
@@ -63,7 +64,6 @@
             this.btnUpdate = new System.Windows.Forms.Button();
             this.txtText = new System.Windows.Forms.TextBox();
             this.lblLabel = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnlColumn1.SuspendLayout();
@@ -195,6 +195,20 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(300, 451);
             this.panel1.TabIndex = 54;
+            // 
+            // button2
+            // 
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.Font = new System.Drawing.Font("Segoe UI Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button2.Location = new System.Drawing.Point(68, 339);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(156, 29);
+            this.button2.TabIndex = 63;
+            this.button2.Text = "Edit";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // pnlColumn1
             // 
@@ -477,20 +491,6 @@
             this.lblLabel.Size = new System.Drawing.Size(71, 20);
             this.lblLabel.TabIndex = 56;
             this.lblLabel.Text = "Textbox";
-            // 
-            // button2
-            // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Segoe UI Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button2.Location = new System.Drawing.Point(68, 339);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(156, 29);
-            this.button2.TabIndex = 63;
-            this.button2.Text = "Edit";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // frmEditBill
             // 
