@@ -38,7 +38,7 @@ namespace KingWilliamApp
 
             SqlConnection dbConnection = new SqlConnection(GetConnectionString());
 
-            SqlCommand command = new SqlCommand("SELECT * FROM reservations WHERE startDate > @fromDate ORDER BY startDate ASC", dbConnection);
+            SqlCommand command = new SqlCommand("SELECT * FROM reservations WHERE startDate >= @fromDate ORDER BY startDate ASC", dbConnection);
             command.Parameters.AddWithValue("@fromDate", fromDate);
 
             try
@@ -127,6 +127,38 @@ namespace KingWilliamApp
             catch (Exception ex)
             {
                 throw new DataException("Error in InsertNewReservation", ex);
+            }
+            finally
+            {
+                dbConnection.Close();
+            }
+
+            return returnValue;
+        }
+
+        internal static bool DeleteReservation(int reservationIDValue)
+        {
+            // Create return value
+            bool returnValue = false;
+
+            // Declare the connection
+            SqlConnection dbConnection = new SqlConnection(GetConnectionString());
+
+            // Create new SQL command and assign it paramaters
+            SqlCommand command = new SqlCommand("DELETE FROM reservations WHERE reservationID = @id", dbConnection);
+            command.Parameters.AddWithValue("@id", reservationIDValue);
+
+            // Try to insert the new record, return result
+            try
+            {
+                dbConnection.Open();
+                // Try to insert the new record, return result
+                returnValue = (command.ExecuteNonQuery() == 1);
+
+            }
+            catch (Exception ex)
+            {
+                throw new DataException("Error in DeleteReservation", ex);
             }
             finally
             {

@@ -35,7 +35,7 @@ namespace KingWilliamApp
             {
                 lblMessage.Text = "";
 
-                Reservation newReservation = new Reservation(dateStart.Value, dateEnd.Value, (int)cbxRoom.SelectedValue, (int)nudGuests.Value, txtNotes.Text.Trim(), UseCustomer.CustomerID);
+                Reservation newReservation = new Reservation(dateStart.Value, dateEnd.Value, int.Parse(cbxRoom.SelectedValue.ToString()), int.Parse(nudGuests.Value.ToString()), txtNotes.Text.Trim(), UseCustomer.CustomerID);
                 newReservation.InsertReservation();
 
                 MessageBox.Show("Reservation created successfully!", "Success");

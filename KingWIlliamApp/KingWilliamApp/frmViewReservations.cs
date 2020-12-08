@@ -16,8 +16,6 @@ namespace KingWilliamApp
         public frmViewReservations()
         {
             InitializeComponent();
-
-
         }
 
         private void frmViewReservations_Load(object sender, EventArgs e)
@@ -55,13 +53,50 @@ namespace KingWilliamApp
 
         private void dgvReservations_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 8) // edit
+            if (e.ColumnIndex == 8)
             {
-                // edit form
+                // Edit
+                frmEditReservations formEditReservation = new frmEditReservations((Reservation)dgvReservations.CurrentRow.Tag);
+                formEditReservation.ShowDialog();
             }
             if (e.ColumnIndex == 9)
             {
-                // delete
+                // Delete
+                Reservation selectedReservation = (Reservation)dgvReservations.CurrentRow.Tag;
+
+                string message = "Are you sure you want to delete reservation (ID = " + selectedReservation.ReservationID + ")?";
+                string title = "Delete Reservation";
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                DialogResult result = MessageBox.Show(message, title, buttons);
+                if (result == DialogResult.Yes)
+                {
+                    // Delete reservation
+                    try
+                    {
+                        if (selectedReservation.DeleteReservation())
+                        {
+                            MessageBox.Show("Reservation successfully deleted!", "Success");
+                            PopulateData(Reservation.GetAll(dtFromDate.Value));
+                        }
+                        else
+                        {
+                            MessageBox.Show("An error occured and the reservation could not be deleted!", "Failure");
+                        }
+                    }
+                    catch (DataException ex)
+                    {
+                        MessageBox.Show("Database error! " + ex.Message + "\n\n" +
+                            ex.InnerException.Message + "\n\n" + ex.Source + "\n\n" + ex.Message +
+                            "\n\n" + ex.StackTrace);
+                    }
+                    // Catch other unanticipated exceptions and provide as much debugging info as possible.
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("An unknown error has occurred in " + ex.Source + 
+                            "! Please contact your IT department and provide the following details:\n\n" + ex.Message + "\n\n" + ex.StackTrace + "\n\nUnknown Error!");
+                    }
+
+                }
             }
         }
 

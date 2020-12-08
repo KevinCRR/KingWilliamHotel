@@ -107,7 +107,7 @@
             // 
             // pnlMenu
             // 
-            this.pnlMenu.BackColor = System.Drawing.Color.Black;
+            this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.pnlMenu.Controls.Add(this.pnlMenuButtons);
             this.pnlMenu.Controls.Add(this.pnlActiveUser);
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;

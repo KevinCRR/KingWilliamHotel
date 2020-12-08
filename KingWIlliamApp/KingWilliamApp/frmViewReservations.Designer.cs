@@ -170,8 +170,10 @@
             this.edit,
             this.delete});
             this.dgvReservations.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvReservations.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvReservations.Location = new System.Drawing.Point(0, 0);
             this.dgvReservations.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvReservations.MultiSelect = false;
             this.dgvReservations.Name = "dgvReservations";
             this.dgvReservations.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;

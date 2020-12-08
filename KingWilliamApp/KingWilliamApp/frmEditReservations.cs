@@ -12,124 +12,23 @@ namespace KingWilliamApp
 {
     public partial class frmEditReservations : Form
     {
-        public frmEditReservations()
+        private Reservation EditReservation;
+        public frmEditReservations(Reservation editReservation)
         {
             InitializeComponent();
+            EditReservation = editReservation;
         }
 
-        private void pnlColumn1_Paint(object sender, PaintEventArgs e)
+        private void frmEditReservations_Load(object sender, EventArgs e)
         {
+            cbxRoom.ValueMember = "roomNumber";
+            cbxRoom.DataSource = Room.GetAllRooms();
 
-        }
-
-        private void lblMessage_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateStart_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtLastName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtFirstName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cbxRoom_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateEnd_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtNotes_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void nudGuests_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pnlHeader_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pnlExit_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblPageName_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnSubmit_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
+            dateStart.Value = EditReservation.StartDate;
+            dateEnd.Value = EditReservation.EndDate;
+            cbxRoom.SelectedValue = EditReservation.RoomNumber;
+            nudGuests.Value = EditReservation.NumberOfGuests;
+            txtNotes.Text = EditReservation.Notes;
         }
     }
 }
