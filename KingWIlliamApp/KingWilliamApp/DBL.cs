@@ -136,6 +136,44 @@ namespace KingWilliamApp
             return returnValue;
         }
 
+        internal static bool UpdateReservation(Reservation updateReservation)
+        {
+            // Create return value
+            bool returnValue = false;
+
+            // Declare the connection
+            SqlConnection dbConnection = new SqlConnection(GetConnectionString());
+
+            // Create new SQL command and assign it paramaters
+            SqlCommand command = new SqlCommand("UPDATE reservations SET roomNumber = @roomNumber, " +
+                "numberOfGuests = @numberOfGuests, startDate = @startDate, endDate = @endDate, notes = @notes " +
+                "WHERE reservationID = @reservationID", dbConnection);
+            command.Parameters.AddWithValue("@roomNumber", updateReservation.RoomNumber);
+            command.Parameters.AddWithValue("@numberOfGuests", updateReservation.NumberOfGuests);
+            command.Parameters.AddWithValue("@startDate", updateReservation.StartDate);
+            command.Parameters.AddWithValue("@endDate", updateReservation.EndDate);
+            command.Parameters.AddWithValue("@notes", updateReservation.Notes);
+            command.Parameters.AddWithValue("@reservationID", updateReservation.ReservationID);
+
+            // Try to insert the new record, return result
+            try
+            {
+                dbConnection.Open();
+                // Try to insert the new record, return result
+                returnValue = (command.ExecuteNonQuery() == 1);
+            }
+            catch (Exception ex)
+            {
+                throw new DataException("Error in UpdateReservation", ex);
+            }
+            finally
+            {
+                dbConnection.Close();
+            }
+
+            return returnValue;
+        }
+
         internal static bool DeleteReservation(int reservationIDValue)
         {
             // Create return value
@@ -581,7 +619,7 @@ namespace KingWilliamApp
                 SqlDataReader reader;
                 reader = command.ExecuteReader();
 
-                returnDataTable.Columns.Add("roomNumber", typeof(string));
+                returnDataTable.Columns.Add("roomNumber", typeof(Int32));
                 returnDataTable.Load(reader);
 
             }

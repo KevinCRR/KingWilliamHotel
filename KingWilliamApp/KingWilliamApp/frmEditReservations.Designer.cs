@@ -63,6 +63,7 @@
             this.btnSubmit.TabIndex = 57;
             this.btnSubmit.Text = "Save";
             this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // pnlHeader
             // 

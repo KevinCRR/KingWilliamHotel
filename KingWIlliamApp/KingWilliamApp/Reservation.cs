@@ -76,6 +76,11 @@ namespace KingWilliamApp
             this.ReservationID = DBL.InsertNewReservation(this);
         }
 
+        protected internal void UpdateReservation()
+        {
+            DBL.UpdateReservation(this);
+        }
+
         protected internal bool DeleteReservation()
         {
             return DBL.DeleteReservation(this.ReservationID);

@@ -21,10 +21,15 @@ namespace KingWilliamApp
         private void frmViewReservations_Load(object sender, EventArgs e)
         {
             dtFromDate.Value = DateTime.Today;
-            PopulateData(Reservation.GetAll(dtFromDate.Value));
+            RefreshList();
         }
 
         private void dtFromDate_ValueChanged(object sender, EventArgs e)
+        {
+            RefreshList();
+        }
+
+        public void RefreshList()
         {
             PopulateData(Reservation.GetAll(dtFromDate.Value));
         }
@@ -58,6 +63,7 @@ namespace KingWilliamApp
                 // Edit
                 frmEditReservations formEditReservation = new frmEditReservations((Reservation)dgvReservations.CurrentRow.Tag);
                 formEditReservation.ShowDialog();
+                RefreshList();
             }
             if (e.ColumnIndex == 9)
             {
@@ -76,7 +82,7 @@ namespace KingWilliamApp
                         if (selectedReservation.DeleteReservation())
                         {
                             MessageBox.Show("Reservation successfully deleted!", "Success");
-                            PopulateData(Reservation.GetAll(dtFromDate.Value));
+                            RefreshList();
                         }
                         else
                         {
@@ -104,11 +110,13 @@ namespace KingWilliamApp
         {
             frmCreateCustomer formCreateCustomer = new frmCreateCustomer();
             formCreateCustomer.ShowDialog();
+            RefreshList();
         }
 
         public static void OpenFormAsDialog(Form newForm)
         {
             newForm.ShowDialog();
+            //RefreshList();
         }
 
         
