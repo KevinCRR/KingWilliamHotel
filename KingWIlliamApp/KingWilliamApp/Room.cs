@@ -45,6 +45,11 @@ namespace KingWilliamApp
             return DBL.SelectAllRooms();
         }
 
+        protected internal static void UpdateStatus(int roomNumber, string status)
+        {
+            DBL.UpdateRoomStatus(roomNumber, status);
+        }
+
         #endregion
 
         #region "Property Procedures"

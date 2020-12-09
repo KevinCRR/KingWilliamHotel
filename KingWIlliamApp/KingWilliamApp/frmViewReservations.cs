@@ -53,6 +53,16 @@ namespace KingWilliamApp
                     "Delete"
                 });
                 dgvReservations.Rows[dgvReservations.RowCount - 1].Tag = r;
+
+                DateTime thisDay = DateTime.Today;
+                if (r.StartDate <= thisDay && r.EndDate >= thisDay)
+                {
+                    Room.UpdateStatus(r.RoomNumber, "OCC");
+                }
+                else
+                {
+                    Room.UpdateStatus(r.RoomNumber, "VC");
+                }
             }
         }
 

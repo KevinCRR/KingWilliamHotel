@@ -28,22 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlBody = new System.Windows.Forms.Panel();
+            this.nudItems = new System.Windows.Forms.NumericUpDown();
+            this.lblAmountOfItems = new System.Windows.Forms.Label();
             this.lblMessage = new System.Windows.Forms.Label();
-            this.lblItemName = new System.Windows.Forms.Label();
-            this.txtItemName = new System.Windows.Forms.TextBox();
-            this.lblItemDescription = new System.Windows.Forms.Label();
-            this.txtItemDescription = new System.Windows.Forms.TextBox();
-            this.lblItemPrice = new System.Windows.Forms.Label();
-            this.txtItemPrice = new System.Windows.Forms.TextBox();
             this.lblPageName = new System.Windows.Forms.Label();
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.btnSubmit = new System.Windows.Forms.Button();
-            this.nudItems = new System.Windows.Forms.NumericUpDown();
-            this.lblAmountOfItems = new System.Windows.Forms.Label();
+            this.dgvTransactions = new System.Windows.Forms.DataGridView();
+            this.reservationID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itemDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itemPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amountOfItems = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.pnlList = new System.Windows.Forms.Panel();
             this.pnlBody.SuspendLayout();
-            this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudItems)).BeginInit();
+            this.pnlHeader.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTransactions)).BeginInit();
+            this.pnlList.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlBody
@@ -56,18 +66,49 @@
             this.pnlBody.Controls.Add(this.nudItems);
             this.pnlBody.Controls.Add(this.lblAmountOfItems);
             this.pnlBody.Controls.Add(this.lblMessage);
-            this.pnlBody.Controls.Add(this.lblItemName);
-            this.pnlBody.Controls.Add(this.txtItemName);
-            this.pnlBody.Controls.Add(this.lblItemDescription);
-            this.pnlBody.Controls.Add(this.txtItemDescription);
-            this.pnlBody.Controls.Add(this.lblItemPrice);
-            this.pnlBody.Controls.Add(this.txtItemPrice);
             this.pnlBody.Location = new System.Drawing.Point(0, 82);
             this.pnlBody.Margin = new System.Windows.Forms.Padding(2);
             this.pnlBody.MaximumSize = new System.Drawing.Size(622, 451);
             this.pnlBody.Name = "pnlBody";
-            this.pnlBody.Size = new System.Drawing.Size(622, 451);
+            this.pnlBody.Size = new System.Drawing.Size(622, 83);
             this.pnlBody.TabIndex = 55;
+            // 
+            // nudItems
+            // 
+            this.nudItems.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudItems.Location = new System.Drawing.Point(32, 38);
+            this.nudItems.Margin = new System.Windows.Forms.Padding(2);
+            this.nudItems.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.nudItems.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudItems.Name = "nudItems";
+            this.nudItems.Size = new System.Drawing.Size(214, 25);
+            this.nudItems.TabIndex = 86;
+            this.nudItems.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // lblAmountOfItems
+            // 
+            this.lblAmountOfItems.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.lblAmountOfItems.AutoSize = true;
+            this.lblAmountOfItems.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAmountOfItems.ForeColor = System.Drawing.Color.Black;
+            this.lblAmountOfItems.Location = new System.Drawing.Point(28, 15);
+            this.lblAmountOfItems.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAmountOfItems.Name = "lblAmountOfItems";
+            this.lblAmountOfItems.Size = new System.Drawing.Size(126, 21);
+            this.lblAmountOfItems.TabIndex = 87;
+            this.lblAmountOfItems.Text = "Amount of Items";
             // 
             // lblMessage
             // 
@@ -79,78 +120,6 @@
             this.lblMessage.Size = new System.Drawing.Size(218, 60);
             this.lblMessage.TabIndex = 11;
             this.lblMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblItemName
-            // 
-            this.lblItemName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.lblItemName.AutoSize = true;
-            this.lblItemName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblItemName.ForeColor = System.Drawing.Color.Black;
-            this.lblItemName.Location = new System.Drawing.Point(45, 29);
-            this.lblItemName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblItemName.Name = "lblItemName";
-            this.lblItemName.Size = new System.Drawing.Size(87, 21);
-            this.lblItemName.TabIndex = 82;
-            this.lblItemName.Text = "Item Name";
-            // 
-            // txtItemName
-            // 
-            this.txtItemName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.txtItemName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtItemName.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtItemName.Location = new System.Drawing.Point(49, 52);
-            this.txtItemName.Margin = new System.Windows.Forms.Padding(2);
-            this.txtItemName.Name = "txtItemName";
-            this.txtItemName.Size = new System.Drawing.Size(216, 25);
-            this.txtItemName.TabIndex = 0;
-            // 
-            // lblItemDescription
-            // 
-            this.lblItemDescription.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.lblItemDescription.AutoSize = true;
-            this.lblItemDescription.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblItemDescription.ForeColor = System.Drawing.Color.Black;
-            this.lblItemDescription.Location = new System.Drawing.Point(47, 96);
-            this.lblItemDescription.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblItemDescription.Name = "lblItemDescription";
-            this.lblItemDescription.Size = new System.Drawing.Size(124, 21);
-            this.lblItemDescription.TabIndex = 83;
-            this.lblItemDescription.Text = "Item Description";
-            // 
-            // txtItemDescription
-            // 
-            this.txtItemDescription.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.txtItemDescription.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtItemDescription.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtItemDescription.Location = new System.Drawing.Point(51, 119);
-            this.txtItemDescription.Margin = new System.Windows.Forms.Padding(2);
-            this.txtItemDescription.Name = "txtItemDescription";
-            this.txtItemDescription.Size = new System.Drawing.Size(214, 25);
-            this.txtItemDescription.TabIndex = 1;
-            // 
-            // lblItemPrice
-            // 
-            this.lblItemPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.lblItemPrice.AutoSize = true;
-            this.lblItemPrice.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblItemPrice.ForeColor = System.Drawing.Color.Black;
-            this.lblItemPrice.Location = new System.Drawing.Point(45, 166);
-            this.lblItemPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblItemPrice.Name = "lblItemPrice";
-            this.lblItemPrice.Size = new System.Drawing.Size(79, 21);
-            this.lblItemPrice.TabIndex = 84;
-            this.lblItemPrice.Text = "Item Price";
-            // 
-            // txtItemPrice
-            // 
-            this.txtItemPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.txtItemPrice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtItemPrice.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtItemPrice.Location = new System.Drawing.Point(49, 189);
-            this.txtItemPrice.Margin = new System.Windows.Forms.Padding(2);
-            this.txtItemPrice.Name = "txtItemPrice";
-            this.txtItemPrice.Size = new System.Drawing.Size(216, 25);
-            this.txtItemPrice.TabIndex = 2;
             // 
             // lblPageName
             // 
@@ -191,45 +160,115 @@
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(622, 52);
             this.btnSubmit.TabIndex = 53;
-            this.btnSubmit.Text = "Create";
+            this.btnSubmit.Text = "Add";
             this.btnSubmit.UseVisualStyleBackColor = false;
             // 
-            // nudItems
+            // dgvTransactions
             // 
-            this.nudItems.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudItems.Location = new System.Drawing.Point(337, 52);
-            this.nudItems.Margin = new System.Windows.Forms.Padding(2);
-            this.nudItems.Maximum = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.nudItems.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.nudItems.Name = "nudItems";
-            this.nudItems.Size = new System.Drawing.Size(214, 25);
-            this.nudItems.TabIndex = 86;
-            this.nudItems.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+            this.dgvTransactions.AllowUserToAddRows = false;
+            this.dgvTransactions.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.dgvTransactions.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvTransactions.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvTransactions.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvTransactions.BackgroundColor = System.Drawing.Color.White;
+            this.dgvTransactions.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvTransactions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTransactions.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.reservationID,
+            this.itemName,
+            this.itemDescription,
+            this.itemPrice,
+            this.amountOfItems,
+            this.date,
+            this.delete});
+            this.dgvTransactions.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvTransactions.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgvTransactions.Location = new System.Drawing.Point(0, 0);
+            this.dgvTransactions.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvTransactions.MultiSelect = false;
+            this.dgvTransactions.Name = "dgvTransactions";
+            this.dgvTransactions.ReadOnly = true;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTransactions.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.dgvTransactions.RowHeadersVisible = false;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvTransactions.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            this.dgvTransactions.RowTemplate.Height = 28;
+            this.dgvTransactions.Size = new System.Drawing.Size(548, 308);
+            this.dgvTransactions.TabIndex = 0;
             // 
-            // lblAmountOfItems
+            // reservationID
             // 
-            this.lblAmountOfItems.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.lblAmountOfItems.AutoSize = true;
-            this.lblAmountOfItems.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAmountOfItems.ForeColor = System.Drawing.Color.Black;
-            this.lblAmountOfItems.Location = new System.Drawing.Point(333, 29);
-            this.lblAmountOfItems.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblAmountOfItems.Name = "lblAmountOfItems";
-            this.lblAmountOfItems.Size = new System.Drawing.Size(126, 21);
-            this.lblAmountOfItems.TabIndex = 87;
-            this.lblAmountOfItems.Text = "Amount of Items";
+            this.reservationID.FillWeight = 30F;
+            this.reservationID.HeaderText = "ID";
+            this.reservationID.Name = "reservationID";
+            this.reservationID.ReadOnly = true;
+            // 
+            // itemName
+            // 
+            this.itemName.HeaderText = "Item Name";
+            this.itemName.Name = "itemName";
+            this.itemName.ReadOnly = true;
+            // 
+            // itemDescription
+            // 
+            this.itemDescription.HeaderText = "Item Description";
+            this.itemDescription.Name = "itemDescription";
+            this.itemDescription.ReadOnly = true;
+            // 
+            // itemPrice
+            // 
+            dataGridViewCellStyle7.Format = "C2";
+            dataGridViewCellStyle7.NullValue = null;
+            this.itemPrice.DefaultCellStyle = dataGridViewCellStyle7;
+            this.itemPrice.HeaderText = "Item Price";
+            this.itemPrice.Name = "itemPrice";
+            this.itemPrice.ReadOnly = true;
+            // 
+            // amountOfItems
+            // 
+            this.amountOfItems.HeaderText = "Amount of Items";
+            this.amountOfItems.Name = "amountOfItems";
+            this.amountOfItems.ReadOnly = true;
+            // 
+            // date
+            // 
+            this.date.HeaderText = "Date";
+            this.date.Name = "date";
+            this.date.ReadOnly = true;
+            // 
+            // delete
+            // 
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.delete.DefaultCellStyle = dataGridViewCellStyle8;
+            this.delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.delete.HeaderText = "";
+            this.delete.Name = "delete";
+            this.delete.ReadOnly = true;
+            this.delete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.delete.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // pnlList
+            // 
+            this.pnlList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlList.BackColor = System.Drawing.Color.White;
+            this.pnlList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlList.Controls.Add(this.dgvTransactions);
+            this.pnlList.Location = new System.Drawing.Point(34, 179);
+            this.pnlList.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlList.Name = "pnlList";
+            this.pnlList.Size = new System.Drawing.Size(550, 310);
+            this.pnlList.TabIndex = 88;
             // 
             // frmCreateTransactions
             // 
@@ -237,6 +276,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(622, 585);
+            this.Controls.Add(this.pnlList);
             this.Controls.Add(this.pnlBody);
             this.Controls.Add(this.pnlHeader);
             this.Controls.Add(this.btnSubmit);
@@ -247,8 +287,10 @@
             this.Text = "New Transaction";
             this.pnlBody.ResumeLayout(false);
             this.pnlBody.PerformLayout();
-            this.pnlHeader.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.nudItems)).EndInit();
+            this.pnlHeader.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTransactions)).EndInit();
+            this.pnlList.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -256,16 +298,19 @@
         #endregion
         private System.Windows.Forms.Panel pnlBody;
         private System.Windows.Forms.Label lblMessage;
-        private System.Windows.Forms.Label lblItemName;
-        private System.Windows.Forms.TextBox txtItemName;
-        private System.Windows.Forms.Label lblItemDescription;
-        private System.Windows.Forms.TextBox txtItemDescription;
-        private System.Windows.Forms.Label lblItemPrice;
-        private System.Windows.Forms.TextBox txtItemPrice;
         private System.Windows.Forms.Label lblPageName;
         private System.Windows.Forms.Panel pnlHeader;
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.NumericUpDown nudItems;
         private System.Windows.Forms.Label lblAmountOfItems;
+        private System.Windows.Forms.DataGridView dgvTransactions;
+        private System.Windows.Forms.DataGridViewTextBoxColumn reservationID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn itemName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn itemDescription;
+        private System.Windows.Forms.DataGridViewTextBoxColumn itemPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn amountOfItems;
+        private System.Windows.Forms.DataGridViewTextBoxColumn date;
+        private System.Windows.Forms.DataGridViewButtonColumn delete;
+        private System.Windows.Forms.Panel pnlList;
     }
 }

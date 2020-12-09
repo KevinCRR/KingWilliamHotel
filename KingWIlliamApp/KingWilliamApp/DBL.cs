@@ -1082,7 +1082,8 @@ namespace KingWilliamApp
 
             SqlConnection dbConnection = new SqlConnection(GetConnectionString());
 
-            SqlCommand command = new SqlCommand("SELECT (roomNumber) FROM rooms", dbConnection);
+            SqlCommand command = new SqlCommand("SELECT (roomNumber) FROM rooms WHERE " +
+                "statusID != 'OCC' AND statusID != 'OOO' AND statusID != 'OOS' AND statusID != 'VD'", dbConnection);
 
             try
             {
@@ -1105,6 +1106,34 @@ namespace KingWilliamApp
             }
 
             return returnDataTable;
+        }
+
+        internal static void UpdateRoomStatus(int roomNumber, string status)
+        {
+            // Declare the connection
+            SqlConnection dbConnection = new SqlConnection(GetConnectionString());
+
+            // Create new SQL command and assign it paramaters
+            SqlCommand command = new SqlCommand("UPDATE rooms SET statusID = @status " +
+                "WHERE roomNumber = @roomNumber", dbConnection);
+            command.Parameters.AddWithValue("@status", status);
+            command.Parameters.AddWithValue("@roomNumber", roomNumber);
+
+            // Try to insert the new record, return result
+            try
+            {
+                dbConnection.Open();
+                // Try to insert the new record, return result
+                command.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new DataException("Error in UpdateRoomStatus", ex);
+            }
+            finally
+            {
+                dbConnection.Close();
+            }
         }
 
         #endregion
