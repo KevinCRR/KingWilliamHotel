@@ -58,6 +58,20 @@ namespace KingWilliamApp
 
         private void dgvReservations_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.ColumnIndex == 5)
+            {
+                // Edit Customer
+                Reservation temp = (Reservation)dgvReservations.CurrentRow.Tag;
+                frmEditCustomer formEditCustomer = new frmEditCustomer(temp.CustomerID);
+                formEditCustomer.ShowDialog();
+            }
+            if (e.ColumnIndex == 6)
+            {
+                // Edit Bill
+                Reservation temp = (Reservation)dgvReservations.CurrentRow.Tag;
+                frmEditBill formEditBill = new frmEditBill(temp.BillID);
+                formEditBill.ShowDialog();
+            }
             if (e.ColumnIndex == 8)
             {
                 // Edit
@@ -109,16 +123,14 @@ namespace KingWilliamApp
         private void btnNew_Click(object sender, EventArgs e)
         {
             frmCreateCustomer formCreateCustomer = new frmCreateCustomer();
-            formCreateCustomer.ShowDialog();
+            frmFindCustomer formFindCustomer = new frmFindCustomer();
+
+            DialogResult dr = new DialogResult();
+            dr = formCreateCustomer.ShowDialog();
+            if (dr == DialogResult.OK)
+                formFindCustomer.ShowDialog();
+
             RefreshList();
-        }
-
-        public static void OpenFormAsDialog(Form newForm)
-        {
-            newForm.ShowDialog();
-            //RefreshList();
-        }
-
-        
+        }        
     }
 }

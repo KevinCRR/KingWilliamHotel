@@ -27,7 +27,8 @@ namespace KingWilliamApp
                 Customer newCustomer = new Customer(txtFirstName.Text.Trim(), txtLastName.Text.Trim(), txtPhone.Text.Trim(), newAddress.InsertAddress());
                 newCustomer.InsertCustomer();
 
-                frmViewReservations.OpenFormAsDialog(new frmCreateReservation(newCustomer));
+                frmCreateReservation formCreateReservation = new frmCreateReservation(newCustomer);
+                formCreateReservation.ShowDialog();
                 this.Close();
             }
             catch (ArgumentNullException ex)
@@ -58,7 +59,7 @@ namespace KingWilliamApp
 
         private void btnExistingCustomer_Click(object sender, EventArgs e)
         {
-            frmViewReservations.OpenFormAsDialog(new frmFindCustomer());
+            DialogResult = DialogResult.OK;
             this.Close();
         }
 

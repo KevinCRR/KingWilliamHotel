@@ -30,6 +30,7 @@
         {
             this.btnSubmit = new System.Windows.Forms.Button();
             this.pnlHeader = new System.Windows.Forms.Panel();
+            this.lblPageName = new System.Windows.Forms.Label();
             this.txtAddress1 = new System.Windows.Forms.TextBox();
             this.lblAddress1 = new System.Windows.Forms.Label();
             this.txtCity = new System.Windows.Forms.TextBox();
@@ -49,9 +50,8 @@
             this.txtFirstName = new System.Windows.Forms.TextBox();
             this.lblFirstName = new System.Windows.Forms.Label();
             this.pnlBody = new System.Windows.Forms.Panel();
-            this.lblPageName = new System.Windows.Forms.Label();
-            this.btnExistingCustomer = new System.Windows.Forms.Button();
             this.lblMessage = new System.Windows.Forms.Label();
+            this.btnExistingCustomer = new System.Windows.Forms.Button();
             this.pnlHeader.SuspendLayout();
             this.pnlBody.SuspendLayout();
             this.SuspendLayout();
@@ -83,6 +83,21 @@
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Size = new System.Drawing.Size(622, 82);
             this.pnlHeader.TabIndex = 51;
+            // 
+            // lblPageName
+            // 
+            this.lblPageName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblPageName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblPageName.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPageName.ForeColor = System.Drawing.Color.White;
+            this.lblPageName.Location = new System.Drawing.Point(0, 0);
+            this.lblPageName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPageName.Name = "lblPageName";
+            this.lblPageName.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.lblPageName.Size = new System.Drawing.Size(622, 82);
+            this.lblPageName.TabIndex = 24;
+            this.lblPageName.Text = "New Customer";
+            this.lblPageName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtAddress1
             // 
@@ -336,20 +351,16 @@
             this.pnlBody.Size = new System.Drawing.Size(622, 451);
             this.pnlBody.TabIndex = 52;
             // 
-            // lblPageName
+            // lblMessage
             // 
-            this.lblPageName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblPageName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblPageName.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPageName.ForeColor = System.Drawing.Color.White;
-            this.lblPageName.Location = new System.Drawing.Point(0, 0);
-            this.lblPageName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblPageName.Name = "lblPageName";
-            this.lblPageName.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.lblPageName.Size = new System.Drawing.Size(622, 82);
-            this.lblPageName.TabIndex = 24;
-            this.lblPageName.Text = "New Customer";
-            this.lblPageName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblMessage.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMessage.ForeColor = System.Drawing.Color.Red;
+            this.lblMessage.Location = new System.Drawing.Point(47, 236);
+            this.lblMessage.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMessage.Name = "lblMessage";
+            this.lblMessage.Size = new System.Drawing.Size(218, 131);
+            this.lblMessage.TabIndex = 11;
+            this.lblMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnExistingCustomer
             // 
@@ -368,19 +379,9 @@
             this.btnExistingCustomer.UseVisualStyleBackColor = false;
             this.btnExistingCustomer.Click += new System.EventHandler(this.btnExistingCustomer_Click);
             // 
-            // lblMessage
-            // 
-            this.lblMessage.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMessage.ForeColor = System.Drawing.Color.Red;
-            this.lblMessage.Location = new System.Drawing.Point(47, 236);
-            this.lblMessage.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(218, 131);
-            this.lblMessage.TabIndex = 11;
-            this.lblMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // frmCreateCustomer
             // 
+            this.AcceptButton = this.btnSubmit;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;

@@ -21,12 +21,28 @@ namespace KingWilliamApp
 
         #region "Constructors"
 
+        protected internal Customer(int customerIDValue, string firstNameValue, string lastNameValue, string phoneNumberValue, int addressIDValue)
+        {
+            this.CustomerID = customerIDValue;
+            this.FirstName = firstNameValue;
+            this.LastName = lastNameValue;
+            this.PhoneNumber = phoneNumberValue;
+            this.AddressID = addressIDValue;
+        }
+
         protected internal Customer(string firstNameValue, string lastNameValue, string phoneNumberValue, int addressIDValue)
         {
             this.FirstName = firstNameValue;
             this.LastName = lastNameValue;
             this.PhoneNumber = phoneNumberValue;
             this.AddressID = addressIDValue;
+        }
+
+        protected internal Customer(string firstNameValue, string lastNameValue, string phoneNumberValue)
+        {
+            this.FirstName = firstNameValue;
+            this.LastName = lastNameValue;
+            this.PhoneNumber = phoneNumberValue;
         }
 
         protected internal Customer()
@@ -41,6 +57,21 @@ namespace KingWilliamApp
         protected internal void InsertCustomer()
         {
             this.CustomerID = DBL.InsertNewCustomer(this);
+        }
+
+        protected internal void FindCustomer()
+        {
+            this.CustomerID = DBL.FindCustomer(this);
+        }
+
+        protected internal static Customer GetCustomer(int customerIDValue)
+        {
+            return DBL.SelectCustomer(customerIDValue);
+        }
+
+        protected internal void UpdateCustomer()
+        {
+            DBL.UpdateCustomer(this);
         }
 
         #endregion
@@ -64,7 +95,7 @@ namespace KingWilliamApp
                 else
                 {
                     // If it is blank, declare and throw an exception
-                    ArgumentException ex = new ArgumentException("First name is required", "reservation");
+                    ArgumentException ex = new ArgumentException("First name is required", "Missing Fields");
                     throw ex;
                 }
             }
@@ -85,7 +116,7 @@ namespace KingWilliamApp
                 else
                 {
                     // If it is blank, declare and throw an exception
-                    ArgumentException ex = new ArgumentException("Last name is required", "reservation");
+                    ArgumentException ex = new ArgumentException("Last name is required", "Missing Fields");
                     throw ex;
                 }
             }
@@ -106,7 +137,7 @@ namespace KingWilliamApp
                 else
                 {
                     // If it is blank, declare and throw an exception
-                    ArgumentException ex = new ArgumentException("Phone number is required", "reservation");
+                    ArgumentException ex = new ArgumentException("Phone number is required", "Missing Fields");
                     throw ex;
                 }
             }

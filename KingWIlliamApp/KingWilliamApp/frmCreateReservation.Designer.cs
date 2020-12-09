@@ -35,6 +35,8 @@
             this.lblPageName = new System.Windows.Forms.Label();
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.pnlBody = new System.Windows.Forms.Panel();
+            this.lblCustomerName = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.dateEnd = new System.Windows.Forms.DateTimePicker();
             this.lblMessage = new System.Windows.Forms.Label();
             this.lblStartDate = new System.Windows.Forms.Label();
@@ -43,8 +45,6 @@
             this.lblNotes = new System.Windows.Forms.Label();
             this.lblNumberOfGuests = new System.Windows.Forms.Label();
             this.btnSubmit = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblCustomerName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nudGuests)).BeginInit();
             this.pnlHeader.SuspendLayout();
             this.pnlBody.SuspendLayout();
@@ -58,7 +58,8 @@
             this.dateStart.Margin = new System.Windows.Forms.Padding(2);
             this.dateStart.Name = "dateStart";
             this.dateStart.Size = new System.Drawing.Size(216, 25);
-            this.dateStart.TabIndex = 41;
+            this.dateStart.TabIndex = 1;
+            this.dateStart.Value = new System.DateTime(2020, 12, 8, 21, 36, 22, 0);
             // 
             // cbxRoom
             // 
@@ -69,7 +70,7 @@
             this.cbxRoom.Margin = new System.Windows.Forms.Padding(2);
             this.cbxRoom.Name = "cbxRoom";
             this.cbxRoom.Size = new System.Drawing.Size(216, 25);
-            this.cbxRoom.TabIndex = 44;
+            this.cbxRoom.TabIndex = 3;
             // 
             // txtNotes
             // 
@@ -78,7 +79,7 @@
             this.txtNotes.Margin = new System.Windows.Forms.Padding(2);
             this.txtNotes.Name = "txtNotes";
             this.txtNotes.Size = new System.Drawing.Size(214, 94);
-            this.txtNotes.TabIndex = 43;
+            this.txtNotes.TabIndex = 5;
             this.txtNotes.Text = "";
             // 
             // nudGuests
@@ -98,7 +99,7 @@
             0});
             this.nudGuests.Name = "nudGuests";
             this.nudGuests.Size = new System.Drawing.Size(214, 25);
-            this.nudGuests.TabIndex = 40;
+            this.nudGuests.TabIndex = 4;
             this.nudGuests.Value = new decimal(new int[] {
             1,
             0,
@@ -158,6 +159,32 @@
             this.pnlBody.Size = new System.Drawing.Size(622, 451);
             this.pnlBody.TabIndex = 53;
             // 
+            // lblCustomerName
+            // 
+            this.lblCustomerName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.lblCustomerName.AutoSize = true;
+            this.lblCustomerName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCustomerName.ForeColor = System.Drawing.Color.Black;
+            this.lblCustomerName.Location = new System.Drawing.Point(161, 37);
+            this.lblCustomerName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCustomerName.Name = "lblCustomerName";
+            this.lblCustomerName.Size = new System.Drawing.Size(72, 21);
+            this.lblCustomerName.TabIndex = 90;
+            this.lblCustomerName.Text = "First Last";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(45, 37);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(112, 21);
+            this.label1.TabIndex = 89;
+            this.label1.Text = "For Customer :";
+            // 
             // dateEnd
             // 
             this.dateEnd.CalendarFont = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -166,8 +193,8 @@
             this.dateEnd.Margin = new System.Windows.Forms.Padding(2);
             this.dateEnd.Name = "dateEnd";
             this.dateEnd.Size = new System.Drawing.Size(216, 25);
-            this.dateEnd.TabIndex = 88;
-            this.dateEnd.Value = new System.DateTime(2020, 12, 7, 14, 41, 59, 0);
+            this.dateEnd.TabIndex = 2;
+            this.dateEnd.Value = new System.DateTime(2020, 12, 8, 21, 36, 31, 0);
             // 
             // lblMessage
             // 
@@ -257,39 +284,14 @@
             this.btnSubmit.Margin = new System.Windows.Forms.Padding(2);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(622, 52);
-            this.btnSubmit.TabIndex = 54;
+            this.btnSubmit.TabIndex = 6;
             this.btnSubmit.Text = "Create";
             this.btnSubmit.UseVisualStyleBackColor = false;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(45, 37);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 21);
-            this.label1.TabIndex = 89;
-            this.label1.Text = "For Customer :";
-            // 
-            // lblCustomerName
-            // 
-            this.lblCustomerName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.lblCustomerName.AutoSize = true;
-            this.lblCustomerName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCustomerName.ForeColor = System.Drawing.Color.Black;
-            this.lblCustomerName.Location = new System.Drawing.Point(161, 37);
-            this.lblCustomerName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblCustomerName.Name = "lblCustomerName";
-            this.lblCustomerName.Size = new System.Drawing.Size(72, 21);
-            this.lblCustomerName.TabIndex = 90;
-            this.lblCustomerName.Text = "First Last";
-            // 
             // frmCreateReservation
             // 
+            this.AcceptButton = this.btnSubmit;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;

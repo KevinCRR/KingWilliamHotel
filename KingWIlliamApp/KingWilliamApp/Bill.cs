@@ -19,11 +19,19 @@ namespace KingWilliamApp
 
         #region "Constructors"
 
+        protected internal Bill(int billIDValue, string billAmountValue, string paymentTypeValue, string amountOwingValue)
+        {
+            this.BillID = billIDValue;
+            this.BillAmount = billAmountValue;
+            this.PaymentType = paymentTypeValue;
+            this.AmountOwing = amountOwingValue;
+        }
+
         protected internal Bill()
         {
-            this.BillAmount = 0;
+            this.BillAmount = "0";
             this.PaymentType = "Undefined";
-            this.AmountOwing = 0;
+            this.AmountOwing = "0";
         }
 
         #endregion
@@ -33,6 +41,16 @@ namespace KingWilliamApp
         protected internal void InsertBill()
         {
             this.BillID = DBL.InsertNewBill(this);
+        }
+
+        protected internal static Bill GetBill(int billIDValue)
+        {
+            return DBL.SelectBill(billIDValue);
+        }
+
+        protected internal void UpdateBill()
+        {
+            DBL.UpdateBill(this);
         }
 
         #endregion
@@ -51,15 +69,28 @@ namespace KingWilliamApp
             }
         }
 
-        protected internal double BillAmount
+        protected internal string BillAmount
         {
             get
             {
-                return billAmount;
+                return billAmount.ToString();
             }
             set
             {
-                billAmount = value;
+                if (!(value == string.Empty))
+                {
+                    if (!double.TryParse(value, out billAmount))
+                    {
+                        ArgumentOutOfRangeException ex = new ArgumentOutOfRangeException("Bill amoount must be a number", "Incorrect Format");
+                        throw ex;
+                    }
+                }
+                else
+                {
+                    // If it is blank, declare and throw an exception
+                    ArgumentNullException ex = new ArgumentNullException("Bill amount is required", "Missing Fields");
+                    throw ex;
+                }
             }
         }
 
@@ -71,19 +102,41 @@ namespace KingWilliamApp
             }
             set
             {
-                paymentType = value;
+                if (!(value == string.Empty))
+                {
+                    paymentType = value;
+                }
+                else
+                {
+                    // If it is blank, declare and throw an exception
+                    ArgumentException ex = new ArgumentException("Payment type is required", "Missing Fields");
+                    throw ex;
+                }
             }
         }
 
-        protected internal double AmountOwing
+        protected internal string AmountOwing
         {
             get
             {
-                return amountOwing;
+                return amountOwing.ToString();
             }
             set
             {
-                amountOwing = value;
+                if (!(value == string.Empty))
+                {
+                    if (!double.TryParse(value, out amountOwing))
+                    {
+                        ArgumentOutOfRangeException ex = new ArgumentOutOfRangeException("Amount owing must be a number", "Incorrect Format");
+                        throw ex;
+                    }
+                }
+                else
+                {
+                    // If it is blank, declare and throw an exception
+                    ArgumentNullException ex = new ArgumentNullException("Amount owing is required", "Missing Fields");
+                    throw ex;
+                }
             }
         }
 

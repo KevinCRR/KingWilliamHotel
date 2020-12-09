@@ -29,7 +29,6 @@ namespace KingWilliamApp
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnNewCustomer = new System.Windows.Forms.Button();
             this.lblFirstName = new System.Windows.Forms.Label();
             this.txtFirstName = new System.Windows.Forms.TextBox();
             this.lblLastName = new System.Windows.Forms.Label();
@@ -45,30 +44,13 @@ namespace KingWilliamApp
             this.pnlBody.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnNewCustomer
-            // 
-            this.btnNewCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnNewCustomer.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.btnNewCustomer.FlatAppearance.BorderSize = 0;
-            this.btnNewCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnNewCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNewCustomer.ForeColor = System.Drawing.Color.White;
-            this.btnNewCustomer.Location = new System.Drawing.Point(200, 386);
-            this.btnNewCustomer.Margin = new System.Windows.Forms.Padding(0);
-            this.btnNewCustomer.Name = "btnNewCustomer";
-            this.btnNewCustomer.Size = new System.Drawing.Size(216, 38);
-            this.btnNewCustomer.TabIndex = 86;
-            this.btnNewCustomer.Text = "Create New Customer";
-            this.btnNewCustomer.UseVisualStyleBackColor = false;
-            this.btnNewCustomer.Click += new System.EventHandler(this.btnNewCustomer_Click);
-            // 
             // lblFirstName
             // 
             this.lblFirstName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lblFirstName.AutoSize = true;
             this.lblFirstName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFirstName.ForeColor = System.Drawing.Color.Black;
-            this.lblFirstName.Location = new System.Drawing.Point(196, 29);
+            this.lblFirstName.Location = new System.Drawing.Point(196, 83);
             this.lblFirstName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFirstName.Name = "lblFirstName";
             this.lblFirstName.Size = new System.Drawing.Size(86, 21);
@@ -80,11 +62,11 @@ namespace KingWilliamApp
             this.txtFirstName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtFirstName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtFirstName.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFirstName.Location = new System.Drawing.Point(200, 52);
+            this.txtFirstName.Location = new System.Drawing.Point(200, 106);
             this.txtFirstName.Margin = new System.Windows.Forms.Padding(2);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(216, 25);
-            this.txtFirstName.TabIndex = 85;
+            this.txtFirstName.TabIndex = 1;
             // 
             // lblLastName
             // 
@@ -92,7 +74,7 @@ namespace KingWilliamApp
             this.lblLastName.AutoSize = true;
             this.lblLastName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLastName.ForeColor = System.Drawing.Color.Black;
-            this.lblLastName.Location = new System.Drawing.Point(198, 96);
+            this.lblLastName.Location = new System.Drawing.Point(198, 150);
             this.lblLastName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLastName.Name = "lblLastName";
             this.lblLastName.Size = new System.Drawing.Size(84, 21);
@@ -104,11 +86,11 @@ namespace KingWilliamApp
             this.txtLastName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtLastName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtLastName.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLastName.Location = new System.Drawing.Point(202, 119);
+            this.txtLastName.Location = new System.Drawing.Point(202, 173);
             this.txtLastName.Margin = new System.Windows.Forms.Padding(2);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(214, 25);
-            this.txtLastName.TabIndex = 81;
+            this.txtLastName.TabIndex = 2;
             // 
             // lblPhone
             // 
@@ -116,7 +98,7 @@ namespace KingWilliamApp
             this.lblPhone.AutoSize = true;
             this.lblPhone.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPhone.ForeColor = System.Drawing.Color.Black;
-            this.lblPhone.Location = new System.Drawing.Point(196, 166);
+            this.lblPhone.Location = new System.Drawing.Point(196, 220);
             this.lblPhone.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPhone.Name = "lblPhone";
             this.lblPhone.Size = new System.Drawing.Size(116, 21);
@@ -128,11 +110,11 @@ namespace KingWilliamApp
             this.txtPhone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPhone.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhone.Location = new System.Drawing.Point(200, 189);
+            this.txtPhone.Location = new System.Drawing.Point(200, 243);
             this.txtPhone.Margin = new System.Windows.Forms.Padding(2);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(216, 25);
-            this.txtPhone.TabIndex = 80;
+            this.txtPhone.TabIndex = 3;
             // 
             // lblPageName
             // 
@@ -172,7 +154,7 @@ namespace KingWilliamApp
             this.btnSubmit.Margin = new System.Windows.Forms.Padding(2);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(622, 52);
-            this.btnSubmit.TabIndex = 53;
+            this.btnSubmit.TabIndex = 4;
             this.btnSubmit.Text = "Search";
             this.btnSubmit.UseVisualStyleBackColor = false;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
@@ -185,7 +167,6 @@ namespace KingWilliamApp
             this.pnlBody.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pnlBody.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnlBody.Controls.Add(this.lblMessage);
-            this.pnlBody.Controls.Add(this.btnNewCustomer);
             this.pnlBody.Controls.Add(this.lblFirstName);
             this.pnlBody.Controls.Add(this.txtFirstName);
             this.pnlBody.Controls.Add(this.lblLastName);
@@ -203,15 +184,16 @@ namespace KingWilliamApp
             // 
             this.lblMessage.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMessage.ForeColor = System.Drawing.Color.Red;
-            this.lblMessage.Location = new System.Drawing.Point(198, 257);
+            this.lblMessage.Location = new System.Drawing.Point(200, 312);
             this.lblMessage.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(218, 91);
+            this.lblMessage.Size = new System.Drawing.Size(216, 91);
             this.lblMessage.TabIndex = 88;
             this.lblMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmFindCustomer
             // 
+            this.AcceptButton = this.btnSubmit;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
@@ -221,6 +203,7 @@ namespace KingWilliamApp
             this.Controls.Add(this.pnlBody);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmFindCustomer";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Existing Customer";
             this.pnlHeader.ResumeLayout(false);
             this.pnlBody.ResumeLayout(false);
@@ -230,8 +213,6 @@ namespace KingWilliamApp
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnNewCustomer;
         private System.Windows.Forms.Label lblFirstName;
         private System.Windows.Forms.TextBox txtFirstName;
         private System.Windows.Forms.Label lblLastName;

@@ -24,6 +24,18 @@ namespace KingWilliamApp
 
         #region "Constructors"
 
+        protected internal Address(int addressIDValue, string address1Value, string address2Value, string cityValue,
+            string provinceValue, string countryValue, string postalCodeValue)
+        {
+            this.AddressID = addressIDValue;
+            this.Address1 = address1Value;
+            this.Address2 = address2Value;
+            this.City = cityValue;
+            this.Province = provinceValue;
+            this.Country = countryValue;
+            this.PostalCode = postalCodeValue;
+        }
+
         protected internal Address(string address1Value, string address2Value, string cityValue, 
             string provinceValue, string countryValue, string postalCodeValue)
         {
@@ -53,6 +65,16 @@ namespace KingWilliamApp
         {
             addressID = DBL.InsertNewAddress(this);
             return addressID;
+        }
+
+        protected internal static Address GetAddress(int addressIDValue)
+        {
+            return DBL.SelectAddress(addressIDValue);
+        }
+
+        protected internal void UpdateAddress()
+        {
+            DBL.UpdateAddress(this);
         }
 
         #endregion
@@ -172,6 +194,10 @@ namespace KingWilliamApp
             get
             {
                 return addressID;
+            }
+            set
+            {
+                addressID = value;
             }
         }
 

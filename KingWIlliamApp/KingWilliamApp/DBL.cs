@@ -51,37 +51,18 @@ namespace KingWilliamApp
                 {
                     while (reader.Read() && returnList.Count() < 25)
                     {
-                        //temp.ReservationID = reader.GetInt32(0);
-                        //temp.StartDate = reader.GetDateTime(5);
-                        //temp.EndDate = reader.GetDateTime(6);
-                        //temp.NumberOfGuests = reader.GetInt32(4);
-                        //temp.RoomNumber = reader.GetInt32(1);
-                        //temp.CustomerID = reader.GetInt32(2);
-                        //temp.BillID = reader.GetInt32(3);
-                        //temp.Notes = "null";
-
                         temp = new Reservation(
                             reader.GetInt32(0),         // id
                             reader.GetDateTime(5),      // startDate
                             reader.GetDateTime(6),      // endDate
                             reader.GetInt32(1),         // roomNumber
                             reader.GetInt32(4),         // numberOfGuests
-                            "null",               //reader.GetString(7));      // notes
+                            SafeGetString(reader, 7),        // notes
                             reader.GetInt32(2),         // customerID
                             reader.GetInt32(3));        // billID
                             
 
                         returnList.Add(temp);
-
-                        //returnList.Add(new Reservation(
-                        //    reader.GetInt32(0),         // id
-                        //    reader.GetDateTime(5),      // startDate
-                        //    reader.GetDateTime(6),      // endDate
-                        //    reader.GetInt32(4),         // numberOfGuests
-                        //    reader.GetInt32(1),         // roomNumber
-                        //    reader.GetInt32(2),         // customerID
-                        //    reader.GetInt32(3),         // billID
-                        //    reader.GetString(7)));      // notes
                     }
                 }
 
@@ -249,6 +230,145 @@ namespace KingWilliamApp
             return returnValue;
         }
 
+        internal static int FindCustomer(Customer findCustomer)
+        {
+            // Create return value
+            int returnValue = 0;
+
+            // Declare the connection
+            SqlConnection dbConnection = new SqlConnection(GetConnectionString());
+
+            // Create new SQL command and assign it paramaters
+            SqlCommand command = new SqlCommand("SELECT customerID FROM customers WHERE firstName = @firstName " +
+                "AND lastName = @lastName AND phoneNumber = @phoneNumber", dbConnection);
+            command.Parameters.AddWithValue("@firstName", findCustomer.FirstName);
+            command.Parameters.AddWithValue("@lastName", findCustomer.LastName);
+            command.Parameters.AddWithValue("@phoneNumber", findCustomer.PhoneNumber);
+
+            // Try to insert the new record, return result
+            try
+            {
+                dbConnection.Open();
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        returnValue = reader.GetInt32(0);
+                    }
+                }
+                else  //showing the error message if not found 
+                {
+                    ArgumentException ex = new ArgumentException("Not Found", "Customer does not exist");
+                    throw ex;
+                }
+                reader.Close();
+            }
+            catch (ArgumentException ex)
+            {
+                throw ex;
+            }
+            catch (Exception ex)
+            {
+                throw new DataException("Error in FindCustomer", ex);
+            }
+            finally
+            {
+                dbConnection.Close();
+            }
+
+            return returnValue;
+        }
+
+        internal static Customer SelectCustomer(int customerIDValue)
+        {
+            // Create return value
+            Customer returnCustomer = new Customer();
+
+            // Declare new SQL connection
+            SqlConnection dbConnection = new SqlConnection(GetConnectionString());
+
+            // Create new SQL command
+            SqlCommand command = new SqlCommand("SELECT * FROM customers WHERE customerID = @customerID", dbConnection);
+            command.Parameters.AddWithValue("@customerID", customerIDValue);
+
+            // Try to connect to the database, create a datareader. If successful, read from the database and fill created row
+            // with information from matching record
+            try
+            {
+                dbConnection.Open();
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        returnCustomer = new Customer(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetInt32(4));
+                    }
+                }
+                else  //showing the error message if not found 
+                {
+                    ArgumentException ex = new ArgumentException("Not Found", "Customer was not found");
+                    throw ex;
+                }
+                reader.Close();
+            }
+            catch (ArgumentException ex)
+            {
+                throw ex;
+            }
+            catch (Exception ex)
+            {
+                throw new DataException("Error in GetCustomer", ex);
+            }
+            finally
+            {
+                dbConnection.Close();
+            }
+
+            // Return the populated row
+            return returnCustomer;
+        }
+
+        internal static bool UpdateCustomer(Customer updateCustomer)
+        {
+            // Create return value
+            bool returnValue = false;
+
+            // Declare the connection
+            SqlConnection dbConnection = new SqlConnection(GetConnectionString());
+
+            // Create new SQL command and assign it paramaters
+            SqlCommand command = new SqlCommand("UPDATE customers SET firstName = @firstName, " +
+                "lastName = @lastName, phoneNumber = @phoneNumber " +
+                "WHERE customerID = @customerID", dbConnection);
+            command.Parameters.AddWithValue("@firstName", updateCustomer.FirstName);
+            command.Parameters.AddWithValue("@lastName", updateCustomer.LastName);
+            command.Parameters.AddWithValue("@phoneNumber", updateCustomer.PhoneNumber);
+            command.Parameters.AddWithValue("@customerID", updateCustomer.CustomerID);
+
+            // Try to insert the new record, return result
+            try
+            {
+                dbConnection.Open();
+                // Try to insert the new record, return result
+                returnValue = (command.ExecuteNonQuery() == 1);
+            }
+            catch (Exception ex)
+            {
+                throw new DataException("Error in UpdateCustomer", ex);
+            }
+            finally
+            {
+                dbConnection.Close();
+            }
+
+            return returnValue;
+        }
+
         #endregion
 
         //***********************************************************************************************************
@@ -285,6 +405,96 @@ namespace KingWilliamApp
             catch (Exception ex)
             {
                 throw new DataException("Error in InsertNewAddress", ex);
+            }
+            finally
+            {
+                dbConnection.Close();
+            }
+
+            return returnValue;
+        }
+
+        internal static Address SelectAddress(int addressIDValue)
+        {
+            // Create return value
+            Address returnAddress = new Address();
+
+            // Declare new SQL connection
+            SqlConnection dbConnection = new SqlConnection(GetConnectionString());
+
+            // Create new SQL command
+            SqlCommand command = new SqlCommand("SELECT * FROM address WHERE addressID = @addressID", dbConnection);
+            command.Parameters.AddWithValue("@addressID", addressIDValue);
+
+            // Try to connect to the database, create a datareader. If successful, read from the database and fill created row
+            // with information from matching record
+            try
+            {
+                dbConnection.Open();
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        returnAddress = new Address(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetString(6));
+                    }
+                }
+                else  //showing the error message if not found 
+                {
+                    ArgumentException ex = new ArgumentException("Not Found", "Address was not found");
+                    throw ex;
+                }
+                reader.Close();
+            }
+            catch (ArgumentException ex)
+            {
+                throw ex;
+            }
+            catch (Exception ex)
+            {
+                throw new DataException("Error in GetAddress", ex);
+            }
+            finally
+            {
+                dbConnection.Close();
+            }
+
+            // Return the populated row
+            return returnAddress;
+        }
+
+        internal static bool UpdateAddress(Address updateAddress)
+        {
+            // Create return value
+            bool returnValue = false;
+
+            // Declare the connection
+            SqlConnection dbConnection = new SqlConnection(GetConnectionString());
+
+            // Create new SQL command and assign it paramaters
+            SqlCommand command = new SqlCommand("UPDATE address SET addressLine1 = @addressLine1, " +
+                "addressLine2 = @addressLine2, city = @city, provinceCode = @provinceCode, country = @country, postalCode = @postalCode " +
+                "WHERE addressID = @addressID", dbConnection);
+            command.Parameters.AddWithValue("@addressLine1", updateAddress.Address1);
+            command.Parameters.AddWithValue("@addressLine2", updateAddress.Address2);
+            command.Parameters.AddWithValue("@city", updateAddress.City);
+            command.Parameters.AddWithValue("@provinceCode", updateAddress.Province);
+            command.Parameters.AddWithValue("@country", updateAddress.Country);
+            command.Parameters.AddWithValue("@postalCode", updateAddress.PostalCode);
+            command.Parameters.AddWithValue("@addressID", updateAddress.AddressID);
+
+            // Try to insert the new record, return result
+            try
+            {
+                dbConnection.Open();
+                // Try to insert the new record, return result
+                returnValue = (command.ExecuteNonQuery() == 1);
+            }
+            catch (Exception ex)
+            {
+                throw new DataException("Error in UpdateAddress", ex);
             }
             finally
             {
@@ -366,6 +576,94 @@ namespace KingWilliamApp
 
             return returnValue;
         }
+
+        internal static Bill SelectBill(int billIDValue)
+        {
+            // Create return value
+            Bill returnBill = new Bill();
+
+            // Declare new SQL connection
+            SqlConnection dbConnection = new SqlConnection(GetConnectionString());
+
+            // Create new SQL command
+            SqlCommand command = new SqlCommand("SELECT * FROM customerBilling WHERE billID = @billID", dbConnection);
+            command.Parameters.AddWithValue("@billID", billIDValue);
+
+            // Try to connect to the database, create a datareader. If successful, read from the database and fill created row
+            // with information from matching record
+            try
+            {
+                dbConnection.Open();
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        returnBill = new Bill(reader.GetInt32(0), reader.GetDecimal(1).ToString(), reader.GetString(2), reader.GetDecimal(3).ToString());
+                    }
+                }
+                else  //showing the error message if not found 
+                {
+                    ArgumentException ex = new ArgumentException("Not Found", "Bill was not found");
+                    throw ex;
+                }
+                reader.Close();
+            }
+            catch (ArgumentException ex)
+            {
+                throw ex;
+            }
+            catch (Exception ex)
+            {
+                throw new DataException("Error in GetBill", ex);
+            }
+            finally
+            {
+                dbConnection.Close();
+            }
+
+            // Return the populated row
+            return returnBill;
+        }
+
+        internal static bool UpdateBill(Bill updateBill)
+        {
+            // Create return value
+            bool returnValue = false;
+
+            // Declare the connection
+            SqlConnection dbConnection = new SqlConnection(GetConnectionString());
+
+            // Create new SQL command and assign it paramaters
+            SqlCommand command = new SqlCommand("UPDATE customerBilling SET billAmount = @billAmount, " +
+                "paymentType = @paymentType, amountOwing = @amountOwing " +
+                "WHERE billID = @billID", dbConnection);
+            command.Parameters.AddWithValue("@billAmount", updateBill.BillAmount);
+            command.Parameters.AddWithValue("@paymentType", updateBill.PaymentType);
+            command.Parameters.AddWithValue("@amountOwing", updateBill.AmountOwing);
+            command.Parameters.AddWithValue("@billID", updateBill.BillID);
+
+            // Try to insert the new record, return result
+            try
+            {
+                dbConnection.Open();
+                // Try to insert the new record, return result
+                returnValue = (command.ExecuteNonQuery() == 1);
+            }
+            catch (Exception ex)
+            {
+                throw new DataException("Error in UpdateBill", ex);
+            }
+            finally
+            {
+                dbConnection.Close();
+            }
+
+            return returnValue;
+        }
+
 
         #endregion
 
@@ -674,6 +972,13 @@ namespace KingWilliamApp
 
             // Return the populated row
             return returnRole;
+        }
+
+        public static string SafeGetString(SqlDataReader reader, int colIndex)
+        {
+            if (!reader.IsDBNull(colIndex))
+                return reader.GetString(colIndex);
+            return string.Empty;
         }
 
         #endregion
