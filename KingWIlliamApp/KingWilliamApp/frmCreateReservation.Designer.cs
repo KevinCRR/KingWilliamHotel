@@ -45,6 +45,7 @@
             this.lblNotes = new System.Windows.Forms.Label();
             this.lblNumberOfGuests = new System.Windows.Forms.Label();
             this.btnSubmit = new System.Windows.Forms.Button();
+            this.lblPastRooms = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nudGuests)).BeginInit();
             this.pnlHeader.SuspendLayout();
             this.pnlBody.SuspendLayout();
@@ -139,6 +140,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlBody.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pnlBody.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlBody.Controls.Add(this.lblPastRooms);
             this.pnlBody.Controls.Add(this.lblCustomerName);
             this.pnlBody.Controls.Add(this.label1);
             this.pnlBody.Controls.Add(this.dateEnd);
@@ -200,10 +202,10 @@
             // 
             this.lblMessage.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMessage.ForeColor = System.Drawing.Color.Red;
-            this.lblMessage.Location = new System.Drawing.Point(49, 309);
+            this.lblMessage.Location = new System.Drawing.Point(49, 329);
             this.lblMessage.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(503, 102);
+            this.lblMessage.Size = new System.Drawing.Size(503, 95);
             this.lblMessage.TabIndex = 87;
             this.lblMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -289,6 +291,18 @@
             this.btnSubmit.UseVisualStyleBackColor = false;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
+            // lblPastRooms
+            // 
+            this.lblPastRooms.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.lblPastRooms.AutoSize = true;
+            this.lblPastRooms.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPastRooms.ForeColor = System.Drawing.Color.DimGray;
+            this.lblPastRooms.Location = new System.Drawing.Point(45, 294);
+            this.lblPastRooms.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPastRooms.Name = "lblPastRooms";
+            this.lblPastRooms.Size = new System.Drawing.Size(0, 19);
+            this.lblPastRooms.TabIndex = 91;
+            // 
             // frmCreateReservation
             // 
             this.AcceptButton = this.btnSubmit;
@@ -332,5 +346,6 @@
         private System.Windows.Forms.DateTimePicker dateEnd;
         private System.Windows.Forms.Label lblCustomerName;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblPastRooms;
     }
 }

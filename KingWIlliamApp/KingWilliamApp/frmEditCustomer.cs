@@ -29,39 +29,42 @@ namespace KingWilliamApp
             try
             {
                 currentCustomer = Customer.GetCustomer(customerIDValue);
+
+                if (currentCustomer == null)
+                    throw new Exception();
+
                 currentAddress = Address.GetAddress(currentCustomer.AddressID);
+
+                DataTable dt = Address.GetProvinces();
+
+                cbxProvince.DataSource = dt;
+                cbxProvince.ValueMember = "provinceName";
+
+                int index = -1;
+                string search = "provinceName = \'" + currentAddress.Province + "\'";
+
+                DataRow[] rows = dt.Select(search);
+                if (rows.Count() > 0)
+                    index = dt.Rows.IndexOf(rows[0]);
+
+                cbxProvince.SelectedIndex = index;
+
+
+                txtFirstName.Text = currentCustomer.FirstName;
+                txtLastName.Text = currentCustomer.LastName;
+                txtPhone.Text = currentCustomer.PhoneNumber;
+
+                txtAddress1.Text = currentAddress.Address1;
+                txtAddress2.Text = currentAddress.Address2;
+                txtCity.Text = currentAddress.City;
+                txtPostalCode.Text = currentAddress.PostalCode;
+                txtCountry.Text = currentAddress.Country;
             }
             catch (Exception)
             {
                 MessageBox.Show("An unexpected error occured! Could not open \"Edit Customer\".", "Error");
                 this.Close();
             }
-
-
-            DataTable dt = Address.GetProvinces();
-
-            cbxProvince.DataSource = dt;
-            cbxProvince.ValueMember = "provinceName";
-
-            int index = -1;
-            string search = "provinceName = \'" + currentAddress.Province + "\'";
-
-            DataRow[] rows = dt.Select(search);
-            if (rows.Count() > 0)
-                index = dt.Rows.IndexOf(rows[0]);
-
-            cbxProvince.SelectedIndex = index;
-
-
-            txtFirstName.Text = currentCustomer.FirstName;
-            txtLastName.Text = currentCustomer.LastName;
-            txtPhone.Text = currentCustomer.PhoneNumber;
-
-            txtAddress1.Text = currentAddress.Address1;
-            txtAddress2.Text = currentAddress.Address2;
-            txtCity.Text = currentAddress.City;
-            txtPostalCode.Text = currentAddress.PostalCode;
-            txtCountry.Text = currentAddress.Country;
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)

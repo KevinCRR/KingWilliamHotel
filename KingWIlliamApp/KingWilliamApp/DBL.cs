@@ -187,6 +187,40 @@ namespace KingWilliamApp
             return returnValue;
         }
 
+        internal static List<String> SelectPastRooms(int customerID)
+        {
+            List<String> returnList = new List<String> { };
+
+            SqlConnection dbConnection = new SqlConnection(GetConnectionString());
+
+            SqlCommand command = new SqlCommand("SELECT DISTINCT roomNumber FROM reservations WHERE customerID = @customerID", dbConnection);
+            command.Parameters.AddWithValue("@customerID", customerID);
+
+            try
+            {
+                dbConnection.Open();
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read() && returnList.Count() < 5)
+                    {
+                        returnList.Add(reader.GetInt32(0).ToString());
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw new DataException("Error in GetPastRooms", ex);
+            }
+            finally
+            {
+                dbConnection.Close();
+            }
+
+            return returnList;
+        }
+
         #endregion
 
         //***********************************************************************************************************
@@ -836,6 +870,146 @@ namespace KingWilliamApp
             }
 
             return returnValue;
+        }
+
+        #endregion
+
+        //***********************************************************************************************************
+        // Transaction
+        //***********************************************************************************************************
+
+        #region Transaction
+
+        internal static List<Transaction> SelectAllTransactions(int billID)
+        {
+            List<Transaction> returnList = new List<Transaction> { };
+
+            SqlConnection dbConnection = new SqlConnection(GetConnectionString());
+
+            SqlCommand command = new SqlCommand("SELECT * FROM transactions WHERE billID = @billID ORDER BY date DESC", dbConnection);
+            command.Parameters.AddWithValue("@billID", billID);
+
+            try
+            {
+                dbConnection.Open();
+
+                Transaction temp = new Transaction();
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        temp = new Transaction(
+                            reader.GetInt32(0),         // id
+                            reader.GetInt32(1),         // billID
+                            reader.GetInt32(2),         // itemID
+                            reader.GetInt32(3),         // amountOfItems
+                            reader.GetDateTime(4));     // date
+
+                        // Search for chargeable item
+                        temp.ChargeableItem = SelectChargeableItem(temp.ItemID);
+
+                        returnList.Add(temp);
+                    }
+                }
+
+            }
+            catch (ArgumentException ex)
+            {
+                throw new ArgumentException(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                throw new DataException("Error in GetAllTransactions", ex);
+            }
+            finally
+            {
+                dbConnection.Close();
+            }
+
+            return returnList;
+        }
+
+        internal static bool DeleteTransaction(int transactionIDValue)
+        {
+            // Create return value
+            bool returnValue = false;
+
+            // Declare the connection
+            SqlConnection dbConnection = new SqlConnection(GetConnectionString());
+
+            // Create new SQL command and assign it paramaters
+            SqlCommand command = new SqlCommand("DELETE FROM transactions WHERE transactionID = @id", dbConnection);
+            command.Parameters.AddWithValue("@id", transactionIDValue);
+
+            // Try to insert the new record, return result
+            try
+            {
+                dbConnection.Open();
+                // Try to insert the new record, return result
+                returnValue = (command.ExecuteNonQuery() == 1);
+
+            }
+            catch (Exception ex)
+            {
+                throw new DataException("Error in DeleteTransaction", ex);
+            }
+            finally
+            {
+                dbConnection.Close();
+            }
+
+            return returnValue;
+        }
+
+        #endregion
+
+        //***********************************************************************************************************
+        // Chargeable Items
+        //***********************************************************************************************************
+
+        #region Chargeable Items
+
+        internal static ChargeableItem SelectChargeableItem(int itemID)
+        {
+            // Create return value
+            ChargeableItem returnItem = new ChargeableItem();
+
+            // Declare new SQL connection
+            SqlConnection dbConnection = new SqlConnection(GetConnectionString());
+
+            // Create new SQL command
+            SqlCommand command = new SqlCommand("SELECT * FROM chargeableItems WHERE ItemID = @itemID", dbConnection);
+            command.Parameters.AddWithValue("@itemID", itemID);
+
+            // Try to connect to the database, create a datareader. If successful, read from the database and fill created row
+            // with information from matching record
+            try
+            {
+                dbConnection.Open();
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        returnItem = new ChargeableItem(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetDecimal(3));
+                    }
+                }
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                throw new DataException("Error in GetChargeableItem", ex);
+            }
+            finally
+            {
+                dbConnection.Close();
+            }
+
+            // Return the populated row
+            return returnItem;
         }
 
         #endregion

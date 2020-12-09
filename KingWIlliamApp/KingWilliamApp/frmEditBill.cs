@@ -24,7 +24,7 @@ namespace KingWilliamApp
 
         private void frmEditBill_Load(object sender, EventArgs e)
         {
-            // Try to get customer from database
+            // Try to get bill from database
             try
             {
                 currentBill = Bill.GetBill(billIDValue);

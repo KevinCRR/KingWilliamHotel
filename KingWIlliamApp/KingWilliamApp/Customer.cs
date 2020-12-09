@@ -74,6 +74,11 @@ namespace KingWilliamApp
             DBL.UpdateCustomer(this);
         }
 
+        protected internal List<String> GetPastRooms()
+        {
+            return DBL.SelectPastRooms(this.CustomerID);
+        }
+
         #endregion
 
         #region "Property Procedures"

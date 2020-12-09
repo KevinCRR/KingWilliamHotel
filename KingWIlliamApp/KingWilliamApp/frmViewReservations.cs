@@ -69,8 +69,11 @@ namespace KingWilliamApp
             {
                 // Edit Bill
                 Reservation temp = (Reservation)dgvReservations.CurrentRow.Tag;
-                frmEditBill formEditBill = new frmEditBill(temp.BillID);
-                formEditBill.ShowDialog();
+                //frmEditBill formEditBill = new frmEditBill(temp.BillID);
+                //formEditBill.ShowDialog();
+
+                frmViewBill formViewBill = new frmViewBill(temp.BillID);
+                formViewBill.ShowDialog();
             }
             if (e.ColumnIndex == 8)
             {

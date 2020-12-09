@@ -64,6 +64,7 @@
   <ItemGroup>
     <Compile Include="Address.cs" />
     <Compile Include="Bill.cs" />
+    <Compile Include="ChargeableItem.cs" />
     <Compile Include="Customer.cs" />
     <Compile Include="DBL.cs" />
     <Compile Include="frmCreateEmploymentPositions.cs">
@@ -250,6 +251,7 @@
     <Compile Include="Reservation.cs" />
     <Compile Include="Room.cs" />
     <Compile Include="Staff.cs" />
+    <Compile Include="Transaction.cs" />
     <Compile Include="User.cs" />
     <EmbeddedResource Include="frmCreateEmploymentPositions.resx">
       <DependentUpon>frmCreateEmploymentPositions.cs</DependentUpon>

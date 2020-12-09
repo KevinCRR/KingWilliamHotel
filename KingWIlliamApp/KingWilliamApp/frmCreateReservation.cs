@@ -25,6 +25,28 @@ namespace KingWilliamApp
         {
             lblCustomerName.Text = UseCustomer.FirstName + " " + UseCustomer.LastName;
 
+            try
+            {
+                string pastRoomsMessage = "";
+                List<String> pastRooms = UseCustomer.GetPastRooms();
+
+                if (pastRooms.Count > 0)
+                {
+                    pastRoomsMessage = "This customer previously stayed in rooms:  ";
+
+                    foreach (string p in pastRooms)
+                    {
+                        pastRoomsMessage = pastRoomsMessage + p + "  ";
+                    }
+                }
+
+                lblPastRooms.Text = pastRoomsMessage;
+            }
+            catch (Exception)
+            {
+                lblPastRooms.Text = "";
+            }
+
             cbxRoom.ValueMember = "roomNumber";
             cbxRoom.DataSource = Room.GetAllRooms();
         }
