@@ -64,12 +64,12 @@ namespace KingWilliamApp
             return DBL.SelectAllReservations(fromDate);
         }
 
-        protected internal void InsertReservation()
+        protected internal void InsertReservation(decimal roomPrice)
         {
             if (this.BillID == 0)
             {
                 Bill newBill = new Bill();
-                newBill.InsertBill();
+                newBill.InsertBill(roomPrice);
                 this.BillID = newBill.BillID;
             }
 

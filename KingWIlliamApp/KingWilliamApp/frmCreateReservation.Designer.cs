@@ -35,6 +35,8 @@
             this.lblPageName = new System.Windows.Forms.Label();
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.pnlBody = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtCost = new System.Windows.Forms.TextBox();
             this.lblPastRooms = new System.Windows.Forms.Label();
             this.lblCustomerName = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -46,8 +48,6 @@
             this.lblNotes = new System.Windows.Forms.Label();
             this.lblNumberOfGuests = new System.Windows.Forms.Label();
             this.btnSubmit = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtCost = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.nudGuests)).BeginInit();
             this.pnlHeader.SuspendLayout();
             this.pnlBody.SuspendLayout();
@@ -165,6 +165,28 @@
             this.pnlBody.Name = "pnlBody";
             this.pnlBody.Size = new System.Drawing.Size(622, 451);
             this.pnlBody.TabIndex = 53;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(142, 252);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(19, 21);
+            this.label2.TabIndex = 93;
+            this.label2.Text = "$";
+            // 
+            // txtCost
+            // 
+            this.txtCost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCost.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCost.Location = new System.Drawing.Point(165, 251);
+            this.txtCost.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCost.Name = "txtCost";
+            this.txtCost.Size = new System.Drawing.Size(100, 25);
+            this.txtCost.TabIndex = 92;
             // 
             // lblPastRooms
             // 
@@ -307,29 +329,6 @@
             this.btnSubmit.Text = "Create";
             this.btnSubmit.UseVisualStyleBackColor = false;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(142, 252);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(19, 21);
-            this.label2.TabIndex = 93;
-            this.label2.Text = "$";
-            // 
-            // txtCost
-            // 
-            this.txtCost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCost.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCost.Location = new System.Drawing.Point(165, 251);
-            this.txtCost.Margin = new System.Windows.Forms.Padding(2);
-            this.txtCost.Name = "txtCost";
-            this.txtCost.ReadOnly = true;
-            this.txtCost.Size = new System.Drawing.Size(100, 25);
-            this.txtCost.TabIndex = 92;
             // 
             // frmCreateReservation
             // 

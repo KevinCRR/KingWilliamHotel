@@ -577,7 +577,7 @@ namespace KingWilliamApp
 
         #region Bill
 
-        internal static int InsertNewBill(Bill insertBill)
+        internal static int InsertNewBill(Bill insertBill, decimal roomPrice)
         {
             // Create return value
             int returnValue = 0;
@@ -587,7 +587,7 @@ namespace KingWilliamApp
 
             // Create new SQL command and assign it paramaters
             SqlCommand command = new SqlCommand("INSERT INTO customerBilling OUTPUT INSERTED.billID VALUES(@billAmount, @paymentType, @amountOwing)", dbConnection);
-            command.Parameters.AddWithValue("@billAmount", insertBill.BillAmount);
+            command.Parameters.AddWithValue("@billAmount", roomPrice);
             command.Parameters.AddWithValue("@paymentType", insertBill.PaymentType);
             command.Parameters.AddWithValue("@amountOwing", insertBill.AmountOwing);
 

@@ -30,9 +30,9 @@ namespace KingWilliamApp
 
                 RefreshList();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("An unexpected error occured! Could not open Bill.", "Error");
+                MessageBox.Show("An unexpected error occured! Could not open Bill. " + ex.ToString(), "Error");
                 this.Close();
             }
 
@@ -43,33 +43,71 @@ namespace KingWilliamApp
 
         public void RefreshList()
         {
-            PopulateData(Transaction.GetAllTransactions(currentBill.BillID));
+            List<Transaction> trans;
+            trans = Transaction.GetAllTransactions(currentBill.BillID);
+            if (!trans.Equals(null))
+            {
+                PopulateData(trans, currentBill);
+            }
+            else
+            {
+                PopulateData(null, currentBill);
+            }
         }
 
-        void PopulateData(List<Transaction> transactions)
+        void PopulateData(List<Transaction> transactions,Bill currentBill)
         {
             decimal billAmount = 0;
+            decimal roomPrice;
+            int index = 1;
+            DateTime date = DateTime.Today;
 
-            dgvTransactions.Rows.Clear();
-            foreach (Transaction t in transactions)
+            if (!transactions.Equals(null))
             {
-                dgvTransactions.Rows.Add(new object[]
+                dgvTransactions.Rows.Clear();
+                foreach (Transaction t in transactions)
                 {
-                    t.TransactionID,
-                    t.ChargeableItem.ItemName,
-                    t.ChargeableItem.ItemDescription,
-                    t.ChargeableItem.ItemPrice,
-                    t.AmountOfItems,
-                    t.Date,
-                    "Delete"
-                });
-                dgvTransactions.Rows[dgvTransactions.RowCount - 1].Tag = t;
+                    dgvTransactions.Rows.Add(new object[]
+                    {
+                        t.TransactionID,
+                        t.ChargeableItem.ItemName,
+                        t.ChargeableItem.ItemDescription,
+                        t.ChargeableItem.ItemPrice,
+                        t.AmountOfItems,
+                        t.Date,
+                        "Delete"
+                    });
+                    dgvTransactions.Rows[dgvTransactions.RowCount - 1].Tag = t;
 
-                // Calculate sum of transactions
-                billAmount += (t.ChargeableItem.ItemPrice * t.AmountOfItems);
-            }
+                    // Calculate sum of transactions
+                    billAmount += (t.ChargeableItem.ItemPrice * t.AmountOfItems);
 
-            txtBillAmount.Text = billAmount.ToString();
+                    if(t.TransactionID.ToString() != "" | t.TransactionID > 0 | !t.TransactionID.Equals(null))
+                    {
+                        date = transactions.First().Date;
+                        index = transactions.Last().TransactionID + 1;
+                    }
+                }
+
+               
+                
+            } 
+
+            roomPrice = Convert.ToDecimal(currentBill.BillAmount) - billAmount;
+            dgvTransactions.Rows.Add(new object[]
+            {
+                    index,
+                    "Room Cost",
+                    "Room",
+                    roomPrice,
+                    1,
+                    date
+            });
+
+
+
+           
+            txtBillAmount.Text = currentBill.BillAmount.ToString();
         }
 
         private void dgvTransactions_CellClick(object sender, DataGridViewCellEventArgs e)
