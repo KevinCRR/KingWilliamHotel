@@ -185,10 +185,8 @@
             this.txtCost.Location = new System.Drawing.Point(165, 251);
             this.txtCost.Margin = new System.Windows.Forms.Padding(2);
             this.txtCost.Name = "txtCost";
-            this.txtCost.ReadOnly = true;
             this.txtCost.Size = new System.Drawing.Size(100, 25);
             this.txtCost.TabIndex = 92;
-            this.txtCost.TextChanged += new System.EventHandler(this.txtCost_TextChanged);
             // 
             // lblPastRooms
             // 

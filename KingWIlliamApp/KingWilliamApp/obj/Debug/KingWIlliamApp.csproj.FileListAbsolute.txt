@@ -49,6 +49,7 @@ C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp
 C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\bin\Debug\KingWilliamApp.pdb
 C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.csprojAssemblyReference.cache
 C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmCreateChargeableItem.resources
+C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmEditReservation.resources
 C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmCreateStaff.resources
 C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmEditReservations.resources
 C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmLogin.resources
@@ -112,7 +113,6 @@ C:\Users\darkfenix\Documents\School\Year_3\Semester_1\DBAS II\Deliverable 3\King
 C:\Users\darkfenix\Documents\School\Year_3\Semester_1\DBAS II\Deliverable 3\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmViewBill.resources
 C:\Users\darkfenix\Documents\School\Year_3\Semester_1\DBAS II\Deliverable 3\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmCreateChargeableItem.resources
 C:\Users\darkfenix\Documents\School\Year_3\Semester_1\DBAS II\Deliverable 3\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmCreateCustomer.resources
-C:\Users\darkfenix\Documents\School\Year_3\Semester_1\DBAS II\Deliverable 3\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmEditReservation.resources
 C:\Users\darkfenix\Documents\School\Year_3\Semester_1\DBAS II\Deliverable 3\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmCreateStaff.resources
 C:\Users\darkfenix\Documents\School\Year_3\Semester_1\DBAS II\Deliverable 3\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmEditReservations.resources
 C:\Users\darkfenix\Documents\School\Year_3\Semester_1\DBAS II\Deliverable 3\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmLogin.resources
@@ -138,5 +138,6 @@ C:\Users\Termina1\Desktop\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Deb
 C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmDeleteUser.resources
 C:\Users\Termina1\Desktop\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmFindCustomer.resources
 C:\Users\Termina1\Desktop\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmCreateReservation.resources
-C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmFindCustomer.resources
-C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmCreateReservation.resources
+C:\Users\darkfenix\Documents\School\Year_3\Semester_1\DBAS II\Deliverable 3\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmDeleteUser.resources
+C:\Users\darkfenix\Documents\School\Year_3\Semester_1\DBAS II\Deliverable 3\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmFindCustomer.resources
+C:\Users\darkfenix\Documents\School\Year_3\Semester_1\DBAS II\Deliverable 3\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmCreateReservation.resources

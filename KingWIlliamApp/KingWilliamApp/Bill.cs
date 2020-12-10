@@ -38,9 +38,9 @@ namespace KingWilliamApp
 
         #region "Class methods"
 
-        protected internal void InsertBill()
+        protected internal void InsertBill(decimal price)
         {
-            this.BillID = DBL.InsertNewBill(this);
+            this.BillID = DBL.InsertNewBill(this,price);
         }
 
         protected internal static Bill GetBill(int billIDValue)
@@ -95,6 +95,27 @@ namespace KingWilliamApp
         }
 
         protected internal string PaymentType
+        {
+            get
+            {
+                return paymentType;
+            }
+            set
+            {
+                if (!(value == string.Empty))
+                {
+                    paymentType = value;
+                }
+                else
+                {
+                    // If it is blank, declare and throw an exception
+                    ArgumentException ex = new ArgumentException("Payment type is required", "Missing Fields");
+                    throw ex;
+                }
+            }
+        }
+
+        protected internal string BillDate
         {
             get
             {
