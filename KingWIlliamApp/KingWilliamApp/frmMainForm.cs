@@ -251,22 +251,23 @@ namespace KingWilliamApp
         #region Staff
         private void btnStaff_Click(object sender, EventArgs e)
         {
-            showSubMenu(pnlStaff);
+            openChildForm(new frmViewStaff());
+            //showSubMenu(pnlStaff);
         }
 
         private void btnStaffView_Click(object sender, EventArgs e)
         {
-            openChildForm(new frmViewStaff());
+            //openChildForm(new frmViewStaff());
         }
 
         private void btnStaffCreate_Click(object sender, EventArgs e)
         {
-            openChildForm(new frmCreateStaff());
+            //openChildForm(new frmCreateStaff());
         }
 
         private void btnStaffEdit_Click(object sender, EventArgs e)
         {
-            openChildForm(new frmEditStaff());
+            //openChildForm(new frmEditStaff());
         }
         #endregion Staff
 

@@ -14,11 +14,11 @@ namespace KingWilliamApp
         string firstName;
         string lastName;
         string phoneNumber;
-        double salary;
+        decimal salary;
         DateTime hiredDate;
         DateTime terminationDate;
         string image;
-        int positionID = 0;
+        string positionID;
         int addressID = 0;
 
         #endregion
@@ -26,12 +26,32 @@ namespace KingWilliamApp
         #region "Constructors"
 
         protected internal Staff(int staffIDValue, string firstNameValue, string lastNameValue, string phoneNumberValue,
-            double salaryValue, DateTime hiredDateValue, DateTime terminationDateValue, string imageValue,
-            int positionIDValue, int addressIDValue)
+            decimal salaryValue, DateTime hiredDateValue, DateTime terminationDateValue,
+            string positionIDValue, int addressIDValue)
+        {
+            this.StaffID = staffIDValue;
+            this.FirstName = firstNameValue;
+            this.LastName = lastNameValue;
+            this.PhoneNumber = phoneNumberValue;
+            this.Salary = salaryValue;
+            this.HiredDate = hiredDateValue;
+            this.TerminationDate = terminationDateValue;
+            this.PositionID = positionIDValue;
+            this.AddressID = addressIDValue;
+        }
+
+        protected internal Staff(string firstNameValue, string lastNameValue, string phoneNumberValue,
+            decimal salaryValue, DateTime hiredDateValue, DateTime terminationDateValue,
+            string positionIDValue, int addressIDValue)
         {
             this.FirstName = firstNameValue;
             this.LastName = lastNameValue;
             this.PhoneNumber = phoneNumberValue;
+            this.Salary = salaryValue;
+            this.HiredDate = hiredDateValue;
+            this.TerminationDate = terminationDateValue;
+            this.PositionID = positionIDValue;
+            this.AddressID = addressIDValue;
         }
 
         protected internal Staff()
@@ -43,14 +63,26 @@ namespace KingWilliamApp
 
         #region "Class methods"
 
-        protected internal static Staff GetStaff(int staffIDValue)
+        protected internal static List<Staff> GetAll()
         {
-            return DBL.SelectStaff(staffIDValue);
+            return DBL.SelectAllStaff();
         }
 
         #endregion
 
         #region "Property Procedures"
+
+        protected internal int StaffID
+        {
+            get
+            {
+                return staffID;
+            }
+            set
+            {
+                staffID = value;
+            }
+        }
 
         protected internal string FirstName
         {
@@ -124,6 +156,54 @@ namespace KingWilliamApp
             set
             {
                 addressID = value;
+            }
+        }
+
+        protected internal string PositionID
+        {
+            get
+            {
+                return positionID;
+            }
+            set
+            {
+                positionID = value;
+            }
+        }
+
+        protected internal decimal Salary
+        {
+            get
+            {
+                return salary;
+            }
+            set
+            {
+                salary = value;
+            }
+        }
+
+        protected internal DateTime HiredDate
+        {
+            get
+            {
+                return hiredDate;
+            }
+            set
+            {
+                hiredDate = value;
+            }
+        }
+
+        protected internal DateTime TerminationDate
+        {
+            get
+            {
+                return terminationDate;
+            }
+            set
+            {
+                terminationDate = value;
             }
         }
 
