@@ -139,6 +139,11 @@ C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp
 C:\Users\Termina1\Desktop\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmFindCustomer.resources
 C:\Users\Termina1\Desktop\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmCreateReservation.resources
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmFindCustomer.resources
+C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmCreateReservation.resources
+>>>>>>> parent of 17f539c... Merge branch 'master' of https://github.com/KevinCRR/KingWilliamHotel
 =======
 C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmFindCustomer.resources
 C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmCreateReservation.resources
