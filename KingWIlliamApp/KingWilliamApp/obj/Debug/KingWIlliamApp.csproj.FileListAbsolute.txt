@@ -49,7 +49,6 @@ C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp
 C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\bin\Debug\KingWilliamApp.pdb
 C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.csprojAssemblyReference.cache
 C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmCreateChargeableItem.resources
-C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmEditReservation.resources
 C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmCreateStaff.resources
 C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmEditReservations.resources
 C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmLogin.resources
@@ -139,3 +138,8 @@ C:\Users\Termina1\Desktop\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Deb
 C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmDeleteUser.resources
 C:\Users\Termina1\Desktop\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmFindCustomer.resources
 C:\Users\Termina1\Desktop\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmCreateReservation.resources
+<<<<<<< HEAD
+=======
+C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmFindCustomer.resources
+C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmCreateReservation.resources
+>>>>>>> parent of 17f539c... Merge branch 'master' of https://github.com/KevinCRR/KingWilliamHotel

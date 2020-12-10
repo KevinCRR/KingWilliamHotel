@@ -166,6 +166,33 @@
             this.pnlBody.Size = new System.Drawing.Size(622, 451);
             this.pnlBody.TabIndex = 53;
             // 
+<<<<<<< HEAD
+=======
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(142, 252);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(19, 21);
+            this.label2.TabIndex = 93;
+            this.label2.Text = "$";
+            // 
+            // txtCost
+            // 
+            this.txtCost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCost.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCost.Location = new System.Drawing.Point(165, 251);
+            this.txtCost.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCost.Name = "txtCost";
+            this.txtCost.ReadOnly = true;
+            this.txtCost.Size = new System.Drawing.Size(100, 25);
+            this.txtCost.TabIndex = 92;
+            this.txtCost.TextChanged += new System.EventHandler(this.txtCost_TextChanged);
+            // 
+>>>>>>> parent of 17f539c... Merge branch 'master' of https://github.com/KevinCRR/KingWilliamHotel
             // lblPastRooms
             // 
             this.lblPastRooms.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
