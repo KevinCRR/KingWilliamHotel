@@ -930,6 +930,41 @@ namespace KingWilliamApp
             return returnList;
         }
 
+        internal static int InsertTransaction(Transaction insertTransaction)
+        {
+            // Create return value
+            int returnValue = 0;
+
+            // Declare the connection
+            SqlConnection dbConnection = new SqlConnection(GetConnectionString());
+
+            // Create new SQL command and assign it paramaters
+            SqlCommand command = new SqlCommand("INSERT INTO transactions OUTPUT INSERTED.transactionID VALUES(@billID, @itemID, @amountOfItems, @date)", dbConnection);
+            command.Parameters.AddWithValue("@billID", insertTransaction.BillID);
+            command.Parameters.AddWithValue("@itemID", insertTransaction.ItemID);
+            command.Parameters.AddWithValue("@amountOfItems", insertTransaction.AmountOfItems);
+            command.Parameters.AddWithValue("@date", insertTransaction.Date);
+
+            // Try to insert the new record, return result
+            try
+            {
+                dbConnection.Open();
+                // Try to insert the new record, return result
+                returnValue = (int)command.ExecuteScalar();
+
+            }
+            catch (Exception ex)
+            {
+                throw new DataException("Error in InsertTransaction", ex);
+            }
+            finally
+            {
+                dbConnection.Close();
+            }
+
+            return returnValue;
+        }
+
         internal static bool DeleteTransaction(int transactionIDValue)
         {
             // Create return value
@@ -1011,6 +1046,48 @@ namespace KingWilliamApp
             // Return the populated row
             return returnItem;
         }
+        internal static List<ChargeableItem> SelectAllChargeableItems()
+        {
+            List<ChargeableItem> returnList = new List<ChargeableItem> { };
+
+            SqlConnection dbConnection = new SqlConnection(GetConnectionString());
+
+            SqlCommand command = new SqlCommand("SELECT * FROM chargeableItems", dbConnection);
+
+            try
+            {
+                dbConnection.Open();
+
+                ChargeableItem temp = new ChargeableItem();
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        temp = new ChargeableItem(
+                            reader.GetInt32(0),         // id
+                            reader.GetString(1),        // itemName
+                            reader.GetString(2),        // itemDescription
+                            reader.GetDecimal(3));      // itemPrice
+
+
+                        returnList.Add(temp);
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw new DataException("Error in GetAllChargeableItems", ex);
+            }
+            finally
+            {
+                dbConnection.Close();
+            }
+
+            return returnList;
+        }
+
 
         #endregion
 
@@ -1106,6 +1183,46 @@ namespace KingWilliamApp
             }
 
             return returnDataTable;
+        }
+
+        internal static decimal SelectRoomPrice(int roomNumber)
+        {
+            // Create return value
+            decimal returnValue = 0;
+
+            // Declare the connection
+            SqlConnection dbConnection = new SqlConnection(GetConnectionString());
+
+            // Create new SQL command and assign it paramaters
+            SqlCommand command = new SqlCommand("SELECT pricePerNight FROM rooms WHERE roomNumber = @roomNumber", dbConnection);
+            command.Parameters.AddWithValue("@roomNumber", roomNumber);
+
+            // Try to insert the new record, return result
+            try
+            {
+                dbConnection.Open();
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        returnValue = reader.GetDecimal(0);
+                    }
+                }
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                throw new DataException("Error in SelectRoomPrice", ex);
+            }
+            finally
+            {
+                dbConnection.Close();
+            }
+
+            return returnValue;
         }
 
         internal static void UpdateRoomStatus(int roomNumber, string status)

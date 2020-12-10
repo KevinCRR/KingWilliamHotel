@@ -66,7 +66,7 @@ namespace KingWilliamApp
                 dgvTransactions.Rows[dgvTransactions.RowCount - 1].Tag = t;
 
                 // Calculate sum of transactions
-                billAmount += t.ChargeableItem.ItemPrice;
+                billAmount += (t.ChargeableItem.ItemPrice * t.AmountOfItems);
             }
 
             txtBillAmount.Text = billAmount.ToString();
@@ -156,7 +156,7 @@ namespace KingWilliamApp
 
         private void btnNew_Click(object sender, EventArgs e)
         {
-            frmCreateTransactions formCreateTransaction = new frmCreateTransactions();
+            frmCreateTransactions formCreateTransaction = new frmCreateTransactions(currentBill.BillID);
             formCreateTransaction.ShowDialog();
 
             RefreshList();

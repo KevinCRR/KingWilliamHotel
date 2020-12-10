@@ -36,7 +36,10 @@ namespace KingWilliamApp
 
         #region "Class methods"
 
-
+        public static List<ChargeableItem> GetAll()
+        {
+            return DBL.SelectAllChargeableItems();
+        }
 
         #endregion
 

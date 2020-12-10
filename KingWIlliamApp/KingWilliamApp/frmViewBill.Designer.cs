@@ -48,7 +48,6 @@
             this.txtAmountOwing = new System.Windows.Forms.TextBox();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.dgvTransactions = new System.Windows.Forms.DataGridView();
-            this.pnlList = new System.Windows.Forms.Panel();
             this.reservationID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itemDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,6 +55,7 @@
             this.amountOfItems = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.pnlList = new System.Windows.Forms.Panel();
             this.pnlHeader.SuspendLayout();
             this.pnlBody.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTransactions)).BeginInit();
@@ -293,23 +293,9 @@
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvTransactions.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvTransactions.RowTemplate.Height = 28;
-            this.dgvTransactions.Size = new System.Drawing.Size(548, 308);
+            this.dgvTransactions.Size = new System.Drawing.Size(548, 294);
             this.dgvTransactions.TabIndex = 0;
             this.dgvTransactions.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTransactions_CellClick);
-            // 
-            // pnlList
-            // 
-            this.pnlList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlList.BackColor = System.Drawing.Color.White;
-            this.pnlList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlList.Controls.Add(this.dgvTransactions);
-            this.pnlList.Location = new System.Drawing.Point(37, 198);
-            this.pnlList.Margin = new System.Windows.Forms.Padding(2);
-            this.pnlList.Name = "pnlList";
-            this.pnlList.Size = new System.Drawing.Size(550, 310);
-            this.pnlList.TabIndex = 87;
             // 
             // reservationID
             // 
@@ -362,6 +348,20 @@
             this.delete.ReadOnly = true;
             this.delete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.delete.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // pnlList
+            // 
+            this.pnlList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlList.BackColor = System.Drawing.Color.White;
+            this.pnlList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlList.Controls.Add(this.dgvTransactions);
+            this.pnlList.Location = new System.Drawing.Point(37, 198);
+            this.pnlList.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlList.Name = "pnlList";
+            this.pnlList.Size = new System.Drawing.Size(550, 296);
+            this.pnlList.TabIndex = 87;
             // 
             // frmViewBill
             // 

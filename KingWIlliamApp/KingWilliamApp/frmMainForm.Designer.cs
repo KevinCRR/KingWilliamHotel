@@ -1010,10 +1010,12 @@
             // 
             // pnlChildForm
             // 
+            this.pnlChildForm.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlChildForm.BackColor = System.Drawing.Color.White;
             this.pnlChildForm.Controls.Add(this.lblKingWilliam);
             this.pnlChildForm.Controls.Add(this.pbxKingWilliam);
-            this.pnlChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlChildForm.Location = new System.Drawing.Point(233, 0);
             this.pnlChildForm.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.pnlChildForm.Name = "pnlChildForm";

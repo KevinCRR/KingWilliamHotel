@@ -12,254 +12,88 @@ namespace KingWilliamApp
 {
     public partial class frmCreateTransactions : Form
     {
-        public frmCreateTransactions()
+        private int BillID;
+
+        public frmCreateTransactions(int billID)
         {
             InitializeComponent();
+
+            BillID = billID;
         }
 
-        private void txtFirstName_TextChanged(object sender, EventArgs e)
+        private void frmCreateTransactions_Load(object sender, EventArgs e)
         {
-
+            RefreshList();
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        public void RefreshList()
         {
-
+            PopulateData(ChargeableItem.GetAll());
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        void PopulateData(List<ChargeableItem> items)
         {
-
+            dgvItems.Rows.Clear();
+            foreach (ChargeableItem i in items)
+            {
+                dgvItems.Rows.Add(new object[]
+                {
+                    false,
+                    i.ItemID,
+                    i.ItemName,
+                    i.ItemDescription,
+                    i.ItemPrice
+                });
+                dgvItems.Rows[dgvItems.RowCount - 1].Tag = i;
+            }
         }
 
-        private void label18_Click(object sender, EventArgs e)
+        private void dgvItems_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblPageName_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnCreate_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtText_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pnlColumn1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void cbxRoom_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateStart_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pnlColumn3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void cbxProvince_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtAddress2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtCountry_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label13_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtCity_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtAddress1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label14_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label15_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label16_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtLastName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtPostalCode_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label17_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtPhone_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pnlHeader_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pnlExit_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pnlColumn2_Paint(object sender, PaintEventArgs e)
-        {
-
+            foreach (DataGridViewRow row in dgvItems.Rows)
+            {
+                row.Cells["Select"].Value = false;
+            }
+
+            //check select row
+            dgvItems.CurrentRow.Cells["Select"].Value = true;
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
+            int selectedItem = 0;
 
-        }
+            foreach (DataGridViewRow row in dgvItems.Rows)
+            {
+                if ((bool)row.Cells["Select"].Value == true)
+                {
+                    selectedItem = (int)row.Cells["ID"].Value;
+                }
+            }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
+            if (selectedItem != 0)
+            {
+                try
+                {
+                    Transaction newTransaction = new Transaction(BillID, selectedItem, int.Parse(nudItems.Value.ToString()), DateTime.Now);
+                    newTransaction.Insert();
 
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
+                    MessageBox.Show("Transaction added successfully!", "Success");
+                    this.Close();
+                }
+                catch (DataException ex)
+                {
+                    MessageBox.Show("Database error! " + ex.Message + "\n\n" +
+                        ex.InnerException.Message + "\n\n" + ex.Source + "\n\n" + ex.Message +
+                        "\n\n" + ex.StackTrace);
+                }
+                // Catch other unanticipated exceptions and provide as much debugging info as possible.
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An unknown error has occurred in " + ex.Source +
+                        "! Please contact your IT department and provide the following details:\n\n" + ex.Message + "\n\n" + ex.StackTrace + "\n\nUnknown Error!");
+                }
+            }
         }
     }
 }

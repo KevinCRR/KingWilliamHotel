@@ -32,6 +32,14 @@ namespace KingWilliamApp
             this.Date = dateValue;
         }
 
+        protected internal Transaction(int billIDValue, int itemIDValue, int amountOfItemsValue, DateTime dateValue)
+        {
+            this.BillID = billIDValue;
+            this.ItemID = itemIDValue;
+            this.AmountOfItems = amountOfItemsValue;
+            this.Date = dateValue;
+        }
+
         protected internal Transaction()
         {
             
@@ -44,6 +52,11 @@ namespace KingWilliamApp
         protected internal static List<Transaction> GetAllTransactions(int billID)
         {
             return DBL.SelectAllTransactions(billID);
+        }
+
+        protected internal void Insert()
+        {
+            this.TransactionID = DBL.InsertTransaction(this);
         }
 
         protected internal bool DeleteTransaction()

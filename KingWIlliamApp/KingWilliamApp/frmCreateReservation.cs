@@ -30,7 +30,7 @@ namespace KingWilliamApp
                 string pastRoomsMessage = "";
                 List<String> pastRooms = UseCustomer.GetPastRooms();
 
-                if (pastRooms.Count > 0)
+                if (pastRooms.Count > 1)
                 {
                     pastRoomsMessage = "This customer previously stayed in rooms:  ";
 
@@ -49,6 +49,26 @@ namespace KingWilliamApp
 
             cbxRoom.ValueMember = "roomNumber";
             cbxRoom.DataSource = Room.GetAllRooms();
+
+            ShowRoomPrice();
+        }
+
+        private void cbxRoom_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ShowRoomPrice();
+        }
+
+        private void ShowRoomPrice()
+        {
+            int selectedRoom = int.Parse(cbxRoom.SelectedValue.ToString());
+            try
+            {
+                txtCost.Text = Room.GetRoomPrice(selectedRoom).ToString("#,0.00");
+            }
+            catch (Exception)
+            {
+                txtCost.Text = "";
+            }
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)

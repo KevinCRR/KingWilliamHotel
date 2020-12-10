@@ -28,31 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlBody = new System.Windows.Forms.Panel();
             this.nudItems = new System.Windows.Forms.NumericUpDown();
             this.lblAmountOfItems = new System.Windows.Forms.Label();
-            this.lblMessage = new System.Windows.Forms.Label();
             this.lblPageName = new System.Windows.Forms.Label();
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.btnSubmit = new System.Windows.Forms.Button();
-            this.dgvTransactions = new System.Windows.Forms.DataGridView();
-            this.reservationID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvItems = new System.Windows.Forms.DataGridView();
+            this.pnlList = new System.Windows.Forms.Panel();
+            this.select = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itemDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itemPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.amountOfItems = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.delete = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.pnlList = new System.Windows.Forms.Panel();
             this.pnlBody.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudItems)).BeginInit();
             this.pnlHeader.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTransactions)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvItems)).BeginInit();
             this.pnlList.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,7 +61,6 @@
             this.pnlBody.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnlBody.Controls.Add(this.nudItems);
             this.pnlBody.Controls.Add(this.lblAmountOfItems);
-            this.pnlBody.Controls.Add(this.lblMessage);
             this.pnlBody.Location = new System.Drawing.Point(0, 82);
             this.pnlBody.Margin = new System.Windows.Forms.Padding(2);
             this.pnlBody.MaximumSize = new System.Drawing.Size(622, 451);
@@ -79,7 +74,7 @@
             this.nudItems.Location = new System.Drawing.Point(32, 38);
             this.nudItems.Margin = new System.Windows.Forms.Padding(2);
             this.nudItems.Maximum = new decimal(new int[] {
-            5,
+            50,
             0,
             0,
             0});
@@ -109,17 +104,6 @@
             this.lblAmountOfItems.Size = new System.Drawing.Size(126, 21);
             this.lblAmountOfItems.TabIndex = 87;
             this.lblAmountOfItems.Text = "Amount of Items";
-            // 
-            // lblMessage
-            // 
-            this.lblMessage.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMessage.ForeColor = System.Drawing.Color.Red;
-            this.lblMessage.Location = new System.Drawing.Point(47, 307);
-            this.lblMessage.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(218, 60);
-            this.lblMessage.TabIndex = 11;
-            this.lblMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblPageName
             // 
@@ -162,54 +146,76 @@
             this.btnSubmit.TabIndex = 53;
             this.btnSubmit.Text = "Add";
             this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
-            // dgvTransactions
+            // dgvItems
             // 
-            this.dgvTransactions.AllowUserToAddRows = false;
-            this.dgvTransactions.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.dgvTransactions.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
-            this.dgvTransactions.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvTransactions.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvTransactions.BackgroundColor = System.Drawing.Color.White;
-            this.dgvTransactions.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvTransactions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTransactions.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.reservationID,
+            this.dgvItems.AllowUserToAddRows = false;
+            this.dgvItems.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.dgvItems.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvItems.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvItems.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvItems.BackgroundColor = System.Drawing.Color.White;
+            this.dgvItems.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvItems.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.select,
+            this.ID,
             this.itemName,
             this.itemDescription,
-            this.itemPrice,
-            this.amountOfItems,
-            this.date,
-            this.delete});
-            this.dgvTransactions.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvTransactions.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvTransactions.Location = new System.Drawing.Point(0, 0);
-            this.dgvTransactions.Margin = new System.Windows.Forms.Padding(2);
-            this.dgvTransactions.MultiSelect = false;
-            this.dgvTransactions.Name = "dgvTransactions";
-            this.dgvTransactions.ReadOnly = true;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTransactions.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
-            this.dgvTransactions.RowHeadersVisible = false;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvTransactions.RowsDefaultCellStyle = dataGridViewCellStyle10;
-            this.dgvTransactions.RowTemplate.Height = 28;
-            this.dgvTransactions.Size = new System.Drawing.Size(548, 308);
-            this.dgvTransactions.TabIndex = 0;
+            this.itemPrice});
+            this.dgvItems.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvItems.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgvItems.Location = new System.Drawing.Point(0, 0);
+            this.dgvItems.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvItems.MultiSelect = false;
+            this.dgvItems.Name = "dgvItems";
+            this.dgvItems.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvItems.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvItems.RowHeadersVisible = false;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvItems.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvItems.RowTemplate.Height = 28;
+            this.dgvItems.Size = new System.Drawing.Size(548, 308);
+            this.dgvItems.TabIndex = 0;
+            this.dgvItems.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvItems_CellContentClick);
             // 
-            // reservationID
+            // pnlList
             // 
-            this.reservationID.FillWeight = 30F;
-            this.reservationID.HeaderText = "ID";
-            this.reservationID.Name = "reservationID";
-            this.reservationID.ReadOnly = true;
+            this.pnlList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlList.BackColor = System.Drawing.Color.White;
+            this.pnlList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlList.Controls.Add(this.dgvItems);
+            this.pnlList.Location = new System.Drawing.Point(34, 179);
+            this.pnlList.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlList.Name = "pnlList";
+            this.pnlList.Size = new System.Drawing.Size(550, 310);
+            this.pnlList.TabIndex = 88;
+            // 
+            // select
+            // 
+            this.select.FalseValue = "false";
+            this.select.HeaderText = "Select";
+            this.select.Name = "select";
+            this.select.ReadOnly = true;
+            this.select.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.select.TrueValue = "true";
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
             // 
             // itemName
             // 
@@ -225,50 +231,12 @@
             // 
             // itemPrice
             // 
-            dataGridViewCellStyle7.Format = "C2";
-            dataGridViewCellStyle7.NullValue = null;
-            this.itemPrice.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle2.Format = "C2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.itemPrice.DefaultCellStyle = dataGridViewCellStyle2;
             this.itemPrice.HeaderText = "Item Price";
             this.itemPrice.Name = "itemPrice";
             this.itemPrice.ReadOnly = true;
-            // 
-            // amountOfItems
-            // 
-            this.amountOfItems.HeaderText = "Amount of Items";
-            this.amountOfItems.Name = "amountOfItems";
-            this.amountOfItems.ReadOnly = true;
-            // 
-            // date
-            // 
-            this.date.HeaderText = "Date";
-            this.date.Name = "date";
-            this.date.ReadOnly = true;
-            // 
-            // delete
-            // 
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.delete.DefaultCellStyle = dataGridViewCellStyle8;
-            this.delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.delete.HeaderText = "";
-            this.delete.Name = "delete";
-            this.delete.ReadOnly = true;
-            this.delete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.delete.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // pnlList
-            // 
-            this.pnlList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlList.BackColor = System.Drawing.Color.White;
-            this.pnlList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlList.Controls.Add(this.dgvTransactions);
-            this.pnlList.Location = new System.Drawing.Point(34, 179);
-            this.pnlList.Margin = new System.Windows.Forms.Padding(2);
-            this.pnlList.Name = "pnlList";
-            this.pnlList.Size = new System.Drawing.Size(550, 310);
-            this.pnlList.TabIndex = 88;
             // 
             // frmCreateTransactions
             // 
@@ -285,11 +253,12 @@
             this.Name = "frmCreateTransactions";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "New Transaction";
+            this.Load += new System.EventHandler(this.frmCreateTransactions_Load);
             this.pnlBody.ResumeLayout(false);
             this.pnlBody.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudItems)).EndInit();
             this.pnlHeader.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTransactions)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvItems)).EndInit();
             this.pnlList.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -297,20 +266,17 @@
 
         #endregion
         private System.Windows.Forms.Panel pnlBody;
-        private System.Windows.Forms.Label lblMessage;
         private System.Windows.Forms.Label lblPageName;
         private System.Windows.Forms.Panel pnlHeader;
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.NumericUpDown nudItems;
         private System.Windows.Forms.Label lblAmountOfItems;
-        private System.Windows.Forms.DataGridView dgvTransactions;
-        private System.Windows.Forms.DataGridViewTextBoxColumn reservationID;
+        private System.Windows.Forms.DataGridView dgvItems;
+        private System.Windows.Forms.Panel pnlList;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn select;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn itemName;
         private System.Windows.Forms.DataGridViewTextBoxColumn itemDescription;
         private System.Windows.Forms.DataGridViewTextBoxColumn itemPrice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn amountOfItems;
-        private System.Windows.Forms.DataGridViewTextBoxColumn date;
-        private System.Windows.Forms.DataGridViewButtonColumn delete;
-        private System.Windows.Forms.Panel pnlList;
     }
 }
