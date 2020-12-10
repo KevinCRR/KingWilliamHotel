@@ -1,0 +1,141 @@
+C:\Users\Termina1\Desktop\KingWIlliamApp\KingWIlliamApp\bin\Debug\KingWIlliamApp.exe.config
+C:\Users\Termina1\Desktop\KingWIlliamApp\KingWIlliamApp\bin\Debug\KingWIlliamApp.exe
+C:\Users\Termina1\Desktop\KingWIlliamApp\KingWIlliamApp\bin\Debug\KingWIlliamApp.pdb
+C:\Users\Termina1\Desktop\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWIlliamApp.csprojAssemblyReference.cache
+C:\Users\Termina1\Desktop\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWIlliamApp.frmMainForm.resources
+C:\Users\Termina1\Desktop\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWIlliamApp.Properties.Resources.resources
+C:\Users\Termina1\Desktop\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWIlliamApp.csproj.GenerateResource.cache
+C:\Users\Termina1\Desktop\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWIlliamApp.csproj.CoreCompileInputs.cache
+C:\Users\Termina1\Desktop\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWIlliamApp.exe
+C:\Users\Termina1\Desktop\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWIlliamApp.pdb
+C:\Users\Termina1\Desktop\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWIlliamApp.frmViewReservations.resources
+C:\Users\Termina1\Desktop\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWIlliamApp.frmBill.resources
+C:\Users\Termina1\Desktop\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWIlliamApp.frmCreateChargeableItem.resources
+C:\Users\Termina1\Desktop\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWIlliamApp.frmCreateReservation.resources
+C:\Users\Termina1\Desktop\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWIlliamApp.frmCreateStaff.resources
+C:\Users\Termina1\Desktop\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWIlliamApp.frmUpdateChargeableItem.resources
+C:\Users\Termina1\Desktop\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWIlliamApp.frmUpdateClient.resources
+C:\Users\Termina1\Desktop\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWIlliamApp.frmUpdateReservation.resources
+C:\Users\Termina1\Desktop\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWIlliamApp.frmUpdateRoom.resources
+C:\Users\Termina1\Desktop\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWIlliamApp.frmUpdateStaff.resources
+C:\Users\Termina1\Desktop\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWIlliamApp.frmViewChargeableItems.resources
+C:\Users\Termina1\Desktop\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWIlliamApp.frmViewClients.resources
+C:\Users\Termina1\Desktop\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWIlliamApp.frmViewRooms.resources
+C:\Users\Termina1\Desktop\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWIlliamApp.frmViewStaff.resources
+C:\Users\Termina1\Desktop\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWIlliamApp.frmLogin.resources
+C:\Users\Termina1\Desktop\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\bin\Debug\KingWilliamApp.exe.config
+C:\Users\Termina1\Desktop\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\bin\Debug\KingWilliamApp.exe
+C:\Users\Termina1\Desktop\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\bin\Debug\KingWilliamApp.pdb
+C:\Users\Termina1\Desktop\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.csprojAssemblyReference.cache
+C:\Users\Termina1\Desktop\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmCreateChargeableItem.resources
+C:\Users\Termina1\Desktop\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmCreateStaff.resources
+C:\Users\Termina1\Desktop\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmLogin.resources
+C:\Users\Termina1\Desktop\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmMainForm.resources
+C:\Users\Termina1\Desktop\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmViewChargeableItems.resources
+C:\Users\Termina1\Desktop\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmViewReservations.resources
+C:\Users\Termina1\Desktop\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmViewStaff.resources
+C:\Users\Termina1\Desktop\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.Properties.Resources.resources
+C:\Users\Termina1\Desktop\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.csproj.GenerateResource.cache
+C:\Users\Termina1\Desktop\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.csproj.CoreCompileInputs.cache
+C:\Users\Termina1\Desktop\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.exe
+C:\Users\Termina1\Desktop\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.pdb
+C:\Users\Termina1\Desktop\KingWilliamHotel\KingWilliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmEditReservations.resources
+C:\Users\Termina1\Desktop\KingWilliamHotel\KingWilliamApp\KingWIlliamApp\bin\Debug\KingWilliamDB.mdf
+C:\Users\Termina1\Desktop\KingWilliamHotel\KingWilliamApp\KingWIlliamApp\bin\Debug\KingWilliamDB_log.ldf
+C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\bin\Debug\KingWilliamDB.mdf
+C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\bin\Debug\KingWilliamDB_log.ldf
+C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\bin\Debug\KingWilliamApp.exe.config
+C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\bin\Debug\KingWilliamApp.exe
+C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\bin\Debug\KingWilliamApp.pdb
+C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.csprojAssemblyReference.cache
+C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmCreateChargeableItem.resources
+C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmEditReservation.resources
+C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmCreateStaff.resources
+C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmEditReservations.resources
+C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmLogin.resources
+C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmMainForm.resources
+C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmViewChargeableItems.resources
+C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmViewReservations.resources
+C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmViewStaff.resources
+C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.Properties.Resources.resources
+C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.csproj.GenerateResource.cache
+C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.exe
+C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.pdb
+C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmCreateCustomer.resources
+C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmCreateEmploymentPositions.resources
+C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmCreateTransactions.resources
+C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmCreateUsers.resources
+C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmEditBill.resources
+C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmEditEmployementPositions.resources
+C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmEditTransactions.resources
+C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmEditUsers.resources
+C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmViewBill.resources
+C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmEditChargeableItem.resources
+C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmEditCustomer.resources
+C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmEditRoom.resources
+C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmEditStaff.resources
+C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmViewCustomer.resources
+C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmViewEmployementPositions.resources
+C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmViewRoom.resources
+C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmViewTransactions.resources
+C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmViewUsers.resources
+C:\Users\Termina1\Desktop\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmCreateEmploymentPositions.resources
+C:\Users\Termina1\Desktop\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmCreateTransactions.resources
+C:\Users\Termina1\Desktop\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmCreateUsers.resources
+C:\Users\Termina1\Desktop\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmEditBill.resources
+C:\Users\Termina1\Desktop\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmEditEmployementPositions.resources
+C:\Users\Termina1\Desktop\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmEditTransactions.resources
+C:\Users\Termina1\Desktop\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmEditUsers.resources
+C:\Users\Termina1\Desktop\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmViewBill.resources
+C:\Users\Termina1\Desktop\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmCreateCustomer.resources
+C:\Users\Termina1\Desktop\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmEditChargeableItem.resources
+C:\Users\Termina1\Desktop\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmEditCustomer.resources
+C:\Users\Termina1\Desktop\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmEditRoom.resources
+C:\Users\Termina1\Desktop\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmEditStaff.resources
+C:\Users\Termina1\Desktop\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmViewCustomer.resources
+C:\Users\Termina1\Desktop\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmViewEmployementPositions.resources
+C:\Users\Termina1\Desktop\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmViewRoom.resources
+C:\Users\Termina1\Desktop\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmViewTransactions.resources
+C:\Users\Termina1\Desktop\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmViewUsers.resources
+C:\Users\darkfenix\Documents\School\Year_3\Semester_1\DBAS II\Deliverable 3\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\bin\Debug\KingWilliamDB.mdf
+C:\Users\darkfenix\Documents\School\Year_3\Semester_1\DBAS II\Deliverable 3\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\bin\Debug\KingWilliamDB_log.ldf
+C:\Users\darkfenix\Documents\School\Year_3\Semester_1\DBAS II\Deliverable 3\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\bin\Debug\KingWilliamApp.exe.config
+C:\Users\darkfenix\Documents\School\Year_3\Semester_1\DBAS II\Deliverable 3\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\bin\Debug\KingWilliamApp.exe
+C:\Users\darkfenix\Documents\School\Year_3\Semester_1\DBAS II\Deliverable 3\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\bin\Debug\KingWilliamApp.pdb
+C:\Users\darkfenix\Documents\School\Year_3\Semester_1\DBAS II\Deliverable 3\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.csprojAssemblyReference.cache
+C:\Users\darkfenix\Documents\School\Year_3\Semester_1\DBAS II\Deliverable 3\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmCreateEmploymentPositions.resources
+C:\Users\darkfenix\Documents\School\Year_3\Semester_1\DBAS II\Deliverable 3\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmCreateTransactions.resources
+C:\Users\darkfenix\Documents\School\Year_3\Semester_1\DBAS II\Deliverable 3\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmCreateUsers.resources
+C:\Users\darkfenix\Documents\School\Year_3\Semester_1\DBAS II\Deliverable 3\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmEditBill.resources
+C:\Users\darkfenix\Documents\School\Year_3\Semester_1\DBAS II\Deliverable 3\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmEditEmployementPositions.resources
+C:\Users\darkfenix\Documents\School\Year_3\Semester_1\DBAS II\Deliverable 3\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmEditTransactions.resources
+C:\Users\darkfenix\Documents\School\Year_3\Semester_1\DBAS II\Deliverable 3\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmEditUsers.resources
+C:\Users\darkfenix\Documents\School\Year_3\Semester_1\DBAS II\Deliverable 3\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmViewBill.resources
+C:\Users\darkfenix\Documents\School\Year_3\Semester_1\DBAS II\Deliverable 3\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmCreateChargeableItem.resources
+C:\Users\darkfenix\Documents\School\Year_3\Semester_1\DBAS II\Deliverable 3\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmCreateCustomer.resources
+C:\Users\darkfenix\Documents\School\Year_3\Semester_1\DBAS II\Deliverable 3\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmEditReservation.resources
+C:\Users\darkfenix\Documents\School\Year_3\Semester_1\DBAS II\Deliverable 3\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmCreateStaff.resources
+C:\Users\darkfenix\Documents\School\Year_3\Semester_1\DBAS II\Deliverable 3\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmEditReservations.resources
+C:\Users\darkfenix\Documents\School\Year_3\Semester_1\DBAS II\Deliverable 3\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmLogin.resources
+C:\Users\darkfenix\Documents\School\Year_3\Semester_1\DBAS II\Deliverable 3\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmMainForm.resources
+C:\Users\darkfenix\Documents\School\Year_3\Semester_1\DBAS II\Deliverable 3\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmEditChargeableItem.resources
+C:\Users\darkfenix\Documents\School\Year_3\Semester_1\DBAS II\Deliverable 3\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmEditCustomer.resources
+C:\Users\darkfenix\Documents\School\Year_3\Semester_1\DBAS II\Deliverable 3\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmEditRoom.resources
+C:\Users\darkfenix\Documents\School\Year_3\Semester_1\DBAS II\Deliverable 3\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmEditStaff.resources
+C:\Users\darkfenix\Documents\School\Year_3\Semester_1\DBAS II\Deliverable 3\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmViewChargeableItems.resources
+C:\Users\darkfenix\Documents\School\Year_3\Semester_1\DBAS II\Deliverable 3\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmViewCustomer.resources
+C:\Users\darkfenix\Documents\School\Year_3\Semester_1\DBAS II\Deliverable 3\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmViewEmployementPositions.resources
+C:\Users\darkfenix\Documents\School\Year_3\Semester_1\DBAS II\Deliverable 3\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmViewReservations.resources
+C:\Users\darkfenix\Documents\School\Year_3\Semester_1\DBAS II\Deliverable 3\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmViewRoom.resources
+C:\Users\darkfenix\Documents\School\Year_3\Semester_1\DBAS II\Deliverable 3\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmViewStaff.resources
+C:\Users\darkfenix\Documents\School\Year_3\Semester_1\DBAS II\Deliverable 3\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmViewTransactions.resources
+C:\Users\darkfenix\Documents\School\Year_3\Semester_1\DBAS II\Deliverable 3\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmViewUsers.resources
+C:\Users\darkfenix\Documents\School\Year_3\Semester_1\DBAS II\Deliverable 3\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.Properties.Resources.resources
+C:\Users\darkfenix\Documents\School\Year_3\Semester_1\DBAS II\Deliverable 3\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.csproj.GenerateResource.cache
+C:\Users\darkfenix\Documents\School\Year_3\Semester_1\DBAS II\Deliverable 3\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.csproj.CoreCompileInputs.cache
+C:\Users\darkfenix\Documents\School\Year_3\Semester_1\DBAS II\Deliverable 3\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.exe
+C:\Users\darkfenix\Documents\School\Year_3\Semester_1\DBAS II\Deliverable 3\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.pdb
+C:\Users\Termina1\Desktop\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmDeleteUser.resources
+C:\Users\100624914\Documents\DBAS\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmDeleteUser.resources
+C:\Users\Termina1\Desktop\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmFindCustomer.resources
+C:\Users\Termina1\Desktop\KingWilliamHotel\KingWIlliamApp\KingWIlliamApp\obj\Debug\KingWilliamApp.frmCreateReservation.resources
