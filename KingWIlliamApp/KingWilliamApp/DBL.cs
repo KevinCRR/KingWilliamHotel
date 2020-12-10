@@ -1121,8 +1121,8 @@ namespace KingWilliamApp
                     while (reader.Read())
                     {
                         returnStaff = new Staff(reader.GetInt32(0), reader.GetString(1), reader.GetString(2),
-                            reader.GetString(3), reader.GetDouble(4), reader.GetDateTime(5), reader.GetDateTime(6),
-                            reader.GetString(7), reader.GetInt32(8), reader.GetInt32(9));
+                            reader.GetString(3), reader.GetDecimal(4), reader.GetDateTime(5), reader.GetDateTime(6),
+                            reader.GetString(7), reader.GetInt32(8));
                     }
                 }
                 else
@@ -1143,6 +1143,53 @@ namespace KingWilliamApp
             // Return the populated row
             return returnStaff;
 
+        }
+
+        internal static List<Staff> SelectAllStaff()
+        {
+            List<Staff> returnList = new List<Staff> { };
+
+            SqlConnection dbConnection = new SqlConnection(GetConnectionString());
+
+            SqlCommand command = new SqlCommand("SELECT * FROM staff", dbConnection);
+
+            try
+            {
+                dbConnection.Open();
+
+                Staff temp = new Staff();
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        temp = new Staff(
+                            reader.GetInt32(0),         // id
+                            reader.GetString(1),        // firstName
+                            reader.GetString(2),        // lastName
+                            reader.GetString(3),        // phoneNumber
+                            reader.GetDecimal(6),       // salary
+                            reader.GetDateTime(7),      // hiredDate
+                            reader.GetDateTime(8),      // terminationDate
+                            reader.GetString(5),         // positionID
+                            reader.GetInt32(4));        // addressID
+
+
+                        returnList.Add(temp);
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw new DataException("Error in GetAllStaff", ex);
+            }
+            finally
+            {
+                dbConnection.Close();
+            }
+
+            return returnList;
         }
 
         #endregion
