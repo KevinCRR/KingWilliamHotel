@@ -73,24 +73,15 @@ namespace KingWilliamApp
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            decimal number;
             try
             {
                 lblMessage.Text = "";
 
+                Reservation newReservation = new Reservation(dateStart.Value, dateEnd.Value, int.Parse(cbxRoom.SelectedValue.ToString()), int.Parse(nudGuests.Value.ToString()), txtNotes.Text.Trim(), UseCustomer.CustomerID);
+                newReservation.InsertReservation();
 
-                if (Decimal.TryParse(txtCost.Text, out number))
-                {
-                    Reservation newReservation = new Reservation(dateStart.Value, dateEnd.Value, int.Parse(cbxRoom.SelectedValue.ToString()), int.Parse(nudGuests.Value.ToString()), txtNotes.Text.Trim(), UseCustomer.CustomerID);
-                    newReservation.InsertReservation(number);
-
-                    MessageBox.Show("Reservation created successfully!", "Success");
-                    this.Close();
-                }
-                else
-                {
-                    throw new System.ArgumentException("Room Price must be a number!");
-                }
+                MessageBox.Show("Reservation created successfully!", "Success");
+                this.Close();
             }
             catch (ArgumentNullException ex)
             {
