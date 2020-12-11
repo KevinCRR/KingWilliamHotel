@@ -42,30 +42,32 @@ namespace KingWilliamApp
             if (User.CurrentUser.ToString() == "Admin")
             {
                 btnReservations.Visible = true;
-                btnBills.Visible = true;
-                btnChargeableItems.Visible = true;
-                btnCustomers.Visible = true;
+                btnBills.Visible = false;
+                btnChargeableItems.Visible = false;
+                btnCustomers.Visible = false;
                 btnStaff.Visible = true;
-                btnTransactions.Visible = true;
+                btnTransactions.Visible = false;
                 btnUsers.Visible = true;
-                btnRoomTypes.Visible = true;
-                btnRooms.Visible = true;
-                btnEmploymentPositions.Visible = true;
+                btnRoomTypes.Visible = false;
+                btnRooms.Visible = false;
+                btnEmploymentPositions.Visible = false;
             }
             else if (User.CurrentUser.ToString() == "Manager")
             {
                 btnReservations.Visible = true;
-                btnBills.Visible = true;
-                btnCustomers.Visible = true;
+                btnBills.Visible = false;
+                btnChargeableItems.Visible = false;
+                btnCustomers.Visible = false;
                 btnStaff.Visible = true;
-                btnTransactions.Visible = true;
-                btnUsers.Visible = true;
-                btnRoomTypes.Visible = true;
-                btnRooms.Visible = true;
+                btnTransactions.Visible = false;
+                btnUsers.Visible = false;
+                btnRoomTypes.Visible = false;
+                btnRooms.Visible = false;
+                btnEmploymentPositions.Visible = false;
             }
             else if (User.CurrentUser.ToString() == "FrontD")
             {
-                btnReservations.Visible = false;
+                btnReservations.Visible = true;
                 btnBills.Visible = false;
                 btnChargeableItems.Visible = false;
                 btnCustomers.Visible = false;
@@ -75,9 +77,6 @@ namespace KingWilliamApp
                 btnRoomTypes.Visible = false;
                 btnRooms.Visible = false;
                 btnEmploymentPositions.Visible = false;
-                btnReservations.Visible = true;
-                btnBills.Visible = true;
-                btnCustomers.Visible = true;
             }
             else if (User.CurrentUser.ToString() == "roomS")
             {
@@ -296,22 +295,23 @@ namespace KingWilliamApp
         #region Users
         private void btnUsers_Click(object sender, EventArgs e)
         {
-            showSubMenu(pnlUsers);
+            //showSubMenu(pnlUsers);
+            openChildForm(new frmViewUsers());
         }
 
         private void btnUserView_Click(object sender, EventArgs e)
         {
-            openChildForm(new frmViewUsers());
+            //openChildForm(new frmViewUsers());
         }
 
         private void btnUserCreate_Click(object sender, EventArgs e)
         {
-            openChildForm(new frmCreateUsers());
+            //openChildForm(new frmCreateUsers());
         }
 
         private void btnUserDelete_Click(object sender, EventArgs e)
         {
-            openChildForm(new frmDeleteUser());
+            //openChildForm(new frmDeleteUser());
         }
         #endregion Users
 

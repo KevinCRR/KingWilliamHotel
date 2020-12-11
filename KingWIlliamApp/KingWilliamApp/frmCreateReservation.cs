@@ -25,6 +25,9 @@ namespace KingWilliamApp
         {
             lblCustomerName.Text = UseCustomer.FirstName + " " + UseCustomer.LastName;
 
+            dateStart.Value = DateTime.Now;
+            dateEnd.Value = DateTime.Today.AddDays(1);
+
             try
             {
                 string pastRoomsMessage = "";

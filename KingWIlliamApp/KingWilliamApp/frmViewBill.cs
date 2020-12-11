@@ -194,10 +194,11 @@ namespace KingWilliamApp
 
         private void btnNew_Click(object sender, EventArgs e)
         {
-            frmCreateTransactions formCreateTransaction = new frmCreateTransactions(currentBill.BillID);
+            frmCreateTransactions formCreateTransaction = new frmCreateTransactions(currentBill);
             formCreateTransaction.ShowDialog();
 
-            RefreshList();
+            //RefreshList();
+            this.frmViewBill_Load(sender, e);
         }
     }
 }

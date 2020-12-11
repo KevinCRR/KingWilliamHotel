@@ -36,11 +36,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvStaff = new System.Windows.Forms.DataGridView();
-            this.pnlList = new System.Windows.Forms.Panel();
-            this.btnNew = new System.Windows.Forms.Button();
-            this.pnlSecondHeader = new System.Windows.Forms.Panel();
-            this.pnlHeader = new System.Windows.Forms.Panel();
-            this.lblPageName = new System.Windows.Forms.Label();
             this.reservationID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,6 +47,11 @@
             this.terminationDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.edit = new System.Windows.Forms.DataGridViewButtonColumn();
             this.delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.pnlList = new System.Windows.Forms.Panel();
+            this.btnNew = new System.Windows.Forms.Button();
+            this.pnlSecondHeader = new System.Windows.Forms.Panel();
+            this.pnlHeader = new System.Windows.Forms.Panel();
+            this.lblPageName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).BeginInit();
             this.pnlList.SuspendLayout();
             this.pnlSecondHeader.SuspendLayout();
@@ -103,73 +103,6 @@
             this.dgvStaff.Size = new System.Drawing.Size(651, 358);
             this.dgvStaff.TabIndex = 0;
             this.dgvStaff.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStaff_CellClick);
-            // 
-            // pnlList
-            // 
-            this.pnlList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlList.BackColor = System.Drawing.Color.White;
-            this.pnlList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlList.Controls.Add(this.dgvStaff);
-            this.pnlList.Location = new System.Drawing.Point(39, 144);
-            this.pnlList.Margin = new System.Windows.Forms.Padding(2);
-            this.pnlList.Name = "pnlList";
-            this.pnlList.Size = new System.Drawing.Size(653, 360);
-            this.pnlList.TabIndex = 58;
-            // 
-            // btnNew
-            // 
-            this.btnNew.BackColor = System.Drawing.Color.White;
-            this.btnNew.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.btnNew.FlatAppearance.BorderSize = 0;
-            this.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnNew.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNew.ForeColor = System.Drawing.Color.Black;
-            this.btnNew.Location = new System.Drawing.Point(39, 8);
-            this.btnNew.Margin = new System.Windows.Forms.Padding(0);
-            this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(85, 27);
-            this.btnNew.TabIndex = 0;
-            this.btnNew.Text = "New";
-            this.btnNew.UseVisualStyleBackColor = false;
-            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
-            // 
-            // pnlSecondHeader
-            // 
-            this.pnlSecondHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.pnlSecondHeader.Controls.Add(this.btnNew);
-            this.pnlSecondHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSecondHeader.Location = new System.Drawing.Point(0, 67);
-            this.pnlSecondHeader.Margin = new System.Windows.Forms.Padding(2);
-            this.pnlSecondHeader.Name = "pnlSecondHeader";
-            this.pnlSecondHeader.Size = new System.Drawing.Size(733, 42);
-            this.pnlSecondHeader.TabIndex = 59;
-            // 
-            // pnlHeader
-            // 
-            this.pnlHeader.Controls.Add(this.lblPageName);
-            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlHeader.Location = new System.Drawing.Point(0, 0);
-            this.pnlHeader.Margin = new System.Windows.Forms.Padding(2);
-            this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(733, 67);
-            this.pnlHeader.TabIndex = 57;
-            // 
-            // lblPageName
-            // 
-            this.lblPageName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblPageName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblPageName.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPageName.ForeColor = System.Drawing.Color.White;
-            this.lblPageName.Location = new System.Drawing.Point(0, 0);
-            this.lblPageName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblPageName.Name = "lblPageName";
-            this.lblPageName.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.lblPageName.Size = new System.Drawing.Size(733, 67);
-            this.lblPageName.TabIndex = 23;
-            this.lblPageName.Text = "Staff";
-            this.lblPageName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // reservationID
             // 
@@ -262,6 +195,73 @@
             this.delete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.delete.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
+            // pnlList
+            // 
+            this.pnlList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlList.BackColor = System.Drawing.Color.White;
+            this.pnlList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlList.Controls.Add(this.dgvStaff);
+            this.pnlList.Location = new System.Drawing.Point(39, 144);
+            this.pnlList.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlList.Name = "pnlList";
+            this.pnlList.Size = new System.Drawing.Size(653, 360);
+            this.pnlList.TabIndex = 58;
+            // 
+            // btnNew
+            // 
+            this.btnNew.BackColor = System.Drawing.Color.White;
+            this.btnNew.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.btnNew.FlatAppearance.BorderSize = 0;
+            this.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnNew.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNew.ForeColor = System.Drawing.Color.Black;
+            this.btnNew.Location = new System.Drawing.Point(39, 8);
+            this.btnNew.Margin = new System.Windows.Forms.Padding(0);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(85, 27);
+            this.btnNew.TabIndex = 0;
+            this.btnNew.Text = "New";
+            this.btnNew.UseVisualStyleBackColor = false;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
+            // 
+            // pnlSecondHeader
+            // 
+            this.pnlSecondHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pnlSecondHeader.Controls.Add(this.btnNew);
+            this.pnlSecondHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlSecondHeader.Location = new System.Drawing.Point(0, 67);
+            this.pnlSecondHeader.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlSecondHeader.Name = "pnlSecondHeader";
+            this.pnlSecondHeader.Size = new System.Drawing.Size(733, 42);
+            this.pnlSecondHeader.TabIndex = 59;
+            // 
+            // pnlHeader
+            // 
+            this.pnlHeader.Controls.Add(this.lblPageName);
+            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlHeader.Location = new System.Drawing.Point(0, 0);
+            this.pnlHeader.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlHeader.Name = "pnlHeader";
+            this.pnlHeader.Size = new System.Drawing.Size(733, 67);
+            this.pnlHeader.TabIndex = 57;
+            // 
+            // lblPageName
+            // 
+            this.lblPageName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblPageName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblPageName.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPageName.ForeColor = System.Drawing.Color.White;
+            this.lblPageName.Location = new System.Drawing.Point(0, 0);
+            this.lblPageName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPageName.Name = "lblPageName";
+            this.lblPageName.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.lblPageName.Size = new System.Drawing.Size(733, 67);
+            this.lblPageName.TabIndex = 23;
+            this.lblPageName.Text = "Staff";
+            this.lblPageName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // frmViewStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -274,6 +274,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmViewStaff";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Staff";
             this.Load += new System.EventHandler(this.frmViewStaff_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).EndInit();

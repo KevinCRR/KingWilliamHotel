@@ -120,6 +120,11 @@ namespace KingWilliamApp
                 throw new ArgumentException("Username already exists!");
         }
 
+        protected internal static List<User> GetAll()
+        {
+            return DBL.SelectAllUsers();
+        }
+
 
         #endregion
 

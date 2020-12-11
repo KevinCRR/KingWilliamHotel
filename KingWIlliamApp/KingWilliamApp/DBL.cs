@@ -872,6 +872,48 @@ namespace KingWilliamApp
             return returnValue;
         }
 
+        internal static List<User> SelectAllUsers()
+        {
+            List<User> returnList = new List<User> { };
+
+            SqlConnection dbConnection = new SqlConnection(GetConnectionString());
+
+            SqlCommand command = new SqlCommand("SELECT * FROM users", dbConnection);
+
+            try
+            {
+                dbConnection.Open();
+
+                User temp = new User();
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        temp = new User(
+                            reader.GetString(0),         // username
+                            reader.GetString(1),        // password
+                            reader.GetString(2),        // roleid
+                            reader.GetInt32(3).ToString());        // staffid
+
+
+                        returnList.Add(temp);
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw new DataException("Error in GetAllUsers", ex);
+            }
+            finally
+            {
+                dbConnection.Close();
+            }
+
+            return returnList;
+        }
+
         #endregion
 
         //***********************************************************************************************************

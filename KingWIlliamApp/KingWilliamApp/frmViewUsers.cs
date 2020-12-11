@@ -17,9 +17,31 @@ namespace KingWilliamApp
             InitializeComponent();
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void frmViewUsers_Load(object sender, EventArgs e)
         {
+            RefreshList();
+        }
 
+        public void RefreshList()
+        {
+            PopulateData(User.GetAll());
+        }
+
+        void PopulateData(List<User> user)
+        {
+            dgvUsers.Rows.Clear();
+            foreach (User u in user)
+            {
+                dgvUsers.Rows.Add(new object[]
+                {
+                    u.Username,
+                    u.RoleID,
+                    u.StaffID,
+                    "Edit",
+                    "Delete"
+                });
+                dgvUsers.Rows[dgvUsers.RowCount - 1].Tag = u;
+            }
         }
     }
 }

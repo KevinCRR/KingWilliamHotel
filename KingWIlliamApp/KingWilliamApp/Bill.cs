@@ -40,6 +40,7 @@ namespace KingWilliamApp
 
         protected internal void InsertBill(decimal price)
         {
+            this.AmountOwing = price.ToString();
             this.BillID = DBL.InsertNewBill(this,price);
         }
 

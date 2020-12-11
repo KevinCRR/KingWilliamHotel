@@ -12,13 +12,13 @@ namespace KingWilliamApp
 {
     public partial class frmCreateTransactions : Form
     {
-        private int BillID;
+        private Bill currentBill;
 
-        public frmCreateTransactions(int billID)
+        public frmCreateTransactions(Bill currentBillValue)
         {
             InitializeComponent();
 
-            BillID = billID;
+            currentBill = currentBillValue;
         }
 
         private void frmCreateTransactions_Load(object sender, EventArgs e)
@@ -62,12 +62,14 @@ namespace KingWilliamApp
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             int selectedItem = 0;
+            decimal itemPrice = 0;
 
             foreach (DataGridViewRow row in dgvItems.Rows)
             {
                 if ((bool)row.Cells["Select"].Value == true)
                 {
                     selectedItem = (int)row.Cells["ID"].Value;
+                    itemPrice = decimal.Parse(row.Cells["itemPrice"].Value.ToString()) * nudItems.Value;
                 }
             }
 
@@ -75,8 +77,14 @@ namespace KingWilliamApp
             {
                 try
                 {
-                    Transaction newTransaction = new Transaction(BillID, selectedItem, int.Parse(nudItems.Value.ToString()), DateTime.Now);
+                    Transaction newTransaction = new Transaction(currentBill.BillID, selectedItem, int.Parse(nudItems.Value.ToString()), DateTime.Now);
                     newTransaction.Insert();
+
+                    // UPDATE BILL
+                    decimal billAmount = decimal.Parse(currentBill.BillAmount) + itemPrice;
+                    decimal amountOwing = decimal.Parse(currentBill.AmountOwing) + itemPrice;
+                    Bill updateBill = new Bill(currentBill.BillID, billAmount.ToString(), currentBill.PaymentType, amountOwing.ToString());
+                    updateBill.UpdateBill();
 
                     MessageBox.Show("Transaction added successfully!", "Success");
                     this.Close();
