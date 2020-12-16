@@ -81,6 +81,11 @@ namespace KingWilliamApp
             DBL.UpdateReservation(this);
         }
 
+        protected internal int reservationCount(DateTime reservations)
+        {
+            return DBL.countedReservations(reservations);
+        }
+
         protected internal bool DeleteReservation()
         {
             return DBL.DeleteReservation(this.ReservationID);

@@ -187,6 +187,38 @@ namespace KingWilliamApp
             return returnValue;
         }
 
+        internal static int countedReservations(DateTime dateOfReservations)
+        {
+            // Create return value
+            int returnValue;
+
+            // Declare the connection
+            SqlConnection dbConnection = new SqlConnection(GetConnectionString());
+
+            // Create new SQL command and assign it paramaters
+            SqlCommand command = new SqlCommand("SELECT COUNT(reservationID) FROM reservations WHERE startDate = @selectedDate;", dbConnection);
+
+            command.Parameters.AddWithValue("@selectedDate", dateOfReservations);
+
+            // Try to insert the new record, return result
+            try
+            {
+                dbConnection.Open();
+                // Try to insert the new record, return result
+                returnValue = (int)command.ExecuteScalar();
+
+            }
+            catch (Exception ex)
+            {
+                throw new DataException("Error in countedReservations", ex);
+            }
+            finally
+            {
+                dbConnection.Close();
+            }
+
+            return returnValue;
+        }
         internal static List<String> SelectPastRooms(int customerID)
         {
             List<String> returnList = new List<String> { };

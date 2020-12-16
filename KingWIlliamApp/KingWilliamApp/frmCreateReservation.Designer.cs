@@ -35,6 +35,8 @@
             this.lblPageName = new System.Windows.Forms.Label();
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.pnlBody = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblRP = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtCost = new System.Windows.Forms.TextBox();
             this.lblPastRooms = new System.Windows.Forms.Label();
@@ -62,7 +64,8 @@
             this.dateStart.Name = "dateStart";
             this.dateStart.Size = new System.Drawing.Size(216, 25);
             this.dateStart.TabIndex = 1;
-            this.dateStart.Value = new System.DateTime(2020, 12, 8, 21, 36, 22, 0);
+            this.dateStart.Value = new System.DateTime(2020, 12, 16, 13, 34, 5, 0);
+            this.dateStart.ValueChanged += new System.EventHandler(this.dateStart_ValueChanged);
             // 
             // cbxRoom
             // 
@@ -143,6 +146,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlBody.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pnlBody.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlBody.Controls.Add(this.label3);
+            this.pnlBody.Controls.Add(this.lblRP);
             this.pnlBody.Controls.Add(this.label2);
             this.pnlBody.Controls.Add(this.txtCost);
             this.pnlBody.Controls.Add(this.lblPastRooms);
@@ -165,6 +170,23 @@
             this.pnlBody.Name = "pnlBody";
             this.pnlBody.Size = new System.Drawing.Size(622, 451);
             this.pnlBody.TabIndex = 53;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(53, 299);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(109, 13);
+            this.label3.TabIndex = 95;
+            this.label3.Text = "Recommended Price:";
+            // 
+            // lblRP
+            // 
+            this.lblRP.AutoSize = true;
+            this.lblRP.Location = new System.Drawing.Point(165, 299);
+            this.lblRP.Name = "lblRP";
+            this.lblRP.Size = new System.Drawing.Size(0, 13);
+            this.lblRP.TabIndex = 94;
             // 
             // label2
             // 
@@ -235,7 +257,7 @@
             this.dateEnd.Name = "dateEnd";
             this.dateEnd.Size = new System.Drawing.Size(216, 25);
             this.dateEnd.TabIndex = 2;
-            this.dateEnd.Value = new System.DateTime(2020, 12, 8, 21, 36, 31, 0);
+            this.dateEnd.Value = new System.DateTime(2020, 12, 16, 0, 0, 0, 0);
             // 
             // lblMessage
             // 
@@ -376,5 +398,7 @@
         private System.Windows.Forms.Label lblPastRooms;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtCost;
+        private System.Windows.Forms.Label lblRP;
+        private System.Windows.Forms.Label label3;
     }
 }
