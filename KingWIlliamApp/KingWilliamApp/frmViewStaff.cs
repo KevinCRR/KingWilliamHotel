@@ -38,8 +38,6 @@ namespace KingWilliamApp
                     s.FirstName,
                     s.LastName,
                     s.PhoneNumber,
-                    s.AddressID,
-                    s.PositionID,
                     s.Salary,
                     s.HiredDate,
                     s.TerminationDate,
@@ -52,14 +50,14 @@ namespace KingWilliamApp
 
         private void dgvStaff_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 9)
+            if (e.ColumnIndex == 7)
             {
                 // Edit
                 frmEditStaff formEditStaff = new frmEditStaff((Staff)dgvStaff.CurrentRow.Tag);
                 formEditStaff.ShowDialog();
                 RefreshList();
             }
-            if (e.ColumnIndex == 10)
+            if (e.ColumnIndex == 8)
             {
                 // Delete
                 Staff selectedStaff = (Staff)dgvStaff.CurrentRow.Tag;

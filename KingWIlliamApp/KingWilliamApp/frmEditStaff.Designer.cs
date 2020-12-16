@@ -59,6 +59,7 @@
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.lblFirst = new System.Windows.Forms.Label();
             this.btnSubmit = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.pnlHeader.SuspendLayout();
             this.pnlMain.SuspendLayout();
             this.SuspendLayout();
@@ -94,6 +95,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlMain.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pnlMain.Controls.Add(this.label2);
             this.pnlMain.Controls.Add(this.lblMessage);
             this.pnlMain.Controls.Add(this.txtSalary);
             this.pnlMain.Controls.Add(this.lblSalary);
@@ -442,6 +444,18 @@
             this.btnSubmit.UseVisualStyleBackColor = false;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(214, 249);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(19, 21);
+            this.label2.TabIndex = 105;
+            this.label2.Text = "$";
+            // 
             // frmEditStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -496,5 +510,6 @@
         private System.Windows.Forms.Label lblHeader;
         private System.Windows.Forms.Label lblMessage;
         private System.Windows.Forms.Button btnSubmit;
+        private System.Windows.Forms.Label label2;
     }
 }

@@ -52,7 +52,7 @@ namespace KingWilliamApp
                 txtPhone.Text = CurrentStaff.PhoneNumber;
                 dateStart.Value = CurrentStaff.HiredDate;
                 dateTermination.Value = CurrentStaff.TerminationDate;
-                txtSalary.Text = CurrentStaff.Salary.ToString();
+                txtSalary.Text = CurrentStaff.Salary;
 
                 txtAddress1.Text = CurrentAddress.Address1;
                 txtAddress2.Text = CurrentAddress.Address2;
@@ -69,7 +69,54 @@ namespace KingWilliamApp
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
+            try
+            {
+                lblMessage.Text = "";
 
+                CurrentStaff.FirstName = txtFirstName.Text.Trim();
+                CurrentStaff.LastName = txtLastName.Text.Trim();
+                CurrentStaff.PhoneNumber = txtPhone.Text.Trim();
+                CurrentStaff.PositionID = cbxPosition.SelectedValue.ToString();
+                CurrentStaff.Salary = txtSalary.Text.Trim();
+                CurrentStaff.HiredDate = dateStart.Value;
+                CurrentStaff.TerminationDate = dateTermination.Value;
+                CurrentStaff.UpdateStaff();
+
+                CurrentAddress.Address1 = txtAddress1.Text.Trim();
+                CurrentAddress.Address2 = txtAddress2.Text.Trim();
+                CurrentAddress.City = txtCity.Text.Trim();
+                CurrentAddress.Province = cbxProvince.SelectedValue.ToString();
+                CurrentAddress.Country = txtCountry.Text.Trim();
+                CurrentAddress.PostalCode = txtPostalCode.Text.Trim();
+                CurrentAddress.UpdateAddress();
+
+                MessageBox.Show("Staff updated successfully!", "Success");
+                this.Close();
+            }
+            catch (ArgumentNullException ex)
+            {
+                lblMessage.Text = ex.Message;
+            }
+            catch (ArgumentOutOfRangeException ex)
+            {
+                lblMessage.Text = ex.Message;
+            }
+            catch (ArgumentException ex)
+            {
+                lblMessage.Text = ex.Message;
+            }
+            // Respond to DataExceptions referencing the database and the inner exception thrown during the database operation
+            catch (DataException ex)
+            {
+                lblMessage.Text = "Database error! " + ex.Message + "\n\n" +
+                    ex.InnerException.Message + "\n\n" + ex.Source + "\n\n" + ex.Message +
+                    "\n\n" + ex.StackTrace;
+            }
+            // Catch other unanticipated exceptions and provide as much debugging info as possible.
+            catch (Exception ex)
+            {
+                lblMessage.Text = "An unknown error has occurred in " + ex.Source + "! Please contact your IT department and provide the following details:\n\n" + ex.Message + "\n\n" + ex.StackTrace + "\n\nUnknown Error!";
+            }
         }
     }
 }

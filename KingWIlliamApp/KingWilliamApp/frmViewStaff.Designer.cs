@@ -29,29 +29,25 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvStaff = new System.Windows.Forms.DataGridView();
-            this.reservationID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.firstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addressID = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.positionID = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.salary = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hiredDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.terminationDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.edit = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.pnlList = new System.Windows.Forms.Panel();
             this.btnNew = new System.Windows.Forms.Button();
             this.pnlSecondHeader = new System.Windows.Forms.Panel();
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.lblPageName = new System.Windows.Forms.Label();
+            this.reservationID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.salary = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hiredDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.terminationDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.edit = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.delete = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).BeginInit();
             this.pnlList.SuspendLayout();
             this.pnlSecondHeader.SuspendLayout();
@@ -74,8 +70,6 @@
             this.firstName,
             this.lastName,
             this.phoneNumber,
-            this.addressID,
-            this.positionID,
             this.salary,
             this.hiredDate,
             this.terminationDate,
@@ -88,112 +82,21 @@
             this.dgvStaff.MultiSelect = false;
             this.dgvStaff.Name = "dgvStaff";
             this.dgvStaff.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvStaff.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvStaff.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvStaff.RowHeadersVisible = false;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvStaff.RowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvStaff.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvStaff.RowTemplate.Height = 28;
             this.dgvStaff.Size = new System.Drawing.Size(651, 358);
             this.dgvStaff.TabIndex = 0;
             this.dgvStaff.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStaff_CellClick);
-            // 
-            // reservationID
-            // 
-            this.reservationID.FillWeight = 30F;
-            this.reservationID.HeaderText = "ID";
-            this.reservationID.Name = "reservationID";
-            this.reservationID.ReadOnly = true;
-            // 
-            // firstName
-            // 
-            this.firstName.HeaderText = "First Name";
-            this.firstName.Name = "firstName";
-            this.firstName.ReadOnly = true;
-            // 
-            // lastName
-            // 
-            this.lastName.HeaderText = "Last Name";
-            this.lastName.Name = "lastName";
-            this.lastName.ReadOnly = true;
-            // 
-            // phoneNumber
-            // 
-            this.phoneNumber.HeaderText = "Phone Number";
-            this.phoneNumber.Name = "phoneNumber";
-            this.phoneNumber.ReadOnly = true;
-            // 
-            // addressID
-            // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.addressID.DefaultCellStyle = dataGridViewCellStyle2;
-            this.addressID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addressID.HeaderText = "Address ID";
-            this.addressID.Name = "addressID";
-            this.addressID.ReadOnly = true;
-            this.addressID.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.addressID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // positionID
-            // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.positionID.DefaultCellStyle = dataGridViewCellStyle3;
-            this.positionID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.positionID.HeaderText = "Position ID";
-            this.positionID.Name = "positionID";
-            this.positionID.ReadOnly = true;
-            this.positionID.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.positionID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // salary
-            // 
-            this.salary.HeaderText = "Salary";
-            this.salary.Name = "salary";
-            this.salary.ReadOnly = true;
-            // 
-            // hiredDate
-            // 
-            this.hiredDate.HeaderText = "Hired Date";
-            this.hiredDate.Name = "hiredDate";
-            this.hiredDate.ReadOnly = true;
-            // 
-            // terminationDate
-            // 
-            this.terminationDate.HeaderText = "Termination Date";
-            this.terminationDate.Name = "terminationDate";
-            this.terminationDate.ReadOnly = true;
-            // 
-            // edit
-            // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(162)))), ((int)(((byte)(72)))));
-            this.edit.DefaultCellStyle = dataGridViewCellStyle4;
-            this.edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.edit.HeaderText = "";
-            this.edit.Name = "edit";
-            this.edit.ReadOnly = true;
-            this.edit.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.edit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // delete
-            // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.delete.DefaultCellStyle = dataGridViewCellStyle5;
-            this.delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.delete.HeaderText = "";
-            this.delete.Name = "delete";
-            this.delete.ReadOnly = true;
-            this.delete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.delete.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // pnlList
             // 
@@ -262,6 +165,73 @@
             this.lblPageName.Text = "Staff";
             this.lblPageName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // reservationID
+            // 
+            this.reservationID.FillWeight = 30F;
+            this.reservationID.HeaderText = "ID";
+            this.reservationID.Name = "reservationID";
+            this.reservationID.ReadOnly = true;
+            // 
+            // firstName
+            // 
+            this.firstName.HeaderText = "First Name";
+            this.firstName.Name = "firstName";
+            this.firstName.ReadOnly = true;
+            // 
+            // lastName
+            // 
+            this.lastName.HeaderText = "Last Name";
+            this.lastName.Name = "lastName";
+            this.lastName.ReadOnly = true;
+            // 
+            // phoneNumber
+            // 
+            this.phoneNumber.HeaderText = "Phone Number";
+            this.phoneNumber.Name = "phoneNumber";
+            this.phoneNumber.ReadOnly = true;
+            // 
+            // salary
+            // 
+            this.salary.HeaderText = "Salary";
+            this.salary.Name = "salary";
+            this.salary.ReadOnly = true;
+            // 
+            // hiredDate
+            // 
+            this.hiredDate.HeaderText = "Hired Date";
+            this.hiredDate.Name = "hiredDate";
+            this.hiredDate.ReadOnly = true;
+            // 
+            // terminationDate
+            // 
+            this.terminationDate.HeaderText = "Termination Date";
+            this.terminationDate.Name = "terminationDate";
+            this.terminationDate.ReadOnly = true;
+            // 
+            // edit
+            // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(162)))), ((int)(((byte)(72)))));
+            this.edit.DefaultCellStyle = dataGridViewCellStyle2;
+            this.edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.edit.HeaderText = "";
+            this.edit.Name = "edit";
+            this.edit.ReadOnly = true;
+            this.edit.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.edit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // delete
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.delete.DefaultCellStyle = dataGridViewCellStyle3;
+            this.delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.delete.HeaderText = "";
+            this.delete.Name = "delete";
+            this.delete.ReadOnly = true;
+            this.delete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.delete.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
             // frmViewStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -296,8 +266,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn firstName;
         private System.Windows.Forms.DataGridViewTextBoxColumn lastName;
         private System.Windows.Forms.DataGridViewTextBoxColumn phoneNumber;
-        private System.Windows.Forms.DataGridViewButtonColumn addressID;
-        private System.Windows.Forms.DataGridViewButtonColumn positionID;
         private System.Windows.Forms.DataGridViewTextBoxColumn salary;
         private System.Windows.Forms.DataGridViewTextBoxColumn hiredDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn terminationDate;

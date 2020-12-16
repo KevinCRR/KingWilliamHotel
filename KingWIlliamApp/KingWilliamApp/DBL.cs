@@ -1266,6 +1266,88 @@ namespace KingWilliamApp
             return returnList;
         }
 
+        internal static int InsertNewStaff(Staff insertStaff)
+        {
+            // Create return value
+            int returnValue = 0;
+
+            // Declare the connection
+            SqlConnection dbConnection = new SqlConnection(GetConnectionString());
+
+            // Create new SQL command and assign it paramaters
+            SqlCommand command = new SqlCommand("INSERT INTO staff OUTPUT INSERTED.staffID VALUES(@firstName, @lastName, " +
+                "@phoneNumber, @addressID, @positionID, @salary, @hiredDate, @terminationDate, @photo)", dbConnection);
+            command.Parameters.AddWithValue("@firstName", insertStaff.FirstName);
+            command.Parameters.AddWithValue("@lastName", insertStaff.LastName);
+            command.Parameters.AddWithValue("@phoneNumber", insertStaff.PhoneNumber);
+            command.Parameters.AddWithValue("@addressID", insertStaff.AddressID);
+            command.Parameters.AddWithValue("@positionID", insertStaff.PositionID);
+            command.Parameters.AddWithValue("@salary", insertStaff.Salary);
+            command.Parameters.AddWithValue("@hiredDate", insertStaff.HiredDate);
+            command.Parameters.AddWithValue("@terminationDate", insertStaff.TerminationDate);
+            command.Parameters.AddWithValue("@photo", "null");
+
+            // Try to insert the new record, return result
+            try
+            {
+                dbConnection.Open();
+                // Try to insert the new record, return result
+                returnValue = (int)command.ExecuteScalar();
+
+            }
+            catch (Exception ex)
+            {
+                throw new DataException("Error in InsertNewStaff", ex);
+            }
+            finally
+            {
+                dbConnection.Close();
+            }
+
+            return returnValue;
+        }
+
+        internal static bool UpdateStaff(Staff updateStaff)
+        {
+            // Create return value
+            bool returnValue = false;
+
+            // Declare the connection
+            SqlConnection dbConnection = new SqlConnection(GetConnectionString());
+
+            // Create new SQL command and assign it paramaters
+            SqlCommand command = new SqlCommand("UPDATE staff SET firstName = @firstName, " +
+                "lastName = @lastName, phoneNumber = @phoneNumber, positionID = @positionID, " +
+                "salary = @salary, hiredDate = @hiredDate, terminationDate = @terminationDate " +
+                "WHERE staffID = @staffID", dbConnection);
+            command.Parameters.AddWithValue("@firstName", updateStaff.FirstName);
+            command.Parameters.AddWithValue("@lastName", updateStaff.LastName);
+            command.Parameters.AddWithValue("@phoneNumber", updateStaff.PhoneNumber);
+            command.Parameters.AddWithValue("@positionID", updateStaff.PositionID);
+            command.Parameters.AddWithValue("@salary", updateStaff.Salary);
+            command.Parameters.AddWithValue("@hiredDate", updateStaff.HiredDate);
+            command.Parameters.AddWithValue("@terminationDate", updateStaff.TerminationDate);
+            command.Parameters.AddWithValue("@staffID", updateStaff.StaffID);
+
+            // Try to insert the new record, return result
+            try
+            {
+                dbConnection.Open();
+                // Try to insert the new record, return result
+                returnValue = (command.ExecuteNonQuery() == 1);
+            }
+            catch (Exception ex)
+            {
+                throw new DataException("Error in UpdateStaff", ex);
+            }
+            finally
+            {
+                dbConnection.Close();
+            }
+
+            return returnValue;
+        }
+
         internal static bool DeleteStaff(int staffIDValue)
         {
             // Create return value

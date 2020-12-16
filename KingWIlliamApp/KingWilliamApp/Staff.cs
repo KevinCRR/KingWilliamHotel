@@ -18,7 +18,7 @@ namespace KingWilliamApp
         decimal salary;
         DateTime hiredDate;
         DateTime terminationDate;
-        string image;
+        //string image;
         string positionID;
         int addressID = 0;
 
@@ -34,7 +34,7 @@ namespace KingWilliamApp
             this.FirstName = firstNameValue;
             this.LastName = lastNameValue;
             this.PhoneNumber = phoneNumberValue;
-            this.Salary = salaryValue;
+            this.Salary = salaryValue.ToString();
             this.HiredDate = hiredDateValue;
             this.TerminationDate = terminationDateValue;
             this.PositionID = positionIDValue;
@@ -42,7 +42,7 @@ namespace KingWilliamApp
         }
 
         protected internal Staff(string firstNameValue, string lastNameValue, string phoneNumberValue,
-            decimal salaryValue, DateTime hiredDateValue, DateTime terminationDateValue,
+            string salaryValue, DateTime hiredDateValue, DateTime terminationDateValue,
             string positionIDValue, int addressIDValue)
         {
             this.FirstName = firstNameValue;
@@ -67,6 +67,16 @@ namespace KingWilliamApp
         protected internal static List<Staff> GetAll()
         {
             return DBL.SelectAllStaff();
+        }
+
+        protected internal void InsertStaff()
+        {
+            this.StaffID = DBL.InsertNewStaff(this);
+        }
+
+        protected internal void UpdateStaff()
+        {
+            DBL.UpdateStaff(this);
         }
 
         protected internal bool DeleteStaff()
@@ -182,15 +192,28 @@ namespace KingWilliamApp
             }
         }
 
-        protected internal decimal Salary
+        protected internal string Salary
         {
             get
             {
-                return salary;
+                return salary.ToString("#,0.00");
             }
             set
             {
-                salary = value;
+                if (!(value == string.Empty))
+                {
+                    if (!decimal.TryParse(value, out salary))
+                    {
+                        ArgumentOutOfRangeException ex = new ArgumentOutOfRangeException("Salary must be a number", "Incorrect Format");
+                        throw ex;
+                    }
+                }
+                else
+                {
+                    // If it is blank, declare and throw an exception
+                    ArgumentNullException ex = new ArgumentNullException("Salary is required", "Missing Fields");
+                    throw ex;
+                }
             }
         }
 
