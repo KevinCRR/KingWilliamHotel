@@ -48,9 +48,9 @@
             this.txtAddress1 = new System.Windows.Forms.TextBox();
             this.lblPageName = new System.Windows.Forms.Label();
             this.pnlHeader = new System.Windows.Forms.Panel();
-            this.btnSubmit = new System.Windows.Forms.Button();
             this.lblCountry = new System.Windows.Forms.Label();
             this.pnlBody = new System.Windows.Forms.Panel();
+            this.btnSubmit = new System.Windows.Forms.Button();
             this.pnlHeader.SuspendLayout();
             this.pnlBody.SuspendLayout();
             this.SuspendLayout();
@@ -297,23 +297,6 @@
             this.pnlHeader.Size = new System.Drawing.Size(622, 82);
             this.pnlHeader.TabIndex = 54;
             // 
-            // btnSubmit
-            // 
-            this.btnSubmit.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnSubmit.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnSubmit.FlatAppearance.BorderSize = 0;
-            this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSubmit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubmit.ForeColor = System.Drawing.Color.Black;
-            this.btnSubmit.Location = new System.Drawing.Point(0, 533);
-            this.btnSubmit.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(622, 52);
-            this.btnSubmit.TabIndex = 53;
-            this.btnSubmit.Text = "Save";
-            this.btnSubmit.UseVisualStyleBackColor = false;
-            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
-            // 
             // lblCountry
             // 
             this.lblCountry.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
@@ -360,6 +343,23 @@
             this.pnlBody.Size = new System.Drawing.Size(622, 451);
             this.pnlBody.TabIndex = 55;
             // 
+            // btnSubmit
+            // 
+            this.btnSubmit.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnSubmit.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnSubmit.FlatAppearance.BorderSize = 0;
+            this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSubmit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubmit.ForeColor = System.Drawing.Color.Black;
+            this.btnSubmit.Location = new System.Drawing.Point(0, 533);
+            this.btnSubmit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Size = new System.Drawing.Size(622, 52);
+            this.btnSubmit.TabIndex = 53;
+            this.btnSubmit.Text = "Save";
+            this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
+            // 
             // frmEditCustomer
             // 
             this.AcceptButton = this.btnSubmit;
@@ -374,7 +374,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmEditCustomer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Update Customer";
+            this.Text = "Customer";
             this.Load += new System.EventHandler(this.frmEditCustomer_Load);
             this.pnlHeader.ResumeLayout(false);
             this.pnlBody.ResumeLayout(false);
@@ -405,8 +405,8 @@
         private System.Windows.Forms.TextBox txtAddress1;
         private System.Windows.Forms.Label lblPageName;
         private System.Windows.Forms.Panel pnlHeader;
-        private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.Label lblCountry;
         private System.Windows.Forms.Panel pnlBody;
+        private System.Windows.Forms.Button btnSubmit;
     }
 }

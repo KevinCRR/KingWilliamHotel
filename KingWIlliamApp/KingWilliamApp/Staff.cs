@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace KingWilliamApp
 {
-    class Staff
+    public class Staff
     {
         #region "Variable declarations"
 
@@ -66,6 +67,16 @@ namespace KingWilliamApp
         protected internal static List<Staff> GetAll()
         {
             return DBL.SelectAllStaff();
+        }
+
+        protected internal bool DeleteStaff()
+        {
+            return DBL.DeleteStaff(this.StaffID);
+        }
+
+        protected internal static DataTable GetPositions()
+        {
+            return DBL.SelectAllPositions();
         }
 
         #endregion

@@ -12,252 +12,62 @@ namespace KingWilliamApp
 {
     public partial class frmEditStaff : Form
     {
-        public frmEditStaff()
+        private Staff CurrentStaff;
+        private Address CurrentAddress;
+
+        public frmEditStaff(Staff editStaff)
         {
             InitializeComponent();
+            CurrentStaff = editStaff;
         }
 
-        private void label18_Click(object sender, EventArgs e)
+        private void frmEditStaff_Load(object sender, EventArgs e)
         {
+            // Try to get staff from database
+            try
+            {
+                CurrentAddress = Address.GetAddress(CurrentStaff.AddressID);
 
+                DataTable dtAddresses = Address.GetProvinces();
+                cbxProvince.DataSource = dtAddresses;
+                cbxProvince.ValueMember = "provinceName";
+
+                DataTable dtPositions = Staff.GetPositions();
+                cbxPosition.ValueMember = "positionID";
+                cbxPosition.DisplayMember = "positionTitle";
+                cbxPosition.DataSource = dtPositions;
+
+                int index = -1;
+                string search = "positionID = \'" + CurrentStaff.PositionID + "\'";
+
+                DataRow[] rows = dtPositions.Select(search);
+                if (rows.Count() > 0)
+                    index = dtPositions.Rows.IndexOf(rows[0]);
+
+                cbxPosition.SelectedIndex = index;
+
+
+                txtFirstName.Text = CurrentStaff.FirstName;
+                txtLastName.Text = CurrentStaff.LastName;
+                txtPhone.Text = CurrentStaff.PhoneNumber;
+                dateStart.Value = CurrentStaff.HiredDate;
+                dateTermination.Value = CurrentStaff.TerminationDate;
+                txtSalary.Text = CurrentStaff.Salary.ToString();
+
+                txtAddress1.Text = CurrentAddress.Address1;
+                txtAddress2.Text = CurrentAddress.Address2;
+                txtCity.Text = CurrentAddress.City;
+                txtPostalCode.Text = CurrentAddress.PostalCode;
+                txtCountry.Text = CurrentAddress.Country;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("An unexpected error occured! Could not open \"Edit Staff\".", "Error");
+                this.Close();
+            }
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblPageName_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnCreate_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtText_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cbxProvince_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pnlColumn2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label14_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label15_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtFirstName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label16_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtLastName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtPostalCode_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label17_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pnlExit_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtPhone_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtAddress2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pnlHeader_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtCountry_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pnlColumn3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label13_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtCity_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtAddress1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pnlColumn1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void cbxRoom_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateStart_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
         {
 
         }

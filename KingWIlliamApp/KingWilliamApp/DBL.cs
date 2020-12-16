@@ -1234,6 +1234,72 @@ namespace KingWilliamApp
             return returnList;
         }
 
+        internal static bool DeleteStaff(int staffIDValue)
+        {
+            // Create return value
+            bool returnValue = false;
+
+            // Declare the connection
+            SqlConnection dbConnection = new SqlConnection(GetConnectionString());
+
+            // Create new SQL command and assign it paramaters
+            SqlCommand command = new SqlCommand("DELETE FROM staff WHERE staffID = @id", dbConnection);
+            command.Parameters.AddWithValue("@id", staffIDValue);
+
+            // Try to insert the new record, return result
+            try
+            {
+                dbConnection.Open();
+                // Try to insert the new record, return result
+                returnValue = (command.ExecuteNonQuery() == 1);
+
+            }
+            catch (Exception ex)
+            {
+                throw new DataException("Error in DeleteStaff", ex);
+            }
+            finally
+            {
+                dbConnection.Close();
+            }
+
+            return returnValue;
+        }
+
+        internal static DataTable SelectAllPositions()
+        {
+            DataTable returnDataTable = new DataTable();
+
+            SqlConnection dbConnection = new SqlConnection(GetConnectionString());
+
+            SqlCommand command = new SqlCommand("SELECT * FROM employmentPositions", dbConnection);
+
+            try
+            {
+                dbConnection.Open();
+
+                SqlDataReader readerProvinces;
+                readerProvinces = command.ExecuteReader();
+
+                returnDataTable.Columns.Add("positionID", typeof(string));
+                returnDataTable.Columns.Add("positionTitle", typeof(string));
+                returnDataTable.Columns.Add("positionDescription", typeof(string));
+                returnDataTable.Columns.Add("positionSalary", typeof(decimal));
+                returnDataTable.Load(readerProvinces);
+
+            }
+            catch (Exception ex)
+            {
+                throw new DataException("Error in GetAllPositions", ex);
+            }
+            finally
+            {
+                dbConnection.Close();
+            }
+
+            return returnDataTable;
+        }
+
         #endregion
 
         //***********************************************************************************************************
