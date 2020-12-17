@@ -62,13 +62,14 @@ namespace KingWilliamApp
         {
             ShowRoomPrice();
         }
-        private void RecommendedPrice(String startDate)
+        private void RecommendedPrice()
         {
 
             int roomsLeft;
             double recommendedPrice;
-            //String DS = dateStart.Text;
-            DateTime dateS = DateTime.ParseExact(startDate, "dddd, MMMM d, yyyy", CultureInfo.InvariantCulture);
+            //String DS = dateStart.Value;
+            DateTime dateS = dateStart.Value.Date;
+            //DateTime dateS = DateTime.ParseExact(startDate, "MMMM d, yyyy", CultureInfo.InvariantCulture);
             var newDate = dateS.AddYears(-1);
             //var currentDate = dateS.AddYears(1);
             Reservation reservationRecommendation = new Reservation(newDate, dateEnd.Value, int.Parse(cbxRoom.SelectedValue.ToString()), int.Parse(nudGuests.Value.ToString()), txtNotes.Text.Trim(), UseCustomer.CustomerID);
@@ -76,7 +77,15 @@ namespace KingWilliamApp
             int selectedRoom = int.Parse(cbxRoom.SelectedValue.ToString());
             double roomPrice = Double.Parse(Room.GetRoomPrice(selectedRoom).ToString());
             roomsLeft = 41 - countedRooms;
-            recommendedPrice = (roomPrice - ((roomPrice / 10.0) * ((roomsLeft) / 41) * (250.00 / 41)) + (roomPrice * (41 / 100.00)));
+            recommendedPrice = (roomPrice - ((roomPrice / 10.0) * ((roomsLeft) / 41.0) * (250.00 / 41.0)) + (roomPrice * (41.0 / 100.00)));
+
+            //double a = (roomPrice * (41.0 / 100.00));
+            //double b = (roomPrice / 10.0);
+            //double c = ((roomsLeft) / 41.0);
+            //double d = (250.00 / 41.0);
+            //double e = (b * c * d);
+            //recommendedPrice = (roomPrice - e + a);
+
             //reservationRecommendation = null;
             //roomsLeft.Equals(null);
             //countedRooms.Equals(null);
@@ -86,7 +95,7 @@ namespace KingWilliamApp
 
         private void ShowRoomPrice()
         {
-            RecommendedPrice(dateStart.Text);
+            RecommendedPrice();
             int selectedRoom = int.Parse(cbxRoom.SelectedValue.ToString());
             try
             {
@@ -173,7 +182,7 @@ namespace KingWilliamApp
         }
         private void dateStart_ValueChanged(object sender, EventArgs e)
         {
-            RecommendedPrice(dateStart.Text);
+            RecommendedPrice();
         }
     }
 }
