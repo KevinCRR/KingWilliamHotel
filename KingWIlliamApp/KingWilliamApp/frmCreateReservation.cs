@@ -65,20 +65,27 @@ namespace KingWilliamApp
         private void RecommendedPrice()
         {
 
-            int roomsLeft;
+            int roomsLeftPast;
+            int roomsLeftCurrent;
             double recommendedPrice;
+            double lastYearRecommendedPrice;
+            double currentYearRecommendedPrice;
             //String DS = dateStart.Value;
             DateTime dateS = dateStart.Value.Date;
             //DateTime dateS = DateTime.ParseExact(startDate, "MMMM d, yyyy", CultureInfo.InvariantCulture);
             var newDate = dateS.AddYears(-1);
             //var currentDate = dateS.AddYears(1);
             Reservation reservationRecommendation = new Reservation(newDate, dateEnd.Value, int.Parse(cbxRoom.SelectedValue.ToString()), int.Parse(nudGuests.Value.ToString()), txtNotes.Text.Trim(), UseCustomer.CustomerID);
-            int countedRooms = reservationRecommendation.reservationCount(newDate);
+            Reservation reservationRecommendationCurrent = new Reservation(dateS, dateEnd.Value, int.Parse(cbxRoom.SelectedValue.ToString()), int.Parse(nudGuests.Value.ToString()), txtNotes.Text.Trim(), UseCustomer.CustomerID);
+            int countedRoomsPast = reservationRecommendation.reservationCount(newDate);
+            int countedRoomsCurrent = reservationRecommendationCurrent.reservationCount(dateS);
             int selectedRoom = int.Parse(cbxRoom.SelectedValue.ToString());
             double roomPrice = Double.Parse(Room.GetRoomPrice(selectedRoom).ToString());
-            roomsLeft = 41 - countedRooms;
-            recommendedPrice = (roomPrice - ((roomPrice / 10.0) * ((roomsLeft) / 41.0) * (250.00 / 41.0)) + (roomPrice * (41.0 / 100.00)));
-
+            roomsLeftPast = 41 - countedRoomsPast;
+            roomsLeftCurrent = 41 - countedRoomsCurrent;
+            lastYearRecommendedPrice = (roomPrice - ((roomPrice / 10.0) * ((roomsLeftPast) / 41.0) * (250.00 / 41.0)) + (roomPrice * (41.0 / 100.00)));
+            currentYearRecommendedPrice = (roomPrice - ((roomPrice / 10.0) * ((roomsLeftCurrent) / 41.0) * (250.00 / 41.0)) + (roomPrice * (41.0 / 100.00)));
+            recommendedPrice = (lastYearRecommendedPrice + currentYearRecommendedPrice + currentYearRecommendedPrice) / 3;
             //double a = (roomPrice * (41.0 / 100.00));
             //double b = (roomPrice / 10.0);
             //double c = ((roomsLeft) / 41.0);
