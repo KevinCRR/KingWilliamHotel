@@ -109,12 +109,12 @@ namespace KingWilliamApp
             dgvTransactions.Rows.Add(new object[]
             {
 
-                    index+1,
+                    "",
                     "Bill Total",
                     "",
                     currentBill.BillAmount,
-                    1,
-                    date
+                    "",
+                    ""
 
             }); 
 
