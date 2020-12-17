@@ -82,7 +82,7 @@ namespace KingWilliamApp
                     dgvTransactions.Rows[dgvTransactions.RowCount - 1].Tag = t;
 
                     // Calculate sum of transactions
-                    billAmount += (t.ChargeableItem.ItemPrice * t.AmountOfItems);
+                    billAmount += (Convert.ToDecimal(t.ChargeableItem.ItemPrice) * t.AmountOfItems);
 
                     if(t.TransactionID.ToString() != "" | t.TransactionID > 0 | !t.TransactionID.Equals(null))
                     {

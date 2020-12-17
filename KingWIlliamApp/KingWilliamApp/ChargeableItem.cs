@@ -24,6 +24,13 @@ namespace KingWilliamApp
             this.ItemID = itemIDValue;
             this.ItemName = itemNameValue;
             this.ItemDescription = itemDescriptionValue;
+            this.ItemPrice = itemPriceValue.ToString();
+        }
+
+        protected internal ChargeableItem(string itemNameValue, string itemDescriptionValue, string itemPriceValue)
+        {
+            this.ItemName = itemNameValue;
+            this.ItemDescription = itemDescriptionValue;
             this.ItemPrice = itemPriceValue;
         }
 
@@ -39,6 +46,16 @@ namespace KingWilliamApp
         public static List<ChargeableItem> GetAll()
         {
             return DBL.SelectAllChargeableItems();
+        }
+
+        protected internal void Insert()
+        {
+            this.itemID = DBL.InsertNewChargeableItem(this);
+        }
+
+        protected internal bool Delete()
+        {
+            return DBL.DeleteChargeableItem(this.ItemID);
         }
 
         #endregion
@@ -99,15 +116,28 @@ namespace KingWilliamApp
             }
         }
 
-        protected internal decimal ItemPrice
+        protected internal string ItemPrice
         {
             get
             {
-                return itemPrice;
+                return itemPrice.ToString("#,0.00");
             }
             set
             {
-                itemPrice = value;
+                if (!(value == string.Empty))
+                {
+                    if (!decimal.TryParse(value, out itemPrice))
+                    {
+                        ArgumentOutOfRangeException ex = new ArgumentOutOfRangeException("Item price must be a number", "Incorrect Format");
+                        throw ex;
+                    }
+                }
+                else
+                {
+                    // If it is blank, declare and throw an exception
+                    ArgumentNullException ex = new ArgumentNullException("Item price is required", "Missing Fields");
+                    throw ex;
+                }
             }
         }
 

@@ -43,7 +43,7 @@ namespace KingWilliamApp
             {
                 btnReservations.Visible = true;
                 btnBills.Visible = false;
-                btnChargeableItems.Visible = false;
+                btnChargeableItems.Visible = true;
                 btnCustomers.Visible = false;
                 btnStaff.Visible = true;
                 btnTransactions.Visible = false;
@@ -56,7 +56,7 @@ namespace KingWilliamApp
             {
                 btnReservations.Visible = true;
                 btnBills.Visible = false;
-                btnChargeableItems.Visible = false;
+                btnChargeableItems.Visible = true;
                 btnCustomers.Visible = false;
                 btnStaff.Visible = true;
                 btnTransactions.Visible = false;
@@ -69,7 +69,7 @@ namespace KingWilliamApp
             {
                 btnReservations.Visible = true;
                 btnBills.Visible = false;
-                btnChargeableItems.Visible = false;
+                btnChargeableItems.Visible = true;
                 btnCustomers.Visible = false;
                 btnStaff.Visible = false;
                 btnTransactions.Visible = false;
@@ -81,17 +81,41 @@ namespace KingWilliamApp
             else if (User.CurrentUser.ToString() == "roomS")
             {
                 btnReservations.Visible = true;
-                btnBills.Visible = true;
+                btnBills.Visible = false;
+                btnChargeableItems.Visible = true;
+                btnCustomers.Visible = false;
+                btnStaff.Visible = false;
+                btnTransactions.Visible = false;
+                btnUsers.Visible = false;
+                btnRoomTypes.Visible = false;
+                btnRooms.Visible = false;
+                btnEmploymentPositions.Visible = false;
             }
             else if (User.CurrentUser.ToString() == "KitchenS")
             {
                 btnReservations.Visible = true;
-                btnBills.Visible = true;
+                btnBills.Visible = false;
+                btnChargeableItems.Visible = true;
+                btnCustomers.Visible = false;
+                btnStaff.Visible = false;
+                btnTransactions.Visible = false;
+                btnUsers.Visible = false;
+                btnRoomTypes.Visible = false;
+                btnRooms.Visible = false;
+                btnEmploymentPositions.Visible = false;
             }
             else if (User.CurrentUser.ToString() == "accountingAndStock")
             {
                 btnReservations.Visible = true;
-                btnBills.Visible = true;
+                btnBills.Visible = false;
+                btnChargeableItems.Visible = true;
+                btnCustomers.Visible = false;
+                btnStaff.Visible = false;
+                btnTransactions.Visible = false;
+                btnUsers.Visible = false;
+                btnRoomTypes.Visible = false;
+                btnRooms.Visible = false;
+                btnEmploymentPositions.Visible = false;
             }
 
 
@@ -141,7 +165,8 @@ namespace KingWilliamApp
         #region Chargeable Items 
         private void btnChargeableItems_Click(object sender, EventArgs e)
         {
-            showSubMenu(pnlChargeableItems);
+            //showSubMenu(pnlChargeableItems);
+            openChildForm(new frmViewChargeableItems());
         }
 
         private void btnChargeableItemView_Click(object sender, EventArgs e)

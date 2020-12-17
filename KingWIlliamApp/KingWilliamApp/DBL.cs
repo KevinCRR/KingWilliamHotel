@@ -1162,6 +1162,73 @@ namespace KingWilliamApp
             return returnList;
         }
 
+        internal static int InsertNewChargeableItem(ChargeableItem insertItem)
+        {
+            // Create return value
+            int returnValue = 0;
+
+            // Declare the connection
+            SqlConnection dbConnection = new SqlConnection(GetConnectionString());
+
+            // Create new SQL command and assign it paramaters
+            SqlCommand command = new SqlCommand("INSERT INTO chargeableItems OUTPUT INSERTED.ItemID VALUES(@ItemName, @itemDescription, " +
+                "@itemPrice)", dbConnection);
+            command.Parameters.AddWithValue("@ItemName", insertItem.ItemName);
+            command.Parameters.AddWithValue("@itemDescription", insertItem.ItemDescription);
+            command.Parameters.AddWithValue("@itemPrice", insertItem.ItemPrice);
+
+            // Try to insert the new record, return result
+            try
+            {
+                dbConnection.Open();
+                // Try to insert the new record, return result
+                returnValue = (int)command.ExecuteScalar();
+
+            }
+            catch (Exception ex)
+            {
+                throw new DataException("Error in InsertNewChargeableItem", ex);
+            }
+            finally
+            {
+                dbConnection.Close();
+            }
+
+            return returnValue;
+        }
+
+        internal static bool DeleteChargeableItem(int itemIDValue)
+        {
+            // Create return value
+            bool returnValue = false;
+
+            // Declare the connection
+            SqlConnection dbConnection = new SqlConnection(GetConnectionString());
+
+            // Create new SQL command and assign it paramaters
+            SqlCommand command = new SqlCommand("DELETE FROM chargeableItems WHERE ItemID = @id", dbConnection);
+            command.Parameters.AddWithValue("@id", itemIDValue);
+
+            // Try to insert the new record, return result
+            try
+            {
+                dbConnection.Open();
+                // Try to insert the new record, return result
+                returnValue = (command.ExecuteNonQuery() == 1);
+
+            }
+            catch (Exception ex)
+            {
+                throw new DataException("Error in DeleteChargeableItem", ex);
+            }
+            finally
+            {
+                dbConnection.Close();
+            }
+
+            return returnValue;
+        }
+
 
         #endregion
 

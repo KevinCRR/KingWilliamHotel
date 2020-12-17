@@ -17,9 +17,42 @@ namespace KingWilliamApp
             InitializeComponent();
         }
 
-        private void lblPageName_Click(object sender, EventArgs e)
+        private void btnSubmit_Click(object sender, EventArgs e)
         {
+            try
+            {
+                lblMessage.Text = "";
 
+                ChargeableItem newItem = new ChargeableItem(txtName.Text.Trim(), txtDescription.Text.Trim(), txtPrice.Text.Trim());
+                newItem.Insert();
+
+                MessageBox.Show("Chargeable Item created successfully!", "Success");
+                this.Close();
+            }
+            catch (ArgumentNullException ex)
+            {
+                lblMessage.Text = ex.Message;
+            }
+            catch (ArgumentOutOfRangeException ex)
+            {
+                lblMessage.Text = ex.Message;
+            }
+            catch (ArgumentException ex)
+            {
+                lblMessage.Text = ex.Message;
+            }
+            // Respond to DataExceptions referencing the database and the inner exception thrown during the database operation
+            catch (DataException ex)
+            {
+                lblMessage.Text = "Database error! " + ex.Message + "\n\n" +
+                    ex.InnerException.Message + "\n\n" + ex.Source + "\n\n" + ex.Message +
+                    "\n\n" + ex.StackTrace;
+            }
+            // Catch other unanticipated exceptions and provide as much debugging info as possible.
+            catch (Exception ex)
+            {
+                lblMessage.Text = "An unknown error has occurred in " + ex.Source + "! Please contact your IT department and provide the following details:\n\n" + ex.Message + "\n\n" + ex.StackTrace + "\n\nUnknown Error!";
+            }
         }
     }
 }

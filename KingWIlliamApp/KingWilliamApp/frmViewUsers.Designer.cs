@@ -99,7 +99,7 @@
             this.pnlList.BackColor = System.Drawing.Color.White;
             this.pnlList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlList.Controls.Add(this.dgvUsers);
-            this.pnlList.Location = new System.Drawing.Point(39, 165);
+            this.pnlList.Location = new System.Drawing.Point(39, 145);
             this.pnlList.Margin = new System.Windows.Forms.Padding(2);
             this.pnlList.Name = "pnlList";
             this.pnlList.Size = new System.Drawing.Size(653, 360);
