@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace KingWilliamApp
 {
     public partial class frmViewBill : Form
@@ -87,6 +88,7 @@ namespace KingWilliamApp
                     {
                         date = transactions.First().Date;
                         index = transactions.Last().TransactionID + 1;
+
                     }
                 }
 
@@ -104,10 +106,20 @@ namespace KingWilliamApp
                     1,
                     date
             });
+            dgvTransactions.Rows.Add(new object[]
+            {
+
+                    index+1,
+                    "Bill Total",
+                    "",
+                    currentBill.BillAmount,
+                    1,
+                    date
+
+            }); 
 
 
 
-           
             txtBillAmount.Text = currentBill.BillAmount.ToString();
         }
 
@@ -202,27 +214,26 @@ namespace KingWilliamApp
             this.frmViewBill_Load(sender, e);
         }
 
+
+
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            PrintDocument pd = new PrintDocument();
-            pd.PrintPage += new PrintPageEventHandler(PrintImage);
-            pd.Print();
+            printDocument1.Print();
+            //PrintDocument pd = new PrintDocument();
+            //pd.PrintPage += new PrintPageEventHandler(PrintImage);
+            //pd.Print();
         }
 
-        void PrintImage(object o, PrintPageEventArgs e)
+        private void printDocument1_PrintPage(object sender, PrintPageEventArgs e)
         {
-            int x = SystemInformation.WorkingArea.X;
-            int y = SystemInformation.WorkingArea.Y;
-            int width = this.Width;
-            int height = this.Height;
+            Bitmap bm = new Bitmap(this.dgvTransactions.Width, this.Height);
+            dgvTransactions.DrawToBitmap(bm, new Rectangle(0, 0, this.dgvTransactions.Width, this.dgvTransactions.Height));
+            e.Graphics.DrawImage(bm, 0, 0);
+        }
 
-            Rectangle bounds = new Rectangle(x, y, width, height);
+        private void dgvTransactions_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
-            Bitmap img = new Bitmap(width, height);
-
-            this.DrawToBitmap(img, bounds);
-            Point p = new Point(100, 100);
-            e.Graphics.DrawImage(img, p);
         }
     }
 }
