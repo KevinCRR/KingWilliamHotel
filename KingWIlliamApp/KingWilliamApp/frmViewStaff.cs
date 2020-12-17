@@ -32,6 +32,13 @@ namespace KingWilliamApp
             dgvStaff.Rows.Clear();
             foreach (Staff s in staff)
             {
+                string termination;
+                if (s.TerminationDate < s.HiredDate)
+                    termination = "";
+                else
+                    termination = s.TerminationDate.ToString();
+
+
                 dgvStaff.Rows.Add(new object[]
                 {
                     s.StaffID,
@@ -40,7 +47,7 @@ namespace KingWilliamApp
                     s.PhoneNumber,
                     s.Salary,
                     s.HiredDate,
-                    s.TerminationDate,
+                    termination,
                     "Edit",
                     "Delete"
                 });
@@ -101,6 +108,7 @@ namespace KingWilliamApp
         private void btnNew_Click(object sender, EventArgs e)
         {
             frmCreateStaff formCreateStaff = new frmCreateStaff();
+            formCreateStaff.ShowDialog();
             RefreshList();
         }
     }

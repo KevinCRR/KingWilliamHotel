@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -36,8 +37,13 @@ namespace KingWilliamApp
         }
 
         #endregion
-         
+
         #region "Class methods"
+
+        protected internal static DataTable GetRoles()
+        {
+            return DBL.SelectAllRoles();
+        }
 
         protected internal static User GetUser(string usernameValue, string passwordValue)
         {

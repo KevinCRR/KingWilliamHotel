@@ -50,9 +50,16 @@ namespace KingWilliamApp
                 txtFirstName.Text = CurrentStaff.FirstName;
                 txtLastName.Text = CurrentStaff.LastName;
                 txtPhone.Text = CurrentStaff.PhoneNumber;
-                dateStart.Value = CurrentStaff.HiredDate;
-                dateTermination.Value = CurrentStaff.TerminationDate;
                 txtSalary.Text = CurrentStaff.Salary;
+                dateStart.Value = CurrentStaff.HiredDate;
+
+                dateTermination.Value = CurrentStaff.TerminationDate;
+                if (CurrentStaff.TerminationDate < CurrentStaff.HiredDate)
+                {
+                    dateTermination.Checked = false;
+                }
+                
+                
 
                 txtAddress1.Text = CurrentAddress.Address1;
                 txtAddress2.Text = CurrentAddress.Address2;
@@ -79,7 +86,10 @@ namespace KingWilliamApp
                 CurrentStaff.PositionID = cbxPosition.SelectedValue.ToString();
                 CurrentStaff.Salary = txtSalary.Text.Trim();
                 CurrentStaff.HiredDate = dateStart.Value;
-                CurrentStaff.TerminationDate = dateTermination.Value;
+
+                if (dateTermination.Checked == true)
+                    CurrentStaff.TerminationDate = dateTermination.Value;
+
                 CurrentStaff.UpdateStaff();
 
                 CurrentAddress.Address1 = txtAddress1.Text.Trim();
@@ -116,6 +126,19 @@ namespace KingWilliamApp
             catch (Exception ex)
             {
                 lblMessage.Text = "An unknown error has occurred in " + ex.Source + "! Please contact your IT department and provide the following details:\n\n" + ex.Message + "\n\n" + ex.StackTrace + "\n\nUnknown Error!";
+            }
+        }
+
+        private void cbxPosition_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DataTable dtPositions = Staff.GetPositions();
+
+            string search = "positionID = \'" + cbxPosition.SelectedValue + "\'";
+
+            DataRow[] rows = dtPositions.Select(search);
+            foreach (DataRow row in rows)
+            {
+                txtSalary.Text = Convert.ToDecimal(row[4]).ToString("#0.00");
             }
         }
     }

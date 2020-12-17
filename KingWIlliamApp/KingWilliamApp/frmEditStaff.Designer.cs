@@ -31,6 +31,7 @@
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.lblHeader = new System.Windows.Forms.Label();
             this.pnlMain = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.lblMessage = new System.Windows.Forms.Label();
             this.txtSalary = new System.Windows.Forms.TextBox();
             this.lblSalary = new System.Windows.Forms.Label();
@@ -59,7 +60,6 @@
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.lblFirst = new System.Windows.Forms.Label();
             this.btnSubmit = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.pnlHeader.SuspendLayout();
             this.pnlMain.SuspendLayout();
             this.SuspendLayout();
@@ -129,11 +129,23 @@
             this.pnlMain.Size = new System.Drawing.Size(622, 455);
             this.pnlMain.TabIndex = 103;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(207, 249);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(19, 21);
+            this.label2.TabIndex = 105;
+            this.label2.Text = "$";
+            // 
             // lblMessage
             // 
             this.lblMessage.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMessage.ForeColor = System.Drawing.Color.Red;
-            this.lblMessage.Location = new System.Drawing.Point(44, 319);
+            this.lblMessage.Location = new System.Drawing.Point(37, 319);
             this.lblMessage.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMessage.Name = "lblMessage";
             this.lblMessage.Size = new System.Drawing.Size(351, 96);
@@ -144,7 +156,7 @@
             // 
             this.txtSalary.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSalary.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSalary.Location = new System.Drawing.Point(237, 248);
+            this.txtSalary.Location = new System.Drawing.Point(230, 248);
             this.txtSalary.Margin = new System.Windows.Forms.Padding(2);
             this.txtSalary.Name = "txtSalary";
             this.txtSalary.Size = new System.Drawing.Size(157, 27);
@@ -155,7 +167,7 @@
             this.lblSalary.AutoSize = true;
             this.lblSalary.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSalary.ForeColor = System.Drawing.Color.Black;
-            this.lblSalary.Location = new System.Drawing.Point(235, 225);
+            this.lblSalary.Location = new System.Drawing.Point(228, 225);
             this.lblSalary.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSalary.Name = "lblSalary";
             this.lblSalary.Size = new System.Drawing.Size(53, 21);
@@ -165,9 +177,10 @@
             // dateTermination
             // 
             this.dateTermination.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTermination.Location = new System.Drawing.Point(238, 116);
+            this.dateTermination.Location = new System.Drawing.Point(231, 116);
             this.dateTermination.Margin = new System.Windows.Forms.Padding(2);
             this.dateTermination.Name = "dateTermination";
+            this.dateTermination.ShowCheckBox = true;
             this.dateTermination.Size = new System.Drawing.Size(157, 27);
             this.dateTermination.TabIndex = 133;
             // 
@@ -176,7 +189,7 @@
             this.lblHire.AutoSize = true;
             this.lblHire.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHire.ForeColor = System.Drawing.Color.Black;
-            this.lblHire.Location = new System.Drawing.Point(234, 28);
+            this.lblHire.Location = new System.Drawing.Point(227, 28);
             this.lblHire.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHire.Name = "lblHire";
             this.lblHire.Size = new System.Drawing.Size(75, 21);
@@ -188,7 +201,7 @@
             this.lblTerminate.AutoSize = true;
             this.lblTerminate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTerminate.ForeColor = System.Drawing.Color.Black;
-            this.lblTerminate.Location = new System.Drawing.Point(234, 93);
+            this.lblTerminate.Location = new System.Drawing.Point(227, 93);
             this.lblTerminate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTerminate.Name = "lblTerminate";
             this.lblTerminate.Size = new System.Drawing.Size(128, 21);
@@ -200,16 +213,17 @@
             this.cbxPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxPosition.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxPosition.FormattingEnabled = true;
-            this.cbxPosition.Location = new System.Drawing.Point(238, 183);
+            this.cbxPosition.Location = new System.Drawing.Point(231, 183);
             this.cbxPosition.Margin = new System.Windows.Forms.Padding(2);
             this.cbxPosition.Name = "cbxPosition";
             this.cbxPosition.Size = new System.Drawing.Size(157, 28);
             this.cbxPosition.TabIndex = 130;
+            this.cbxPosition.SelectedIndexChanged += new System.EventHandler(this.cbxPosition_SelectedIndexChanged);
             // 
             // dateStart
             // 
             this.dateStart.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateStart.Location = new System.Drawing.Point(238, 51);
+            this.dateStart.Location = new System.Drawing.Point(231, 51);
             this.dateStart.Margin = new System.Windows.Forms.Padding(2);
             this.dateStart.Name = "dateStart";
             this.dateStart.Size = new System.Drawing.Size(157, 27);
@@ -220,7 +234,7 @@
             this.lblPosition.AutoSize = true;
             this.lblPosition.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPosition.ForeColor = System.Drawing.Color.Black;
-            this.lblPosition.Location = new System.Drawing.Point(235, 158);
+            this.lblPosition.Location = new System.Drawing.Point(228, 158);
             this.lblPosition.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPosition.Name = "lblPosition";
             this.lblPosition.Size = new System.Drawing.Size(65, 21);
@@ -232,7 +246,7 @@
             this.lblPostal.AutoSize = true;
             this.lblPostal.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPostal.ForeColor = System.Drawing.Color.Black;
-            this.lblPostal.Location = new System.Drawing.Point(438, 225);
+            this.lblPostal.Location = new System.Drawing.Point(431, 225);
             this.lblPostal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPostal.Name = "lblPostal";
             this.lblPostal.Size = new System.Drawing.Size(91, 21);
@@ -244,7 +258,7 @@
             this.cbxProvince.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxProvince.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxProvince.FormattingEnabled = true;
-            this.cbxProvince.Location = new System.Drawing.Point(441, 319);
+            this.cbxProvince.Location = new System.Drawing.Point(434, 319);
             this.cbxProvince.Margin = new System.Windows.Forms.Padding(2);
             this.cbxProvince.MaxDropDownItems = 13;
             this.cbxProvince.Name = "cbxProvince";
@@ -256,7 +270,7 @@
             this.lblAdd2.AutoSize = true;
             this.lblAdd2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAdd2.ForeColor = System.Drawing.Color.Black;
-            this.lblAdd2.Location = new System.Drawing.Point(438, 93);
+            this.lblAdd2.Location = new System.Drawing.Point(431, 93);
             this.lblAdd2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAdd2.Name = "lblAdd2";
             this.lblAdd2.Size = new System.Drawing.Size(112, 21);
@@ -267,7 +281,7 @@
             // 
             this.txtAddress2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtAddress2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddress2.Location = new System.Drawing.Point(441, 116);
+            this.txtAddress2.Location = new System.Drawing.Point(434, 116);
             this.txtAddress2.Margin = new System.Windows.Forms.Padding(2);
             this.txtAddress2.Name = "txtAddress2";
             this.txtAddress2.Size = new System.Drawing.Size(148, 27);
@@ -277,7 +291,7 @@
             // 
             this.txtPostalCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPostalCode.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPostalCode.Location = new System.Drawing.Point(441, 248);
+            this.txtPostalCode.Location = new System.Drawing.Point(434, 248);
             this.txtPostalCode.Margin = new System.Windows.Forms.Padding(2);
             this.txtPostalCode.Name = "txtPostalCode";
             this.txtPostalCode.Size = new System.Drawing.Size(148, 27);
@@ -288,7 +302,7 @@
             this.lblCountry.AutoSize = true;
             this.lblCountry.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCountry.ForeColor = System.Drawing.Color.Black;
-            this.lblCountry.Location = new System.Drawing.Point(437, 365);
+            this.lblCountry.Location = new System.Drawing.Point(430, 365);
             this.lblCountry.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCountry.Name = "lblCountry";
             this.lblCountry.Size = new System.Drawing.Size(66, 21);
@@ -299,7 +313,7 @@
             // 
             this.txtCountry.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCountry.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCountry.Location = new System.Drawing.Point(441, 388);
+            this.txtCountry.Location = new System.Drawing.Point(434, 388);
             this.txtCountry.Margin = new System.Windows.Forms.Padding(2);
             this.txtCountry.Name = "txtCountry";
             this.txtCountry.Size = new System.Drawing.Size(148, 27);
@@ -310,7 +324,7 @@
             this.lblProvince.AutoSize = true;
             this.lblProvince.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProvince.ForeColor = System.Drawing.Color.Black;
-            this.lblProvince.Location = new System.Drawing.Point(436, 296);
+            this.lblProvince.Location = new System.Drawing.Point(429, 296);
             this.lblProvince.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblProvince.Name = "lblProvince";
             this.lblProvince.Size = new System.Drawing.Size(70, 21);
@@ -322,7 +336,7 @@
             this.lblCity.AutoSize = true;
             this.lblCity.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCity.ForeColor = System.Drawing.Color.Black;
-            this.lblCity.Location = new System.Drawing.Point(438, 161);
+            this.lblCity.Location = new System.Drawing.Point(431, 161);
             this.lblCity.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCity.Name = "lblCity";
             this.lblCity.Size = new System.Drawing.Size(37, 21);
@@ -333,7 +347,7 @@
             // 
             this.txtCity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCity.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCity.Location = new System.Drawing.Point(441, 183);
+            this.txtCity.Location = new System.Drawing.Point(434, 183);
             this.txtCity.Margin = new System.Windows.Forms.Padding(2);
             this.txtCity.Name = "txtCity";
             this.txtCity.Size = new System.Drawing.Size(148, 27);
@@ -344,7 +358,7 @@
             this.lblAdd1.AutoSize = true;
             this.lblAdd1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAdd1.ForeColor = System.Drawing.Color.Black;
-            this.lblAdd1.Location = new System.Drawing.Point(438, 28);
+            this.lblAdd1.Location = new System.Drawing.Point(431, 28);
             this.lblAdd1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAdd1.Name = "lblAdd1";
             this.lblAdd1.Size = new System.Drawing.Size(112, 21);
@@ -355,7 +369,7 @@
             // 
             this.txtAddress1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtAddress1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddress1.Location = new System.Drawing.Point(441, 51);
+            this.txtAddress1.Location = new System.Drawing.Point(434, 51);
             this.txtAddress1.Margin = new System.Windows.Forms.Padding(2);
             this.txtAddress1.Name = "txtAddress1";
             this.txtAddress1.Size = new System.Drawing.Size(148, 27);
@@ -365,7 +379,7 @@
             // 
             this.txtFirstName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtFirstName.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFirstName.Location = new System.Drawing.Point(48, 51);
+            this.txtFirstName.Location = new System.Drawing.Point(41, 51);
             this.txtFirstName.Margin = new System.Windows.Forms.Padding(2);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(148, 27);
@@ -376,7 +390,7 @@
             this.lblLast.AutoSize = true;
             this.lblLast.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLast.ForeColor = System.Drawing.Color.Black;
-            this.lblLast.Location = new System.Drawing.Point(44, 93);
+            this.lblLast.Location = new System.Drawing.Point(37, 93);
             this.lblLast.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLast.Name = "lblLast";
             this.lblLast.Size = new System.Drawing.Size(84, 21);
@@ -387,7 +401,7 @@
             // 
             this.txtLastName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtLastName.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLastName.Location = new System.Drawing.Point(48, 116);
+            this.txtLastName.Location = new System.Drawing.Point(41, 116);
             this.txtLastName.Margin = new System.Windows.Forms.Padding(2);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(148, 27);
@@ -398,7 +412,7 @@
             this.lblPhone.AutoSize = true;
             this.lblPhone.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPhone.ForeColor = System.Drawing.Color.Black;
-            this.lblPhone.Location = new System.Drawing.Point(42, 161);
+            this.lblPhone.Location = new System.Drawing.Point(35, 161);
             this.lblPhone.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPhone.Name = "lblPhone";
             this.lblPhone.Size = new System.Drawing.Size(116, 21);
@@ -409,7 +423,7 @@
             // 
             this.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPhone.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhone.Location = new System.Drawing.Point(48, 184);
+            this.txtPhone.Location = new System.Drawing.Point(41, 184);
             this.txtPhone.Margin = new System.Windows.Forms.Padding(2);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(148, 27);
@@ -420,7 +434,7 @@
             this.lblFirst.AutoSize = true;
             this.lblFirst.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFirst.ForeColor = System.Drawing.Color.Black;
-            this.lblFirst.Location = new System.Drawing.Point(44, 28);
+            this.lblFirst.Location = new System.Drawing.Point(37, 28);
             this.lblFirst.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFirst.Name = "lblFirst";
             this.lblFirst.Size = new System.Drawing.Size(86, 21);
@@ -443,18 +457,6 @@
             this.btnSubmit.Text = "Save";
             this.btnSubmit.UseVisualStyleBackColor = false;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(214, 249);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(19, 21);
-            this.label2.TabIndex = 105;
-            this.label2.Text = "$";
             // 
             // frmEditStaff
             // 

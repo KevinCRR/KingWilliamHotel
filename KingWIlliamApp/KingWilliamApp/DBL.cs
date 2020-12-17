@@ -1563,6 +1563,39 @@ namespace KingWilliamApp
             return returnRole;
         }
 
+        internal static DataTable SelectAllRoles()
+        {
+            DataTable returnDataTable = new DataTable();
+
+            SqlConnection dbConnection = new SqlConnection(GetConnectionString());
+
+            SqlCommand command = new SqlCommand("SELECT * FROM roles", dbConnection);
+
+            try
+            {
+                dbConnection.Open();
+
+                SqlDataReader readerProvinces;
+                readerProvinces = command.ExecuteReader();
+
+                returnDataTable.Columns.Add("roleID", typeof(string));
+                returnDataTable.Columns.Add("roleTitle", typeof(string));
+                returnDataTable.Columns.Add("roleDescription", typeof(string));
+                returnDataTable.Load(readerProvinces);
+
+            }
+            catch (Exception ex)
+            {
+                throw new DataException("Error in GetAllRoles", ex);
+            }
+            finally
+            {
+                dbConnection.Close();
+            }
+
+            return returnDataTable;
+        }
+
         public static string SafeGetString(SqlDataReader reader, int colIndex)
         {
             if (!reader.IsDBNull(colIndex))

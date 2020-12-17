@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlTypes;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,249 +18,68 @@ namespace KingWilliamApp
             InitializeComponent();
         }
 
-        private void txtFirstName_TextChanged(object sender, EventArgs e)
+        private void frmCreateStaff_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label18_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblPageName_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnCreate_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtText_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pnlColumn1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void cbxRoom_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateStart_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pnlColumn3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void cbxProvince_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtAddress2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtCountry_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label13_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtCity_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtAddress1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label14_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label15_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label16_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtLastName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtPostalCode_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label17_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtPhone_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pnlHeader_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pnlExit_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pnlColumn2_Paint(object sender, PaintEventArgs e)
-        {
-
+            DataTable dtAddresses = Address.GetProvinces();
+            cbxProvince.DataSource = dtAddresses;
+            cbxProvince.ValueMember = "provinceName";
+
+            DataTable dtPositions = Staff.GetPositions();
+            cbxPosition.ValueMember = "positionID";
+            cbxPosition.DisplayMember = "positionTitle";
+            cbxPosition.DataSource = dtPositions;
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
+            try
+            {
+                lblMessage.Text = "";
 
+                Address newAddress = new Address(txtAddress1.Text.Trim(), txtAddress2.Text.Trim(), txtCity.Text.Trim(), cbxProvince.SelectedValue.ToString(), txtCountry.Text.Trim(), txtPostalCode.Text.Trim());
+                Staff newStaff = new Staff(txtFirstName.Text.Trim(), txtLastName.Text.Trim(), txtPhone.Text.Trim(), txtSalary.Text.Trim(), dateStart.Value, DateTime.Today.AddYears(-100), cbxPosition.SelectedValue.ToString(), newAddress.InsertAddress());
+                newStaff.InsertStaff();
+
+                MessageBox.Show("Staff created successfully!", "Success");
+                this.Close();
+            }
+            catch (ArgumentNullException ex)
+            {
+                lblMessage.Text = ex.Message;
+            }
+            catch (ArgumentOutOfRangeException ex)
+            {
+                lblMessage.Text = ex.Message;
+            }
+            catch (ArgumentException ex)
+            {
+                lblMessage.Text = ex.Message;
+            }
+            // Respond to DataExceptions referencing the database and the inner exception thrown during the database operation
+            catch (DataException ex)
+            {
+                lblMessage.Text = "Database error! " + ex.Message + "\n\n" +
+                    ex.InnerException.Message + "\n\n" + ex.Source + "\n\n" + ex.Message +
+                    "\n\n" + ex.StackTrace;
+            }
+            // Catch other unanticipated exceptions and provide as much debugging info as possible.
+            catch (Exception ex)
+            {
+                lblMessage.Text = "An unknown error has occurred in " + ex.Source + "! Please contact your IT department and provide the following details:\n\n" + ex.Message + "\n\n" + ex.StackTrace + "\n\nUnknown Error!";
+            }
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        private void cbxPosition_SelectedIndexChanged(object sender, EventArgs e)
         {
+            DataTable dtPositions = Staff.GetPositions();
 
-        }
+            string search = "positionID = \'" + cbxPosition.SelectedValue + "\'";
 
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
+            DataRow[] rows = dtPositions.Select(search);
+            foreach (DataRow row in rows)
+            {
+                txtSalary.Text = Convert.ToDecimal(row[4]).ToString("#0.00");
+            }
         }
     }
 }
