@@ -64,7 +64,7 @@
             this.dateStart.Name = "dateStart";
             this.dateStart.Size = new System.Drawing.Size(216, 25);
             this.dateStart.TabIndex = 1;
-            this.dateStart.Value = new System.DateTime(2020, 12, 16, 13, 34, 5, 0);
+            this.dateStart.Value = new System.DateTime(2020, 12, 17, 0, 0, 0, 0);
             this.dateStart.ValueChanged += new System.EventHandler(this.dateStart_ValueChanged);
             // 
             // cbxRoom
@@ -216,7 +216,7 @@
             this.lblPastRooms.AutoSize = true;
             this.lblPastRooms.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPastRooms.ForeColor = System.Drawing.Color.DimGray;
-            this.lblPastRooms.Location = new System.Drawing.Point(45, 294);
+            this.lblPastRooms.Location = new System.Drawing.Point(265, 40);
             this.lblPastRooms.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPastRooms.Name = "lblPastRooms";
             this.lblPastRooms.Size = new System.Drawing.Size(0, 19);
@@ -257,7 +257,7 @@
             this.dateEnd.Name = "dateEnd";
             this.dateEnd.Size = new System.Drawing.Size(216, 25);
             this.dateEnd.TabIndex = 2;
-            this.dateEnd.Value = new System.DateTime(2020, 12, 16, 0, 0, 0, 0);
+            this.dateEnd.Value = new System.DateTime(2020, 12, 17, 0, 0, 0, 0);
             // 
             // lblMessage
             // 
